@@ -24,14 +24,15 @@ export default function Experience() {
           transition={{ duration: 0.8 }}
         >
 
-          <video
-            src="/videos/carro_matei.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-auto object-cover"
-          />
+<video
+  src="/videos/carro_matei.mp4"
+  autoPlay
+  loop
+  muted
+  playsInline
+  preload="auto"
+  className="w-full h-auto object-cover"
+/>
 
           {/* 🔥 DIFUMINADO SUAVE (sin blur) */}
           <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-white/70 via-transparent to-white/70" />

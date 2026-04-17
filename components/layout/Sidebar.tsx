@@ -8,7 +8,7 @@ export default function Sidebar() {
       initial={{ x: 100, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="fixed right-6 top-[35%] z-[999] flex flex-col gap-4"
+className="hidden md:flex fixed right-6 top-[35%] z-[999] flex-col gap-4"
     >
       {/* CONTENEDOR */}
       <div className="bg-white/90 backdrop-blur-md border border-gray-200 rounded-2xl shadow-xl p-5 flex flex-col gap-4 min-w-[140px]">
