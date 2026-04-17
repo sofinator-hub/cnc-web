@@ -84,13 +84,14 @@ export default function Hero() {
         </p>
 
         {/* 🔥 TÍTULO */}
-        <motion.h1 className="text-4xl md:text-7xl font-bold mb-6 leading-tight overflow-hidden">
+        <motion.h1 className="text-4xl md:text-7xl font-bold mb-6 leading-tight text-black">
 
           <motion.span
             initial={{ clipPath: "inset(0 100% 0 0)" }}
             animate={{ clipPath: "inset(0 0% 0 0)" }}
             transition={{ duration: 1 }}
-            className="block"
+            className="block text-black will-change-transform"
+            
           >
             Corte CNC Láser
           </motion.span>
