@@ -2,14 +2,19 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("inicio");
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+
+      if (pathname !== "/") return; // 🔥 solo detectar secciones en home
 
       const sections = document.querySelectorAll("section");
       let current = "";
@@ -26,7 +31,7 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
 
   const linkStyle = (section: string) =>
     `relative transition ${
@@ -45,64 +50,56 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-        {/* LOGO */}
-        <motion.h1
-          className={`font-bold tracking-[0.3em] transition ${
-            scrolled ? "text-black" : "text-gray-700"
-          }`}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >
-          MATEI
-        </motion.h1>
+        {/* 🔥 LOGO → HOME */}
+        <Link href="/">
+          <motion.h1
+            className={`cursor-pointer font-bold tracking-[0.3em] transition ${
+              scrolled ? "text-black" : "text-gray-700"
+            }`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+          >
+            MATEI
+          </motion.h1>
+        </Link>
 
         {/* LINKS */}
         <ul className="flex gap-8 text-sm">
 
           {/* INICIO */}
           <li className="relative">
-            <a href="#inicio" className={linkStyle("inicio")}>
+            <Link href="/" className={linkStyle("inicio")}>
               Inicio
-            </a>
-
-            {active === "inicio" && (
-              <motion.div
-                layoutId="underline"
-                className="absolute -bottom-1 left-0 w-full h-[2px] bg-blue-500"
-              />
-            )}
+            </Link>
           </li>
 
           {/* SERVICIOS */}
           <li className="relative">
-            <a href="#servicios" className={linkStyle("servicios")}>
-              Servicios
-            </a>
-
-            {active === "servicios" && (
-              <motion.div
-                layoutId="underline"
-                className="absolute -bottom-1 left-0 w-full h-[2px] bg-blue-500"
-              />
+            {pathname === "/" ? (
+              <a href="#servicios" className={linkStyle("servicios")}>
+                Servicios
+              </a>
+            ) : (
+              <Link href="/#servicios" className="text-gray-500 hover:text-black">
+                Servicios
+              </Link>
             )}
           </li>
 
           {/* GALERÍA */}
           <li className="relative">
-            <a href="#galeria" className={linkStyle("galeria")}>
-              Galería
-            </a>
-
-            {active === "galeria" && (
-              <motion.div
-                layoutId="underline"
-                className="absolute -bottom-1 left-0 w-full h-[2px] bg-blue-500"
-              />
+            {pathname === "/" ? (
+              <a href="#galeria" className={linkStyle("galeria")}>
+                Galería
+              </a>
+            ) : (
+              <Link href="/#galeria" className="text-gray-500 hover:text-black">
+                Galería
+              </Link>
             )}
           </li>
 
         </ul>
-
       </div>
     </motion.nav>
   );
