@@ -52,7 +52,7 @@ export default function CNCPage() {
 
             {/* VIDEO */}
             <video
-              src="/videos/carro_matei.mp4"
+              src="/videos/video_corte_laser1.mp4"
               autoPlay
               loop
               muted
