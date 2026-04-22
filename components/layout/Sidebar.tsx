@@ -23,7 +23,7 @@ export default function Sidebar() {
         {/* 🔥 NAVEGACIÓN (LO NUEVO) */}
         <div className="flex flex-col gap-2 text-xs text-gray-600 text-center">
 
-          <Link href="/cortes" className="hover:text-black transition">
+          <Link href="/cnc" className="hover:text-black transition">
             Corte Láser
           </Link>
 
