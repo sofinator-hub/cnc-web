@@ -3,138 +3,175 @@
 import { motion } from "framer-motion";
 
 export default function CNCPage() {
+  const materials = [
+    { material: "Acero inoxidable", espesor: "—" },
+    { material: "Acero al carbón", espesor: "—" },
+    { material: "Aluminio", espesor: "—" },
+    { material: "Latón", espesor: "—" },
+    { material: "Cobre", espesor: "—" },
+  ];
+
   return (
-    <main className="bg-white text-black">
+    <main className="bg-[#0a0a0a] text-white">
 
       {/* HERO */}
-      <section className="min-h-[80vh] flex items-center justify-center text-center px-6">
-        <div className="max-w-3xl">
-          <p className="text-xs tracking-[0.3em] text-gray-500 mb-4">
-            CNC LASER SYSTEM
-          </p>
+      <section className="py-32 text-center px-6">
+        <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">
+          CNC LASER SYSTEM
+        </p>
 
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Corte CNC Láser
-          </h1>
+        <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          Servicio de Corte Láser y Fibra
+        </h1>
 
-          <p className="text-gray-600 text-lg">
-            Tecnología de corte láser de fibra para fabricación industrial y producción personalizada.
-          </p>
+        <p className="text-gray-400 max-w-3xl mx-auto">
+          Maquila de corte láser en acero inoxidable con tecnología de alta precisión.
+        </p>
+      </section>
+
+      {/* VIDEO PRINCIPAL */}
+      <section className="py-20 px-6 text-center">
+        <p className="text-gray-400 max-w-4xl mx-auto mb-12">
+          Puedes hacer todo lo que sea posible con nuestro sistema de corte láser de fibra:
+          joyas, gabinetes electrónicos, decoraciones, robots, letreros, muebles y más.
+        </p>
+
+        <motion.div
+          className="relative max-w-3xl mx-auto"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="absolute inset-0 bg-blue-500/20 blur-2xl rounded-xl" />
+
+          <video
+            src="/videos/video_corte_laser1.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="relative z-10 w-full rounded-xl object-cover"
+          />
+        </motion.div>
+      </section>
+
+      {/* CORTE INDUSTRIAL */}
+      <section className="py-32 px-6 max-w-6xl mx-auto">
+
+        <h2 className="text-3xl font-bold mb-12 text-center">
+          Corte Láser de Piezas Industriales
+        </h2>
+
+        <p className="text-gray-400 text-center max-w-3xl mx-auto mb-16">
+          La tecnología de corte por láser permite trabajar acero al carbón,
+          aluminio y acero inoxidable con cortes limpios, alta precisión
+          y tolerancias estrictas.
+        </p>
+
+        <div className="grid md:grid-cols-2 gap-8">
+
+          <motion.img
+            src="/foto_acero1.jpeg"
+            alt="corte acero 1"
+            className="rounded-xl object-cover w-full h-[300px]"
+            whileHover={{ scale: 1.05 }}
+          />
+
+          <motion.img
+            src="/foto_acero2.jpeg"
+            alt="corte acero 2"
+            className="rounded-xl object-cover w-full h-[300px]"
+            whileHover={{ scale: 1.05 }}
+          />
+
         </div>
       </section>
 
-      {/* VIDEO */}
-      <section className="py-32 relative overflow-hidden">
+      {/* TABLA */}
+      <section className="py-32 px-6 bg-[#111]">
 
-        {/* GRID */}
-        <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
-          <div className="w-full h-full bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:40px_40px]" />
-        </div>
+        <div className="max-w-4xl mx-auto">
 
-        <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
-
-          <h2 className="text-3xl font-bold mb-6">
-            Proceso de corte en acción
+          <h2 className="text-3xl font-bold mb-12 text-center">
+            Materiales y espesores
           </h2>
 
-          <p className="text-gray-600 mb-12">
-            Corte de alta precisión con maquinaria industrial.
-          </p>
-
           <motion.div
-            className="relative mx-auto w-full max-w-[700px]"
+            className="overflow-hidden rounded-xl border border-gray-700"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
           >
-            {/* GLOW */}
-            <div className="absolute inset-0 bg-blue-500/10 blur-2xl rounded-2xl" />
+            <table className="w-full text-left">
 
-            {/* VIDEO */}
-            <video
-              src="/videos/video_corte_laser1.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="relative z-10 w-full rounded-xl object-cover"
-            />
+              <thead className="bg-[#1a1a1a] text-gray-300">
+                <tr>
+                  <th className="p-4">Material</th>
+                  <th className="p-4">Espesor máximo</th>
+                </tr>
+              </thead>
 
-            {/* BORDE */}
-            <div className="absolute inset-0 border border-black/10 rounded-xl pointer-events-none" />
+              <tbody className="text-gray-400">
+                {materials.map((row) => (
+                  <tr key={row.material} className="border-t border-gray-700">
+                    <td className="p-4">{row.material}</td>
+                    <td className="p-4">{row.espesor}</td>
+                  </tr>
+                ))}
+              </tbody>
+
+            </table>
           </motion.div>
 
         </div>
       </section>
 
-      {/* CAPACIDADES */}
-      <section className="py-24 px-6 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12">
-          Capacidades del sistema
+      {/* GRABADO */}
+      <section className="py-32 px-6 max-w-6xl mx-auto">
+
+        <h2 className="text-3xl font-bold mb-12 text-center">
+          Grabado Láser
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-10 text-gray-600">
+        <div className="grid md:grid-cols-3 gap-6">
 
-          <div>
-            <h3 className="font-semibold mb-2">Alta precisión</h3>
-            <p>Cortes exactos con tolerancias estrictas.</p>
-          </div>
+          <motion.div
+            className="col-span-2 relative"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+          >
+            <div className="absolute inset-0 bg-blue-500/10 blur-2xl rounded-xl" />
 
-          <div>
-            <h3 className="font-semibold mb-2">Diseños complejos</h3>
-            <p>Ideal para geometrías avanzadas y piezas industriales.</p>
-          </div>
+            <video
+              src="/videos/video_grabado_laser1.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              className="relative z-10 w-full rounded-xl object-cover"
+            />
+          </motion.div>
 
-          <div>
-            <h3 className="font-semibold mb-2">Producción flexible</h3>
-            <p>Desde prototipos hasta producción en serie.</p>
+          <div className="flex flex-col gap-6">
+
+            <img
+              src="/foto_grabado1.jpeg"
+              alt="grabado 1"
+              className="rounded-xl object-cover h-[150px] w-full"
+            />
+
+            <img
+              src="/foto_grabado2.jpeg"
+              alt="grabado 2"
+              className="rounded-xl object-cover h-[150px] w-full"
+            />
+
           </div>
 
         </div>
       </section>
-
-      {/* MATERIALES */}
-      <section className="py-24 bg-gray-50 px-6">
-        <div className="max-w-6xl mx-auto">
-
-          <h2 className="text-3xl font-bold mb-12">
-            Materiales compatibles
-          </h2>
-
-          <div className="flex flex-wrap gap-4 text-sm text-gray-700">
-
-            <span className="px-4 py-2 bg-black border rounded-full">Acero al carbon</span>
-            <span className="px-4 py-2 bg-black border rounded-full">Acero inoxidable</span>
-            <span className="px-4 py-2 bg-black border rounded-full">Aluminio</span>
-            <span className="px-4 py-2 bg-black border rounded-full">latón y cobre</span>
-            <span className="px-4 py-2 bg-black border rounded-full">MDF</span>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-24 text-center px-6">
-
-        <h2 className="text-3xl font-bold mb-6">
-          ¿Tienes un proyecto en mente?
-        </h2>
-
-        <p className="text-gray-600 mb-8">
-          Cotiza con nosotros y lleva tu idea a producción.
-        </p>
-
-        <a
-          href="https://wa.me/5215562045546"
-          target="_blank"
-          className="bg-black text-white px-6 py-3 rounded-full font-semibold"
-        >
-          Cotizar ahora
-        </a>
-
-      </section>
-
+      
     </main>
   );
 }
