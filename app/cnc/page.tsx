@@ -93,11 +93,10 @@ export default function CNCPage() {
 
             <tbody>
               {[
-                ["Acero inoxidable", "----"],
-                ["Acero al carbón", "----"],
-                ["Aluminio", "----"],
-                ["Latón", "----"],
-                ["Cobre", "----"],
+                ["Acero inoxidable", "3/16 (5mm)"],
+                ["Acero al carbón", "5/8 (16mm)"],
+                ["Aluminio", "3/16 (5 mm)"],
+                ["Latón y cobre", "(3 mm)"],
               ].map((item, i) => (
                 <tr key={i} className="border-t hover:bg-gray-50 transition">
                   <td className="px-6 py-3">{item[0]}</td>
