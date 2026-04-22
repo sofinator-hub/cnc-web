@@ -21,10 +21,15 @@ export default function CNCPage() {
         </div>
 
         {/* VIDEO FIX */}
-        <video className="rounded-2xl shadow-md w-full" controls>
-          <source src="/videos/video_corte_laser1.mp4" type="video/mp4" />
-          Tu navegador no soporta video.
-        </video>
+        <video
+  className="rounded-2xl shadow-md w-full"
+  autoPlay
+  muted
+  loop
+  playsInline
+>
+  <source src="/videos/video_corte_laser1.mp4" type="video/mp4" />
+</video>
       </section>
 
 
@@ -115,10 +120,15 @@ export default function CNCPage() {
         <div className="grid md:grid-cols-2 gap-8 items-center">
 
           {/* VIDEO FIX */}
-          <video className="rounded-2xl shadow-md w-full" controls>
-            <source src="/videos/video_grabado_laser1.mp4" type="video/mp4" />
-            Tu navegador no soporta video.
-          </video>
+          <video
+  className="rounded-2xl shadow-md w-full"
+  autoPlay
+  muted
+  loop
+  playsInline
+>
+  <source src="/videos/video_grabado_laser1.mp4" type="video/mp4" />
+</video>
 
           <div className="grid grid-cols-2 gap-4">
 
@@ -127,17 +137,17 @@ export default function CNCPage() {
                 src="/foto_grabado1.jpg"
                 width={300}
                 height={300}
-                alt="Grabado 1"
+                alt="Grabado_1"
                 className="object-cover w-full h-full group-hover:scale-105 transition"
               />
             </div>
 
             <div className="overflow-hidden rounded-xl group">
               <Image
-                src="/foto_grabado 2.jpg"
+                src="/foto_grabado2.jpg"
                 width={300}
                 height={300}
-                alt="Grabado 2"
+                alt="Grabado_2"
                 className="object-cover w-full h-full group-hover:scale-105 transition"
               />
             </div>
