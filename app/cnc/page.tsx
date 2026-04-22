@@ -3,44 +3,28 @@
 import { motion } from "framer-motion";
 
 export default function CNCPage() {
-  const materials = [
-    { material: "Acero inoxidable", espesor: "—" },
-    { material: "Acero al carbón", espesor: "—" },
-    { material: "Aluminio", espesor: "—" },
-    { material: "Latón", espesor: "—" },
-    { material: "Cobre", espesor: "—" },
-  ];
-
   return (
     <main className="bg-[#0a0a0a] text-white">
 
-      {/* HERO */}
-      <section className="py-32 text-center px-6">
-        <p className="text-xs tracking-[0.3em] text-gray-400 mb-4">
-          CNC LASER SYSTEM
-        </p>
+      {/* 🔥 TEXTO 1 */}
+      <section className="py-32 px-6 text-center">
 
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          Servicio de Corte Láser y Fibra
+          SERVICIO DE CORTE LÁSER Y FIBRA
         </h1>
 
-        <p className="text-gray-400 max-w-3xl mx-auto">
-          Maquila de corte láser en acero inoxidable con tecnología de alta precisión.
+        <p className="text-gray-400 max-w-4xl mx-auto mb-6">
+          Maquila de corte láser en acero inoxidable
         </p>
-      </section>
 
-      {/* VIDEO PRINCIPAL */}
-      <section className="py-20 px-6 text-center">
-        <p className="text-gray-400 max-w-4xl mx-auto mb-12">
-          Puedes hacer todo lo que sea posible con nuestro sistema de corte láser de fibra:
-          joyas, gabinetes electrónicos, decoraciones, robots, letreros, muebles y más.
+        <p className="text-gray-400 max-w-4xl mx-auto mb-16">
+          Puedes hacer todo lo que sea posible con nuestro sistema de corte láser de fibra: joyas, gabinetes electrónicos, decoraciones, tarjetas de identificación y etiquetas, robots, marcadores, relojes, letreros, letras, marcos, arte, modelos, bolsos, juguetes, artículos para el hogar, iluminación, muebles e incluso productos promocionales personalizados.
         </p>
 
         <motion.div
           className="relative max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
         >
           <div className="absolute inset-0 bg-blue-500/20 blur-2xl rounded-xl" />
 
@@ -54,70 +38,88 @@ export default function CNCPage() {
             className="relative z-10 w-full rounded-xl object-cover"
           />
         </motion.div>
+
       </section>
 
-      {/* CORTE INDUSTRIAL */}
+      {/* 🔥 TEXTO 2 */}
       <section className="py-32 px-6 max-w-6xl mx-auto">
 
         <h2 className="text-3xl font-bold mb-12 text-center">
-          Corte Láser de Piezas Industriales
+          CORTE LÁSER DE PIEZAS INDUSTRIALES
         </h2>
 
-        <p className="text-gray-400 text-center max-w-3xl mx-auto mb-16">
-          La tecnología de corte por láser permite trabajar acero al carbón,
-          aluminio y acero inoxidable con cortes limpios, alta precisión
-          y tolerancias estrictas.
+        <p className="text-gray-400 text-center max-w-4xl mx-auto mb-16">
+          La tecnología de corte por láser es un proceso excelente para cortar acero al carbón, aleaciones de aluminio y acero inoxidable. El corte por láser de metal proporciona un borde más limpio con una mejor perpendicularidad que otras formas de corte por llama, junto con un corte más pequeño. Los diseños complicados, las tolerancias estrictas y la precisión, son excelentes candidatos para el corte por láser.
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">
 
-          <motion.img
+          <img
             src="/foto_acero1.jpeg"
-            alt="corte acero 1"
+            alt="acero 1"
             className="rounded-xl object-cover w-full h-[300px]"
-            whileHover={{ scale: 1.05 }}
           />
 
-          <motion.img
+          <img
             src="/foto_acero2.jpeg"
-            alt="corte acero 2"
+            alt="acero 2"
             className="rounded-xl object-cover w-full h-[300px]"
-            whileHover={{ scale: 1.05 }}
           />
 
         </div>
+
       </section>
 
-      {/* TABLA */}
+      {/* 🔥 TABLA */}
       <section className="py-32 px-6 bg-[#111]">
 
         <div className="max-w-4xl mx-auto">
 
           <h2 className="text-3xl font-bold mb-12 text-center">
-            Materiales y espesores
+            MATERIALES Y ESPESORES
           </h2>
 
           <motion.div
             className="overflow-hidden rounded-xl border border-gray-700"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
           >
             <table className="w-full text-left">
 
               <thead className="bg-[#1a1a1a] text-gray-300">
                 <tr>
                   <th className="p-4">Material</th>
-                  <th className="p-4">Espesor máximo</th>
+                  <th className="p-4">Calibre máximo</th>
                 </tr>
               </thead>
 
               <tbody className="text-gray-400">
-                {materials.map((row) => (
-                  <tr key={row.material} className="border-t border-gray-700">
-                    <td className="p-4">{row.material}</td>
-                    <td className="p-4">{row.espesor}</td>
-                  </tr>
-                ))}
+
+                <tr className="border-t border-gray-700">
+                  <td className="p-4">Acero inoxidable</td>
+                  <td className="p-4">—</td>
+                </tr>
+
+                <tr className="border-t border-gray-700">
+                  <td className="p-4">Acero al carbón</td>
+                  <td className="p-4">—</td>
+                </tr>
+
+                <tr className="border-t border-gray-700">
+                  <td className="p-4">Aluminio</td>
+                  <td className="p-4">—</td>
+                </tr>
+
+                <tr className="border-t border-gray-700">
+                  <td className="p-4">Latón</td>
+                  <td className="p-4">—</td>
+                </tr>
+
+                <tr className="border-t border-gray-700">
+                  <td className="p-4">Cobre</td>
+                  <td className="p-4">—</td>
+                </tr>
+
               </tbody>
 
             </table>
@@ -126,20 +128,17 @@ export default function CNCPage() {
         </div>
       </section>
 
-      {/* GRABADO */}
+      {/* 🔥 TEXTO 4 */}
       <section className="py-32 px-6 max-w-6xl mx-auto">
 
         <h2 className="text-3xl font-bold mb-12 text-center">
-          Grabado Láser
+          GRABADO LÁSER
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
 
-          <motion.div
-            className="col-span-2 relative"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-          >
+          {/* VIDEO */}
+          <div className="col-span-2 relative">
             <div className="absolute inset-0 bg-blue-500/10 blur-2xl rounded-xl" />
 
             <video
@@ -151,8 +150,9 @@ export default function CNCPage() {
               preload="auto"
               className="relative z-10 w-full rounded-xl object-cover"
             />
-          </motion.div>
+          </div>
 
+          {/* IMÁGENES */}
           <div className="flex flex-col gap-6">
 
             <img
@@ -170,8 +170,9 @@ export default function CNCPage() {
           </div>
 
         </div>
+
       </section>
-      
+
     </main>
   );
 }
