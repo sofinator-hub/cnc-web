@@ -66,7 +66,7 @@ export default function CNCPage() {
               src="/foto_acero1.jpg"
               width={700}
               height={500}
-              alt="Acero 1"
+              alt="Acero_1"
               className="object-cover w-full h-full group-hover:scale-110 transition duration-700"
             />
             <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition" />
@@ -77,7 +77,7 @@ export default function CNCPage() {
               src="/foto_acero2.jpg"
               width={700}
               height={500}
-              alt="Acero 2"
+              alt="Acero_2"
               className="object-cover w-full h-full group-hover:scale-110 transition duration-700"
             />
             <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition" />
@@ -153,14 +153,14 @@ export default function CNCPage() {
                 src="/foto_grabado1.jpg"
                 width={300}
                 height={300}
-                alt="Grabado 1"
+                alt="Grabado_1"
                 className="object-cover w-full h-full group-hover:scale-110 transition duration-500"
               />
             </div>
 
             <div className="overflow-hidden rounded-2xl group">
               <Image
-                src="/foto_grabado 2.jpg"
+                src="/foto_grabado2.jpg"
                 width={300}
                 height={300}
                 alt="Grabado_2"
