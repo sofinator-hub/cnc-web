@@ -39,10 +39,10 @@ export default function Services() {
             whileHover={{ y: -10, scale: 1.03 }}
           >
             <h3 className="text-xl font-semibold mb-4">
-              Grabado
+               Diseño Personalizado
             </h3>
             <p className="text-gray-600">
-              Detalles finos y personalizados.
+              Desarrollo de proyectos a medida.
             </p>
           </motion.div>
 
@@ -52,10 +52,10 @@ export default function Services() {
             whileHover={{ y: -10, scale: 1.03 }}
           >
             <h3 className="text-xl font-semibold mb-4">
-              Diseño Personalizado
+              Ingeniería y automatixación
             </h3>
             <p className="text-gray-600">
-              Desarrollo de proyectos a medida.
+              Desarrollo de proyectos integrales de automatización, industriales y eléctricos
             </p>
           </motion.div>
 

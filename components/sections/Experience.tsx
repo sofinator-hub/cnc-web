@@ -34,7 +34,7 @@ export default function Experience() {
   className="w-full h-auto object-cover"
 />
 
-          {/* 🔥 DIFUMINADO SUAVE (sin blur) */}
+          {/*  DIFUMINADO SUAVE (sin blur) */}
           <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-white/70 via-transparent to-white/70" />
 
           <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-white/60 via-transparent to-white/60" />

@@ -24,7 +24,7 @@ export default function Sidebar() {
         <div className="flex flex-col gap-2 text-xs text-gray-600 text-center">
 
           <Link href="/cnc" className="hover:text-black transition">
-            Corte CNC Láser
+            Corte Láser
           </Link>
 
           <Link href="/conveyors" className="hover:text-black transition">
@@ -40,17 +40,6 @@ export default function Sidebar() {
           </Link>
 
         </div>
-
-        {/* BOTÓN COTIZAR */}
-        <motion.a
-          href="https://wa.me/5215562045546"
-          target="_blank"
-          className="bg-black text-white text-sm px-4 py-2 rounded-full text-center font-medium"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Cotizar
-        </motion.a>
 
         {/* CONTACTO */}
         <a
@@ -75,3 +64,14 @@ export default function Sidebar() {
     </motion.div>
   );
 }
+
+        {/* BOTÓN COTIZAR */}
+        <motion.a
+          href="https://wa.me/5215562045546"
+          target="_blank"
+          className="bg-black text-white text-sm px-4 py-2 rounded-full text-center font-medium"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Cotizar
+        </motion.a>

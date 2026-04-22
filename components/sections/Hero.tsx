@@ -37,7 +37,7 @@ export default function Hero() {
       onMouseMove={handleMouseMove}
     >
 
-      {/* 🔵 GRADIENTE BASE */}
+      {/*  GRADIENTE BASE */}
       <motion.div
         className="absolute inset-0"
         animate={{
@@ -50,12 +50,12 @@ export default function Hero() {
         transition={{ duration: 14, repeat: Infinity }}
       />
 
-      {/* 🧊 GRID CNC */}
+      {/*  GRID CNC */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
         <div className="w-full h-full bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:40px_40px]" />
       </div>
 
-      {/* 🧊 HUD ESQUINAS (más sutil en móvil) */}
+      {/*  HUD ESQUINAS (más sutil en móvil) */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-4 left-4 w-8 h-8 md:w-12 md:h-12 border-t border-l border-black/30" />
         <div className="absolute top-4 right-4 w-8 h-8 md:w-12 md:h-12 border-t border-r border-black/30" />
@@ -63,7 +63,7 @@ export default function Hero() {
         <div className="absolute bottom-4 right-4 w-8 h-8 md:w-12 md:h-12 border-b border-r border-black/30" />
       </div>
 
-      {/* 🔥 CURSOR GLOW (solo desktop) */}
+      {/*  CURSOR GLOW (solo desktop) */}
       {!isMobile && (
         <motion.div
           className="pointer-events-none fixed w-[280px] h-[280px] bg-blue-500/10 rounded-full blur-3xl"
@@ -75,15 +75,15 @@ export default function Hero() {
         />
       )}
 
-      {/* 🧠 CONTENIDO */}
+      {/*  CONTENIDO */}
       <div className="text-center px-6 z-10 max-w-3xl">
 
         {/* TEXTO SISTEMA */}
         <p className="text-[10px] md:text-xs tracking-[0.3em] text-gray-500 mb-4">
-          SYSTEM // CNC ACTIVE PROCESS
+          SISTEMA ACTIVO
         </p>
 
-        {/* 🔥 TÍTULO */}
+        {/*  TÍTULO */}
         <motion.h1 className="text-4xl md:text-7xl font-bold mb-6 leading-tight text-black">
 
           <motion.span
@@ -93,7 +93,7 @@ export default function Hero() {
             className="block text-black will-change-transform"
             
           >
-            Corte CNC Láser
+            Corte Láser
           </motion.span>
 
           <motion.span
@@ -107,7 +107,7 @@ export default function Hero() {
 
         </motion.h1>
 
-        {/* 🔥 LÁSER */}
+        {/*  LÁSER */}
         <motion.div className="relative w-full h-[1px] overflow-hidden mb-6">
           <motion.div
             className="absolute top-0 left-0 h-full w-[200px] bg-gradient-to-r from-transparent via-blue-500/80 to-transparent"
@@ -120,7 +120,7 @@ export default function Hero() {
           />
         </motion.div>
 
-        {/* 🔥 CNC ANIMACIÓN */}
+        {/*  CNC ANIMACIÓN */}
         <motion.div className="relative w-full h-[70px] md:h-[80px] overflow-hidden mb-6">
 
           <motion.div
@@ -153,7 +153,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
         >
-          Diseño, grabado y fabricación con tecnología de alta precisión
+          Diseño, corte y fabricación con tecnología de alta precisión
         </motion.p>
 
         {/* BOTÓN */}
@@ -172,7 +172,7 @@ export default function Hero() {
 
         {/* STATUS */}
         <p className="text-[10px] md:text-xs text-gray-400 mt-6">
-          STATUS: ACTIVE • PRECISION MODE ENABLED
+          INGENIERÍA • PRECISIÓN
         </p>
 
       </div>
