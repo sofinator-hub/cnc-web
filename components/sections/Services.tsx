@@ -52,7 +52,7 @@ export default function Services() {
             whileHover={{ y: -10, scale: 1.03 }}
           >
             <h3 className="text-xl font-semibold mb-4">
-              Ingeniería y automatixación
+              Ingeniería y automatización
             </h3>
             <p className="text-gray-600">
               Desarrollo de proyectos integrales de automatización, industriales y eléctricos
