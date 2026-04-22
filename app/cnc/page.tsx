@@ -134,7 +134,7 @@ export default function CNCPage() {
 
             <div className="overflow-hidden rounded-xl group">
               <Image
-                src="/foto_grabado1.jpg"
+                src="/foto_grabado1.png"
                 width={300}
                 height={300}
                 alt="Grabado_1"
@@ -144,7 +144,7 @@ export default function CNCPage() {
 
             <div className="overflow-hidden rounded-xl group">
               <Image
-                src="/foto_grabado2.jpg"
+                src="/foto_grabado_laser2.jpg"
                 width={300}
                 height={300}
                 alt="Grabado_2"
