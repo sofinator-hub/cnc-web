@@ -34,7 +34,7 @@ export default function CNCPage() {
         <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
 
           <h2 className="text-3xl font-bold mb-6">
-            Proceso CNC en acción
+            Proceso de corte en acción
           </h2>
 
           <p className="text-gray-600 mb-12">
@@ -103,11 +103,11 @@ export default function CNCPage() {
 
           <div className="flex flex-wrap gap-4 text-sm text-gray-700">
 
-            <span className="px-4 py-2 bg-white border rounded-full">Acero</span>
-            <span className="px-4 py-2 bg-white border rounded-full">Acero inoxidable</span>
-            <span className="px-4 py-2 bg-white border rounded-full">Aluminio</span>
-            <span className="px-4 py-2 bg-white border rounded-full">Acrílico</span>
-            <span className="px-4 py-2 bg-white border rounded-full">MDF</span>
+            <span className="px-4 py-2 bg-black border rounded-full">Acero al carbon</span>
+            <span className="px-4 py-2 bg-black border rounded-full">Acero inoxidable</span>
+            <span className="px-4 py-2 bg-black border rounded-full">Aluminio</span>
+            <span className="px-4 py-2 bg-black border rounded-full">latón y cobre</span>
+            <span className="px-4 py-2 bg-black border rounded-full">MDF</span>
 
           </div>
 
