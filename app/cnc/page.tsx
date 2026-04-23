@@ -189,12 +189,52 @@ return (
           </button>
         </div>
 
+{/* SECCIÓN TUBO */}
+
+<section className="min-h-screen flex items-center px-6 md:px-20">
+
+  <div className="grid md:grid-cols-2 gap-10 items-center w-full">
+
+```
+<div>
+  <h2 className="text-3xl font-semibold mb-4">
+    CORTE LÁSER DE TUBO
+  </h2>
+
+  <p className="text-gray-600 mb-6">
+    Corte de tubos y perfiles con alta precisión para aplicaciones industriales, estructuras y mobiliario.
+  </p>
+
+  <a
+    href="/tubo"
+    className="inline-block px-6 py-3 border border-black rounded-full hover:bg-black hover:text-white transition"
+  >
+    Ver más
+  </a>
+</div>
+
+<div className="relative group">
+  <div className="absolute inset-0 bg-blue-500 opacity-20 blur-3xl rounded-2xl scale-110 group-hover:opacity-30 transition duration-500" />
+
+  <img
+    src="/tubo.jpg"
+    alt="Corte láser de tubo"
+    className="relative rounded-2xl object-cover w-full h-full shadow-md"
+  />
+</div>
+```
+
+  </div>
+
+</section>
+
       </div>
 
     </section>
 
   </main>
 </>
+
 
 );
 }
