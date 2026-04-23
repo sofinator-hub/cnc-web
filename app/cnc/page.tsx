@@ -191,7 +191,7 @@ return (
 
 {/* SECCIÓN TUBO */}
 
-<section className="min-h-screen flex items-center justify-center px-6 md:px-20 relative overflow-hidden">
+<section className="min-h-screen flex items-center justify-center relative overflow-hidden">
 
 {/* VIDEO FONDO */}
 <video
@@ -203,22 +203,21 @@ playsInline
 
 >
 
-```
-<source src="/videos/video_tubo.mp4" type="video/mp4" />
-```
+
+<source src="/videos/video_tubo2.mp4" type="video/mp4" />
+
 
   </video>
 
-{/* OVERLAY DIFUMINADO */}
+{/* OVERLAY */}
 
-  <div className="absolute inset-0 bg-white/60 backdrop-blur-md" />
+  <div className="absolute inset-0 bg-white/50 backdrop-blur-sm" />
 
 {/* CONTENIDO */}
 
-  <div className="relative z-10 text-center max-w-xl">
-
-```
+  <div className="relative z-10 text-center px-6 max-w-2xl">
 <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+
   CORTE LÁSER DE TUBO
 </h2>
 
@@ -232,7 +231,7 @@ playsInline
 >
   Ver más
 </a>
-```
+
 
   </div>
 
