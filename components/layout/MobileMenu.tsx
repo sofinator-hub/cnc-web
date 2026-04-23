@@ -12,9 +12,9 @@ return (
 onClick={() => setOpen(!open)}
 className="fixed top-4 right-4 z-[999] md:hidden bg-white/70 backdrop-blur-md p-3 rounded-xl shadow-lg transition"
 >
-<div className={`w-6 h-[2px] bg-black mb-1 transition ${open ? "rotate-45 translate-y-2" : ""}`}></div>
-<div className={`w-6 h-[2px] bg-black mb-1 transition ${open ? "opacity-0" : ""}`}></div>
-<div className={`w-6 h-[2px] bg-black transition ${open ? "-rotate-45 -translate-y-2" : ""}`}></div> </button>
+<div className="w-6 h-[2px] bg-black mb-1"></div>
+<div className="w-6 h-[2px] bg-black mb-1"></div>
+<div className="w-6 h-[2px] bg-black"></div> </button>
 
 ```
   {/* BACKDROP (ahora sí cierra) */}
