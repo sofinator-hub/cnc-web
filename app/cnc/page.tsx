@@ -52,9 +52,12 @@ return ( <main className="bg-white text-gray-900">
         </p>
       </div>
 
-      <video className="rounded-2xl shadow-md w-full" autoPlay muted loop playsInline>
-        <source src="/videos/video_corte_laser1.mp4" type="video/mp4" />
-      </video>
+      <div className="relative group">
+        <div className="absolute inset-0 bg-blue-500 opacity-20 blur-3xl rounded-2xl scale-110 group-hover:opacity-30 transition duration-500" />
+        <video className="relative rounded-2xl shadow-md w-full" autoPlay muted loop playsInline>
+          <source src="/videos/video_corte_laser1.mp4" type="video/mp4" />
+        </video>
+      </div>
 
     </div>
   </section>
@@ -105,7 +108,7 @@ return ( <main className="bg-white text-gray-900">
   {/* TABLA */}
   <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
 
-    {/* líneas tipo láser */}
+
     <div className="absolute inset-0 opacity-10 bg-[linear-gradient(90deg,#000_1px,transparent_1px),linear-gradient(#000_1px,transparent_1px)] bg-[size:50px_50px]" />
 
     <h2 className="text-3xl font-semibold mb-8 relative z-10">
@@ -162,9 +165,12 @@ return ( <main className="bg-white text-gray-900">
 
     <div className="grid md:grid-cols-2 gap-10 items-center w-full">
 
-      <video className="rounded-2xl shadow-md w-full" autoPlay muted loop playsInline>
-        <source src="/videos/video_grabado_laser1.mp4" type="video/mp4" />
-      </video>
+      <div className="relative group">
+        <div className="absolute inset-0 bg-blue-500 opacity-20 blur-3xl rounded-2xl scale-110 group-hover:opacity-30 transition duration-500" />
+        <video className="relative rounded-2xl shadow-md w-full" autoPlay muted loop playsInline>
+          <source src="/videos/video_grabado_laser1.mp4" type="video/mp4" />
+        </video>
+      </div>
 
       <div>
         <h2 className="text-3xl font-semibold mb-4">
@@ -181,7 +187,7 @@ return ( <main className="bg-white text-gray-900">
       </div>
 
     </div>
-    
+
   </section>
 
 </main>
