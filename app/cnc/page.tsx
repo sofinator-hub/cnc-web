@@ -3,159 +3,168 @@ import Image from "next/image";
 
 
 export default function CNCPage() {
-  
+ 
   return (
-    <main className="bg-white text-gray-900 min-h-screen px-6 md:px-20 py-16 space-y-24">
+    <main className="bg-black text-white h-screen overflow-y-scroll snap-y snap-mandatory">
 
-      {/* ================= SECCIÓN 1 ================= */}
-      <section className="grid md:grid-cols-2 gap-10 items-center">
-        
+      {/* ================= HERO ================= */}
+      <section className="min-h-screen snap-start flex items-center justify-center text-center px-6">
         <div>
-          <h1 className="text-3xl md:text-4xl font-semibold mb-4">
-            SERVICIO DE CORTE LÁSER Y FIBRA
+          <h1 className="text-5xl md:text-7xl font-bold tracking-widest">
+            CORTE LÁSER
           </h1>
 
-          <p className="text-gray-600 leading-relaxed">
-            Maquila de corte láser en acero inoxidable. Puedes hacer todo lo que sea posible con nuestro sistema de corte láser de fibra: joyas, gabinetes electrónicos, decoraciones, tarjetas de identificación y etiquetas, robots, marcadores, relojes, letreros, letras, marcos, arte, modelos, bolsos, juguetes, artículos para el hogar, iluminación, muebles e incluso productos promocionales personalizados.
+          <p className="mt-6 text-gray-400 max-w-xl mx-auto">
+            Precisión industrial en acero inoxidable, aluminio y más.
           </p>
         </div>
-
-        {/* VIDEO FIX */}
-        <video
-  className="rounded-2xl shadow-md w-full"
-  autoPlay
-  muted
-  loop
-  playsInline
->
-  <source src="/videos/video_corte_laser1.mp4" type="video/mp4" />
-</video>
       </section>
 
 
+      {/* ================= SERVICIO ================= */}
+      <section className="min-h-screen snap-start flex items-center px-6 md:px-20">
+        <div className="grid md:grid-cols-2 gap-10 items-center w-full">
 
-      {/* ================= SECCIÓN 2 ================= */}
-      <section className="space-y-8">
+          <div>
+            <h2 className="text-4xl font-semibold mb-4">
+              SERVICIO DE CORTE LÁSER Y FIBRA
+            </h2>
 
-        <div>
-          <h2 className="text-3xl font-semibold mb-4">
-            CORTE LÁSER DE PIEZAS INDUSTRIALES
+            <p className="text-gray-400 leading-relaxed">
+              Maquila de corte láser en acero inoxidable. Puedes crear piezas industriales, decoración, gabinetes electrónicos, señalización, estructuras, muebles y productos personalizados con alta precisión.
+            </p>
+          </div>
+
+          <video
+            className="rounded-2xl shadow-xl w-full"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src="/videos/video_corte_laser1.mp4" type="video/mp4" />
+          </video>
+
+        </div>
+      </section>
+
+
+      {/* ================= INDUSTRIAL ================= */}
+      <section className="min-h-screen snap-start flex items-center px-6 md:px-20">
+        <div className="w-full space-y-10">
+
+          <h2 className="text-4xl font-semibold text-center">
+            PIEZAS INDUSTRIALES
           </h2>
 
-          <p className="text-gray-600 max-w-3xl">
-            La tecnología de corte por láser es un proceso excelente para cortar acero al carbón, aleaciones de aluminio y acero inoxidable.
-          </p>
-        </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          
-          <div className="overflow-hidden rounded-2xl group">
-            <Image
-              src="/foto_acero1.jpg"
-              width={600}
-              height={400}
-              alt="Acero 1"
-              className="object-cover w-full h-full group-hover:scale-105 transition"
-            />
-          
-          </div>
 
-          <div className="overflow-hidden rounded-2xl group">
-            <Image
-              src="/foto_acero2.jpg"
-              width={600}
-              height={400}
-              alt="Acero 2"
-              className="object-cover w-full h-full group-hover:scale-105 transition"
-            />
-          
+          <div className="grid md:grid-cols-2 gap-6">
+
+            <div className="overflow-hidden rounded-2xl">
+              <Image
+                src="/foto_acero1.jpg"
+                width={600}
+                height={400}
+                alt="Acero"
+                className="object-cover w-full h-full hover:scale-105 transition duration-500"
+              />
+            </div>
+
+            <div className="overflow-hidden rounded-2xl">
+              <Image
+                src="/foto_acero2.jpg"
+                width={600}
+                height={400}
+                alt="Acero"
+                className="object-cover w-full h-full hover:scale-105 transition duration-500"
+              />
+            </div>
+
           </div>
 
         </div>
-      
+
       </section>
 
 
-      {/* ================= TABLA ================= */}
-      <section className="text-center space-y-8">
-        <h2 className="text-3xl font-semibold">
+      {/* ================= MATERIALES ================= */}
+      <section className="min-h-screen snap-start flex flex-col justify-center items-center px-6 text-center">
+        <h2 className="text-4xl font-semibold mb-10">
           MATERIALES Y ESPESORES
         </h2>
 
-        <div className="flex justify-center">
-          <table className="border rounded-xl overflow-hidden shadow-sm">
-            <thead className="bg-gray-100">
-              <tr>
-                <th className="px-6 py-3 text-left">Material</th>
-                <th className="px-6 py-3 text-left">Calibre Máximo</th>
+        <table className="border border-gray-700 rounded-xl overflow-hidden">
+          <tbody>
+            {[
+              ["Acero inoxidable", "3/16 (5mm)"],
+              ["Acero al carbón", "5/8 (16mm)"],
+              ["Aluminio", "3/16 (5mm)"],
+              ["Latón y cobre", "3 mm"]
+            ].map((item, i) => (
+              <tr key={i} className="border-b border-gray-700">
+                <td className="px-6 py-4">{item[0]}</td>
+                <td className="px-6 py-4 text-gray-400">{item[1]}</td>
               </tr>
-            </thead>
+            ))}
+          </tbody>
+        </table>
+      </section>
 
-            <tbody>
-              {[
-                ["Acero inoxidable", "3/16 (5mm)"],
-                ["Acero al carbón", "5/8 (16mm)"],
-                ["Aluminio", "3/16 (5mm)"],
-                ["Latón y cobre", "3 mm"]
 
-              ].map((item, i) => (
-                <tr key={i} className="border-t hover:bg-gray-50 transition">
-                  <td className="px-6 py-3">{item[0]}</td>
-                  <td className="px-6 py-3">{item[1]}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+      {/* ================= CORTE DE TUBO ================= */}
+      <section className="min-h-screen snap-start flex items-center justify-center text-center px-6">
+        <div>
+          <h2 className="text-5xl font-bold">
+            CORTE DE TUBO
+          </h2>
+
+          <p className="mt-6 text-gray-400 max-w-xl">
+            Tecnología especializada para corte preciso en estructuras tubulares y perfiles metálicos.
+          </p>
         </div>
       </section>
 
 
-      {/* ================= SECCIÓN 4 ================= */}
-      <section className="space-y-10">
+      {/* ================= GRABADO ================= */}
+      <section className="min-h-screen snap-start flex items-center px-6 md:px-20">
+        <div className="grid md:grid-cols-2 gap-10 items-center w-full">
 
-        <h2 className="text-3xl font-semibold text-center">
-          GRABADO LÁSER
-        </h2>
-
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-
-          {/* VIDEO FIX */}
           <video
-  className="rounded-2xl shadow-md w-full"
-  autoPlay
-  muted
-  loop
-  playsInline
->
-  <source src="/videos/video_grabado_laser1.mp4" type="video/mp4" />
-</video>
+            className="rounded-2xl shadow-xl w-full"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src="/videos/video_grabado_laser1.mp4" type="video/mp4" />
+          </video>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div>
+            <h2 className="text-4xl font-semibold mb-4">
+              GRABADO LÁSER
+            </h2>
 
-            <div className="overflow-hidden rounded-xl group">
-              <Image
-                src="/foto_grabado1.png"
-                width={300}
-                height={300}
-                alt="Grabado_1"
-                className="object-cover w-full h-full group-hover:scale-105 transition"
-              />
-            </div>
-
-            <div className="overflow-hidden rounded-xl group">
-              <Image
-                src="/foto_grabado_laser2.jpg"
-                width={300}
-                height={300}
-                alt="Grabado_2"
-                className="object-cover w-full h-full group-hover:scale-105 transition"
-              />
-            </div>
-
+            <p className="text-gray-400">
+              Personalización de alta precisión para piezas industriales, identificación y diseño.
+            </p>
           </div>
 
         </div>
-      
+      </section>
+
+
+      {/* ================= CTA ================= */}
+      <section className="min-h-screen snap-start flex items-center justify-center text-center px-6">
+        <div>
+          <h2 className="text-4xl font-bold mb-6">
+            COTIZA TU PROYECTO
+          </h2>
+
+          <button className="px-8 py-3 border border-white rounded-full hover:bg-white hover:text-black transition">
+            Solicitar cotización
+          </button>
+        </div>
       </section>
 
     </main>
