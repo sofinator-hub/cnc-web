@@ -17,8 +17,9 @@ className="fixed top-4 right-4 z-[999] md:hidden bg-white/70 backdrop-blur-md p-
 <div className={`w-6 h-[2px] bg-black transition ${open ? "-rotate-45 -translate-y-2" : ""}`}></div> </button>
 
 ```
-  {/* BACKDROP */}
+  {/* BACKDROP (ahora sí cierra) */}
   <div
+    onClick={() => setOpen(false)}
     className={`fixed inset-0 z-[998] bg-white/60 backdrop-blur-xl transition duration-500 ${
       open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
     }`}
@@ -30,6 +31,15 @@ className="fixed top-4 right-4 z-[999] md:hidden bg-white/70 backdrop-blur-md p-
       open ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0 pointer-events-none"
     }`}
   >
+
+    {/* BOTÓN X */}
+    <button
+      onClick={() => setOpen(false)}
+      className="absolute top-6 right-6 text-3xl text-black"
+    >
+      ✕
+    </button>
+
     <Link href="/" onClick={() => setOpen(false)} className="text-blue-700 hover:scale-110 transition">
       Inicio
     </Link>
