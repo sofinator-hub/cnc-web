@@ -103,30 +103,33 @@ return ( <main className="bg-white text-gray-900">
 
 
   {/* TABLA */}
-  <section className="min-h-screen flex flex-col justify-center items-center text-center px-6">
+  <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
 
-    <h2 className="text-3xl font-semibold mb-8">
+    {/* líneas tipo láser */}
+    <div className="absolute inset-0 opacity-10 bg-[linear-gradient(90deg,#000_1px,transparent_1px),linear-gradient(#000_1px,transparent_1px)] bg-[size:50px_50px]" />
+
+    <h2 className="text-3xl font-semibold mb-8 relative z-10">
       MATERIALES Y ESPESORES
     </h2>
 
     <div
-      className="flex justify-center"
+      className="flex justify-center relative z-10"
       onMouseMove={(e) => {
         setPos({ x: e.clientX, y: e.clientY });
       }}
     >
 
-      <div className="border rounded-xl overflow-hidden shadow-sm w-full max-w-2xl">
+      <div className="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden shadow-md w-full max-w-2xl">
 
         {materiales.map((item, i) => (
           <div
             key={i}
             onMouseEnter={() => setHovered(item)}
             onMouseLeave={() => setHovered(null)}
-            className="flex justify-between px-6 py-4 border-t hover:bg-gray-50 transition cursor-pointer"
+            className="flex justify-between px-6 py-4 border-b last:border-none hover:bg-white transition cursor-pointer"
           >
-            <span>{item.nombre}</span>
-            <span>{item.medida}</span>
+            <span className="font-medium">{item.nombre}</span>
+            <span className="text-gray-500">{item.medida}</span>
           </div>
         ))}
 
@@ -157,34 +160,24 @@ return ( <main className="bg-white text-gray-900">
   {/* SECCIÓN 4 */}
   <section className="min-h-screen flex items-center px-6 md:px-20">
 
-    <div className="grid md:grid-cols-2 gap-8 items-center w-full">
+    <div className="grid md:grid-cols-2 gap-10 items-center w-full">
 
       <video className="rounded-2xl shadow-md w-full" autoPlay muted loop playsInline>
         <source src="/videos/video_grabado_laser1.mp4" type="video/mp4" />
       </video>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div>
+        <h2 className="text-3xl font-semibold mb-4">
+          GRABADO LÁSER
+        </h2>
 
-        <div className="overflow-hidden rounded-xl group">
-          <Image
-            src="/foto_grabado1.png"
-            width={300}
-            height={300}
-            alt="Grabado 1"
-            className="object-cover w-full h-full group-hover:scale-105 transition"
-          />
-        </div>
+        <p className="text-gray-600 mb-6">
+          Personalización de alta precisión para piezas industriales, identificación y diseño.
+        </p>
 
-        <div className="overflow-hidden rounded-xl group">
-          <Image
-            src="/foto_grabado_laser2.jpg"
-            width={300}
-            height={300}
-            alt="Grabado 2"
-            className="object-cover w-full h-full group-hover:scale-105 transition"
-          />
-        </div>
-
+        <button className="px-6 py-3 border border-black rounded-full hover:bg-black hover:text-white transition">
+          Solicitar cotización
+        </button>
       </div>
 
     </div>
@@ -192,6 +185,7 @@ return ( <main className="bg-white text-gray-900">
   </section>
 
 </main>
+
 
 );
 }
