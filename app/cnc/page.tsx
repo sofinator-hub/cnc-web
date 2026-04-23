@@ -203,7 +203,7 @@ playsInline
 
 >
 
-<source src="/videos/video_tubo.mp4" type="video/mp4" />
+<source src="/videos/video_tubo2.mp4" type="video/mp4" />
 
   </video>
 
