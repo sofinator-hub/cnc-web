@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function MobileMenu() {
 const [open, setOpen] = useState(false);
@@ -8,31 +9,62 @@ return (
 <>
 {/* BOTÓN HAMBURGUESA */}
 <button
-onClick={() => setOpen(true)}
-className="fixed top-5 right-5 z-50 md:hidden text-3xl"
+onClick={() => setOpen(!open)}
+className="fixed top-4 right-4 z-[999] md:hidden bg-white/70 backdrop-blur-md p-3 rounded-xl shadow-lg transition"
 >
-☰ </button>
+<div className={`w-6 h-[2px] bg-black mb-1 transition ${open ? "rotate-45 translate-y-2" : ""}`}></div>
+<div className={`w-6 h-[2px] bg-black mb-1 transition ${open ? "opacity-0" : ""}`}></div>
+<div className={`w-6 h-[2px] bg-black transition ${open ? "-rotate-45 -translate-y-2" : ""}`}></div> </button>
 
 ```
-  {/* MENU FULLSCREEN */}
-  {open && (
-    <div className="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center space-y-10 text-2xl">
+  {/* BACKDROP */}
+  <div
+    className={`fixed inset-0 z-[998] bg-white/60 backdrop-blur-xl transition duration-500 ${
+      open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+    }`}
+  />
 
-      {/* CERRAR */}
-      <button
-        onClick={() => setOpen(false)}
-        className="absolute top-5 right-5 text-3xl"
-      >
-        ✕
-      </button>
+  {/* MENU */}
+  <div
+    className={`fixed inset-0 z-[999] flex flex-col items-center justify-center space-y-10 text-2xl font-medium transition-all duration-500 ${
+      open ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0 pointer-events-none"
+    }`}
+  >
+    <Link href="/" onClick={() => setOpen(false)} className="text-blue-700 hover:scale-110 transition">
+      Inicio
+    </Link>
 
-      <a href="#inicio" onClick={() => setOpen(false)}>Inicio</a>
-      <a href="#industrial" onClick={() => setOpen(false)}>Industrial</a>
-      <a href="#materiales" onClick={() => setOpen(false)}>Materiales</a>
-      <a href="#grabado" onClick={() => setOpen(false)}>Grabado</a>
+    <Link href="/cnc" onClick={() => setOpen(false)} className="text-blue-700 hover:scale-110 transition">
+      Corte láser
+    </Link>
 
-    </div>
-  )}
+    <Link href="/conveyors" onClick={() => setOpen(false)} className="text-blue-700 hover:scale-110 transition">
+      Conveyors
+    </Link>
+
+    <Link href="/inoxidable" onClick={() => setOpen(false)} className="text-blue-700 hover:scale-110 transition">
+      Muebles inoxidable
+    </Link>
+
+    <Link href="/celosias" onClick={() => setOpen(false)} className="text-blue-700 hover:scale-110 transition">
+      Celosías
+    </Link>
+
+    <a
+      href="https://wa.me/525562045546"
+      target="_blank"
+      className="text-blue-700 hover:scale-110 transition"
+    >
+      WhatsApp
+    </a>
+
+    <a
+      href="mailto:tuemail@empresa.com"
+      className="text-blue-700 hover:scale-110 transition"
+    >
+      Email
+    </a>
+  </div>
 </>
 
 );
