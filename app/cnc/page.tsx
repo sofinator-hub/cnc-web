@@ -191,46 +191,58 @@ return (
 
 {/* SECCIÓN TUBO */}
 
-<section className="min-h-screen flex items-center px-6 md:px-20">
+<section className="min-h-screen flex items-center justify-center px-6 md:px-20 relative overflow-hidden">
 
-  <div className="grid md:grid-cols-2 gap-10 items-center w-full">
+{/* VIDEO FONDO */}
+<video
+className="absolute inset-0 w-full h-full object-cover"
+autoPlay
+muted
+loop
+playsInline
+
+>
 
 ```
-<div>
-  <h2 className="text-3xl font-semibold mb-4">
-    CORTE LÁSER DE TUBO
-  </h2>
+<source src="/videos/video_tubo.mp4" type="video/mp4" />
+```
 
-  <p className="text-gray-600 mb-6">
-    Corte de tubos y perfiles con alta precisión para aplicaciones industriales, estructuras y mobiliario.
-  </p>
+  </video>
 
-  <a
-    href="/tubo"
-    className="inline-block px-6 py-3 border border-black rounded-full hover:bg-black hover:text-white transition"
-  >
-    Ver más
-  </a>
-</div>
+{/* OVERLAY DIFUMINADO */}
 
-<div className="relative group">
-  <div className="absolute inset-0 bg-blue-500 opacity-20 blur-3xl rounded-2xl scale-110 group-hover:opacity-30 transition duration-500" />
+  <div className="absolute inset-0 bg-white/60 backdrop-blur-md" />
 
-  <img
-    src="/tubo.jpg"
-    alt="Corte láser de tubo"
-    className="relative rounded-2xl object-cover w-full h-full shadow-md"
-  />
-</div>
+{/* CONTENIDO */}
+
+  <div className="relative z-10 text-center max-w-xl">
+
+```
+<h2 className="text-3xl md:text-4xl font-semibold mb-4">
+  CORTE LÁSER DE TUBO
+</h2>
+
+<p className="text-gray-700 mb-6">
+  Corte de tubos y perfiles con alta precisión para aplicaciones industriales, estructuras y mobiliario.
+</p>
+
+<a
+  href="/tubo"
+  className="inline-block px-8 py-3 border border-black rounded-full hover:bg-black hover:text-white transition"
+>
+  Ver más
+</a>
 ```
 
   </div>
 
 </section>
 
-      </div>
 
-    </section>
+
+  </div>
+
+</section>
 
   </main>
 </>

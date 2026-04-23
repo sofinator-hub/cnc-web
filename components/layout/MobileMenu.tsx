@@ -16,7 +16,7 @@ className="fixed top-4 right-4 z-[999] md:hidden bg-white/70 backdrop-blur-md p-
 <div className="w-6 h-[2px] bg-black mb-1"></div>
 <div className="w-6 h-[2px] bg-black"></div> </button>
 
-```
+
   {/* BACKDROP (ahora sí cierra) */}
   <div
     onClick={() => setOpen(false)}

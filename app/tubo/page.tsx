@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function TuboPage() {
 return ( <main className="bg-white text-gray-900 min-h-screen px-6 md:px-20 py-16 space-y-24">
 
-```
+
   <section className="min-h-screen flex items-center">
     <div className="grid md:grid-cols-2 gap-10 items-center w-full">
 
