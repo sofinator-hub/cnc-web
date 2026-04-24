@@ -107,12 +107,11 @@ setIndex((index + 1) % tubos.length);
 return ( <div className="relative z-10 flex flex-col items-center">
 
 
-  <img
-    src={tubos[index].img}
-    alt={tubos[index].nombre}
-    className="w-[300px] md:w-[500px] h-[300px] md:h-[400px] object-contain rounded-2xl shadow-xl mb-6"
-  />
-
+<img
+  src={tubos[index].img}
+  alt={tubos[index].nombre}
+  className="w-[300px] md:w-[500px] h-auto object-contain rounded-2xl shadow-xl mb-6"
+/>
   <h3 className="text-xl font-semibold">
     {tubos[index].nombre}
   </h3>
