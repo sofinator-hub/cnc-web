@@ -85,7 +85,7 @@ return (
 
           <div className="overflow-hidden rounded-2xl group">
             <Image
-              src="/foto_acero1.jpg"
+              src="/chispas_laser3.jpg"
               width={600}
               height={400}
               alt="Acero 1"
