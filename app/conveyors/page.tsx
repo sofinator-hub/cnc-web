@@ -84,22 +84,22 @@ const [index, setIndex] = useState(0);
 
 const conveyors = [
 {
-img: "/conveyors/conveyor1.jpg",
+img: "/conveyor1.jpg",
 nombre: "Banda transportadora",
 desc: "Movimiento continuo para materiales ligeros"
 },
 {
-img: "/conveyors/conveyor2.jpg",
+img: "/conveyor2.jpg",
 nombre: "Rodillos",
 desc: "Ideal para carga pesada y pallets"
 },
 {
-img: "/conveyors/conveyor3.jpg",
+img: "/conveyor3.jpg",
 nombre: "Cadena",
 desc: "Alta resistencia en procesos industriales"
 },
 {
-img: "/conveyors/conveyor4.jpg",
+img: "/conveyor4.jpg",
 nombre: "Sistema personalizado",
 desc: "Diseñado según tus necesidades"
 }
