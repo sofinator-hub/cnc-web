@@ -59,10 +59,6 @@ return ( <main className="bg-white text-gray-900">
     <div className="absolute left-0 top-0 h-full w-[2px] bg-blue-500 opacity-60" />
     <div className="absolute right-0 top-0 h-full w-[2px] bg-blue-500 opacity-60" />
 
-    <h2 className="text-3xl md:text-4xl font-semibold mb-8 relative z-10">
-      TIPOS DE TUBO QUE MANEJAMOS
-    </h2>
-
     <CarruselTubo />
 
   </section>
@@ -81,22 +77,22 @@ const tubos = [
 {
 img: "/tipo_de_tubo1.jpg",
 nombre: "Perfil cuadrado",
-desc: "Ideal para estructuras industriales"
+desc: "Alta resistencia para estructura"
 },
 {
 img: "/tipo_de_tubo2.jpg",
 nombre: "Tubo redondo",
-desc: "Alta resistencia estructural"
+desc: "Versátil y estético para múltiples usos"
 },
 {
 img: "/tipo_de_tubo3.jpg",
 nombre: "Ángulo",
-desc: "Diseño moderno y funcional"
+desc: "Refuerzo estructural en esquinas"
 },
 {
 img: "/tipo_de_tubo4.jpg",
 nombre: "Canal C",
-desc: "Corte personalizado"
+desc: "Soporte firme para cargas y bastidores"
 }
 ];
 
@@ -114,7 +110,7 @@ return ( <div className="relative z-10 flex flex-col items-center">
   <img
     src={tubos[index].img}
     alt={tubos[index].nombre}
-    className="w-[300px] md:w-[500px] h-[300px] md:h-[400px] object-cover rounded-2xl shadow-xl mb-6"
+    className="w-[300px] md:w-[500px] h-[300px] md:h-[400px] object-contain rounded-2xl shadow-xl mb-6"
   />
 
   <h3 className="text-xl font-semibold">
