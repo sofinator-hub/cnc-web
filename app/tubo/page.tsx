@@ -79,23 +79,23 @@ const [index, setIndex] = useState(0);
 
 const tubos = [
 {
-img: "/tubo1.jpg",
-nombre: "Tubo redondo",
+img: "/tipo_de_tubo1.jpg",
+nombre: "Perfil cuadrado",
 desc: "Ideal para estructuras industriales"
 },
 {
-img: "/tubo2.jpg",
-nombre: "Tubo cuadrado",
+img: "/tipo_de_tubo2.jpg",
+nombre: "Tubo redondo",
 desc: "Alta resistencia estructural"
 },
 {
-img: "/tubo3.jpg",
-nombre: "Tubo rectangular",
+img: "/tipo_de_tubo3.jpg",
+nombre: "Ángulo",
 desc: "Diseño moderno y funcional"
 },
 {
-img: "/tubo4.jpg",
-nombre: "Perfil especial",
+img: "/tipo_de_tubo4.jpg",
+nombre: "Canal C",
 desc: "Corte personalizado"
 }
 ];
