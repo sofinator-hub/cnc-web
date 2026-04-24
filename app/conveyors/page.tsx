@@ -34,7 +34,7 @@ return ( <main className="bg-white text-gray-900">
           <div className="absolute inset-0 bg-blue-500 opacity-20 blur-3xl rounded-2xl scale-110" />
 
           <video
-            className="relative rounded-2xl shadow-md w-full"
+            className="relative rounded-2xl shadow-md w-[300px] md:w-[450px]"
             autoPlay
             muted
             loop
