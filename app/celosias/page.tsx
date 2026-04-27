@@ -23,26 +23,26 @@ const items: Item[] = [
 return (
 <> <MobileMenu />
 
-```
-  <main className="min-h-screen bg-[#f4f6f8] text-gray-900">
+  <main className="min-h-screen bg-[#111827] text-white">
 
     {/* ================= HERO ================= */}
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
 
       {/* FONDO */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-100 to-gray-200" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#111827] via-[#1f2937] to-[#111827]" />
 
-      {/* GRID */}
-      <div className="absolute inset-0 opacity-20 bg-[linear-gradient(90deg,#000_1px,transparent_1px),linear-gradient(#000_1px,transparent_1px)] bg-[size:40px_40px]" />
+      {/* LUCES SUAVES */}
+      <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full blur-[120px] opacity-10" />
+      <div className="absolute bottom-20 right-20 w-72 h-72 bg-cyan-400 rounded-full blur-[120px] opacity-10" />
 
-      {/* CARD */}
-      <div className="relative z-10 backdrop-blur-xl bg-white/70 border border-gray-200 rounded-3xl p-10 md:p-16 max-w-4xl w-[90%] shadow-xl">
+      {/* GLASS CARD */}
+      <div className="relative z-10 backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-10 md:p-16 max-w-4xl w-[90%] shadow-xl">
 
         <h1 className="text-3xl md:text-5xl font-semibold mb-6">
           CELOSÍAS
         </h1>
 
-        <p className="text-gray-600 max-w-xl">
+        <p className="text-gray-300 max-w-xl">
           Diseños decorativos y funcionales en corte láser que combinan estética y precisión para interiores y exteriores.
         </p>
 
@@ -64,7 +64,7 @@ return (
           <div
             key={i}
             onClick={() => setSelected(item)}
-            className="cursor-pointer group relative rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition"
+            className="cursor-pointer group relative rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-blue-400/40 transition"
           >
 
             <img
@@ -74,7 +74,7 @@ return (
             />
 
             {/* OVERLAY */}
-            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition" />
+            <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition" />
 
             {/* TEXTO */}
             <div className="absolute bottom-0 p-4 text-white opacity-0 group-hover:opacity-100 transition">
@@ -95,7 +95,7 @@ return (
     {selected && (
       <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-[999]">
 
-        <div className="bg-white rounded-2xl max-w-3xl w-[90%] p-6 relative">
+        <div className="bg-[#1f2937] text-white rounded-2xl max-w-3xl w-[90%] p-6 relative">
 
           <button
             onClick={() => setSelected(null)}
@@ -114,7 +114,7 @@ return (
             {selected.title}
           </h3>
 
-          <p className="text-gray-600">
+          <p className="text-gray-300">
             {selected.desc}
           </p>
 
@@ -128,4 +128,3 @@ return (
 
 );
 }
-
