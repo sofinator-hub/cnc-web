@@ -2,7 +2,8 @@
 import { useState } from "react";
 
 export default function ConveyorsPage() {
-return ( <main className="bg-white text-gray-900">
+return ( 
+<main className="bg-white text-gray-900">
 
 
   {/* ================= SECCIÓN 1 ================= */}
