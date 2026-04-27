@@ -17,7 +17,7 @@ className="fixed top-4 right-4 z-[999] md:hidden bg-white/70 backdrop-blur-md p-
 <div className="w-6 h-[2px] bg-black"></div> </button>
 
 
-  {/* BACKDROP (ahora sí cierra) */}
+  {/* BACKDROP */}
   <div
     onClick={() => setOpen(false)}
     className={`fixed inset-0 z-[998] bg-white/60 backdrop-blur-xl transition duration-500 ${
@@ -52,8 +52,8 @@ className="fixed top-4 right-4 z-[999] md:hidden bg-white/70 backdrop-blur-md p-
       Conveyors
     </Link>
 
-    <Link href="/inoxidable" onClick={() => setOpen(false)} className="text-blue-700 hover:scale-110 transition">
-      Muebles inoxidable
+    <Link href="/guardas" onClick={() => setOpen(false)} className="text-blue-700 hover:scale-110 transition">
+      Guardas
     </Link>
 
     <Link href="/celosias" onClick={() => setOpen(false)} className="text-blue-700 hover:scale-110 transition">
