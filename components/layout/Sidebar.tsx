@@ -32,7 +32,7 @@ export default function Sidebar() {
           </Link>
 
           <Link href="/inoxidable" className="hover:text-black transition">
-            Muebles inoxidable
+            Guardas
           </Link>
 
           <Link href="/celosias" className="hover:text-black transition">
