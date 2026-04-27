@@ -20,7 +20,7 @@ export default function Sidebar() {
           SYSTEM ONLINE
         </div>
 
-        {/* 🔥 NAVEGACIÓN (LO NUEVO) */}
+        {/*  NAVEGACIÓN (LO NUEVO) */}
         <div className="flex flex-col gap-2 text-xs text-gray-600 text-center">
 
           <Link href="/cnc" className="hover:text-black transition">
@@ -31,7 +31,7 @@ export default function Sidebar() {
             Conveyors
           </Link>
 
-          <Link href="/inoxidable" className="hover:text-black transition">
+          <Link href="/guardas" className="hover:text-black transition">
             Guardas
           </Link>
 
