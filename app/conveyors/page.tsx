@@ -118,7 +118,7 @@ return ( <div className="flex flex-col items-center">
   <img
     src={conveyors[index].img}
     alt={conveyors[index].nombre}
-    className="w-[300px] md:w-[500px] h-auto object-contain rounded-2xl shadow-xl mb-6"
+    className="w-[300px] md:w-[500px] max-h-[300px] object-contain rounded-2xl shadow-xl mb-6"
   />
 
   <h3 className="text-xl font-semibold">
