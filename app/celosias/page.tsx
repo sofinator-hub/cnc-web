@@ -25,30 +25,30 @@ export default function CelosiasPage() {
     <>
       <MobileMenu />
 
-      <main className="min-h-screen bg-[#0a0a0a] text-white">
+      <main className="min-h-screen bg-[#f1f5f9] text-gray-900">
 
         {/* ================= HERO ================= */}
         <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
 
-          {/* Fondo */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0f172a] to-black" />
+          {/* Fondo gris */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#e5e7eb] via-[#f1f5f9] to-[#e5e7eb]" />
 
-          {/* Glow sutil */}
-          <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full blur-[140px] opacity-10" />
-          <div className="absolute bottom-20 right-20 w-72 h-72 bg-cyan-400 rounded-full blur-[140px] opacity-10" />
+          {/* Glow azul */}
+          <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full blur-[140px] opacity-20" />
+          <div className="absolute bottom-20 right-20 w-72 h-72 bg-cyan-400 rounded-full blur-[140px] opacity-20" />
 
           {/* Card */}
           <motion.div
             initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.8 }}
-            className="relative z-10 backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-10 md:p-16 max-w-4xl w-[90%]"
+            className="relative z-10 backdrop-blur-xl bg-white/60 border border-white/40 rounded-3xl p-10 md:p-16 max-w-4xl w-[90%] shadow-xl"
           >
-            <h1 className="text-3xl md:text-5xl font-semibold mb-6 tracking-[0.3em]">
+            <h1 className="text-3xl md:text-5xl font-semibold mb-6 tracking-[0.3em] text-gray-900">
               C E L O S Í A S
             </h1>
 
-            <p className="text-gray-300 max-w-xl leading-relaxed">
+            <p className="text-gray-600 max-w-xl leading-relaxed">
               Diseños decorativos y funcionales en corte láser que combinan estética y precisión para interiores y exteriores.
             </p>
           </motion.div>
@@ -62,7 +62,7 @@ export default function CelosiasPage() {
             initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-semibold mb-16 tracking-[0.2em]"
+            className="text-3xl md:text-4xl font-semibold mb-16 tracking-[0.2em] text-gray-900"
           >
             GALERÍA
           </motion.h2>
@@ -77,7 +77,7 @@ export default function CelosiasPage() {
                 transition={{ duration: 0.6, delay: i * 0.15 }}
                 viewport={{ once: true }}
                 onClick={() => setSelected(item)}
-                className="cursor-pointer group relative rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-blue-400/40 transition duration-500"
+                className="cursor-pointer group relative rounded-2xl overflow-hidden bg-white/70 border border-gray-200 hover:border-blue-400 transition duration-500 shadow-md hover:shadow-xl"
               >
 
                 {/* Imagen */}
@@ -87,15 +87,15 @@ export default function CelosiasPage() {
                   className="w-full h-[300px] object-cover transition-transform duration-700 group-hover:scale-110"
                 />
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-500" />
+                {/* Overlay azul */}
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 via-blue-500/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
 
                 {/* Texto */}
-                <div className="absolute bottom-0 p-6 opacity-0 group-hover:opacity-100 transition duration-500">
-                  <h3 className="text-lg font-medium tracking-wide">
+                <div className="absolute bottom-0 p-6 opacity-0 group-hover:opacity-100 transition duration-500 text-white">
+                  <h3 className="text-lg font-semibold tracking-wide">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-gray-300 mt-1">
+                  <p className="text-sm opacity-80 mt-1">
                     {item.desc}
                   </p>
                 </div>
@@ -112,13 +112,13 @@ export default function CelosiasPage() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="fixed inset-0 bg-black/80 flex items-center justify-center z-[999]"
+            className="fixed inset-0 bg-black/60 flex items-center justify-center z-[999]"
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0, filter: "blur(10px)" }}
               animate={{ scale: 1, opacity: 1, filter: "blur(0px)" }}
               transition={{ duration: 0.4 }}
-              className="bg-[#111827] text-white rounded-2xl max-w-3xl w-[90%] p-6 relative border border-white/10"
+              className="bg-white text-gray-900 rounded-2xl max-w-3xl w-[90%] p-6 relative shadow-2xl"
             >
 
               <button
@@ -138,7 +138,7 @@ export default function CelosiasPage() {
                 {selected.title}
               </h3>
 
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
                 {selected.desc}
               </p>
 
