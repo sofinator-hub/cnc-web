@@ -30,8 +30,14 @@ export default function CelosiasPage() {
         {/* ================= HERO ================= */}
         <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
 
-          {/* Fondo gris */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#e5e7eb] via-[#f1f5f9] to-[#e5e7eb]" />
+          {/* Fondo con imagen DIFUMINADA */}
+          <div className="absolute inset-0">
+            <img
+              src="/fondo_celosia.jpg"
+              alt="Fondo celosía"
+              className="w-full h-full object-cover blur-sm scale-105"
+            />
+          </div>
 
           {/* Glow azul */}
           <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full blur-[140px] opacity-20" />
