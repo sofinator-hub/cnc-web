@@ -86,17 +86,17 @@ const conveyors = [
 {
 img: "/conveyor1.jpg",
 nombre: "Transportadores de rodillo",
-desc: "Los transportadores de rodillos por gravedad son soluciones ideales para el manejo de materiales en almacenes y áreas de producción.Dependiendo de su uso se pueden fabricar con acero inoxidable, acero al carbón pintado al horno, aluminio.Pregunte por el más indicado para su actividad."
+desc: "Los transportadores de rodillos por gravedad."
 },
 {
 img: "/conveyor2.jpg",
 nombre: "Bandas transportadoras motorizadas",
-desc: "Las cintas transportadoras eléctricas son una solución económica para situaciones no adecuadas para la gravedad. En MATEI te  ofrecemos una línea estándar de cintas transportadoras eléctricas de cama deslizante plana y también disponibles como cintas transportadoras inclinadas. "
+desc: "Las cintas transportadoras eléctricas son una solución económica."
 },
 {
 img: "/conveyor3.jpg",
 nombre: "Bandas transportadoras inclinadas",
-desc: "Si necesita llevar un producto a otro nivel para que coincida con una línea de producción o brindar soporte ergonómico a un empleado, los sistemas de transportadores de inclinación  pueden proporcionar la flexibilidad necesaria. Nuestros transportadores inclinados pueden venir equipados con secciones horizontales, entrada y / o salida para proporcionar un mejor manejo y control del producto. Los transportadores inclinados también son ideales en aplicaciones de tolva o alimentación de piezas."
+desc: "Si necesita llevar un producto a otro nivel."
 },
 {
 img: "/conveyor4.png",
