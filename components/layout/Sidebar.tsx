@@ -39,6 +39,14 @@ export default function Sidebar() {
             Celosías
           </Link>
 
+          <Link href="/inoxidable" className="hover:text-black transition">
+            Moniliario Inoxidable
+          </Link>
+
+          <Link href="/celosias" className="hover:text-black transition">
+            Soldadura con Ultrasonido
+          </Link>
+
         </div>
 
         {/* CONTACTO */}

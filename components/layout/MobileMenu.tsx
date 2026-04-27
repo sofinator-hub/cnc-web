@@ -61,7 +61,7 @@ className="fixed top-4 right-4 z-[999] md:hidden bg-white/70 backdrop-blur-md p-
     </Link>
 
     <Link href="/inoxidable" onClick={() => setOpen(false)} className="text-blue-700 hover:scale-110 transition">
-      Muebles de Inoxidable
+      Moniliario Inoxidable
     </Link>
 
         <Link href="/soldadura" onClick={() => setOpen(false)} className="text-blue-700 hover:scale-110 transition">
