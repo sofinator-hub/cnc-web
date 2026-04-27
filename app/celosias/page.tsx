@@ -3,12 +3,12 @@ import MobileMenu from "@/components/layout/MobileMenu";
 
 export default function CelosiasPage() {
 const items = [
-{ img: "/public/celosia1.jpg", title: "Diseño 1" },
-{ img: "/public/celosia2.jpg", title: "Diseño 2" },
-{ img: "/public/celosia3.jpg", title: "Diseño 3" },
-{ img: "/public/celosia4.jpg", title: "Diseño 4" },
-{ img: "/public/celosia5.jpg", title: "Diseño 5" },
-{ img: "/public/celosia6.jpg", title: "Diseño 6" }
+{ img: "/celosia1.jpg", title: "Diseño 1" },
+{ img: "/celosia2.jpg", title: "Diseño 2" },
+{ img: "/celosia3.jpg", title: "Diseño 3" },
+{ img: "/celosia4.jpg", title: "Diseño 4" },
+{ img: "/celosia5.jpg", title: "Diseño 5" },
+{ img: "/celosia6.jpg", title: "Diseño 6" }
 ];
 
 return (
