@@ -33,7 +33,7 @@ export default function CelosiasPage() {
           {/* Fondo con imagen DIFUMINADA */}
           <div className="absolute inset-0">
             <img
-              src="/fondo_celosia.jpg"
+              src="/fondo_celosia1.jpg"
               alt="Fondo celosía"
               className="w-full h-full object-cover blur-sm scale-105"
             />
