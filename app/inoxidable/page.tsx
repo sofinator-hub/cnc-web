@@ -32,7 +32,7 @@ export default function MobiliarioPage() {
           {/* Fondo */}
           <div className="absolute inset-0">
             <img
-              src="/fondo_acero.jpg"
+              src="/fondo_acero1.jpg"
               alt="Fondo acero"
               className="w-full h-full object-cover opacity-90"
             />
