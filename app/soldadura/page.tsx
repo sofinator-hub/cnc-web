@@ -12,18 +12,29 @@ export default function UltrasonidoPage() {
         {/* ================= HERO ================= */}
         <section className="min-h-[85vh] flex items-center justify-center relative overflow-hidden px-4">
 
-          {/* Fondo */}
+          {/* Fondo imagen */}
           <div className="absolute inset-0">
             <img
               src="/ultrasonido.jpg"
               alt="Ultrasonido"
-              className="w-full h-full object-cover opacity-50"
+              className="w-full h-full object-cover opacity-60"
             />
           </div>
 
           {/* Glow */}
           <div className="absolute top-10 left-5 w-48 h-48 bg-blue-500 blur-3xl opacity-20" />
           <div className="absolute bottom-10 right-5 w-48 h-48 bg-cyan-400 blur-3xl opacity-20" />
+
+          {/* 🔥 ONDAS ULTRASÓNICAS */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="relative w-[250px] h-[250px]">
+
+              <span className="absolute inset-0 rounded-full border border-blue-400 opacity-40 animate-ping"></span>
+              <span className="absolute inset-0 rounded-full border border-cyan-300 opacity-30 animate-ping [animation-delay:0.6s]"></span>
+              <span className="absolute inset-0 rounded-full border border-blue-500 opacity-20 animate-ping [animation-delay:1.2s]"></span>
+
+            </div>
+          </div>
 
           {/* Card */}
           <motion.div
@@ -43,11 +54,12 @@ export default function UltrasonidoPage() {
         </section>
 
 
-        {/* ================= EXPLICACIÓN ================= */}
+        {/* ================= EXPLICACIÓN (CON VIDEO) ================= */}
         <section className="px-6 md:px-20 py-24 bg-[#020617]">
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
 
+            {/* TEXTO */}
             <div>
               <h2 className="text-2xl md:text-4xl font-semibold mb-6">
                 ¿Qué es la soldadura por ultrasonido?
@@ -63,10 +75,18 @@ export default function UltrasonidoPage() {
               </p>
             </div>
 
-            <img
-              src="/ultra_detalle.jpg"
-              className="w-full h-[300px] md:h-[400px] object-cover rounded-2xl"
-            />
+            {/* 🎥 VIDEO */}
+            <div className="rounded-2xl overflow-hidden">
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-[300px] md:h-[400px] object-cover"
+              >
+                <source src="/ultrasonido.mp4" type="video/mp4" />
+              </video>
+            </div>
 
           </div>
         </section>
@@ -103,22 +123,7 @@ export default function UltrasonidoPage() {
             </div>
 
           </div>
-        </section>
-
-
-        {/* ================= APLICACIONES ================= */}
-        <section className="px-6 md:px-20 py-24 bg-[#020617]">
-
-          <h2 className="text-2xl md:text-4xl font-semibold mb-12">
-            Aplicaciones
-          </h2>
-
-          <ul className="text-white/70 space-y-3">
-            <li>• Industria automotriz</li>
-            <li>• Electrónica</li>
-            <li>• Dispositivos médicos</li>
-            <li>• Plásticos técnicos</li>
-          </ul>
+          
 
         </section>
 
