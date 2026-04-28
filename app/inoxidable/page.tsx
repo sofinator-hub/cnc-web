@@ -26,41 +26,39 @@ export default function MobiliarioPage() {
 
       <main className="min-h-screen bg-white text-gray-900">
 
-        {/* ================= HERO ================= */}
-        <section className="min-h-[85vh] flex items-center justify-center relative overflow-hidden px-6 md:px-20">
+{/* ================= HERO ================= */}
+<section className="min-h-[85vh] flex items-center justify-center relative overflow-hidden px-4">
 
+  {/* Fondo */}
+  <div className="absolute inset-0">
+    <img
+      src="/fondo_acero1.jpg"
+      alt="Fondo acero"
+      className="w-full h-full object-cover md:opacity-90"
+    />
+  </div>
 
-          <div className="absolute inset-0">
-            <img
-              src="/fondo_acero1.jpg"
-              alt="Fondo acero"
-              className="w-full h-full object-cover opacity-90"
-            />
-          </div>
+  {/* Glow */}
+  <div className="absolute top-10 left-5 w-48 h-48 md:w-80 md:h-80 bg-blue-600 rounded-full blur-3xl opacity-20" />
+  <div className="absolute bottom-10 right-5 w-48 h-48 md:w-80 md:h-80 bg-cyan-400 rounded-full blur-3xl opacity-20" />
 
+  {/* CARD  */}
+  <motion.div
+    initial={{ opacity: 0, y: 25 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    className="relative z-10 backdrop-blur-xl bg-white/70 border border-white/40 rounded-2xl md:rounded-3xl p-6 md:p-14 max-w-3xl w-full shadow-xl"
+  >
+    <h1 className="text-2xl sm:text-3xl md:text-5xl font-semibold mb-4 md:mb-6 tracking-[0.15em] md:tracking-[0.3em] text-gray-800 text-center md:text-left leading-tight">
+      TEST INOXIDABLE
+    </h1>
 
-          <div className="absolute top-10 left-10 w-60 h-60 bg-blue-600 rounded-full blur-3xl opacity-20" />
-          <div className="absolute bottom-10 right-10 w-60 h-60 bg-cyan-400 rounded-full blur-3xl opacity-20" />
-
-          {/*  TÍTULO CON FONDO */}
-          <div className="relative z-10 max-w-4xl">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="inline-block bg-blue-900/40 backdrop-blur-md px-6 py-4 rounded-2xl"
-            >
-              <h1 className="text-3xl md:text-5xl font-semibold tracking-[0.2em] text-white">
-                MOBILIARIO INOXIDABLE
-              </h1>
-            </motion.div>
-
-            <p className="text-white/80 max-w-2xl leading-relaxed text-sm md:text-base mt-6">
-              Soluciones en acero inoxidable diseñadas para máxima durabilidad,
-              higiene y rendimiento en entornos profesionales.
-            </p>
-          </div>
-        </section>
-
+    <p className="text-gray-600 text-sm md:text-base max-w-xl leading-relaxed text-center md:text-left">
+      Soluciones en acero inoxidable diseñadas para máxima durabilidad,
+      higiene y rendimiento en entornos profesionales.
+    </p>
+  </motion.div>
+</section>
 
         {/* ================= PRODUCTOS ================= */}
         <section className="px-6 md:px-20 py-20">
