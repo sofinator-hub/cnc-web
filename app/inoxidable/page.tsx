@@ -1,10 +1,17 @@
 "use client";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import MobileMenu from "@/components/layout/MobileMenu";
 
-export default function MobiliarioPage() {
+type Item = {
+  img: string;
+  title: string;
+};
 
-  const products = [
+export default function MobiliarioPage() {
+  const [selected, setSelected] = useState<Item | null>(null);
+
+  const products: Item[] = [
     { img: "/mesa.jpg", title: "Mesas de trabajo" },
     { img: "/tarja.jpg", title: "Tarjas industriales" },
     { img: "/estante.jpg", title: "Estantería" },
@@ -20,18 +27,32 @@ export default function MobiliarioPage() {
       <main className="min-h-screen bg-white text-gray-900">
 
         {/* ================= HERO ================= */}
-        <section className="min-h-[80vh] flex items-center justify-center relative px-6 md:px-20">
+        <section className="min-h-[85vh] flex items-center justify-center relative overflow-hidden px-6 md:px-20">
 
-          <div className="max-w-4xl">
+          {/* Fondo */}
+          <div className="absolute inset-0">
+            <img
+              src="/fondo_acero.jpg"
+              alt="Fondo acero"
+              className="w-full h-full object-cover opacity-90"
+            />
+          </div>
+
+          {/* Glow suave */}
+          <div className="absolute top-10 left-10 w-60 h-60 bg-blue-600 rounded-full blur-3xl opacity-20" />
+          <div className="absolute bottom-10 right-10 w-60 h-60 bg-cyan-400 rounded-full blur-3xl opacity-20" />
+
+          {/* Contenido */}
+          <div className="relative z-10 max-w-4xl">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-3xl md:text-5xl font-semibold mb-6 tracking-[0.2em]"
+              className="text-3xl md:text-5xl font-semibold mb-6 tracking-[0.2em] text-white"
             >
               MOBILIARIO
             </motion.h1>
 
-            <p className="text-gray-600 max-w-2xl leading-relaxed text-sm md:text-base">
+            <p className="text-white/80 max-w-2xl leading-relaxed text-sm md:text-base">
               Soluciones en acero inoxidable diseñadas para máxima durabilidad,
               higiene y rendimiento en entornos profesionales.
             </p>
@@ -40,7 +61,7 @@ export default function MobiliarioPage() {
 
 
         {/* ================= PRODUCTOS ================= */}
-        <section className="px-6 md:px-20 pb-20">
+        <section className="px-6 md:px-20 py-20">
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
@@ -70,7 +91,10 @@ export default function MobiliarioPage() {
                     {item.title}
                   </h3>
 
-                  <button className="text-sm text-blue-600 mt-1 hover:underline">
+                  <button
+                    onClick={() => setSelected(item)}
+                    className="text-sm text-blue-600 mt-1 hover:underline"
+                  >
                     Ver más →
                   </button>
                 </div>
@@ -82,72 +106,91 @@ export default function MobiliarioPage() {
         </section>
 
 
-        {/* ================= SECCIÓN DEL MEDIO (EXPLICACIÓN) ================= */}
-        <section className="px-6 md:px-20 py-24 bg-gray-50">
+        {/* ================= EXPLICACIÓN ================= */}
+        <section className="relative py-24 overflow-hidden">
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Fondo gris difuminado */}
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-100 via-gray-100 to-transparent" />
+
+          <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center px-6 md:px-20">
 
             {/* TEXTO */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
             >
               <h2 className="text-2xl md:text-4xl font-semibold mb-6">
                 Precisión y resistencia en cada pieza
               </h2>
 
-              <p className="text-gray-600 leading-relaxed mb-4">
-                El acero inoxidable es el material ideal para entornos donde la higiene,
-                la durabilidad y la resistencia son fundamentales. Nuestros productos están
-                diseñados para ofrecer un desempeño superior incluso en condiciones exigentes.
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                El acero inoxidable garantiza higiene, resistencia a la corrosión
+                y durabilidad en entornos exigentes.
               </p>
 
               <p className="text-gray-600 leading-relaxed">
-                Cada pieza se fabrica con procesos de corte y ensamblaje de alta precisión,
-                garantizando acabados limpios, funcionales y estéticamente profesionales.
+                Diseñado con procesos de alta precisión, cada producto ofrece
+                acabados profesionales y funcionalidad superior.
               </p>
             </motion.div>
 
-            {/* IMAGEN */}
+            {/* IMAGEN CON FADE */}
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="overflow-hidden rounded-2xl"
+              className="relative"
             >
               <img
                 src="/acero.jpg"
                 alt="Acero inoxidable"
-                loading="lazy"
-                className="w-full h-[300px] md:h-[400px] object-cover"
+                className="w-full h-[300px] md:h-[400px] object-cover rounded-2xl"
               />
+
+              {/* Fade overlay */}
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-gray-100 rounded-2xl" />
             </motion.div>
 
           </div>
         </section>
 
 
-        {/* ================= SECCIÓN FINAL (VALOR) ================= */}
-        <section className="px-6 md:px-20 py-24">
-
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-2xl md:text-4xl font-semibold mb-8"
+        {/* ================= MODAL ================= */}
+        {selected && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="fixed inset-0 bg-black/70 flex items-center justify-center z-[999] px-4"
           >
-            Diseñado para entornos profesionales
-          </motion.h2>
+            <motion.div
+              initial={{ scale: 0.95 }}
+              animate={{ scale: 1 }}
+              className="bg-white rounded-2xl max-w-xl w-full p-6 relative"
+            >
+              <button
+                onClick={() => setSelected(null)}
+                className="absolute top-3 right-3"
+              >
+                ✕
+              </button>
 
-          <p className="text-gray-600 max-w-3xl leading-relaxed">
-            Nuestro mobiliario en acero inoxidable está pensado para cocinas industriales,
-            laboratorios, hospitales y espacios arquitectónicos donde la funcionalidad y la
-            limpieza son esenciales. Ofrecemos soluciones personalizadas adaptadas a cada proyecto.
-          </p>
+              <img
+                src={selected.img}
+                className="w-full h-[250px] object-cover rounded-xl mb-4"
+              />
 
-        </section>
+              <h3 className="text-xl font-semibold">
+                {selected.title}
+              </h3>
+
+              <p className="text-gray-600 mt-2">
+                Información detallada del producto en acero inoxidable.
+              </p>
+
+            </motion.div>
+          </motion.div>
+        )}
 
       </main>
     </>
