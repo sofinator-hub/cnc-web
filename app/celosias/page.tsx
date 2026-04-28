@@ -42,7 +42,7 @@ export default function CelosiasPage() {
 
           <div className="absolute inset-0">
             <img
-              src="/fondo_celosia1.jpg"
+              src="/fondo_celosia2.jpg"
               alt="Fondo celosía"
               loading="lazy"
               className="w-full h-full object-cover md:opacity-90"
@@ -52,7 +52,7 @@ export default function CelosiasPage() {
 
           <div className="absolute top-10 left-5 w-40 h-40 md:w-80 md:h-80 bg-blue-600 rounded-full blur-3xl opacity-20" />
           <div className="absolute bottom-10 right-5 w-40 h-40 md:w-80 md:h-80 bg-cyan-400 rounded-full blur-3xl opacity-20" />
-          
+
 
           <motion.div
             initial={{ opacity: 0, y: 25 }}
