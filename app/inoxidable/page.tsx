@@ -29,7 +29,7 @@ export default function MobiliarioPage() {
         {/* ================= HERO ================= */}
         <section className="min-h-[85vh] flex items-center justify-center relative overflow-hidden px-6 md:px-20">
 
-          {/* Fondo */}
+
           <div className="absolute inset-0">
             <img
               src="/fondo_acero1.jpg"
@@ -38,21 +38,23 @@ export default function MobiliarioPage() {
             />
           </div>
 
-          {/* Glow suave */}
+
           <div className="absolute top-10 left-10 w-60 h-60 bg-blue-600 rounded-full blur-3xl opacity-20" />
           <div className="absolute bottom-10 right-10 w-60 h-60 bg-cyan-400 rounded-full blur-3xl opacity-20" />
 
-          {/* Contenido */}
+          {/* 🔥 TÍTULO CON FONDO */}
           <div className="relative z-10 max-w-4xl">
-            <motion.h1
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-3xl md:text-5xl font-semibold mb-6 tracking-[0.2em] text-white"
+              className="inline-block bg-blue-900/40 backdrop-blur-md px-6 py-4 rounded-2xl"
             >
-              MOBILIARIO
-            </motion.h1>
+              <h1 className="text-3xl md:text-5xl font-semibold tracking-[0.2em] text-white">
+                MOBILIARIO
+              </h1>
+            </motion.div>
 
-            <p className="text-white/80 max-w-2xl leading-relaxed text-sm md:text-base">
+            <p className="text-white/80 max-w-2xl leading-relaxed text-sm md:text-base mt-6">
               Soluciones en acero inoxidable diseñadas para máxima durabilidad,
               higiene y rendimiento en entornos profesionales.
             </p>
@@ -107,14 +109,10 @@ export default function MobiliarioPage() {
 
 
         {/* ================= EXPLICACIÓN ================= */}
-        <section className="relative py-24 overflow-hidden">
+        <section className="bg-gray-100 py-24">
 
-          {/* Fondo gris difuminado */}
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-100 via-gray-100 to-transparent" />
-
-          <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center px-6 md:px-20">
-
-            {/* TEXTO */}
+          <div className="grid md:grid-cols-2 gap-12 items-center px-6 md:px-20">
+        
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -135,22 +133,56 @@ export default function MobiliarioPage() {
               </p>
             </motion.div>
 
-            {/* IMAGEN CON FADE */}
+
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative"
+
             >
+
               <img
                 src="/acero.jpg"
                 alt="Acero inoxidable"
                 className="w-full h-[300px] md:h-[400px] object-cover rounded-2xl"
               />
 
-              {/* Fade overlay */}
-              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-gray-100 rounded-2xl" />
+
             </motion.div>
+
+          </div>
+        </section>
+
+
+        {/* ================= NUEVA SECCIÓN 🔥 ================= */}
+        <section className="px-6 md:px-20 py-24">
+
+          <h2 className="text-2xl md:text-4xl font-semibold mb-12 text-center">
+            ¿Por qué elegir acero inoxidable?
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-10 text-center">
+
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Alta durabilidad</h3>
+              <p className="text-gray-600 text-sm">
+                Resiste el uso intensivo sin perder calidad ni estética.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Higiene superior</h3>
+              <p className="text-gray-600 text-sm">
+                Superficie fácil de limpiar ideal para entornos profesionales.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Diseño funcional</h3>
+              <p className="text-gray-600 text-sm">
+                Pensado para optimizar espacios y procesos de trabajo.
+              </p>
+            </div>
 
           </div>
         </section>
@@ -168,6 +200,7 @@ export default function MobiliarioPage() {
               animate={{ scale: 1 }}
               className="bg-white rounded-2xl max-w-xl w-full p-6 relative"
             >
+
               <button
                 onClick={() => setSelected(null)}
                 className="absolute top-3 right-3"
