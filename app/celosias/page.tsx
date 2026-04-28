@@ -28,34 +28,35 @@ export default function CelosiasPage() {
       <main className="min-h-screen bg-[#f1f5f9] text-gray-900">
 
         {/* ================= HERO ================= */}
-        <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <section className="min-h-[85vh] md:min-h-screen flex items-center justify-center relative overflow-hidden px-4">
 
-          {/* Fondo */}
+          {/* Fondo (SIN efectos pesados en móvil) */}
           <div className="absolute inset-0">
             <img
               src="/fondo_celosia1.jpg"
               alt="Fondo celosía"
               loading="lazy"
-              className="w-full h-full object-cover blur-sm scale-105"
+              className="w-full h-full object-cover md:opacity-90"
             />
           </div>
 
-          {/* Glow AZUL PRO (gradiente elegante) */}
-          <div className="absolute top-20 left-20 w-[400px] h-[400px] bg-gradient-to-br from-[#1d4ed8] to-[#0ea5e9] rounded-full blur-[180px] opacity-25" />
-          <div className="absolute bottom-20 right-20 w-[400px] h-[400px] bg-gradient-to-tr from-[#38bdf8] to-[#1d4ed8] rounded-full blur-[180px] opacity-20" />
+          {/* Glow ligero (mucho más barato para el render) */}
+          <div className="absolute top-10 left-5 w-40 h-40 md:w-80 md:h-80 bg-blue-600 rounded-full blur-3xl opacity-20" />
+          <div className="absolute bottom-10 right-5 w-40 h-40 md:w-80 md:h-80 bg-cyan-400 rounded-full blur-3xl opacity-20" />
 
           {/* Card */}
           <motion.div
-            initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{ duration: 0.8 }}
-            className="relative z-10 backdrop-blur-xl bg-white/60 border border-white/40 rounded-3xl p-10 md:p-16 max-w-4xl w-[90%] shadow-xl"
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="relative z-10 backdrop-blur-lg bg-white/70 border border-white/40 rounded-2xl md:rounded-3xl p-6 md:p-14 max-w-3xl w-full shadow-xl"
           >
-            <h1 className="text-3xl md:text-5xl font-semibold mb-6 tracking-[0.3em] text-gray-700">
-              C E L O S Í A S
+            {/* TEXTO ARREGLADO */}
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-semibold mb-4 md:mb-6 tracking-[0.1em] md:tracking-[0.3em] text-gray-700 text-center md:text-left leading-tight break-words">
+              CELOSÍAS
             </h1>
 
-            <p className="text-gray-600 max-w-xl leading-relaxed">
+            <p className="text-gray-600 text-sm md:text-base max-w-xl leading-relaxed text-center md:text-left">
               Diseños decorativos y funcionales en corte láser que combinan estética y precisión para interiores y exteriores.
             </p>
           </motion.div>
@@ -63,47 +64,44 @@ export default function CelosiasPage() {
 
 
         {/* ================= GALERÍA ================= */}
-        <section className="px-6 md:px-20 py-20">
+        <section className="px-4 md:px-20 py-16 md:py-20">
 
           <motion.h2
-            initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
-            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-semibold mb-16 tracking-[0.2em] text-gray-900"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-2xl md:text-4xl font-semibold mb-10 md:mb-16 tracking-[0.15em] md:tracking-[0.2em] text-gray-900 text-center md:text-left"
           >
             GALERÍA
           </motion.h2>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
 
             {items.map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 60, filter: "blur(12px)" }}
-                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                transition={{ duration: 0.6, delay: i * 0.12 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: i * 0.08 }}
                 viewport={{ once: true }}
                 onClick={() => setSelected(item)}
-                className="cursor-pointer group relative rounded-2xl overflow-hidden bg-white/70 border border-gray-200 hover:border-blue-500 transition duration-500 shadow-md hover:shadow-xl"
+                className="cursor-pointer group relative rounded-2xl overflow-hidden bg-white border border-gray-200 hover:border-blue-500 transition duration-300 shadow-sm hover:shadow-lg"
               >
 
-                {/* Imagen */}
                 <img
                   src={item.img}
                   alt={item.title}
                   loading="lazy"
-                  className="w-full h-[300px] object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-[220px] md:h-[300px] object-cover transition-transform duration-500 group-hover:scale-105"
                 />
 
-                {/* Overlay AZUL refinado */}
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/70 via-blue-500/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/70 via-blue-500/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-300" />
 
-                {/* Texto */}
-                <div className="absolute bottom-0 p-6 opacity-0 group-hover:opacity-100 transition duration-500 text-white">
-                  <h3 className="text-lg font-semibold tracking-wide">
+                <div className="absolute bottom-0 p-4 md:p-6 opacity-0 group-hover:opacity-100 transition duration-300 text-white">
+                  <h3 className="text-base md:text-lg font-semibold">
                     {item.title}
                   </h3>
-                  <p className="text-sm opacity-80 mt-1">
+                  <p className="text-xs md:text-sm opacity-80 mt-1">
                     {item.desc}
                   </p>
                 </div>
@@ -120,18 +118,17 @@ export default function CelosiasPage() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="fixed inset-0 bg-black/60 flex items-center justify-center z-[999]"
+            className="fixed inset-0 bg-black/70 flex items-center justify-center z-[999] px-4"
           >
             <motion.div
-              initial={{ scale: 0.9, opacity: 0, filter: "blur(10px)" }}
-              animate={{ scale: 1, opacity: 1, filter: "blur(0px)" }}
-              transition={{ duration: 0.4 }}
-              className="bg-white text-gray-900 rounded-2xl max-w-3xl w-[90%] p-6 relative shadow-2xl"
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              className="bg-white rounded-2xl max-w-2xl w-full p-4 md:p-6 relative shadow-2xl"
             >
 
               <button
                 onClick={() => setSelected(null)}
-                className="absolute top-4 right-4 text-xl hover:scale-110 transition"
+                className="absolute top-3 right-3 text-lg"
               >
                 ✕
               </button>
@@ -139,14 +136,14 @@ export default function CelosiasPage() {
               <img
                 src={selected.img}
                 alt={selected.title}
-                className="w-full h-[350px] object-cover rounded-xl mb-6"
+                className="w-full h-[220px] md:h-[350px] object-cover rounded-xl mb-4 md:mb-6"
               />
 
-              <h3 className="text-2xl font-semibold mb-2 tracking-wide">
+              <h3 className="text-xl md:text-2xl font-semibold mb-2">
                 {selected.title}
               </h3>
 
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 text-sm md:text-base">
                 {selected.desc}
               </p>
 
