@@ -50,7 +50,7 @@ export default function MobiliarioPage() {
     className="relative z-10 backdrop-blur-xl bg-white/70 border border-white/40 rounded-2xl md:rounded-3xl p-6 md:p-14 max-w-3xl w-full shadow-xl"
   >
     <h1 className="text-2xl sm:text-3xl md:text-5xl font-semibold mb-4 md:mb-6 tracking-[0.15em] md:tracking-[0.3em] text-gray-800 text-center md:text-left leading-tight">
-      TEST INOXIDABLE
+      MOBILIARIO INOXIDABLE
     </h1>
 
     <p className="text-gray-600 text-sm md:text-base max-w-xl leading-relaxed text-center md:text-left">
