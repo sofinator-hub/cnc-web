@@ -40,7 +40,7 @@ export default function Sidebar() {
           </Link>
 
           <Link href="/inoxidable" className="hover:text-black transition">
-            Moniliario Inoxidable
+            Mobiliario Inoxidable
           </Link>
 
           <Link href="/celosias" className="hover:text-black transition">

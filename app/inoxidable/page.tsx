@@ -42,7 +42,7 @@ export default function MobiliarioPage() {
           <div className="absolute top-10 left-10 w-60 h-60 bg-blue-600 rounded-full blur-3xl opacity-20" />
           <div className="absolute bottom-10 right-10 w-60 h-60 bg-cyan-400 rounded-full blur-3xl opacity-20" />
 
-          {/* 🔥 TÍTULO CON FONDO */}
+          {/*  TÍTULO CON FONDO */}
           <div className="relative z-10 max-w-4xl">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -50,7 +50,7 @@ export default function MobiliarioPage() {
               className="inline-block bg-blue-900/40 backdrop-blur-md px-6 py-4 rounded-2xl"
             >
               <h1 className="text-3xl md:text-5xl font-semibold tracking-[0.2em] text-white">
-                MOBILIARIO
+                MOBILIARIO INOXIDABLE
               </h1>
             </motion.div>
 
@@ -154,39 +154,85 @@ export default function MobiliarioPage() {
         </section>
 
 
-        {/* ================= NUEVA SECCIÓN 🔥 ================= */}
-        <section className="px-6 md:px-20 py-24">
+{/* ================= NUEVA SECCIÓN  ================= */}
+<section className="px-6 md:px-20 py-24">
 
-          <h2 className="text-2xl md:text-4xl font-semibold mb-12 text-center">
-            ¿Por qué elegir acero inoxidable?
-          </h2>
+  <h2 className="text-2xl md:text-4xl font-semibold mb-12 text-center">
+    ¿Por qué elegir acero inoxidable?
+  </h2>
 
-          <div className="grid md:grid-cols-3 gap-10 text-center">
+  <div className="grid md:grid-cols-3 gap-10 text-center">
 
-            <div>
-              <h3 className="text-lg font-semibold mb-2">Alta durabilidad</h3>
-              <p className="text-gray-600 text-sm">
-                Resiste el uso intensivo sin perder calidad ni estética.
-              </p>
-            </div>
+    {/* ITEM 1 */}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.4 }}
+      className="p-6 rounded-2xl hover:bg-gray-50 transition"
+    >
+      <div className="flex justify-center mb-4">
+        <div className="w-14 h-14 flex items-center justify-center rounded-full bg-blue-100">
+          {/* ICONO */}
+          <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path d="M12 6v6l4 2" />
+            <circle cx="12" cy="12" r="10" />
+          </svg>
+        </div>
+      </div>
 
-            <div>
-              <h3 className="text-lg font-semibold mb-2">Higiene superior</h3>
-              <p className="text-gray-600 text-sm">
-                Superficie fácil de limpiar ideal para entornos profesionales.
-              </p>
-            </div>
+      <h3 className="text-lg font-semibold mb-2">Alta durabilidad</h3>
+      <p className="text-gray-600 text-sm">
+        Resiste el uso intensivo sin perder calidad ni estética.
+      </p>
+    </motion.div>
 
-            <div>
-              <h3 className="text-lg font-semibold mb-2">Diseño funcional</h3>
-              <p className="text-gray-600 text-sm">
-                Pensado para optimizar espacios y procesos de trabajo.
-              </p>
-            </div>
+    {/* ITEM 2 */}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.4, delay: 0.1 }}
+      className="p-6 rounded-2xl hover:bg-gray-50 transition"
+    >
+      <div className="flex justify-center mb-4">
+        <div className="w-14 h-14 flex items-center justify-center rounded-full bg-blue-100">
+          <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+      </div>
 
-          </div>
-        </section>
+      <h3 className="text-lg font-semibold mb-2">Higiene superior</h3>
+      <p className="text-gray-600 text-sm">
+        Superficie fácil de limpiar ideal para entornos profesionales.
+      </p>
+    </motion.div>
 
+    {/* ITEM 3 */}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.4, delay: 0.2 }}
+      className="p-6 rounded-2xl hover:bg-gray-50 transition"
+    >
+      <div className="flex justify-center mb-4">
+        <div className="w-14 h-14 flex items-center justify-center rounded-full bg-blue-100">
+          <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path d="M3 7h18M3 12h18M3 17h18" />
+          </svg>
+        </div>
+      </div>
+
+      <h3 className="text-lg font-semibold mb-2">Diseño funcional</h3>
+      <p className="text-gray-600 text-sm">
+        Pensado para optimizar espacios y procesos de trabajo.
+      </p>
+    </motion.div>
+
+  </div>
+</section>
 
         {/* ================= MODAL ================= */}
         {selected && (
