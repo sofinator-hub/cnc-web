@@ -43,7 +43,7 @@ export default function Sidebar() {
             Mobiliario Inoxidable
           </Link>
 
-          <Link href="/celosias" className="hover:text-black transition">
+          <Link href="/soldadura" className="hover:text-black transition">
             Soldadura con Ultrasonido
           </Link>
 
