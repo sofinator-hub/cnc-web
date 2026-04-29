@@ -83,7 +83,7 @@ export default function IngenieriaPage() {
           {/* Fondo estilo tus otras páginas */}
           <div className="absolute inset-0">
             <img
-              src="/fondo_ingenieria1.jpg"
+              src="/fondo_ingenieria2.jpg"
               className="w-full h-full object-cover"
             />
           </div>
