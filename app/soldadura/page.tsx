@@ -139,9 +139,17 @@ export default function UltrasonidoPage() {
             Contáctanos para desarrollar soluciones con soldadura de alta precisión.
           </p>
 
-          <button className="bg-blue-600 px-6 py-3 rounded-xl hover:bg-blue-700 transition">
-            Cotizar ahora
-          </button>
+<button
+  onClick={() =>
+    window.open(
+      "https://wa.me/5215562045546?text=Hola,%20quiero%20cotizar%20un%20proyecto%20de%20soldadura%20ultrasónica",
+      "_blank"
+    )
+  }
+  className="bg-blue-600 px-6 py-3 rounded-xl hover:bg-blue-700 transition"
+>
+  Cotizar ahora
+</button>
 
         </section>
 
