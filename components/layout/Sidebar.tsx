@@ -47,6 +47,11 @@ export default function Sidebar() {
             Soldadura con Ultrasonido
           </Link>
 
+           <Link href="/ingeniería" className="hover:text-black transition">
+            Servicios de Ingeniería
+          </Link>
+
+
         </div>
 
         {/* CONTACTO */}
