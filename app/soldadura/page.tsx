@@ -15,7 +15,7 @@ export default function UltrasonidoPage() {
           {/* Fondo imagen */}
           <div className="absolute inset-0">
             <img
-              src="/ultrasonido.jpg"
+              src="/fondo acero.jpg"
               alt="Ultrasonido"
               className="w-full h-full object-cover opacity-60"
             />
@@ -25,7 +25,7 @@ export default function UltrasonidoPage() {
           <div className="absolute top-10 left-5 w-48 h-48 bg-blue-500 blur-3xl opacity-20" />
           <div className="absolute bottom-10 right-5 w-48 h-48 bg-cyan-400 blur-3xl opacity-20" />
 
-          {/* 🔥 ONDAS ULTRASÓNICAS */}
+          {/* ONDAS ULTRASÓNICAS */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div className="relative w-[250px] h-[250px]">
 
@@ -123,7 +123,7 @@ export default function UltrasonidoPage() {
             </div>
 
           </div>
-          
+
 
         </section>
 
