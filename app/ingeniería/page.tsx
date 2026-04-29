@@ -12,10 +12,10 @@ const sections = {
       "Sistemas de baja tensión",
       "Diagramas unifilares",
       "Mantenimiento eléctrico",
-      "Instalación de alimentadores",
-      "Sistemas UPS, CCTV y voz/datos"
+      "Instalación de alimentadores"
     ],
-    img: "/electrico.jpg"
+    img: "/electrico_color.jpg",
+    imgBN: "/electrico.jpg"
   },
   automatizacion: {
     title: "Automatización",
@@ -24,10 +24,10 @@ const sections = {
       "Programación PLC",
       "Integración de maquinaria",
       "Interfaces HMI",
-      "Variadores de frecuencia",
-      "Optimización de procesos"
+      "Variadores de frecuencia"
     ],
-    img: "/automatizacion.jpg"
+    img: "/automatizacion_color.jpg",
+    imgBN: "/automatizacion.jpg"
   },
   control: {
     title: "Control Eléctrico",
@@ -36,10 +36,10 @@ const sections = {
       "Diseño de tableros",
       "EPLAN / AutoCAD",
       "Mantenimiento",
-      "Actualización de sistemas",
-      "Arrancadores para motor"
+      "Actualización de sistemas"
     ],
-    img: "/control.jpg"
+    img: "/control_color.jpg",
+    imgBN: "/control.jpg"
   },
   generales: {
     title: "Servicios Generales",
@@ -47,11 +47,10 @@ const sections = {
     items: [
       "HVAC",
       "UPS",
-      "Mantenimiento electromecánico",
-      
-      "Instalaciones industriales"
+      "Mantenimiento electromecánico"
     ],
-    img: "/general.jpg"
+    img: "/general_color.jpg",
+    imgBN: "/general.jpg"
   },
   proyectos: {
     title: "Gestión de Proyectos",
@@ -62,7 +61,8 @@ const sections = {
       "Ingeniería de valor",
       "Ejecución integral"
     ],
-    img: "/proyectos.jpg"
+    img: "/proyectos_color.jpg",
+    imgBN: "/proyectos.jpg"
   }
 };
 
@@ -80,33 +80,33 @@ export default function IngenieriaPage() {
         {/* ================= HERO ================= */}
         <section className="min-h-[80vh] flex items-center justify-center relative overflow-hidden px-4">
 
-          {/* Fondo */}
+          {/* Fondo estilo tus otras páginas */}
           <div className="absolute inset-0">
             <img
-              src="/ingenieria.jpg"
-              className="w-full h-full object-cover scale-105 transition-transform duration-700 hover:scale-110"
+              src="/fondo_ingenieria.jpg"
+              className="w-full h-full object-cover"
             />
           </div>
 
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/70" />
+          {/* Overlay elegante */}
+          <div className="absolute inset-0 bg-black/50" />
 
-          {/* Glow */}
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 blur-3xl opacity-20 animate-pulse" />
-          <div className="absolute bottom-20 right-10 w-72 h-72 bg-cyan-400 blur-3xl opacity-20 animate-pulse" />
+          {/* Glow AZUL MARINO */}
+          <div className="absolute top-20 left-10 w-72 h-72 bg-[#0f172a] blur-3xl opacity-30" />
+          <div className="absolute bottom-20 right-10 w-72 h-72 bg-[#0f172a] blur-3xl opacity-30" />
 
-          {/* Contenido */}
+          {/* Card */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative z-10 backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl md:rounded-3xl p-6 md:p-14 max-w-3xl w-full shadow-xl"
+            className="relative z-10 backdrop-blur-xl bg-white/70 border border-white/40 rounded-2xl md:rounded-3xl p-6 md:p-14 max-w-3xl w-full shadow-xl"
           >
-            <h1 className="text-3xl md:text-5xl font-semibold mb-6 tracking-[0.2em] text-white">
+            <h1 className="text-3xl md:text-5xl font-semibold mb-6 tracking-[0.2em] text-gray-800">
               INGENIERÍA
             </h1>
 
-            <p className="text-white/80 text-sm md:text-base leading-relaxed">
+            <p className="text-gray-600">
               Diseño, automatización y control eléctrico para soluciones industriales de alto rendimiento.
             </p>
           </motion.div>
@@ -158,26 +158,26 @@ export default function IngenieriaPage() {
           </motion.div>
 
 
-          {/* IMAGEN CON EFECTO */}
+          {/* ================= IMAGEN DOBLE (EL EFECTO REAL 🔥) ================= */}
           <motion.div
             key={data.img}
             className="relative w-full h-[350px] rounded-2xl overflow-hidden group"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
+
+            {/* Imagen blanco y negro */}
             <img
-              src={data.img}
-              className="
-                w-full h-full object-cover
-                grayscale contrast-125 brightness-90
-                group-hover:grayscale-0 group-hover:brightness-100
-                transition duration-700 ease-in-out
-                scale-105 group-hover:scale-110
-              "
+              src={data.imgBN}
+              className="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:opacity-0"
             />
 
-            {/* overlay */}
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-500" />
+            {/* Imagen color */}
+            <img
+              src={data.img}
+              className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition duration-500"
+            />
+            
           </motion.div>
 
         </section>
@@ -197,7 +197,7 @@ export default function IngenieriaPage() {
           <button
             onClick={() =>
               window.open(
-                "https://wa.me/5215562045546?text=Hola,%20quiero%20cotizar%20un%20proyecto%20de%20ingeniería",
+                "https://wa.me/521XXXXXXXXXX?text=Hola,%20quiero%20cotizar%20un%20proyecto%20de%20ingeniería",
                 "_blank"
               )
             }
