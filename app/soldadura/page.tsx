@@ -15,7 +15,7 @@ export default function UltrasonidoPage() {
           {/* Fondo imagen */}
           <div className="absolute inset-0">
             <img
-              src="/fondo acero.jpg"
+              src="/fondo_soldadura.jpg"
               alt="Ultrasonido"
               className="w-full h-full object-cover opacity-60"
             />
@@ -84,7 +84,7 @@ export default function UltrasonidoPage() {
                 playsInline
                 className="w-full h-[300px] md:h-[400px] object-cover"
               >
-                <source src="/ultrasonidito.mp4" type="video/mp4" />
+                <source src="videos//video_ultrasonido.mp4" type="video/mp4" />
               </video>
             </div>
 
