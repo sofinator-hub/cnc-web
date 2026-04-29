@@ -84,7 +84,7 @@ export default function UltrasonidoPage() {
                 playsInline
                 className="w-full h-[300px] md:h-[400px] object-cover"
               >
-                <source src="/ultrasonido.mp4" type="video/mp4" />
+                <source src="/ultrasonidito.mp4" type="video/mp4" />
               </video>
             </div>
 
