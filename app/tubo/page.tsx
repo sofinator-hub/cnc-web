@@ -96,10 +96,17 @@ export default function TuboPage() {
                 <li>• Minimización de desperdicio</li>
                 <li>• Integración con procesos industriales</li>
               </ul>
-
-              <button className="px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition">
-                Solicitar cotización
-              </button>
+<button
+  onClick={() =>
+    window.open(
+      "https://wa.me/5215562045546?text=Hola,%20quiero%20cotizar%20corte%20láser%20de%20tubo",
+      "_blank"
+    )
+  }
+  className="px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition"
+>
+  Solicitar cotización
+</button>
             </div>
             
 
@@ -174,17 +181,13 @@ function CarruselTubo() {
       </p>
 
       <div className="flex gap-6">
-<button
-  onClick={() =>
-    window.open(
-      "https://wa.me/5215562045546?text=Hola,%20quiero%20cotizar%20corte%20láser%20de%20tubo",
-      "_blank"
-    )
-  }
-  className="px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition"
->
-  Solicitar cotización
-</button>
+        <button onClick={prev} className="px-4 py-2 border rounded-full hover:bg-black hover:text-white transition">
+          ←
+        </button>
+
+        <button onClick={next} className="px-4 py-2 border rounded-full hover:bg-black hover:text-white transition">
+          →
+        </button>
       </div>
 
     </div>
