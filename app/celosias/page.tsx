@@ -34,7 +34,7 @@ export default function CelosiasPage() {
     <>
       <MobileMenu />
 
-      <main className="min-h-screen bg-[#f1f5f9] text-gray-900">
+      <main className="min-h-screen relative z-10 text-gray-900">
 
         {/* ================= HERO ================= */}
         <section className="min-h-[85vh] md:min-h-screen flex items-center justify-center relative overflow-hidden px-4">
@@ -43,8 +43,7 @@ export default function CelosiasPage() {
           <div className="absolute inset-0">
             <img
               src="/fondo_celosia2.jpg"
-              alt="Fondo celosía"
-              loading="lazy"
+
               className="w-full h-full object-cover md:opacity-90"
             />
           </div>
@@ -52,13 +51,13 @@ export default function CelosiasPage() {
 
           <div className="absolute top-10 left-5 w-40 h-40 md:w-80 md:h-80 bg-blue-600 rounded-full blur-3xl opacity-20" />
           <div className="absolute bottom-10 right-5 w-40 h-40 md:w-80 md:h-80 bg-cyan-400 rounded-full blur-3xl opacity-20" />
-
+          
 
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="relative z-10 backdrop-blur-lg bg-white/70 border border-white/40 rounded-2xl md:rounded-3xl p-6 md:p-14 max-w-3xl w-full shadow-xl"
+            className="relative z-10 backdrop-blur-xl bg-white/60 border border-white/40 rounded-2xl md:rounded-3xl p-6 md:p-14 max-w-3xl w-full shadow-xl"
           >
             <h1 className="text-2xl sm:text-3xl md:text-5xl font-semibold mb-4 md:mb-6 tracking-[0.1em] md:tracking-[0.3em] text-gray-700 text-center md:text-left">
               CELOSÍAS
@@ -71,7 +70,7 @@ export default function CelosiasPage() {
         </section>
 
 
-        {/* ================= SECCIÓN SONAE ================= */}
+        {/* ================= PROYECTOS ================= */}
         <section className="px-4 md:px-20 py-16">
 
           <h2 className="text-2xl md:text-4xl font-semibold mb-10 tracking-[0.15em] text-center md:text-left">
@@ -87,7 +86,7 @@ export default function CelosiasPage() {
                 className={`px-4 py-2 rounded-full text-sm whitespace-nowrap transition
                   ${active === cat
                     ? "bg-blue-600 text-white"
-                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"}
+                    : "bg-white/80 backdrop-blur-sm text-gray-700 hover:bg-gray-200"}
                 `}
               >
                 {cat}
@@ -95,7 +94,7 @@ export default function CelosiasPage() {
             ))}
           </div>
 
-          {/* GRID LIMPIO */}
+          {/* GRID */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
             {filteredItems.map((item, i) => (
@@ -109,8 +108,7 @@ export default function CelosiasPage() {
 
                   <img
                     src={item.img}
-                    alt={item.title}
-                    loading="lazy"
+
                     className="w-full h-[260px] object-cover transition duration-500 group-hover:scale-105"
                   />
 
@@ -118,12 +116,8 @@ export default function CelosiasPage() {
 
                   <div className="absolute bottom-0 p-4 text-white opacity-0 group-hover:opacity-100 transition duration-300">
                     <p className="text-xs opacity-80">{item.category}</p>
-                    <h3 className="text-lg font-semibold">
-                      {item.title}
-                    </h3>
-                    <span className="text-sm underline">
-                      Ver más →
-                    </span>
+                    <h3 className="text-lg font-semibold">{item.title}</h3>
+                    <span className="text-sm underline">Ver más →</span>
                   </div>
 
                 </div>
@@ -135,7 +129,7 @@ export default function CelosiasPage() {
         </section>
 
 
-        {/* ================= TU GALERÍA ORIGINAL ================= */}
+        {/* ================= GALERÍA ================= */}
         <section className="px-4 md:px-20 py-16 md:py-20">
 
           <h2 className="text-2xl md:text-4xl font-semibold mb-10 md:mb-16 tracking-[0.15em] text-center md:text-left">
@@ -152,25 +146,20 @@ export default function CelosiasPage() {
                 transition={{ duration: 0.4, delay: i * 0.08 }}
                 viewport={{ once: true }}
                 onClick={() => setSelected(item)}
-                className="cursor-pointer group relative rounded-2xl overflow-hidden bg-white border border-gray-200 hover:border-blue-500 transition duration-300 shadow-sm hover:shadow-lg"
+                className="cursor-pointer group relative rounded-2xl overflow-hidden bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-blue-500 transition duration-300 shadow-sm hover:shadow-lg"
               >
 
                 <img
                   src={item.img}
-                  alt={item.title}
-                  loading="lazy"
+
                   className="w-full h-[220px] md:h-[300px] object-cover transition-transform duration-500 group-hover:scale-105"
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/70 via-blue-500/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-300" />
 
                 <div className="absolute bottom-0 p-4 md:p-6 opacity-0 group-hover:opacity-100 transition duration-300 text-white">
-                  <h3 className="text-base md:text-lg font-semibold">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs md:text-sm opacity-80 mt-1">
-                    {item.desc}
-                  </p>
+                  <h3 className="text-base md:text-lg font-semibold">{item.title}</h3>
+                  <p className="text-xs md:text-sm opacity-80 mt-1">{item.desc}</p>
                 </div>
 
               </motion.div>
@@ -202,7 +191,7 @@ export default function CelosiasPage() {
 
               <img
                 src={selected.img}
-                alt={selected.title}
+
                 className="w-full h-[220px] md:h-[350px] object-cover rounded-xl mb-4 md:mb-6"
               />
 
