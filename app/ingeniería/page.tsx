@@ -158,7 +158,7 @@ export default function IngenieriaPage() {
           </motion.div>
 
 
-          {/* ================= IMAGEN DOBLE (EL EFECTO REAL 🔥) ================= */}
+          {/* ================= IMAGEN DOBLE ================= */}
           <motion.div
             key={data.img}
             className="relative w-full h-[350px] rounded-2xl overflow-hidden group"
@@ -197,7 +197,7 @@ export default function IngenieriaPage() {
           <button
             onClick={() =>
               window.open(
-                "https://wa.me/521XXXXXXXXXX?text=Hola,%20quiero%20cotizar%20un%20proyecto%20de%20ingeniería",
+                "https://wa.me/5215562045546?text=Hola,%20quiero%20cotizar%20un%20proyecto%20de%20ingeniería",
                 "_blank"
               )
             }
