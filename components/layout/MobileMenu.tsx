@@ -3,95 +3,123 @@ import { useState } from "react";
 import Link from "next/link";
 
 export default function MobileMenu() {
-const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
-return (
-<>
-{/* BOTÓN HAMBURGUESA */}
-<button
-onClick={() => setOpen(!open)}
-className="fixed top-4 right-4 z-[999] md:hidden bg-white/70 backdrop-blur-md p-3 rounded-xl shadow-lg transition"
->
-<div className="w-6 h-[2px] bg-black mb-1"></div>
-<div className="w-6 h-[2px] bg-black mb-1"></div>
-<div className="w-6 h-[2px] bg-black"></div> </button>
+  return (
+    <>
+      {/* BOTÓN */}
+      <button
+        onClick={() => setOpen(!open)}
+        className="fixed top-4 right-4 z-[999] md:hidden bg-white/70 backdrop-blur-md p-3 rounded-xl shadow-lg"
+      >
+        <div className="w-6 h-[2px] bg-black mb-1"></div>
+        <div className="w-6 h-[2px] bg-black mb-1"></div>
+        <div className="w-6 h-[2px] bg-black"></div>
+      </button>
 
+      {/* BACKDROP */}
+      <div
+        onClick={() => setOpen(false)}
+        className={`fixed inset-0 z-[998] bg-white/70 backdrop-blur-xl transition duration-500 ${
+          open ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+      />
 
-  {/* BACKDROP */}
-  <div
-    onClick={() => setOpen(false)}
-    className={`fixed inset-0 z-[998] bg-white/60 backdrop-blur-xl transition duration-500 ${
-      open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-    }`}
-  />
+      {/* MENU */}
+      <div
+        className={`fixed inset-0 z-[999] flex flex-col justify-between p-8 transition-all duration-500 ${
+          open ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0 pointer-events-none"
+        }`}
+      >
 
-  {/* MENU */}
-  <div
-    className={`fixed inset-0 z-[999] flex flex-col items-center justify-center space-y-10 text-2xl font-medium transition-all duration-500 ${
-      open ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0 pointer-events-none"
-    }`}
-  >
+        {/* HEADER */}
+        <div className="flex justify-between items-center">
+          <span className="text-sm text-gray-400">MENU</span>
 
-    {/* BOTÓN X */}
-    <button
-      onClick={() => setOpen(false)}
-      className="absolute top-6 right-6 text-3xl text-black"
-    >
-      ✕
-    </button>
+          <button
+            onClick={() => setOpen(false)}
+            className="text-2xl text-black"
+          >
+            ✕
+          </button>
+        </div>
 
-    <Link href="/" onClick={() => setOpen(false)} className="text-blue-700 hover:scale-110 transition">
-      Inicio
-    </Link>
+        {/* NAVEGACIÓN */}
+        <div className="flex flex-col gap-5 text-xl font-medium text-gray-800">
 
-    <Link href="/cnc" onClick={() => setOpen(false)} className="text-blue-700 hover:scale-110 transition">
-      Corte láser
-    </Link>
+          <Link href="/" onClick={() => setOpen(false)} className="hover:text-black transition">
+            Inicio
+          </Link>
 
-        <Link href="/tubo" onClick={() => setOpen(false)} className="text-blue-700 hover:scale-110 transition">
-      Corte láser de tubo
-    </Link>
+          <Link href="/cnc" onClick={() => setOpen(false)} className="hover:text-black transition">
+            Corte láser
+          </Link>
 
-        <Link href="/soldadura" onClick={() => setOpen(false)} className="text-blue-700 hover:scale-110 transition">
-      Soldadura con Ultrasonido
-    </Link>
-    
-    <Link href="/conveyors" onClick={() => setOpen(false)} className="text-blue-700 hover:scale-110 transition">
-      Conveyors
-    </Link>
+          <Link href="/tubo" onClick={() => setOpen(false)} className="hover:text-black transition">
+            Corte láser de tubo
+          </Link>
 
-    <Link href="/guardas" onClick={() => setOpen(false)} className="text-blue-700 hover:scale-110 transition">
-      Guardas
-    </Link>
+          <Link href="/soldadura" onClick={() => setOpen(false)} className="hover:text-black transition">
+            Soldadura con Ultrasonido
+          </Link>
 
-    <Link href="/celosias" onClick={() => setOpen(false)} className="text-blue-700 hover:scale-110 transition">
-      Celosías
-    </Link>
+          <Link href="/conveyors" onClick={() => setOpen(false)} className="hover:text-black transition">
+            Conveyors
+          </Link>
 
-    <Link href="/inoxidable" onClick={() => setOpen(false)} className="text-blue-700 hover:scale-110 transition">
-      Mobiliario Inoxidable
-    </Link>
+          <Link href="/guardas" onClick={() => setOpen(false)} className="hover:text-black transition">
+            Guardas
+          </Link>
 
-        <Link href="/ingeniería" onClick={() => setOpen(false)} className="text-blue-700 hover:scale-110 transition">
-      Servicios de ingeniería
-    </Link>
+          <Link href="/celosias" onClick={() => setOpen(false)} className="hover:text-black transition">
+            Celosías
+          </Link>
 
-    <a
-      href="https://wa.me/525562045546"
-      target="_blank"
-      className="text-blue-700 hover:scale-110 transition"
-    >
-      WhatsApp
-    </a>
+          <Link href="/inoxidable" onClick={() => setOpen(false)} className="hover:text-black transition">
+            Mobiliario Inoxidable
+          </Link>
 
-    <a
-      href="mailto:tuemail@empresa.com"
-      className="text-blue-700 hover:scale-110 transition"
-    >
-      Email
-    </a>
-  </div>
-</>
+          <Link href="/ingeniería" onClick={() => setOpen(false)} className="hover:text-black transition">
+            Servicios de ingeniería
+          </Link>
 
-);
+        </div>
+
+        {/* FOOTER */}
+        <div className="flex flex-col gap-4">
+
+          {/* CONTACTO */}
+          <div className="flex flex-col gap-2 text-sm text-gray-500">
+
+            <a
+              href="https://wa.me/5215562045546"
+              target="_blank"
+              className="hover:text-black transition"
+            >
+              WhatsApp
+            </a>
+
+            <a
+              href="mailto:matei_company@hotmail.com"
+              className="hover:text-black transition"
+            >
+              Email
+            </a>
+
+          </div>
+
+          {/* CTA */}
+          <a
+            href="https://wa.me/5215562045546?text=Hola,%20quiero%20cotizar"
+            target="_blank"
+            className="bg-black text-white text-center py-3 rounded-xl font-medium"
+          >
+            Cotizar
+          </a>
+
+        </div>
+
+      </div>
+    </>
+  );
 }
