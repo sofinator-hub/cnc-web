@@ -68,7 +68,7 @@ export default function CNCPage() {
             <div className="relative group">
               <div className="absolute inset-0 bg-gray-300 opacity-20 blur-3xl rounded-2xl scale-110 group-hover:opacity-30 transition duration-500" />
               <video className="relative rounded-2xl shadow-md w-full" autoPlay muted loop playsInline>
-                <source src="/videos/video_corte_laser1.mp4" />
+                <source src="/videos/video_lasercito.mp4" />
               </video>
             </div>
 
