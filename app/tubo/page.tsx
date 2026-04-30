@@ -60,14 +60,9 @@ export default function TuboPage() {
 
 
         {/* ================= CARRUSEL ================= */}
-        <section className="min-h-screen flex flex-col items-center justify-center relative px-6">
+        <section className="min-h-screen flex flex-col items-center justify-center px-6">
 
-          <div className="absolute inset-0 opacity-10 bg-[linear-gradient(90deg,#000_1px,transparent_1px),linear-gradient(#000_1px,transparent_1px)] bg-[size:50px_50px]" />
-
-          <div className="absolute left-0 top-0 h-full w-[2px] bg-gray-300 opacity-60" />
-          <div className="absolute right-0 top-0 h-full w-[2px] bg-gray-300 opacity-60" />
-
-          <div className="relative z-10 text-center">
+          <div className="text-center">
 
             <h2 className="text-3xl md:text-4xl font-semibold mb-8">
               TIPOS DE TUBO QUE MANEJAMOS
@@ -84,7 +79,7 @@ export default function TuboPage() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center w-full">
 
-            {/* TEXTO */}
+
             <div>
               <h2 className="text-3xl md:text-4xl font-semibold mb-6">
                 Capacidades técnicas
@@ -92,7 +87,7 @@ export default function TuboPage() {
 
               <p className="text-gray-700 mb-4">
                 Contamos con maquinaria de corte láser especializada para trabajar tubos
-                y perfiles con alta precisión, optimizando tiempos de producción.
+                y perfiles con alta precisión.
               </p>
 
               <ul className="space-y-2 text-gray-600 text-sm mb-6">
@@ -106,8 +101,8 @@ export default function TuboPage() {
                 Solicitar cotización
               </button>
             </div>
+            
 
-            {/* VISUAL */}
             <div className="relative group">
               <div className="absolute inset-0 bg-gray-300 opacity-20 blur-3xl rounded-2xl scale-110" />
 
