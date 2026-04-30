@@ -78,7 +78,7 @@ export default function ConveyorsPage() {
         </section>
 
 
-        {/* ================= NUEVA SECCIÓN 🔥 ================= */}
+        {/* ================= NUEVA SECCIÓN  ================= */}
         <section className="min-h-screen flex items-center px-6 md:px-20">
 
           <div className="grid md:grid-cols-2 gap-12 items-center w-full">
