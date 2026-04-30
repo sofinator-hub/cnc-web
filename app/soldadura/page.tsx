@@ -32,7 +32,7 @@ export default function UltrasonidoPage() {
     <>
       <MobileMenu />
 
-      {/*  FONDO FIJO GLOBAL */}
+      {/*  FONDO GLOBAL */}
       <div className="fixed inset-0 -z-10">
         <img
           src="/fondo_soldadura.jpg"
@@ -79,7 +79,7 @@ export default function UltrasonidoPage() {
 
 
         {/* ================= EXPLICACIÓN ================= */}
-        <section className="px-6 md:px-20 py-24 bg-black/60 backdrop-blur-sm">
+        <section className="px-6 md:px-20 py-24">
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
 
@@ -97,7 +97,7 @@ export default function UltrasonidoPage() {
                 Ideal para aplicaciones donde la precisión, limpieza y velocidad son fundamentales.
               </p>
             </div>
-
+            
 
             <div className="rounded-2xl overflow-hidden">
               <video
@@ -116,7 +116,7 @@ export default function UltrasonidoPage() {
 
 
         {/* ================= PANEL ================= */}
-        <section className="grid md:grid-cols-[250px_1fr] min-h-[60vh] bg-black/70 backdrop-blur-sm">
+        <section className="grid md:grid-cols-[250px_1fr] min-h-[60vh]">
 
           <div className="border-r border-white/10 p-6 space-y-4">
 
@@ -152,7 +152,7 @@ export default function UltrasonidoPage() {
 
 
         {/* ================= BENEFICIOS ================= */}
-        <section className="px-6 md:px-20 py-24 bg-black/60 backdrop-blur-sm">
+        <section className="px-6 md:px-20 py-24">
 
           <h2 className="text-2xl md:text-4xl font-semibold mb-12 text-center">
             Ventajas del proceso
@@ -187,7 +187,7 @@ export default function UltrasonidoPage() {
 
 
         {/* ================= CTA ================= */}
-        <section className="px-6 md:px-20 py-24 text-center bg-black/70 backdrop-blur-sm">
+        <section className="px-6 md:px-20 py-24 text-center">
 
           <h2 className="text-2xl md:text-4xl font-semibold mb-6">
             ¿Tienes un proyecto?
