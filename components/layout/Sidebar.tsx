@@ -20,13 +20,21 @@ export default function Sidebar() {
           SYSTEM ONLINE
         </div>
 
-        {/*  NAVEGACIÓN (LO NUEVO) */}
+        {/*  NAVEGACIÓN */}
         <div className="flex flex-col gap-2 text-xs text-gray-600 text-center">
 
           <Link href="/cnc" className="hover:text-black transition">
             Corte Láser
           </Link>
 
+           <Link href="/tubo" className="hover:text-black transition">
+            Corte láser de tubo
+          </Link>
+
+          <Link href="/soldadura" className="hover:text-black transition">
+            Soldadura con Ultrasonido
+          </Link>
+          
           <Link href="/conveyors" className="hover:text-black transition">
             Conveyors
           </Link>
@@ -41,10 +49,6 @@ export default function Sidebar() {
 
           <Link href="/inoxidable" className="hover:text-black transition">
             Mobiliario Inoxidable
-          </Link>
-
-          <Link href="/soldadura" className="hover:text-black transition">
-            Soldadura con Ultrasonido
           </Link>
 
            <Link href="/ingeniería" className="hover:text-black transition">
