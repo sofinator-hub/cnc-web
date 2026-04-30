@@ -94,7 +94,7 @@ export default function CNCPage() {
 
               <div className="overflow-hidden rounded-2xl group">
                 <Image
-                  src="/chispas_laser3.jpg"
+                  src="/chispas_laser1.jpg"
                   width={600}
                   height={400}
                   alt=""
