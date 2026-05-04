@@ -10,7 +10,7 @@ export default function MobileMenu() {
       {/* BOTÓN */}
       <button
         onClick={() => setOpen(!open)}
-        className="fixed top-4 right-4 z-[999] md:hidden bg-white/70 backdrop-blur-md p-3 rounded-xl shadow-lg"
+        className="fixed top-4 right-4 z-[1000] md:hidden bg-white/70 backdrop-blur-md p-3 rounded-xl shadow-lg"
       >
         <div className="w-6 h-[2px] bg-black mb-1"></div>
         <div className="w-6 h-[2px] bg-black mb-1"></div>
@@ -20,18 +20,20 @@ export default function MobileMenu() {
       {/* BACKDROP */}
       <div
         onClick={() => setOpen(false)}
-        className={`fixed inset-0 z-[998] bg-white/70 backdrop-blur-xl transition duration-500 ${
+        className={`fixed top-16 left-0 w-full h-[calc(100vh-64px)] z-[998] bg-white/70 backdrop-blur-xl transition duration-500 ${
           open ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       />
 
       {/* MENU */}
       <div
-        className={`fixed inset-0 z-[999] flex flex-col justify-between p-8 transition-all duration-500 ${
-          open ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0 pointer-events-none"
+        className={`fixed top-16 left-0 w-full h-[calc(100vh-64px)] z-[999] flex flex-col justify-between p-8 transition-all duration-500 ${
+          open
+            ? "translate-y-0 opacity-100"
+            : "-translate-y-10 opacity-0 pointer-events-none"
         }`}
       >
-
+        
         {/* HEADER */}
         <div className="flex justify-between items-center">
           <span className="text-sm text-gray-400">MENU</span>
@@ -83,12 +85,17 @@ export default function MobileMenu() {
             Servicios de ingeniería
           </Link>
 
+          {/* IA */}
+          <Link href="/ai" onClick={() => setOpen(false)} className="text-black font-semibold">
+            IA
+          </Link>
+
         </div>
 
         {/* FOOTER */}
         <div className="flex flex-col gap-4">
 
-          {/* CONTACTO */}
+
           <div className="flex flex-col gap-2 text-sm text-gray-500">
 
             <a
@@ -108,7 +115,7 @@ export default function MobileMenu() {
 
           </div>
 
-          {/* CTA */}
+
           <a
             href="https://wa.me/5215562045546?text=Hola,%20quiero%20cotizar"
             target="_blank"
