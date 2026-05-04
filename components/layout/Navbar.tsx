@@ -37,7 +37,7 @@ export default function Navbar() {
 
   const isActive = (section: string) => {
     if (isHome) return active === section;
-    return section === "inicio"; // en otras páginas, "Inicio" activo
+    return section === "inicio";
   };
 
   const linkStyle = (section: string) =>
@@ -71,7 +71,7 @@ export default function Navbar() {
         </Link>
 
         {/* LINKS */}
-        <ul className="flex gap-8 text-sm">
+        <ul className="flex items-center gap-6 text-sm whitespace-nowrap">
 
           {/* INICIO */}
           <li className="relative">
@@ -125,13 +125,16 @@ export default function Navbar() {
                 className="absolute -bottom-1 left-0 w-full h-[2px] bg-blue-500"
               />
             )}
+          </li>
 
-            {/* IA */}
-<li className="relative">
-  <Link href="/ai" className="text-gray-500 hover:text-black">
-    IA
-  </Link>
-</li>
+          {/* IA */}
+          <li className="relative">
+            <Link
+              href="/ai"
+              className="bg-black text-white px-4 py-1 rounded-md hover:bg-gray-800 transition"
+            >
+              IA
+            </Link>
           </li>
 
         </ul>
