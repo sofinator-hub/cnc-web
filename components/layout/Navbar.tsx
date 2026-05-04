@@ -35,6 +35,15 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isHome]);
 
+  //  MEDIR ALTURA REAL DEL NAVBAR
+  useEffect(() => {
+    const nav = document.getElementById("navbar");
+    if (nav) {
+      const height = nav.offsetHeight;
+      document.documentElement.style.setProperty("--nav-height", `${height}px`);
+    }
+  }, []);
+
   const isActive = (section: string) => {
     if (isHome) return active === section;
     return section === "inicio";
@@ -49,6 +58,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
+      id="navbar"
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
           ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-200"
@@ -57,7 +67,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-        {/* LOGO */}
+
         <Link href="/">
           <motion.h1
             className={`cursor-pointer font-bold tracking-[0.3em] transition ${
@@ -70,69 +80,31 @@ export default function Navbar() {
           </motion.h1>
         </Link>
 
-        {/* LINKS */}
+
         <ul className="flex items-center gap-6 text-sm whitespace-nowrap">
 
-          {/* INICIO */}
-          <li className="relative">
-            <Link href="/" className={linkStyle("inicio")}>
-              Inicio
-            </Link>
-
-            {isActive("inicio") && (
-              <motion.div
-                layoutId="underline"
-                className="absolute -bottom-1 left-0 w-full h-[2px] bg-blue-500"
-              />
-            )}
+          <li>
+            <Link href="/" className={linkStyle("inicio")}>Inicio</Link>
           </li>
 
-          {/* SERVICIOS */}
-          <li className="relative">
+          <li>
             {isHome ? (
-              <a href="#servicios" className={linkStyle("servicios")}>
-                Servicios
-              </a>
+              <a href="#servicios" className={linkStyle("servicios")}>Servicios</a>
             ) : (
-              <Link href="/#servicios" className="text-gray-500 hover:text-black">
-                Servicios
-              </Link>
-            )}
-
-            {isHome && active === "servicios" && (
-              <motion.div
-                layoutId="underline"
-                className="absolute -bottom-1 left-0 w-full h-[2px] bg-blue-500"
-              />
+              <Link href="/#servicios">Servicios</Link>
             )}
           </li>
 
-          {/* GALERÍA */}
-          <li className="relative">
+          <li>
             {isHome ? (
-              <a href="#galeria" className={linkStyle("galeria")}>
-                Galería
-              </a>
+              <a href="#galeria" className={linkStyle("galeria")}>Galería</a>
             ) : (
-              <Link href="/#galeria" className="text-gray-500 hover:text-black">
-                Galería
-              </Link>
-            )}
-
-            {isHome && active === "galeria" && (
-              <motion.div
-                layoutId="underline"
-                className="absolute -bottom-1 left-0 w-full h-[2px] bg-blue-500"
-              />
+              <Link href="/#galeria">Galería</Link>
             )}
           </li>
 
-          {/* IA */}
-          <li className="relative">
-            <Link
-              href="/ai"
-              className="bg-black text-white px-4 py-1 rounded-md hover:bg-gray-800 transition"
-            >
+          <li>
+            <Link href="/ai" className="bg-black text-white px-4 py-1 rounded-md">
               IA
             </Link>
           </li>
