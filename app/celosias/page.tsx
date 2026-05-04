@@ -33,23 +33,10 @@ active === "Todos"
 return (
 <> <MobileMenu />
 
-```
-  <main className="min-h-screen text-gray-900 relative">
-
-    {/* 👇 FONDO BLANCO BIEN APLICADO */}
-    <div
-      className="absolute inset-0 -z-10"
-      style={{
-        backgroundImage: "url('/fondo_blanco.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        opacity: 0.25   // 🔥 clave: lo hace elegante, no invasivo
-      }}
-    />
-
-    {/* 👇 CAPA BASE PARA LIMPIAR */}
-    <div className="absolute inset-0 -z-10 bg-white/80" />
-
+  <main
+    className="min-h-screen text-gray-900"
+    style={{ backgroundImage: "url('/fondo_blanco.jpg')" }}
+  >
 
     {/* ================= HERO ================= */}
     <section className="min-h-[85vh] md:min-h-screen flex items-center justify-center relative overflow-hidden px-4">
@@ -58,7 +45,7 @@ return (
         <img
           src="/fondo_celosia2.jpg"
           alt="Fondo celosía"
-          
+          loading="lazy"
           className="w-full h-full object-cover md:opacity-90"
         />
       </div>
@@ -114,30 +101,116 @@ return (
               <img
                 src={item.img}
                 alt={item.title}
-
+                loading="lazy"
                 className="w-full h-[260px] object-cover transition duration-500 group-hover:scale-105"
               />
 
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition" />
+              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300" />
 
-              <div className="absolute bottom-0 p-4 text-white opacity-0 group-hover:opacity-100 transition">
+              <div className="absolute bottom-0 p-4 text-white opacity-0 group-hover:opacity-100 transition duration-300">
                 <p className="text-xs opacity-80">{item.category}</p>
-                <h3 className="text-lg font-semibold">{item.title}</h3>
+                <h3 className="text-lg font-semibold">
+                  {item.title}
+                </h3>
+                <span className="text-sm underline">
+                  Ver más →
+                </span>
               </div>
 
             </div>
           </div>
         ))}
       </div>
+    </section>
 
+
+    {/* ================= GALERÍA ================= */}
+    <section className="px-4 md:px-20 py-16 md:py-20">
+
+      <h2 className="text-2xl md:text-4xl font-semibold mb-10 md:mb-16 tracking-[0.15em] text-center md:text-left">
+        GALERÍA
+      </h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
+
+        {items.map((item, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: i * 0.08 }}
+            viewport={{ once: true }}
+            onClick={() => setSelected(item)}
+            className="cursor-pointer group relative rounded-2xl overflow-hidden bg-white border border-gray-200 hover:border-blue-500 transition duration-300 shadow-sm hover:shadow-lg"
+          >
+
+            <img
+              src={item.img}
+              alt={item.title}
+              loading="lazy"
+              className="w-full h-[220px] md:h-[300px] object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-blue-900/70 via-blue-500/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-300" />
+
+            <div className="absolute bottom-0 p-4 md:p-6 opacity-0 group-hover:opacity-100 transition duration-300 text-white">
+              <h3 className="text-base md:text-lg font-semibold">
+                {item.title}
+              </h3>
+              <p className="text-xs md:text-sm opacity-80 mt-1">
+                {item.desc}
+              </p>
+            </div>
+
+          </motion.div>
+        ))}
+
+      </div>
 
     </section>
 
 
+    {/* ================= MODAL ================= */}
+    {selected && (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="fixed inset-0 bg-black/70 flex items-center justify-center z-[999] px-4"
+      >
+        <motion.div
+          initial={{ scale: 0.95, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          className="bg-white rounded-2xl max-w-2xl w-full p-4 md:p-6 relative shadow-2xl"
+        >
 
+          <button
+            onClick={() => setSelected(null)}
+            className="absolute top-3 right-3 text-lg"
+          >
+            ✕
+          </button>
+
+          <img
+            src={selected.img}
+            alt={selected.title}
+            className="w-full h-[220px] md:h-[350px] object-cover rounded-xl mb-4 md:mb-6"
+          />
+
+          <h3 className="text-xl md:text-2xl font-semibold mb-2">
+            {selected.title}
+          </h3>
+
+          <p className="text-gray-600 text-sm md:text-base">
+            {selected.desc}
+          </p>
+
+        </motion.div>
+      </motion.div>
+    )}
 
   </main>
 </>
+
 
 );
 }
