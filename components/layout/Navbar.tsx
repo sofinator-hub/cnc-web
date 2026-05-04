@@ -125,6 +125,13 @@ export default function Navbar() {
                 className="absolute -bottom-1 left-0 w-full h-[2px] bg-blue-500"
               />
             )}
+
+            {/* IA */}
+<li className="relative">
+  <Link href="/ai" className="text-gray-500 hover:text-black">
+    IA
+  </Link>
+</li>
           </li>
 
         </ul>
