@@ -35,7 +35,16 @@ export default function CelosiasPage() {
     <>
       <MobileMenu />
 
-      <main className="min-h-screen bg-[#f1f5f9] text-gray-900">
+  {/* FONDO*/}
+  <div className="fixed inset-0 -z-10">
+    <img
+      src="/fondo_blanco.jpg"
+      className="w-full h-full object-cover"
+    />
+    <div className="absolute inset-0 bg-white/70" />
+  </div>
+
+  <main className="relative z-10 text-gray-900">
 
         {/* ================= HERO ================= */}
         <section className="min-h-[85vh] md:min-h-screen flex items-center justify-center relative overflow-hidden px-4">
