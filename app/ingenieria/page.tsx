@@ -402,76 +402,140 @@ export default function IngenieriaPage() {
         </section>
 
 
-        {/* ================= TIMELINE ================= */}
-        <section className="px-6 md:px-20 py-32 bg-black text-white overflow-hidden">
+{/* ================= TIMELINE PREMIUM ================= */}
+<section className="relative px-6 md:px-20 py-32 bg-black text-white overflow-hidden">
 
-          <div className="max-w-7xl mx-auto">
+  {/* GRID FONDO */}
+  <div className="absolute inset-0 opacity-[0.04]">
+    <div className="w-full h-full bg-[linear-gradient(to_right,#ffffff22_1px,transparent_1px),linear-gradient(to_bottom,#ffffff22_1px,transparent_1px)] bg-[size:80px_80px]" />
+  </div>
 
-            <div className="text-center mb-24">
+  {/* GLOWS */}
+  <div className="absolute top-40 left-20 w-72 h-72 bg-blue-500/10 blur-3xl rounded-full" />
+  <div className="absolute bottom-20 right-20 w-72 h-72 bg-white/10 blur-3xl rounded-full" />
 
-              <p className="uppercase tracking-[0.3em] text-sm text-gray-500 mb-4">
-                Proceso
-              </p>
+  <div className="relative z-10 max-w-6xl mx-auto">
 
-              <h2 className="text-5xl font-light">
-                Desarrollo estructurado
-              </h2>
+    {/* HEADER */}
+    <div className="text-center mb-28">
 
-            </div>
+      <p className="uppercase tracking-[0.4em] text-sm text-gray-500 mb-6">
+        Proceso de trabajo
+      </p>
 
-            <div className="relative">
+      <h2 className="text-5xl md:text-6xl font-light leading-tight mb-8">
+        Desarrollo industrial
+        <br />
+        estructurado
+      </h2>
 
-              {/* LINEA */}
-              <div className="absolute top-1/2 left-0 w-full h-[1px] bg-white/10 hidden md:block" />
+      <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+        Cada proyecto se desarrolla mediante un proceso técnico orientado
+        a manufactura, integración y optimización industrial.
+      </p>
 
-              <div className="grid md:grid-cols-5 gap-10 relative z-10">
+    </div>
 
-                {[
-                  "Levantamiento",
-                  "Diseño CAD",
-                  "Simulación",
-                  "Fabricación",
-                  "Integración",
-                ].map((step, index) => (
+    {/* TIMELINE */}
+    <div className="relative">
 
-                  <motion.div
-                    key={index}
-                    whileHover={{ y: -10 }}
-                    className="relative text-center group"
-                  >
+      {/* LINEA */}
+      <div className="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 w-[2px] h-full bg-white/10" />
 
-                    {/* NODO */}
-                    <div className="w-10 h-10 rounded-full bg-white mx-auto mb-8 relative z-10 shadow-[0_0_30px_rgba(255,255,255,0.3)]" />
+      {/* ITEMS */}
+      <div className="space-y-28">
 
-                    {/* CARD */}
-                    <div className="border border-white/10 bg-white/[0.03] backdrop-blur-xl rounded-3xl p-8 transition duration-300 group-hover:border-white/30">
+        {[
+          {
+            number: "01",
+            title: "Levantamiento",
+            desc: "Análisis técnico, requerimientos operativos y evaluación del proceso industrial.",
+          },
+          {
+            number: "02",
+            title: "Diseño CAD",
+            desc: "Desarrollo de modelos 3D, estructuras y componentes orientados a manufactura.",
+          },
+          {
+            number: "03",
+            title: "Simulación",
+            desc: "Validación funcional y optimización técnica antes de fabricación.",
+          },
+          {
+            number: "04",
+            title: "Fabricación",
+            desc: "Producción CNC, integración mecánica y manufactura industrial.",
+          },
+          {
+            number: "05",
+            title: "Integración",
+            desc: "Implementación, pruebas y puesta en marcha del sistema.",
+          },
+        ].map((step, index) => (
 
-                      <div className="text-6xl text-white/10 font-bold mb-6">
-                        0{index + 1}
-                      </div>
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className={`relative flex items-center ${
+              index % 2 === 0
+                ? "md:justify-start"
+                : "md:justify-end"
+            }`}
+          >
 
-                      <h3 className="text-xl mb-4">
-                        {step}
-                      </h3>
+            {/* CARD */}
+            <motion.div
+              whileHover={{
+                y: -8,
+                scale: 1.02,
+              }}
+              transition={{ duration: 0.3 }}
+              className="relative w-full md:w-[46%] backdrop-blur-xl bg-white/[0.03] border border-white/10 rounded-[32px] p-8 md:p-10 shadow-2xl group overflow-hidden"
+            >
 
-                      <p className="text-sm text-gray-400 leading-relaxed">
-                        Desarrollo técnico enfocado en manufactura,
-                        funcionalidad y optimización industrial.
-                      </p>
+              {/* HOVER GLOW */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
 
-                    </div>
+              {/* NUMERO */}
+              <div className="absolute -top-6 -right-2 text-[120px] font-bold text-white/[0.04] leading-none">
+                {step.number}
+              </div>
 
-                  </motion.div>
+              <div className="relative z-10">
 
-                ))}
+                <p className="uppercase tracking-[0.3em] text-xs text-gray-500 mb-4">
+                  Etapa {step.number}
+                </p>
+
+                <h3 className="text-3xl font-light mb-6">
+                  {step.title}
+                </h3>
+
+                <p className="text-gray-400 leading-relaxed text-lg">
+                  {step.desc}
+                </p>
 
               </div>
 
-            </div>
+            </motion.div>
 
-          </div>
+            {/* NODO */}
+            <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-white shadow-[0_0_30px_rgba(255,255,255,0.5)] border-4 border-black z-20" />
 
-        </section>
+          </motion.div>
+
+        ))}
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 
         {/* ================= TECNOLOGIAS ================= */}
