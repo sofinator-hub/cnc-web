@@ -22,9 +22,7 @@ export default function GuardasPage() {
         <img
           src="/fondo_blanco.jpg"
           className="w-full h-full object-cover"
-        />
-
-        <div className="absolute inset-0 bg-white/55" />
+       />
       </div>
 
       <main className="relative z-10 text-black overflow-hidden">
@@ -41,26 +39,7 @@ export default function GuardasPage() {
           {/* OVERLAY */}
           <div className="absolute inset-0 bg-black/55" />
 
-          {/* NAV SUPERIOR */}
-          <div className="absolute top-0 left-0 w-full z-20 px-6 md:px-14 py-8 flex justify-between items-center text-white">
 
-            <h1 className="text-3xl font-light tracking-tight">
-              CNC
-            </h1>
-
-            <div className="hidden md:flex gap-10 text-xs tracking-[0.25em] uppercase text-white/80">
-              <span>Inicio</span>
-              <span>Conveyors</span>
-              <span className="text-white">Guardas</span>
-              <span>Ingeniería</span>
-              <span>Contacto</span>
-            </div>
-
-            <div className="text-2xl">
-              ☰
-            </div>
-
-          </div>
 
           {/* CONTENIDO */}
           <div className="relative z-10 h-full flex items-center px-6 md:px-14">
@@ -91,16 +70,11 @@ export default function GuardasPage() {
 
           </div>
 
-          {/* SCROLL */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 text-3xl">
-            𖡎
-          </div>
-
-        </section>
+       </section>
 
 
         {/* ================= SISTEMAS ================= */}
-        <section className="px-6 md:px-14 py-24 md:py-32 bg-transparent">
+        <section className="px-6 md:px-14 py-24 md:py-32">
 
           <div className="max-w-[1500px] mx-auto">
 
@@ -126,8 +100,7 @@ export default function GuardasPage() {
                 <p className="text-gray-600 text-lg leading-relaxed max-w-[460px]">
                   Diseñamos y fabricamos guardas industriales
                   que se integran a tus equipos y procesos,
-                  cumpliendo con los más altos estándares
-                  de seguridad y calidad.
+                  cumpliendo con altos estándares de seguridad y calidad.
                 </p>
 
               </div>
@@ -152,7 +125,7 @@ export default function GuardasPage() {
 
                 <p className="text-gray-600 leading-relaxed">
                   Sistemas diseñados para proteger
-                  operadores y maquinaria en áreas industriales.
+                  operadores y maquinaria industrial.
                 </p>
 
               </div>
@@ -171,8 +144,8 @@ export default function GuardasPage() {
                 </h3>
 
                 <p className="text-gray-600 leading-relaxed">
-                  Diseños modulares que se adaptan
-                  a diferentes espacios, equipos y necesidades.
+                  Diseños modulares adaptados
+                  a diferentes procesos y espacios.
                 </p>
 
               </div>
@@ -191,8 +164,8 @@ export default function GuardasPage() {
                 </h3>
 
                 <p className="text-gray-600 leading-relaxed">
-                  Integración precisa con sistemas
-                  existentes de automatización y producción.
+                  Integración precisa con maquinaria
+                  y líneas automatizadas.
                 </p>
 
               </div>
@@ -205,7 +178,7 @@ export default function GuardasPage() {
 
 
         {/* ================= INFO ================= */}
-        <section className="px-6 md:px-14 py-20 bg-transparent">
+        <section className="px-6 md:px-14 py-20">
 
           <div className="max-w-[1500px] mx-auto border-t border-black/10 pt-20">
 
@@ -218,6 +191,7 @@ export default function GuardasPage() {
                 className="overflow-hidden rounded-[10px]"
               >
 
+                {/* SOLO AQUÍ B/N → COLOR */}
                 <img
                   src="/guardas_detalle.jpg"
                   className="w-full h-[340px] md:h-[520px] object-cover grayscale hover:grayscale-0 transition duration-700"
@@ -241,8 +215,7 @@ export default function GuardasPage() {
                 <p className="text-gray-600 text-lg leading-relaxed mb-12 max-w-[520px]">
                   Cada proyecto es desarrollado según
                   los requerimientos de tu operación,
-                  garantizando funcionalidad, durabilidad
-                  y cumplimiento con normas de seguridad industrial.
+                  garantizando funcionalidad y durabilidad.
                 </p>
 
                 {/* LISTA */}
@@ -280,7 +253,7 @@ export default function GuardasPage() {
 
 
         {/* ================= CARRUSEL ================= */}
-        <section className="px-6 md:px-14 py-20 bg-transparent">
+        <section className="px-6 md:px-14 py-20">
 
           <div className="max-w-[1500px] mx-auto border-t border-black/10 pt-16">
 
@@ -292,57 +265,53 @@ export default function GuardasPage() {
 
 
         {/* ================= CTA FINAL ================= */}
-        <section className="relative px-6 md:px-14 py-24 overflow-hidden bg-black">
+        <section className="px-6 md:px-14 py-24">
 
-          {/* FONDO */}
-          <img
-            src="/hero_guardas_clean.jpg"
-            className="absolute inset-0 w-full h-full object-cover opacity-20"
-          />
+          <div className="max-w-[1500px] mx-auto border-t border-black/10 pt-20">
 
-          <div className="absolute inset-0 bg-black/80" />
+            <div className="grid md:grid-cols-2 gap-20 items-center">
 
-          <div className="relative z-10 max-w-[1500px] mx-auto grid md:grid-cols-2 gap-20 items-center">
+              {/* TEXTO */}
+              <div>
 
-            {/* TEXTO */}
-            <div>
+                <p className="uppercase tracking-[0.45em] text-xs text-gray-400 mb-8">
+                  ¿Tienes un proyecto?
+                </p>
 
-              <p className="uppercase tracking-[0.45em] text-xs text-white/50 mb-8">
-                ¿Tienes un proyecto?
-              </p>
+                <h2 className="text-[52px] md:text-[82px] font-light leading-[0.95] text-black">
+                  Hablemos de tu
+                  siguiente solución
+                </h2>
 
-              <h2 className="text-[52px] md:text-[82px] font-light leading-[0.95] text-white">
-                Hablemos de tu
-                siguiente solución
-              </h2>
-
-            </div>
+              </div>
 
 
-            {/* DERECHA */}
-            <div>
+              {/* DERECHA */}
+              <div>
 
-              <p className="text-white/70 text-lg leading-relaxed max-w-[420px] mb-12">
-                Desarrollamos sistemas de guardas industriales
-                que impulsan la seguridad y eficiencia
-                de tu operación.
-              </p>
+                <p className="text-gray-600 text-lg leading-relaxed max-w-[420px] mb-12">
+                  Desarrollamos sistemas de guardas industriales
+                  que impulsan la seguridad y eficiencia
+                  de tu operación.
+                </p>
 
-              <button
-                onClick={() =>
-                  window.open(
-                    "https://wa.me/5215562045546?text=Hola,%20quiero%20cotizar%20guardas%20industriales",
-                    "_blank"
-                  )
-                }
-                className="bg-white text-black px-8 py-4 rounded-md flex items-center gap-4 hover:opacity-90 transition"
-              >
+                <button
+                  onClick={() =>
+                    window.open(
+                      "https://wa.me/5215562045546?text=Hola,%20quiero%20cotizar%20guardas%20industriales",
+                      "_blank"
+                    )
+                  }
+                  className="bg-black text-white px-8 py-4 rounded-md flex items-center gap-4 hover:opacity-90 transition"
+                >
 
-                CONTACTAR
+                  CONTACTAR
 
-                <ArrowUpRight size={18} />
+                  <ArrowUpRight size={18} />
 
-              </button>
+                </button>
+
+              </div>
 
             </div>
 
@@ -357,7 +326,7 @@ export default function GuardasPage() {
 
 
 
-/* ================= CARRUSEL EXACTO ================= */
+/* ================= CARRUSEL ================= */
 
 function CarruselExacto() {
   const [index, setIndex] = useState(0);
@@ -416,7 +385,7 @@ function CarruselExacto() {
       </div>
 
 
-      {/* SLIDES */}
+      {/* TODAS A COLOR */}
       <div className="grid md:grid-cols-3 gap-2 overflow-hidden rounded-[12px]">
 
         {[0, 1, 2].map((offset) => {
