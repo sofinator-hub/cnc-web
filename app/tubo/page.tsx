@@ -31,7 +31,7 @@ export default function TuboPage() {
 
           {/* FONDO */}
           <img
-            src="/hero_tubo.jpg"
+            src="/fondo_tubo.jpg"
             className="absolute inset-0 w-full h-full object-cover"
           />
 
@@ -320,7 +320,7 @@ export default function TuboPage() {
           </div>
 
        </section>
-       
+
         {/* ================= CTA FINAL ================= */}
         <section className="px-6 md:px-14 py-24">
 
