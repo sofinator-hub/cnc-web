@@ -26,7 +26,7 @@ import MobileMenu from "@/components/layout/MobileMenu";
 
           {/* IMAGEN */}
           <img
-            src="/hero_guardas_clean.jpg"
+            src="/fondo_guardas.jpg"
             className="absolute inset-0 w-full h-full object-cover"
           />
 
