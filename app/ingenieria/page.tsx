@@ -412,12 +412,7 @@ export default function IngenieriaPage() {
     className="w-full h-full object-cover"
   />
 
-  {/* OVERLAY OSCURO */}
-  <div className="absolute inset-0 bg-black/70" />
-
-  {/* GLOW */}
-  <div className="absolute top-40 left-20 w-72 h-72 bg-blue-500/10 blur-3xl rounded-full" />
-  <div className="absolute bottom-20 right-20 w-72 h-72 bg-white/10 blur-3xl rounded-full" />
+  <div className="absolute inset-0 bg-black/60" />
 </div>
 
   {/* GLOWS */}
