@@ -7,13 +7,14 @@ import MobileMenu from "@/components/layout/MobileMenu";
 const sections = {
   electrico: {
     title: "Servicios Eléctricos",
+    number: "01",
     desc: "Desarrollo e integración de sistemas eléctricos industriales orientados a seguridad, confiabilidad y eficiencia operativa.",
     capabilities: [
       "Instalaciones de potencia",
       "Sistemas de baja tensión",
       "Diagramas unifilares",
       "Mantenimiento eléctrico",
-      "Instalación de alimentadores",
+      
     ],
     applications: [
       "Líneas de producción",
@@ -23,9 +24,9 @@ const sections = {
     ],
     tech: [
       "AutoCAD Electrical",
-      "Protecciones eléctricas",
       "Control industrial",
-      "Integración electromecánica",
+      "Protecciones eléctricas",
+
     ],
     img: "/electrico_color.jpg",
     imgBN: "/electrico.jpg",
@@ -33,7 +34,8 @@ const sections = {
 
   automatizacion: {
     title: "Automatización",
-    desc: "Automatización de procesos mediante PLCs, HMIs y sistemas industriales para optimizar producción y control.",
+    number: "02",
+    desc: "Automatización de procesos mediante PLCs, HMIs y sistemas industriales.",
     capabilities: [
       "Programación PLC",
       "Integración de maquinaria",
@@ -41,16 +43,16 @@ const sections = {
       "Variadores de frecuencia",
     ],
     applications: [
-      "Automatización repetitiva",
-      "Sistemas conveyor",
-      "Estaciones automatizadas",
       "Procesos industriales",
+      "Sistemas conveyor",
+      "Automatización repetitiva",
+
     ],
     tech: [
       "PLC",
       "HMI",
       "Sensores industriales",
-      "Redes industriales",
+
     ],
     img: "/automatizacion_color.jpg",
     imgBN: "/automatizacion.jpg",
@@ -58,23 +60,23 @@ const sections = {
 
   control: {
     title: "Control Eléctrico",
-    desc: "Diseño y desarrollo de sistemas de control orientados a manufactura, automatización y monitoreo industrial.",
+    number: "03",
+    desc: "Diseño y desarrollo de sistemas de control industrial.",
     capabilities: [
       "Diseño de tableros",
       "EPLAN / AutoCAD",
-      "Actualización de sistemas",
-      "Mantenimiento industrial",
+      "Control de motores",
     ],
     applications: [
-      "Centros de control",
+
       "Integración eléctrica",
-      "Control de motores",
+      "Centros de control",
       "Monitoreo industrial",
     ],
     tech: [
-      "EPLAN",
-      "AutoCAD",
       "PLC",
+      "EPLAN",
+      
       "Control eléctrico",
     ],
     img: "/control_color.jpg",
@@ -83,23 +85,23 @@ const sections = {
 
   generales: {
     title: "Servicios Generales",
-    desc: "Soluciones integrales para infraestructura industrial y soporte electromecánico.",
+    number: "04",
+    desc: "Soluciones integrales para infraestructura industrial.",
     capabilities: [
       "HVAC",
       "UPS",
       "Mantenimiento electromecánico",
-      "Soporte técnico",
+
     ],
     applications: [
       "Infraestructura industrial",
-      "Áreas de producción",
+
       "Centros de carga",
       "Soporte operativo",
     ],
     tech: [
       "HVAC",
-      "Sistemas UPS",
-      "Mantenimiento industrial",
+      "UPS",
       "Infraestructura eléctrica",
     ],
     img: "/general_color.jpg",
@@ -108,16 +110,16 @@ const sections = {
 
   proyectos: {
     title: "Gestión de Proyectos",
-    desc: "Planeación, supervisión y ejecución de proyectos industriales llave en mano.",
+    number: "05",
+    desc: "Planeación, supervisión y ejecución de proyectos industriales.",
     capabilities: [
       "Supervisión eléctrica",
       "Ingeniería de valor",
-      "Ejecución integral",
+
       "Coordinación técnica",
     ],
     applications: [
-      "Proyectos industriales",
-      "Integración de sistemas",
+      "Integración industrial",
       "Expansión de planta",
       "Manufactura",
     ],
@@ -125,7 +127,7 @@ const sections = {
       "Planeación industrial",
       "Ingeniería aplicada",
       "Control de procesos",
-      "Integración técnica",
+
     ],
     img: "/proyectos_color.jpg",
     imgBN: "/proyectos.jpg",
@@ -147,13 +149,13 @@ export default function IngenieriaPage() {
           src="/fondo_blanco.jpg"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-white/70" />
+        <div className="absolute inset-0 bg-white/75" />
       </div>
 
       <main className="relative z-10 text-gray-900">
 
         {/* ================= HERO ================= */}
-        <section className="min-h-[90vh] flex items-center justify-center relative overflow-hidden px-4">
+        <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-6">
 
           <div className="absolute inset-0">
             <img
@@ -162,264 +164,308 @@ export default function IngenieriaPage() {
             />
           </div>
 
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-black/65" />
 
-          <div className="absolute top-20 left-10 w-72 h-72 bg-[#0f172a] blur-3xl opacity-30" />
-          <div className="absolute bottom-20 right-10 w-72 h-72 bg-[#0f172a] blur-3xl opacity-30" />
+          {/* GRID */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="w-full h-full bg-[linear-gradient(to_right,#ffffff22_1px,transparent_1px),linear-gradient(to_bottom,#ffffff22_1px,transparent_1px)] bg-[size:80px_80px]" />
+          </div>
+
+          {/* NUMERO GIGANTE */}
+          <div className="absolute text-[220px] md:text-[420px] font-bold text-white/5">
+            01
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative z-10 backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-8 md:p-14 max-w-4xl w-full shadow-2xl text-white"
+            className="relative z-10 max-w-5xl text-center text-white"
           >
-            <p className="uppercase tracking-[0.3em] text-sm text-gray-300 mb-6">
+
+            <p className="uppercase tracking-[0.4em] text-sm text-gray-300 mb-6">
               Ingeniería Industrial
             </p>
 
-            <h1 className="text-4xl md:text-6xl font-light mb-8 leading-tight">
-              Soluciones integrales
+            <h1 className="text-5xl md:text-7xl font-light leading-tight mb-8">
+              Diseño, automatización
               <br />
-              para manufactura y automatización
+              y manufactura industrial
             </h1>
 
-            <p className="text-gray-300 text-lg leading-relaxed max-w-3xl">
-              Desarrollamos soluciones industriales integrando diseño mecánico,
-              automatización, control eléctrico y manufactura para optimizar
+            <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto mb-12">
+              Desarrollamos soluciones industriales integrando ingeniería,
+              automatización, manufactura y control eléctrico para optimizar
               procesos productivos y sistemas industriales.
             </p>
+
+            {/* MÉTRICAS */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+              <div className="backdrop-blur-xl bg-white/10 border border-white/10 rounded-2xl p-6">
+                <h3 className="text-3xl font-light mb-2">+25</h3>
+                <p className="text-sm text-gray-300">
+                  Proyectos
+                </p>
+              </div>
+
+              <div className="backdrop-blur-xl bg-white/10 border border-white/10 rounded-2xl p-6">
+                <h3 className="text-3xl font-light mb-2">+10</h3>
+                <p className="text-sm text-gray-300">
+                  Sistemas integrados
+                </p>
+              </div>
+
+              <div className="backdrop-blur-xl bg-white/10 border border-white/10 rounded-2xl p-6">
+                <h3 className="text-3xl font-light mb-2">24/7</h3>
+                <p className="text-sm text-gray-300">
+                  Soporte técnico
+                </p>
+              </div>
+
+              <div className="backdrop-blur-xl bg-white/10 border border-white/10 rounded-2xl p-6">
+                <h3 className="text-3xl font-light mb-2">5</h3>
+                <p className="text-sm text-gray-300">
+                  Industrias
+                </p>
+              </div>
+
+            </div>
+
           </motion.div>
 
         </section>
 
 
-        {/* ================= SELECTOR ================= */}
-        <section className="px-6 md:px-20 py-12 flex flex-wrap gap-4 justify-center">
+        {/* ================= SERVICIOS ================= */}
+        <section className="px-6 md:px-20 py-28">
 
-          {Object.keys(sections).map((key) => (
-            <button
-              key={key}
-              onClick={() => setActive(key)}
-              className={`px-5 py-2 rounded-full border transition ${
-                active === key
-                  ? "bg-black text-white"
-                  : "bg-white text-black hover:bg-gray-100"
-              }`}
+          <div className="max-w-7xl mx-auto grid md:grid-cols-[320px_1fr] gap-12">
+
+            {/* MENU LATERAL */}
+            <div className="space-y-4">
+
+              {Object.keys(sections).map((key) => {
+
+                const item = sections[key as keyof typeof sections];
+
+                return (
+                  <button
+                    key={key}
+                    onClick={() => setActive(key)}
+                    className={`w-full text-left rounded-3xl p-6 border transition-all duration-300 ${
+                      active === key
+                        ? "bg-black text-white border-black"
+                        : "bg-white/70 border-black/5 hover:bg-white"
+                    }`}
+                  >
+
+                    <div className="flex items-center justify-between mb-4">
+
+                      <span className="text-sm opacity-60">
+                        {item.number}
+                      </span>
+
+                      <div className={`w-3 h-3 rounded-full ${
+                        active === key
+                          ? "bg-white"
+                          : "bg-black/20"
+                      }`} />
+
+                    </div>
+
+                    <h3 className="text-xl font-medium">
+                      {item.title}
+                    </h3>
+
+                  </button>
+                );
+              })}
+
+            </div>
+
+
+            {/* PANEL */}
+            <motion.div
+              key={active}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="bg-white/70 backdrop-blur-xl border border-black/5 rounded-[40px] overflow-hidden shadow-2xl"
             >
-              {sections[key as keyof typeof sections].title}
-            </button>
-          ))}
 
-        </section>
+              {/* IMAGEN */}
+              <div className="relative h-[400px] overflow-hidden group">
 
+                <img
+                  src={data.imgBN}
+                  className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:opacity-0 grayscale"
+                />
 
-        {/* ================= INTRO ================= */}
-        <section className="px-6 md:px-20 pb-10">
+                <img
+                  src={data.img}
+                  className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition duration-700"
+                />
 
-          <div className="max-w-5xl mx-auto text-center">
+                <div className="absolute inset-0 bg-black/20" />
 
-            <p className="uppercase tracking-[0.3em] text-sm text-gray-500 mb-4">
-              Capacidades técnicas
-            </p>
+                <div className="absolute bottom-8 left-8 text-white">
 
-            <h2 className="text-4xl md:text-5xl font-light mb-8">
-              Ingeniería aplicada a procesos industriales
-            </h2>
+                  <p className="text-sm tracking-[0.3em] uppercase opacity-70 mb-3">
+                    Servicio especializado
+                  </p>
 
-            <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              Integramos ingeniería, manufactura y automatización para desarrollar
-              soluciones funcionales orientadas a producción, seguridad y optimización
-              operativa.
-            </p>
+                  <h2 className="text-4xl font-light">
+                    {data.title}
+                  </h2>
+
+                </div>
+
+              </div>
+
+              {/* INFO */}
+              <div className="p-8 md:p-12">
+
+                <p className="text-gray-600 text-lg leading-relaxed mb-12 max-w-3xl">
+                  {data.desc}
+                </p>
+
+                <div className="grid md:grid-cols-3 gap-10">
+
+                  {/* CAPACIDADES */}
+                  <div>
+                    <h3 className="uppercase tracking-[0.2em] text-sm text-gray-500 mb-6">
+                      Capacidades
+                    </h3>
+
+                    <div className="space-y-4">
+
+                      {data.capabilities.map((item, i) => (
+                        <div
+                          key={i}
+                          className="bg-black/[0.03] rounded-2xl p-4"
+                        >
+                          {item}
+                        </div>
+                      ))}
+
+                    </div>
+                  </div>
+
+                  {/* APLICACIONES */}
+                  <div>
+                    <h3 className="uppercase tracking-[0.2em] text-sm text-gray-500 mb-6">
+                      Aplicaciones
+                    </h3>
+
+                    <div className="space-y-4">
+
+                      {data.applications.map((item, i) => (
+                        <div
+                          key={i}
+                          className="bg-black/[0.03] rounded-2xl p-4"
+                        >
+                          {item}
+                        </div>
+                      ))}
+
+                    </div>
+                  </div>
+
+                  {/* TECNOLOGIAS */}
+                  <div>
+                    <h3 className="uppercase tracking-[0.2em] text-sm text-gray-500 mb-6">
+                      Tecnologías
+                    </h3>
+
+                    <div className="space-y-4">
+
+                      {data.tech.map((item, i) => (
+                        <div
+                          key={i}
+                          className="bg-black/[0.03] rounded-2xl p-4"
+                        >
+                          {item}
+                        </div>
+                      ))}
+
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </motion.div>
 
           </div>
 
         </section>
 
 
-        {/* ================= CONTENIDO ================= */}
-        <section className="px-6 md:px-20 py-16 grid md:grid-cols-2 gap-16 items-center">
+        {/* ================= TIMELINE ================= */}
+        <section className="px-6 md:px-20 py-32 bg-black text-white overflow-hidden">
 
-          {/* INFO */}
-          <motion.div
-            key={active}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="bg-white/70 backdrop-blur-xl border border-black/5 rounded-3xl p-8 shadow-xl"
-          >
+          <div className="max-w-7xl mx-auto">
 
-            <h2 className="text-4xl font-light mb-6">
-              {data.title}
-            </h2>
-
-            <p className="text-gray-600 mb-10 leading-relaxed">
-              {data.desc}
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-8">
-
-              {/* CAPACIDADES */}
-              <div>
-                <h3 className="text-sm uppercase tracking-[0.2em] text-gray-500 mb-4">
-                  Capacidades
-                </h3>
-
-                <ul className="space-y-3 text-sm text-gray-700">
-                  {data.capabilities.map((item, i) => (
-                    <li key={i}>• {item}</li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* APLICACIONES */}
-              <div>
-                <h3 className="text-sm uppercase tracking-[0.2em] text-gray-500 mb-4">
-                  Aplicaciones
-                </h3>
-
-                <ul className="space-y-3 text-sm text-gray-700">
-                  {data.applications.map((item, i) => (
-                    <li key={i}>• {item}</li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* TECNOLOGÍAS */}
-              <div>
-                <h3 className="text-sm uppercase tracking-[0.2em] text-gray-500 mb-4">
-                  Tecnologías
-                </h3>
-
-                <ul className="space-y-3 text-sm text-gray-700">
-                  {data.tech.map((item, i) => (
-                    <li key={i}>• {item}</li>
-                  ))}
-                </ul>
-              </div>
-
-            </div>
-
-          </motion.div>
-
-
-          {/* IMAGEN */}
-          <motion.div
-            key={data.img}
-            className="relative w-full h-[500px] rounded-3xl overflow-hidden group shadow-2xl"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-          >
-
-            <img
-              src={data.imgBN}
-              className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:opacity-0 grayscale"
-            />
-
-            <img
-              src={data.img}
-              className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition duration-700"
-            />
-
-          </motion.div>
-
-        </section>
-
-
-        {/* ================= INGENIERÍA + FABRICACIÓN ================= */}
-        <section className="px-6 md:px-20 py-28 bg-black text-white">
-
-          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-
-            <div>
-
-              <p className="uppercase tracking-[0.3em] text-sm text-gray-500 mb-4">
-                Ingeniería + Manufactura
-              </p>
-
-              <h2 className="text-4xl md:text-5xl font-light leading-tight mb-8">
-                Del concepto
-                <br />
-                a la fabricación
-              </h2>
-
-              <p className="text-gray-400 leading-relaxed mb-10">
-                Desarrollamos proyectos completos desde modelado CAD y diseño
-                estructural hasta fabricación CNC, integración y ensamble final.
-              </p>
-
-              <div className="grid grid-cols-2 gap-6 text-sm text-gray-300">
-
-                <div>• Diseño CAD</div>
-                <div>• Simulación</div>
-                <div>• Corte CNC</div>
-                <div>• Integración eléctrica</div>
-                <div>• Fabricación metálica</div>
-                <div>• Ensamble final</div>
-
-              </div>
-
-            </div>
-
-            <div className="relative">
-              <img
-                src="/fondo_ingenieria1.jpg"
-                className="rounded-3xl object-cover h-[500px] w-full"
-              />
-            </div>
-
-          </div>
-
-        </section>
-
-
-        {/* ================= PROCESO ================= */}
-        <section className="px-6 md:px-20 py-28 bg-[#0a0a0a] text-white">
-
-          <div className="max-w-6xl mx-auto">
-
-            <div className="mb-20 text-center">
+            <div className="text-center mb-24">
 
               <p className="uppercase tracking-[0.3em] text-sm text-gray-500 mb-4">
                 Proceso
               </p>
 
-              <h2 className="text-4xl md:text-5xl font-light">
+              <h2 className="text-5xl font-light">
                 Desarrollo estructurado
               </h2>
 
             </div>
 
-            <div className="grid md:grid-cols-5 gap-8">
+            <div className="relative">
 
-              {[
-                "Levantamiento",
-                "Diseño CAD",
-                "Simulación",
-                "Fabricación",
-                "Integración",
-              ].map((step, index) => (
+              {/* LINEA */}
+              <div className="absolute top-1/2 left-0 w-full h-[1px] bg-white/10 hidden md:block" />
 
-                <div
-                  key={index}
-                  className="border border-white/10 rounded-3xl p-6 bg-white/[0.03]"
-                >
+              <div className="grid md:grid-cols-5 gap-10 relative z-10">
 
-                  <div className="text-5xl text-white/10 mb-6">
-                    0{index + 1}
-                  </div>
+                {[
+                  "Levantamiento",
+                  "Diseño CAD",
+                  "Simulación",
+                  "Fabricación",
+                  "Integración",
+                ].map((step, index) => (
 
-                  <h3 className="text-lg mb-4">
-                    {step}
-                  </h3>
+                  <motion.div
+                    key={index}
+                    whileHover={{ y: -10 }}
+                    className="relative text-center group"
+                  >
 
-                  <p className="text-sm text-gray-400 leading-relaxed">
-                    Desarrollo técnico orientado a manufactura,
-                    funcionalidad y optimización industrial.
-                  </p>
+                    {/* NODO */}
+                    <div className="w-10 h-10 rounded-full bg-white mx-auto mb-8 relative z-10 shadow-[0_0_30px_rgba(255,255,255,0.3)]" />
 
-                </div>
+                    {/* CARD */}
+                    <div className="border border-white/10 bg-white/[0.03] backdrop-blur-xl rounded-3xl p-8 transition duration-300 group-hover:border-white/30">
 
-              ))}
+                      <div className="text-6xl text-white/10 font-bold mb-6">
+                        0{index + 1}
+                      </div>
+
+                      <h3 className="text-xl mb-4">
+                        {step}
+                      </h3>
+
+                      <p className="text-sm text-gray-400 leading-relaxed">
+                        Desarrollo técnico enfocado en manufactura,
+                        funcionalidad y optimización industrial.
+                      </p>
+
+                    </div>
+
+                  </motion.div>
+
+                ))}
+
+              </div>
 
             </div>
 
@@ -428,8 +474,8 @@ export default function IngenieriaPage() {
         </section>
 
 
-        {/* ================= TECNOLOGÍAS ================= */}
-        <section className="px-6 md:px-20 py-24 bg-black text-white">
+        {/* ================= TECNOLOGIAS ================= */}
+        <section className="px-6 md:px-20 py-28 bg-[#0a0a0a] text-white">
 
           <div className="max-w-6xl mx-auto text-center">
 
@@ -437,7 +483,7 @@ export default function IngenieriaPage() {
               Tecnologías
             </p>
 
-            <h2 className="text-4xl font-light mb-16">
+            <h2 className="text-5xl font-light mb-20">
               Herramientas y sistemas
             </h2>
 
@@ -454,49 +500,18 @@ export default function IngenieriaPage() {
                 "Automatización",
               ].map((tech, index) => (
 
-                <div
+                <motion.div
                   key={index}
-                  className="border border-white/10 rounded-2xl py-6 bg-white/[0.03]"
+                  whileHover={{ y: -5 }}
+                  className="border border-white/10 rounded-3xl py-10 bg-white/[0.03] backdrop-blur-xl"
                 >
-                  <p className="text-gray-300">
+
+                  <p className="text-gray-300 text-lg">
                     {tech}
                   </p>
-                </div>
-
-              ))}
-
-            </div>
-
-          </div>
-
-        </section>
 
 
-        {/* ================= INDUSTRIAS ================= */}
-        <section className="px-6 md:px-20 py-24 bg-[#0a0a0a] text-white">
-
-          <div className="max-w-6xl mx-auto text-center">
-
-            <h2 className="text-4xl font-light mb-14">
-              Industrias que atendemos
-            </h2>
-
-            <div className="grid md:grid-cols-5 gap-6 text-gray-300">
-
-              {[
-                "Manufactura",
-                "Automotriz",
-                "Logística",
-                "Alimentos",
-                "Metalmecánica",
-              ].map((item, index) => (
-
-                <div
-                  key={index}
-                  className="border border-white/10 rounded-2xl py-8 bg-white/[0.03]"
-                >
-                  {item}
-                </div>
+                </motion.div>
 
               ))}
 
@@ -508,15 +523,15 @@ export default function IngenieriaPage() {
 
 
         {/* ================= CTA ================= */}
-        <section className="px-6 md:px-20 py-28 text-center bg-black text-white">
+        <section className="px-6 md:px-20 py-32 bg-black text-white text-center">
 
-          <h2 className="text-4xl md:text-5xl font-light leading-tight mb-8">
+          <h2 className="text-5xl md:text-6xl font-light leading-tight mb-10">
             ¿Necesitas desarrollar
             <br />
             una solución industrial?
           </h2>
 
-          <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed mb-10">
+          <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed mb-12 text-lg">
             Nuestro equipo puede ayudarte desde diseño conceptual
             hasta fabricación e integración final.
           </p>
@@ -528,7 +543,7 @@ export default function IngenieriaPage() {
                 "_blank"
               )
             }
-            className="bg-white text-black px-8 py-4 rounded-2xl hover:bg-gray-200 transition"
+            className="bg-white text-black px-10 py-5 rounded-2xl hover:bg-gray-200 transition text-lg"
           >
             Cotizar proyecto
           </button>
