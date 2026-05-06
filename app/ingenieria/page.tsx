@@ -405,14 +405,18 @@ export default function IngenieriaPage() {
 {/* ================= TIMELINE PREMIUM ================= */}
 <section className="relative px-6 md:px-20 py-32 bg-black text-white overflow-hidden">
 
-{/* FONDO */}
-<div className="fixed inset-0 -z-10">
-  <img
-    src="/fondo_negro.jpg"
-    className="w-full h-full object-cover"
+{/* FONDO TIMELINE */}
+<div className="absolute inset-0">
+
+  <div
+    className="absolute inset-0 bg-fixed bg-center bg-cover"
+    style={{
+      backgroundImage: "url('/fondo_negro.jpg')",
+    }}
   />
 
   <div className="absolute inset-0 bg-black/60" />
+
 </div>
 
   {/* GLOWS */}
