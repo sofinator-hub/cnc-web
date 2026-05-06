@@ -22,49 +22,44 @@ export default function GuardasPage() {
 
         {/* ================= HERO ================= */}
         <section className="min-h-screen flex items-center relative overflow-hidden">
-
+          
 
           <img
             src="/fondo_guardas.jpg"
-            
+
             className="absolute inset-0 w-full h-full object-cover"
           />
 
-          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0 bg-black/45" />
 
-          {/* GRID TECNICO */}
+          {/* GRID TECNICO SUTIL */}
           <div className="absolute inset-0 opacity-10">
             <div className="w-full h-full bg-[linear-gradient(to_right,#ffffff22_1px,transparent_1px),linear-gradient(to_bottom,#ffffff22_1px,transparent_1px)] bg-[size:70px_70px]" />
           </div>
 
-          {/* NUMERO */}
-          <div className="absolute right-10 md:right-24 top-10 text-[120px] md:text-[220px] text-white/10 font-bold">
-            01
-          </div>
-
-          <div className="relative z-10 grid md:grid-cols-2 gap-16 items-center w-full px-6 md:px-20 text-white">
+          <div className="relative z-10 grid md:grid-cols-2 gap-14 items-center w-full px-6 md:px-20 text-white">
 
             {/* TEXTO */}
             <motion.div
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 35 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
 
-              <p className="uppercase tracking-[0.4em] text-sm text-gray-300 mb-6">
+              <p className="uppercase tracking-[0.35em] text-sm text-gray-300 mb-6">
                 Seguridad Industrial
               </p>
 
               <h1 className="text-5xl md:text-7xl font-light leading-tight mb-8">
-                Guardas industriales
+                Guardas
                 <br />
-                para maquinaria
+                industriales
               </h1>
 
-              <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mb-10">
-                Sistemas de protección industrial diseñados para maquinaria,
-                automatización y líneas de producción, integrando seguridad,
-                resistencia y funcionalidad operativa.
+              <p className="text-lg text-gray-200 leading-relaxed max-w-2xl mb-10">
+                Sistemas de protección diseñados para maquinaria,
+                automatización y líneas de producción, integrando
+                seguridad, funcionalidad y resistencia industrial.
               </p>
 
               {/* METRICAS */}
@@ -72,11 +67,11 @@ export default function GuardasPage() {
 
                 <div className="backdrop-blur-xl bg-white/10 border border-white/10 rounded-2xl p-5">
                   <h3 className="text-2xl font-light mb-2">
-                    +20
+                    CNC
                   </h3>
 
                   <p className="text-xs text-gray-300">
-                    Sistemas fabricados
+                    Fabricación precisa
                   </p>
                 </div>
 
@@ -92,21 +87,21 @@ export default function GuardasPage() {
 
                 <div className="backdrop-blur-xl bg-white/10 border border-white/10 rounded-2xl p-5">
                   <h3 className="text-2xl font-light mb-2">
-                    CNC
+                    MOD
                   </h3>
 
                   <p className="text-xs text-gray-300">
-                    Fabricación precisa
+                    Sistemas modulares
                   </p>
                 </div>
 
                 <div className="backdrop-blur-xl bg-white/10 border border-white/10 rounded-2xl p-5">
                   <h3 className="text-2xl font-light mb-2">
-                    100%
+                    SAFE
                   </h3>
 
                   <p className="text-xs text-gray-300">
-                    Diseño personalizado
+                    Seguridad industrial
                   </p>
                 </div>
 
@@ -116,19 +111,19 @@ export default function GuardasPage() {
 
             {/* IMAGEN */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
               className="relative flex justify-center"
             >
 
-              {/* OVERLAYS */}
-              <div className="absolute top-8 left-8 border border-white/20 rounded-xl px-4 py-2 backdrop-blur-xl bg-black/20 text-sm">
+              {/* ETIQUETAS TECNICAS */}
+              <div className="absolute top-6 left-6 border border-white/20 rounded-xl px-4 py-2 backdrop-blur-xl bg-black/20 text-sm">
                 Safety Zone
               </div>
 
-              <div className="absolute bottom-10 right-8 border border-white/20 rounded-xl px-4 py-2 backdrop-blur-xl bg-black/20 text-sm">
-                Industrial Protection
+              <div className="absolute bottom-6 right-6 border border-white/20 rounded-xl px-4 py-2 backdrop-blur-xl bg-black/20 text-sm">
+                Modular System
               </div>
 
               <img
@@ -150,17 +145,17 @@ export default function GuardasPage() {
 
             <div className="text-center mb-20">
 
-              <p className="uppercase tracking-[0.4em] text-sm text-gray-500 mb-6">
+              <p className="uppercase tracking-[0.35em] text-sm text-gray-500 mb-6">
                 Aplicaciones
               </p>
 
               <h2 className="text-5xl font-light mb-8">
-                Sistemas de protección
+                Protección industrial
               </h2>
 
               <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Diseñadas para integrarse en diferentes entornos industriales,
-                automatización y maquinaria especializada.
+                Sistemas desarrollados para integrarse en diferentes
+                procesos industriales y automatización.
               </p>
 
             </div>
@@ -170,13 +165,13 @@ export default function GuardasPage() {
               {[
                 "Robots industriales",
                 "Conveyors",
-                "Zonas automatizadas",
-                "Áreas de corte",
+                "Áreas automatizadas",
+                "Zonas de corte",
               ].map((item, index) => (
 
                 <motion.div
                   key={index}
-                  whileHover={{ y: -8 }}
+                  whileHover={{ y: -6 }}
                   className="bg-white/70 backdrop-blur-xl border border-black/5 rounded-[28px] p-10 shadow-xl"
                 >
 
@@ -200,38 +195,23 @@ export default function GuardasPage() {
 
 
         {/* ================= CARRUSEL ================= */}
-        <section className="px-6 md:px-20 py-28 relative overflow-hidden">
+        <section className="px-6 md:px-20 py-28">
 
-          <div className="absolute inset-0">
+          <div className="text-center mb-20">
 
-            <div
-              className="absolute inset-0 bg-fixed bg-center bg-cover"
-              style={{
-                backgroundImage: "url('/fondo_negro.jpg')",
-              }}
-            />
+            <p className="uppercase tracking-[0.35em] text-sm text-gray-500 mb-6">
+              Tipos de guardas
+            </p>
 
-            <div className="absolute inset-0 bg-black/70" />
-
-          </div>
-
-          <div className="relative z-10">
-
-            <div className="text-center mb-20 text-white">
-
-              <p className="uppercase tracking-[0.4em] text-sm text-gray-400 mb-6">
-                Tipos de guardas
-              </p>
-
-              <h2 className="text-5xl font-light">
-                Sistemas modulares
-              </h2>
-
-            </div>
-
-            <CarruselGuardas />
+            <h2 className="text-5xl font-light">
+              Sistemas modulares
+            </h2>
 
           </div>
+
+          <CarruselGuardas />
+
+
 
         </section>
 
@@ -244,7 +224,7 @@ export default function GuardasPage() {
             {/* TEXTO */}
             <div>
 
-              <p className="uppercase tracking-[0.4em] text-sm text-gray-500 mb-6">
+              <p className="uppercase tracking-[0.35em] text-sm text-gray-500 mb-6">
                 Normativa y seguridad
               </p>
 
@@ -255,8 +235,8 @@ export default function GuardasPage() {
               </h2>
 
               <p className="text-gray-600 leading-relaxed mb-10 text-lg">
-                Nuestras guardas están desarrolladas para reducir riesgos,
-                proteger operadores y mantener seguridad en procesos industriales.
+                Nuestras guardas están diseñadas para proteger operadores,
+                maquinaria y procesos industriales bajo estándares de seguridad.
               </p>
 
               <div className="grid grid-cols-2 gap-5 mb-10">
@@ -295,16 +275,16 @@ export default function GuardasPage() {
 
             {/* IMAGEN */}
             <motion.div
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ scale: 1.01 }}
               className="relative"
             >
 
-              {/* OVERLAY TECNICO */}
-              <div className="absolute top-6 left-6 border border-white/20 bg-black/40 backdrop-blur-xl rounded-xl px-4 py-2 text-white text-sm z-10">
+              {/* ETIQUETAS */}
+              <div className="absolute top-6 left-6 border border-white/20 bg-black/30 backdrop-blur-xl rounded-xl px-4 py-2 text-white text-sm z-10">
                 Safety Panel
               </div>
 
-              <div className="absolute bottom-6 right-6 border border-white/20 bg-black/40 backdrop-blur-xl rounded-xl px-4 py-2 text-white text-sm z-10">
+              <div className="absolute bottom-6 right-6 border border-white/20 bg-black/30 backdrop-blur-xl rounded-xl px-4 py-2 text-white text-sm z-10">
                 Controlled Access
               </div>
 
@@ -320,120 +300,37 @@ export default function GuardasPage() {
         </section>
 
 
-        {/* ================= TIMELINE ================= */}
-        <section className="relative px-6 md:px-20 py-32 text-white overflow-hidden">
+        {/* ================= CTA ================= */}
+        <section className="px-6 md:px-20 pb-32">
 
-          {/* FONDO */}
-          <div className="absolute inset-0">
+          <div className="max-w-5xl mx-auto bg-white/70 backdrop-blur-xl border border-black/5 rounded-[40px] p-12 md:p-20 text-center shadow-2xl">
 
-            <div
-              className="absolute inset-0 bg-fixed bg-center bg-cover"
-              style={{
-                backgroundImage: "url('/fondo_negro.jpg')",
-              }}
-            />
+            <p className="uppercase tracking-[0.35em] text-sm text-gray-500 mb-6">
+              Sistemas personalizados
+            </p>
 
-            <div className="absolute inset-0 bg-black/70" />
+            <h2 className="text-4xl md:text-6xl font-light leading-tight mb-8">
+              ¿Necesitas proteger
+              <br />
+              un proceso industrial?
+            </h2>
 
-          </div>
+            <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed mb-10 text-lg">
+              Diseñamos soluciones adaptadas a maquinaria,
+              automatización y líneas de producción industriales.
+            </p>
 
-          <div className="relative z-10 max-w-6xl mx-auto">
-
-            <div className="text-center mb-28">
-
-              <p className="uppercase tracking-[0.4em] text-sm text-gray-500 mb-6">
-                Proceso de fabricación
-              </p>
-
-              <h2 className="text-5xl md:text-6xl font-light leading-tight mb-8">
-                Desarrollo modular
-                <br />
-                estructurado
-              </h2>
-
-            </div>
-
-            <div className="relative">
-
-              <div className="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 w-[2px] h-full bg-white/10" />
-
-              <div className="space-y-28">
-
-                {[
-                  {
-                    number: "01",
-                    title: "Levantamiento",
-                    desc: "Evaluación de maquinaria y zonas de riesgo.",
-                  },
-                  {
-                    number: "02",
-                    title: "Diseño",
-                    desc: "Modelado y desarrollo estructural personalizado.",
-                  },
-                  {
-                    number: "03",
-                    title: "Fabricación",
-                    desc: "Producción CNC y ensamblaje industrial.",
-                  },
-                  {
-                    number: "04",
-                    title: "Instalación",
-                    desc: "Integración y ajuste operativo.",
-                  },
-                ].map((step, index) => (
-
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 80 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7 }}
-                    viewport={{ once: true }}
-                    className={`relative flex items-center ${
-                      index % 2 === 0
-                        ? "md:justify-start"
-                        : "md:justify-end"
-                    }`}
-                  >
-
-                    <motion.div
-                      whileHover={{
-                        y: -8,
-                        scale: 1.02,
-                      }}
-                      className="relative w-full md:w-[46%] backdrop-blur-xl bg-white/[0.03] border border-white/10 rounded-[32px] p-8 md:p-10 shadow-2xl overflow-hidden"
-                    >
-
-                      <div className="absolute -top-6 -right-2 text-[120px] font-bold text-white/[0.04] leading-none">
-                        {step.number}
-                      </div>
-
-                      <div className="relative z-10">
-
-                        <p className="uppercase tracking-[0.3em] text-xs text-gray-500 mb-4">
-                          Etapa {step.number}
-                        </p>
-
-                        <h3 className="text-3xl font-light mb-6">
-                          {step.title}
-                        </h3>
-
-                        <p className="text-gray-400 leading-relaxed text-lg">
-                          {step.desc}
-                        </p>
-
-                      </div>
-
-                    </motion.div>
-
-                    <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-white border-4 border-black z-20" />
-
-                  </motion.div>
-
-                ))}
-
-              </div>
-
-            </div>
+            <button
+              onClick={() =>
+                window.open(
+                  "https://wa.me/5215562045546?text=Hola,%20quiero%20cotizar%20guardas%20industriales",
+                  "_blank"
+                )
+              }
+              className="px-8 py-4 bg-black text-white rounded-2xl hover:bg-gray-800 transition"
+            >
+              Solicitar cotización
+            </button>
 
           </div>
 
@@ -482,40 +379,52 @@ function CarruselGuardas() {
   };
 
   return (
-    <div className="flex flex-col items-center relative z-10">
+    <div className="max-w-5xl mx-auto">
 
-      <motion.img
-        key={guardas[index].img}
-        initial={{ opacity: 0.4 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.4 }}
-        src={guardas[index].img}
-        className="w-[320px] md:w-[700px] max-h-[500px] object-cover rounded-[32px] shadow-2xl mb-10 border border-white/10"
-      />
+      <div className="bg-white/70 backdrop-blur-xl border border-black/5 rounded-[36px] p-6 md:p-10 shadow-2xl">
 
-      <h3 className="text-3xl font-light text-white mb-4">
-        {guardas[index].nombre}
-      </h3>
+        <motion.img
+          key={guardas[index].img}
+          initial={{ opacity: 0.4 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.4 }}
+          src={guardas[index].img}
+          className="w-full h-[240px] md:h-[520px] object-cover rounded-[28px] shadow-xl mb-8"
+        />
 
-      <p className="text-gray-400 mb-10 text-lg">
-        {guardas[index].desc}
-      </p>
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
 
-      <div className="flex gap-6">
+          <div className="text-left">
 
-        <button
-          onClick={prev}
-          className="px-5 py-3 border border-white/20 rounded-full hover:bg-white hover:text-black transition text-white"
-        >
-          ←
-        </button>
+            <h3 className="text-2xl md:text-4xl font-light mb-4">
+              {guardas[index].nombre}
+            </h3>
 
-        <button
-          onClick={next}
-          className="px-5 py-3 border border-white/20 rounded-full hover:bg-white hover:text-black transition text-white"
-        >
-          →
-        </button>
+            <p className="text-gray-600 text-base md:text-lg">
+              {guardas[index].desc}
+            </p>
+
+          </div>
+
+          <div className="flex gap-4">
+
+            <button
+              onClick={prev}
+              className="w-12 h-12 rounded-full border border-black/10 hover:bg-black hover:text-white transition"
+            >
+              ←
+            </button>
+
+            <button
+              onClick={next}
+              className="w-12 h-12 rounded-full border border-black/10 hover:bg-black hover:text-white transition"
+            >
+              →
+            </button>
+
+          </div>
+
+        </div>
 
       </div>
 
