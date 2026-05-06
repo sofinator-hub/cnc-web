@@ -2,39 +2,15 @@
 
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 import MobileMenu from "@/components/layout/MobileMenu";
 
 export default function GuardasPage() {
-  const sistemas = [
-    {
-      title: "Protección perimetral",
-      desc: "Sistemas diseñados para delimitar y proteger áreas industriales y maquinaria.",
-      img: "/guarda1.jpg",
-    },
-    {
-      title: "Acceso controlado",
-      desc: "Guardas con accesos modulares y configuración personalizada.",
-      img: "/guarda2.jpg",
-    },
-    {
-      title: "Diseños personalizados",
-      desc: "Soluciones adaptadas a procesos industriales y automatización.",
-      img: "/guarda3.jpg",
-    },
-  ];
-
-  const galeria = [
-    "/guarda1.jpg",
-    "/guarda2.jpg",
-    "/guarda3.jpg",
-    "/guarda4.jpg",
-  ];
-
-  return (
+return (
     <>
       <MobileMenu />
 
-      {/* FONDO GLOBAL */}
+      {/* ================= FONDO GLOBAL ================= */}
       <div className="fixed inset-0 -z-10">
         <img
           src="/fondo_blanco.jpg"
@@ -49,25 +25,24 @@ export default function GuardasPage() {
         {/* ================= HERO ================= */}
         <section className="relative min-h-screen flex items-center overflow-hidden">
 
-          {/* FONDO */}
+          {/* IMAGEN HERO */}
           <img
-            src="/fondo_guardas.jpg"
-
+            src="/hero_guardas_clean.jpg"
             className="absolute inset-0 w-full h-full object-cover"
           />
 
           {/* OVERLAY */}
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/55 backdrop-blur-[1px]" />
 
           {/* CONTENIDO */}
-          <div className="relative z-10 w-full px-6 md:px-20">
-
+         
+     <div className="relative z-10 w-full px-6 md:px-20">
 
             <motion.div
               initial={{ opacity: 0, y: 35 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="max-w-3xl"
+              className="max-w-2xl"
             >
 
               <p className="uppercase tracking-[0.35em] text-sm text-gray-300 mb-6">
@@ -80,10 +55,10 @@ export default function GuardasPage() {
                 industriales
               </h1>
 
-              <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-xl">
-                Sistemas de protección para maquinaria,
-                automatización y procesos industriales,
-                diseñados para integrarse con precisión y funcionalidad.
+              <p className="text-lg md:text-xl text-gray-100 leading-relaxed">
+                Sistemas de protección diseñados para maquinaria,
+                automatización y procesos industriales con enfoque
+                en seguridad, integración y funcionalidad.
               </p>
 
             </motion.div>
@@ -109,14 +84,28 @@ export default function GuardasPage() {
                 Soluciones modulares
               </h2>
 
-
-
-            </div>
+           </div>
 
             {/* GRID */}
             <div className="grid md:grid-cols-3 gap-8">
 
-              {sistemas.map((item, index) => (
+              {[
+                {
+                  title: "Protección perimetral",
+                  desc: "Diseñadas para delimitar áreas industriales y proteger maquinaria.",
+                  img: "/guarda1.jpg",
+                },
+                {
+                  title: "Acceso controlado",
+                  desc: "Guardas con accesos modulares y configuraciones personalizadas.",
+                  img: "/guarda2.jpg",
+                },
+                {
+                  title: "Diseños personalizados",
+                  desc: "Soluciones adaptadas a procesos industriales y automatización.",
+                  img: "/guarda3.jpg",
+                },
+              ].map((item, index) => (
 
                 <motion.div
                   key={index}
@@ -128,7 +117,7 @@ export default function GuardasPage() {
                   {/* IMAGEN */}
                   <div className="relative overflow-hidden rounded-[32px] mb-8">
 
-                    {/* B/N */}
+
                     <img
                       src={item.img}
                       className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700"
@@ -159,8 +148,10 @@ export default function GuardasPage() {
 
           </div>
 
-         </section>
-        {/* ================= INFO ================= */}
+        </section>
+
+
+        {/* ================= INFO TECNICA ================= */}
         <section className="px-6 md:px-20 py-28">
 
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
@@ -205,9 +196,7 @@ export default function GuardasPage() {
 
               </div>
 
-
-
-            </div>
+           </div>
 
             {/* IMAGEN */}
             <motion.div
@@ -227,51 +216,26 @@ export default function GuardasPage() {
 
         </section>
 
-        {/* ================= GALERIA ================= */}
+
+        {/* ================= CARRUSEL ================= */}
         <section className="px-6 md:px-20 py-28">
 
-          <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
 
-            {/* TITULO */}
-            <div className="mb-20 text-center">
+            <p className="uppercase tracking-[0.35em] text-sm text-gray-500 mb-6">
+              Proyectos
+            </p>
 
-              <p className="uppercase tracking-[0.35em] text-sm text-gray-500 mb-6">
-                Galería
-              </p>
-
-              <h2 className="text-5xl font-light">
-                Proyectos y fabricación
-              </h2>
-
-            </div>
-
-            {/* GRID */}
-            <div className="grid md:grid-cols-2 gap-8">
-
-              {galeria.map((img, index) => (
-
-                <motion.div
-                  key={index}
-                  whileHover={{ scale: 1.01 }}
-                  transition={{ duration: 0.3 }}
-                  className="group relative overflow-hidden rounded-[36px]"
-                >
-
-                  {/* B/N */}
-                  <img
-                    src={img}
-                    className="w-full h-[300px] md:h-[420px] object-cover grayscale group-hover:grayscale-0 transition duration-700"
-                  />
-
-                </motion.div>
-
-              ))}
-
-            </div>
+            <h2 className="text-5xl font-light">
+              Sistemas industriales
+            </h2>
 
           </div>
 
+          <CarruselGuardas />
+
         </section>
+
 
         {/* ================= CTA ================= */}
         <section className="px-6 md:px-20 pb-32">
@@ -311,5 +275,98 @@ export default function GuardasPage() {
 
       </main>
     </>
+  );
+}
+
+
+/* ================= CARRUSEL ================= */
+
+function CarruselGuardas() {
+  const [index, setIndex] = useState(0);
+
+  const guardas = [
+    {
+      img: "/guarda1.jpg",
+      nombre: "Guardas perimetrales",
+      desc: "Protección alrededor de maquinaria industrial.",
+    },
+    {
+      img: "/guarda2.jpg",
+      nombre: "Acceso controlado",
+      desc: "Sistemas modulares con acceso seguro.",
+    },
+    {
+      img: "/guarda3.jpg",
+      nombre: "Diseños personalizados",
+      desc: "Integración adaptada a procesos industriales.",
+    },
+    {
+      img: "/guarda4.jpg",
+      nombre: "Protección industrial",
+      desc: "Soluciones enfocadas en seguridad operativa.",
+    },
+  ];
+
+  const prev = () => {
+    setIndex((index - 1 + guardas.length) % guardas.length);
+  };
+
+  const next = () => {
+    setIndex((index + 1) % guardas.length);
+  };
+
+  return (
+    <div className="max-w-5xl mx-auto px-4">
+
+      <div className="relative overflow-hidden rounded-[40px] shadow-2xl">
+
+        {/* IMAGEN */}
+        <motion.img
+          key={guardas[index].img}
+          initial={{ opacity: 0.5 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.4 }}
+          src={guardas[index].img}
+          className="w-full h-[260px] md:h-[520px] object-cover"
+        />
+
+        {/* OVERLAY */}
+        <div className="absolute inset-0 bg-black/35" />
+
+        {/* INFO */}
+        <div className="absolute bottom-0 left-0 w-full p-6 md:p-10 text-white">
+
+          <h3 className="text-3xl md:text-5xl font-light mb-4">
+            {guardas[index].nombre}
+          </h3>
+
+          <p className="text-gray-200 text-lg max-w-xl">
+            {guardas[index].desc}
+          </p>
+
+        </div>
+
+      </div>
+
+      {/* BOTONES */}
+      <div className="flex justify-center gap-4 mt-10">
+
+        <button
+          onClick={prev}
+          className="w-12 h-12 rounded-full border border-black/10 hover:bg-black hover:text-white transition flex items-center justify-center"
+        >
+          ←
+        </button>
+
+        <button
+          onClick={next}
+          className="w-12 h-12 rounded-full border border-black/10 hover:bg-black hover:text-white transition flex items-center justify-center"
+        >
+          →
+        </button>
+
+      </div>
+
+    </div>
   );
 }
