@@ -405,10 +405,20 @@ export default function IngenieriaPage() {
 {/* ================= TIMELINE PREMIUM ================= */}
 <section className="relative px-6 md:px-20 py-32 bg-black text-white overflow-hidden">
 
-  {/* GRID FONDO */}
-  <div className="absolute inset-0 opacity-[0.04]">
-    <div className="w-full h-full bg-[linear-gradient(to_right,#ffffff22_1px,transparent_1px),linear-gradient(to_bottom,#ffffff22_1px,transparent_1px)] bg-[size:80px_80px]" />
-  </div>
+{/* FONDO */}
+<div className="absolute inset-0">
+  <img
+    src="/fondo_negro.jpg"
+    className="w-full h-full object-cover"
+  />
+
+  {/* OVERLAY OSCURO */}
+  <div className="absolute inset-0 bg-black/70" />
+
+  {/* GLOW */}
+  <div className="absolute top-40 left-20 w-72 h-72 bg-blue-500/10 blur-3xl rounded-full" />
+  <div className="absolute bottom-20 right-20 w-72 h-72 bg-white/10 blur-3xl rounded-full" />
+</div>
 
   {/* GLOWS */}
   <div className="absolute top-40 left-20 w-72 h-72 bg-blue-500/10 blur-3xl rounded-full" />
