@@ -28,7 +28,7 @@ export default function Sidebar() {
           </Link>
 
           <Link href="/tubo" className="px-2 py-1 rounded-md hover:bg-gray-100 hover:text-black transition">
-            Corte láser de tubo
+            Corte Láser de Tubo
           </Link>
 
           <Link href="/soldadura" className="px-2 py-1 rounded-md hover:bg-gray-100 hover:text-black transition">
