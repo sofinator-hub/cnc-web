@@ -1,9 +1,9 @@
 "use client";
 
- import { motion } from "framer-motion";
- import MobileMenu from "@/components/layout/MobileMenu";
- import { useState } from "react";
- import {
+import { motion } from "framer-motion";
+import MobileMenu from "@/components/layout/MobileMenu";
+import { useState } from "react";
+import {
   Shield,
   Grid2X2,
   Cog,
@@ -24,7 +24,7 @@ export default function GuardasPage() {
           className="w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-white/80" />
+        <div className="absolute inset-0 bg-white/55" />
       </div>
 
       <main className="relative z-10 text-black overflow-hidden">
@@ -93,14 +93,14 @@ export default function GuardasPage() {
 
           {/* SCROLL */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 text-3xl">
-            
+            𖡎
           </div>
 
         </section>
 
 
         {/* ================= SISTEMAS ================= */}
-        <section className="px-6 md:px-14 py-24 md:py-32 bg-[#f7f7f5]">
+        <section className="px-6 md:px-14 py-24 md:py-32 bg-transparent">
 
           <div className="max-w-[1500px] mx-auto">
 
@@ -205,7 +205,7 @@ export default function GuardasPage() {
 
 
         {/* ================= INFO ================= */}
-        <section className="px-6 md:px-14 py-20 bg-[#f7f7f5]">
+        <section className="px-6 md:px-14 py-20 bg-transparent">
 
           <div className="max-w-[1500px] mx-auto border-t border-black/10 pt-20">
 
@@ -220,7 +220,7 @@ export default function GuardasPage() {
 
                 <img
                   src="/guardas_detalle.jpg"
-                  className="w-full h-[340px] md:h-[520px] object-cover grayscale"
+                  className="w-full h-[340px] md:h-[520px] object-cover grayscale hover:grayscale-0 transition duration-700"
                 />
 
               </motion.div>
@@ -270,17 +270,17 @@ export default function GuardasPage() {
 
                 </div>
 
+              </div>
+
             </div>
 
-           </div>
-
-         </div>
+          </div>
 
         </section>
 
 
         {/* ================= CARRUSEL ================= */}
-        <section className="px-6 md:px-14 py-20 bg-[#f7f7f5]">
+        <section className="px-6 md:px-14 py-20 bg-transparent">
 
           <div className="max-w-[1500px] mx-auto border-t border-black/10 pt-16">
 
@@ -399,7 +399,7 @@ function CarruselExacto() {
             0{index + 1} / 0{slides.length}
           </span>
 
-         <div className="flex gap-4">
+          <div className="flex gap-4">
 
             <button onClick={prev}>
               <ChevronLeft size={22} strokeWidth={1.5} />
@@ -434,7 +434,7 @@ function CarruselExacto() {
 
               <img
                 src={slides[slideIndex]}
-                className="w-full h-[260px] md:h-[500px] object-cover grayscale hover:grayscale-0 transition duration-700"
+                className="w-full h-[260px] md:h-[500px] object-cover"
               />
 
             </motion.div>
