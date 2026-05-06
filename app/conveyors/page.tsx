@@ -1,61 +1,254 @@
 "use client";
-import { useState } from "react";
+
+import { motion } from "framer-motion";
 import MobileMenu from "@/components/layout/MobileMenu";
+import { useState } from "react";
+import {
+  MoveHorizontal,
+  Workflow,
+  Cog,
+  ChevronLeft,
+  ChevronRight,
+  ArrowUpRight,
+} from "lucide-react";
 
 export default function ConveyorsPage() {
   return (
     <>
       <MobileMenu />
 
-      {/*  FONDO GLOBAL */}
+      {/* ================= FONDO GLOBAL ================= */}
       <div className="fixed inset-0 -z-10">
         <img
           src="/fondo_blanco.jpg"
           className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-white/70" />
+       />
       </div>
 
-      <main className="relative z-10 text-gray-900">
+      <main className="relative z-10 text-black overflow-hidden">
 
         {/* ================= HERO ================= */}
-        <section className="min-h-screen flex items-center relative overflow-hidden">
+        <section className="relative h-screen overflow-hidden">
 
-
+          {/* FONDO */}
           <img
-            src="/fondo_conveyor.jpg"
-
+           
+           src="/fondo_conveyor.jpg"
             className="absolute inset-0 w-full h-full object-cover"
           />
 
+          {/* OVERLAY */}
+          <div className="absolute inset-0 bg-black/55" />
 
-          <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
+          {/* CONTENIDO */}
+          <div className="relative z-10 h-full flex items-center px-6 md:px-14">
 
+            <motion.div
+              initial={{ opacity: 0, y: 35 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="max-w-[520px]"
+            >
 
-          <div className="relative z-10 grid md:grid-cols-2 gap-10 items-center w-full px-6 md:px-20 text-white">
+              <p className="uppercase tracking-[0.45em] text-xs text-white/70 mb-8">
+                Automatización industrial
+              </p>
 
-            <div>
-              <h1 className="text-3xl md:text-4xl font-semibold mb-4">
-                SISTEMAS DE TRANSPORTE -CONVEYORS-
+              <h1 className="text-[58px] md:text-[96px] leading-[0.9] font-light text-white mb-8">
+                Sistemas
+                <br />
+                conveyors
               </h1>
 
-              <p className="text-gray-200 leading-relaxed">
-                Soluciones automatizadas para el transporte eficiente de materiales en procesos industriales.
+              <p className="text-white/80 text-lg leading-relaxed">
+                Soluciones automatizadas para el transporte
+                eficiente de materiales en procesos industriales.
               </p>
+
+            </motion.div>
+
+          </div>
+
+        </section>
+
+
+        {/* ================= SISTEMAS ================= */}
+        <section className="px-6 md:px-14 py-24 md:py-32">
+
+          <div className="max-w-[1500px] mx-auto">
+
+            {/* TOP */}
+            <div className="grid md:grid-cols-2 gap-14 mb-24">
+
+              <div>
+
+                <p className="uppercase tracking-[0.45em] text-xs text-gray-400 mb-8">
+                  Sistemas
+                </p>
+
+                <h2 className="text-[48px] md:text-[78px] font-light leading-[0.95]">
+                  Transporte
+                  industrial
+                  eficiente
+                </h2>
+
+              </div>
+
+              <div className="flex items-center">
+
+                <p className="text-gray-600 text-lg leading-relaxed max-w-[460px]">
+                  Diseñamos sistemas conveyors adaptados
+                  a líneas de producción y automatización,
+                  optimizando flujo, movimiento y eficiencia operativa.
+                </p>
+
+              </div>
+
             </div>
 
-            <div className="relative group flex justify-center">
-              <div className="absolute inset-0 bg-blue-500 opacity-20 blur-3xl rounded-2xl scale-110" />
 
-              <video
-                className="relative rounded-2xl shadow-md w-[300px] md:w-[450px]"
-                autoPlay
-                muted
-                loop
-                playsInline
+            {/* FEATURES */}
+            <div className="grid md:grid-cols-3 gap-10 border-t border-black/10 pt-16">
+
+              <div className="pr-6 md:border-r border-black/10">
+
+                <MoveHorizontal
+                  size={34}
+                  strokeWidth={1.3}
+                  className="mb-8"
+                />
+
+                <h3 className="uppercase tracking-[0.3em] text-xs mb-6">
+                  Movimiento
+                </h3>
+
+                <p className="text-gray-600 leading-relaxed">
+                  Sistemas diseñados para flujo continuo
+                  y transporte eficiente de materiales.
+                </p>
+
+              </div>
+
+
+              <div className="pr-6 md:border-r border-black/10">
+
+                <Workflow
+                  size={34}
+                  strokeWidth={1.3}
+                  className="mb-8"
+                />
+
+                <h3 className="uppercase tracking-[0.3em] text-xs mb-6">
+                  Integración
+                </h3>
+
+                <p className="text-gray-600 leading-relaxed">
+                  Integración precisa con líneas
+                  automatizadas y procesos industriales.
+                </p>
+
+              </div>
+
+
+              <div>
+
+                <Cog
+                  size={34}
+                  strokeWidth={1.3}
+                  className="mb-8"
+                />
+
+                <h3 className="uppercase tracking-[0.3em] text-xs mb-6">
+                  Personalización
+                </h3>
+
+                <p className="text-gray-600 leading-relaxed">
+                  Diseños personalizados según
+                  necesidades específicas de producción.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        {/* ================= INFO ================= */}
+        <section className="px-6 md:px-14 py-20">
+
+          <div className="max-w-[1500px] mx-auto border-t border-black/10 pt-20">
+
+            <div className="grid md:grid-cols-2 gap-20 items-center">
+
+              {/* IMAGEN */}
+              <motion.div
+                whileHover={{ scale: 1.01 }}
+                transition={{ duration: 0.4 }}
+                className="overflow-hidden rounded-[10px]"
               >
-                <source src="/videos/video_conveyor.mp4" />
-              </video>
+
+                {/* SOLO AQUÍ B/N → COLOR */}
+                <video
+                  className="w-full h-[340px] md:h-[520px] object-cover grayscale hover:grayscale-0 transition duration-700"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                >
+                  <source src="/videos/video_conveyor.mp4" />
+                </video>
+
+              </motion.div>
+
+
+              {/* TEXTO */}
+              <div>
+
+                <p className="uppercase tracking-[0.4em] text-xs text-gray-400 mb-8">
+                  Ingeniería y automatización
+                </p>
+
+                <h2 className="text-[42px] md:text-[64px] leading-[1] font-light mb-8">
+                  Soluciones
+                  en movimiento
+                </h2>
+
+                <p className="text-gray-600 text-lg leading-relaxed mb-12 max-w-[520px]">
+                  Sistemas conveyors desarrollados
+                  para optimizar producción, automatización
+                  y manejo eficiente de materiales.
+                </p>
+
+                {/* LISTA */}
+                <div className="space-y-5">
+
+                  {[
+                    "Diseño personalizado",
+                    "Automatización industrial",
+                    "Integración con líneas de producción",
+                    "Optimización de procesos",
+                  ].map((item, index) => (
+
+                    <div
+                      key={index}
+                      className="flex items-center gap-4 text-gray-700"
+                    >
+
+                      <div className="w-1.5 h-1.5 rounded-full bg-black" />
+
+                      {item}
+
+                    </div>
+
+                  ))}
+
+                </div>
+
+              </div>
+
             </div>
 
           </div>
@@ -64,67 +257,69 @@ export default function ConveyorsPage() {
 
 
         {/* ================= CARRUSEL ================= */}
-        <section className="min-h-screen flex flex-col items-center justify-center px-6">
+        <section className="px-6 md:px-14 py-20">
 
-          <div className="text-center">
-
-            <h2 className="text-3xl md:text-4xl font-semibold mb-8">
-              TIPOS DE CONVEYORS
-            </h2>
+          <div className="max-w-[1500px] mx-auto border-t border-black/10 pt-16">
 
             <CarruselConveyors />
 
           </div>
+
         </section>
 
 
-        {/* ================= NUEVA SECCIÓN  ================= */}
-        <section className="min-h-screen flex items-center px-6 md:px-20">
+        {/* ================= CTA FINAL ================= */}
+        <section className="px-6 md:px-14 py-24">
 
-          <div className="grid md:grid-cols-2 gap-12 items-center w-full">
+          <div className="max-w-[1500px] mx-auto border-t border-black/10 pt-20">
 
-            {/* TEXTO */}
-            <div>
-              <h2 className="text-3xl md:text-4xl font-semibold mb-6">
-                Ingeniería en movimiento
-              </h2>
+            <div className="grid md:grid-cols-2 gap-20 items-center">
 
-              <p className="text-gray-700 mb-4">
-                Diseñamos sistemas de transporte adaptados a tus necesidades,
-                optimizando flujo de trabajo, tiempos y eficiencia operativa.
-              </p>
+              {/* TEXTO */}
+              <div>
 
-              <ul className="space-y-2 text-gray-600 text-sm mb-6">
-                <li>• Diseño personalizado</li>
-                <li>• Integración con líneas de producción</li>
-                <li>• Automatización de procesos</li>
-                <li>• Mantenimiento y optimización</li>
-              </ul>
+                <p className="uppercase tracking-[0.45em] text-xs text-gray-400 mb-8">
+                  ¿Tienes un proyecto?
+                </p>
 
-              <button
-                onClick={() =>
-                  window.open(
-                    "https://wa.me/5215562045546?text=Hola,%20quiero%20cotizar%20un%20sistema%20de%20conveyors",
-                    "_blank"
-                  )
-                }
-                className="px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition"
-              >
-                Solicitar cotización
-              </button>
-            </div>
+                <h2 className="text-[52px] md:text-[82px] font-light leading-[0.95] text-black">
+                  Hablemos de tu
+                  siguiente sistema
+                </h2>
 
-            {/* IMAGEN */}
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gray-300 opacity-20 blur-3xl rounded-2xl scale-110" />
+              </div>
 
-              <img
-                src="/conveyor_detalle.jpg"
-                className="relative w-full h-[350px] object-cover rounded-2xl shadow-lg"
-              />
+
+              {/* DERECHA */}
+              <div>
+
+                <p className="text-gray-600 text-lg leading-relaxed max-w-[420px] mb-12">
+                  Diseñamos conveyors industriales
+                  adaptados a automatización y líneas
+                  modernas de producción.
+                </p>
+
+                <button
+                  onClick={() =>
+                    window.open(
+                      "https://wa.me/5215562045546?text=Hola,%20quiero%20cotizar%20un%20sistema%20de%20conveyors",
+                      "_blank"
+                    )
+                  }
+                  className="bg-black text-white px-8 py-4 rounded-md flex items-center gap-4 hover:opacity-90 transition"
+                >
+
+                  CONTACTAR
+
+                  <ArrowUpRight size={18} />
+
+                </button>
+
+              </div>
             </div>
 
           </div>
+
         </section>
 
       </main>
@@ -138,62 +333,103 @@ export default function ConveyorsPage() {
 function CarruselConveyors() {
   const [index, setIndex] = useState(0);
 
-  const conveyors = [
-    {
-      img: "/conveyor1.jpg",
-      nombre: "Transportadores de rodillo",
-      desc: "Los transportadores de rodillos por gravedad."
-    },
-    {
-      img: "/conveyor2.jpg",
-      nombre: "Bandas transportadoras motorizadas",
-      desc: "Las cintas transportadoras eléctricas son una solución económica."
-    },
-    {
-      img: "/conveyor3.jpg",
-      nombre: "Bandas transportadoras inclinadas",
-      desc: "Si necesita llevar un producto a otro nivel."
-    },
-    {
-      img: "/conveyor4.png",
-      nombre: "Sistema personalizado",
-      desc: "Diseñado según tus necesidades"
-    }
+  const slides = [
+    "/conveyor1.jpg",
+    "/conveyor2.jpg",
+    "/conveyor3.jpg",
+    "/conveyor4.png",
   ];
 
   const prev = () => {
-    setIndex((index - 1 + conveyors.length) % conveyors.length);
+    setIndex((prev) =>
+      prev === 0 ? slides.length - 1 : prev - 1
+    );
   };
 
   const next = () => {
-    setIndex((index + 1) % conveyors.length);
+    setIndex((prev) =>
+      prev === slides.length - 1 ? 0 : prev + 1
+    );
   };
 
   return (
-    <div className="flex flex-col items-center">
+    <div>
 
-      <img
-        src={conveyors[index].img}
+      {/* HEADER */}
+      <div className="flex justify-between items-center mb-10">
 
-        className="w-[300px] md:w-[500px] max-h-[300px] object-contain rounded-2xl shadow-xl mb-6"
-      />
+        <p className="uppercase tracking-[0.4em] text-xs text-gray-400">
+          Proyectos
+        </p>
 
-      <h3 className="text-xl font-semibold">
-        {conveyors[index].nombre}
-      </h3>
+        <div className="flex items-center gap-8">
 
-      <p className="text-gray-600 mb-6">
-        {conveyors[index].desc}
-      </p>
+          <span className="text-sm text-gray-500">
+            0{index + 1} / 0{slides.length}
+          </span>
 
-      <div className="flex gap-6">
-        <button onClick={prev} className="px-4 py-2 border rounded-full hover:bg-black hover:text-white transition">
-          ←
-        </button>
+          <div className="flex gap-4">
 
-        <button onClick={next} className="px-4 py-2 border rounded-full hover:bg-black hover:text-white transition">
-          →
-        </button>
+            <button onClick={prev}>
+              <ChevronLeft size={22} strokeWidth={1.5} />
+            </button>
+
+            <button onClick={next}>
+              <ChevronRight size={22} strokeWidth={1.5} />
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      {/* SLIDES */}
+      <div className="grid md:grid-cols-3 gap-2 overflow-hidden rounded-[12px]">
+
+        {[0, 1, 2].map((offset) => {
+          const slideIndex = (index + offset) % slides.length;
+
+          return (
+
+            <motion.div
+              key={slideIndex}
+              initial={{ opacity: 0.7 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4 }}
+              className="relative overflow-hidden"
+            >
+
+              <img
+                src={slides[slideIndex]}
+                className="w-full h-[260px] md:h-[500px] object-cover"
+              />
+
+            </motion.div>
+
+          );
+        })}
+
+      </div>
+
+
+      {/* INDICADORES */}
+      <div className="flex justify-center gap-3 mt-10">
+
+        {slides.map((_, i) => (
+
+          <div
+            key={i}
+            className={`h-[2px] transition-all duration-300 ${
+              i === index
+                ? "w-10 bg-black"
+                : "w-6 bg-black/20"
+            }`}
+          />
+
+        ))}
+
       </div>
 
     </div>
