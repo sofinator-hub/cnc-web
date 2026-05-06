@@ -29,7 +29,7 @@ export default function ConveyorsPage() {
       <main className="relative z-10 text-black overflow-hidden">
 
         {/* ================= HERO ================= */}
-        <section className="relative h-screen overflow-hidden">
+        <section className="relative min-h-screen overflow-hidden">
 
           {/* FONDO */}
           <img
@@ -40,35 +40,64 @@ export default function ConveyorsPage() {
           {/* OVERLAY */}
           <div className="absolute inset-0 bg-black/60" />
 
-          {/* GLOW AZUL SUTIL */}
-          <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 blur-[150px] rounded-full" />
+          {/* GLOW AZUL HORIZONTAL */}
+          <div className="absolute top-1/2 right-[-10%] -translate-y-1/2 w-[900px] h-[300px] bg-blue-500/10 blur-[140px] rounded-full" />
 
           {/* CONTENIDO */}
-          <div className="relative z-10 h-full flex items-center px-6 md:px-14">
+          <div className="relative z-10 h-full px-6 md:px-14 py-32 flex items-center">
 
-            <motion.div
-              initial={{ opacity: 0, y: 35 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="max-w-[560px]"
-            >
+            <div className="grid md:grid-cols-2 gap-20 items-center w-full">
 
-              <p className="uppercase tracking-[0.45em] text-xs text-white/60 mb-8">
-                Automatización industrial
-              </p>
+              {/* TEXTO */}
+              <motion.div
+                initial={{ opacity: 0, y: 35 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="max-w-[560px]"
+              >
 
-              <h1 className="text-[58px] md:text-[100px] leading-[0.9] font-light text-white mb-8">
-                Sistemas
-                <br />
-                conveyors
-              </h1>
+                <p className="uppercase tracking-[0.45em] text-xs text-white/60 mb-8">
+                  Automatización industrial
+                </p>
 
-              <p className="text-white/75 text-lg md:text-xl leading-relaxed max-w-[480px]">
-                Soluciones automatizadas para el transporte
-                eficiente de materiales en procesos industriales.
-              </p>
+                <h1 className="text-[58px] md:text-[100px] leading-[0.9] font-light text-white mb-8">
+                  Sistemas
+                  <br />
+                  conveyors
+                </h1>
 
-            </motion.div>
+                <p className="text-white/75 text-lg md:text-xl leading-relaxed max-w-[480px]">
+                  Soluciones automatizadas para el transporte
+                  eficiente de materiales en procesos industriales.
+                </p>
+
+              </motion.div>
+
+
+              {/* VIDEO */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.96 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+                className="relative"
+              >
+
+                {/* GLOW */}
+                <div className="absolute inset-0 bg-blue-500/10 blur-3xl rounded-[30px] scale-110" />
+
+                <video
+                  className="relative w-full rounded-[28px] object-cover border border-white/10 shadow-2xl"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                >
+                  <source src="/videos/video_conveyor.mp4" />
+                </video>
+
+              </motion.div>
+
+            </div>
 
           </div>
 
