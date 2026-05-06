@@ -9,7 +9,7 @@ export default function GuardasPage() {
     <>
       <MobileMenu />
 
-      {/* FONDO GLOBAL */}
+      {/* FONDO */}
       <div className="fixed inset-0 -z-10">
         <img
           src="/fondo_blanco.jpg"
@@ -22,17 +22,17 @@ export default function GuardasPage() {
 
         {/* ================= HERO ================= */}
         <section className="min-h-screen flex items-center relative overflow-hidden">
-          
+
 
           <img
             src="/fondo_guardas.jpg"
-
+  
             className="absolute inset-0 w-full h-full object-cover"
           />
 
           <div className="absolute inset-0 bg-black/45" />
 
-          {/* GRID TECNICO SUTIL */}
+          {/* GRID */}
           <div className="absolute inset-0 opacity-10">
             <div className="w-full h-full bg-[linear-gradient(to_right,#ffffff22_1px,transparent_1px),linear-gradient(to_bottom,#ffffff22_1px,transparent_1px)] bg-[size:70px_70px]" />
           </div>
@@ -58,11 +58,10 @@ export default function GuardasPage() {
 
               <p className="text-lg text-gray-200 leading-relaxed max-w-2xl mb-10">
                 Sistemas de protección diseñados para maquinaria,
-                automatización y líneas de producción, integrando
-                seguridad, funcionalidad y resistencia industrial.
+                automatización y líneas de producción industriales.
               </p>
 
-              {/* METRICAS */}
+              {/* MÉTRICAS */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
 
                 <div className="backdrop-blur-xl bg-white/10 border border-white/10 rounded-2xl p-5">
@@ -77,11 +76,11 @@ export default function GuardasPage() {
 
                 <div className="backdrop-blur-xl bg-white/10 border border-white/10 rounded-2xl p-5">
                   <h3 className="text-2xl font-light mb-2">
-                    24/7
+                    SAFE
                   </h3>
 
                   <p className="text-xs text-gray-300">
-                    Protección operativa
+                    Protección industrial
                   </p>
                 </div>
 
@@ -97,11 +96,11 @@ export default function GuardasPage() {
 
                 <div className="backdrop-blur-xl bg-white/10 border border-white/10 rounded-2xl p-5">
                   <h3 className="text-2xl font-light mb-2">
-                    SAFE
+                    24/7
                   </h3>
 
                   <p className="text-xs text-gray-300">
-                    Seguridad industrial
+                    Protección operativa
                   </p>
                 </div>
 
@@ -117,7 +116,7 @@ export default function GuardasPage() {
               className="relative flex justify-center"
             >
 
-              {/* ETIQUETAS TECNICAS */}
+
               <div className="absolute top-6 left-6 border border-white/20 rounded-xl px-4 py-2 backdrop-blur-xl bg-black/20 text-sm">
                 Safety Zone
               </div>
@@ -154,8 +153,8 @@ export default function GuardasPage() {
               </h2>
 
               <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Sistemas desarrollados para integrarse en diferentes
-                procesos industriales y automatización.
+                Sistemas diseñados para maquinaria,
+                automatización y procesos industriales.
               </p>
 
             </div>
@@ -225,27 +224,29 @@ export default function GuardasPage() {
             <div>
 
               <p className="uppercase tracking-[0.35em] text-sm text-gray-500 mb-6">
-                Normativa y seguridad
+                Seguridad y protección
               </p>
 
               <h2 className="text-5xl font-light leading-tight mb-10">
-                Protección operativa
+                Sistemas pensados
                 <br />
-                industrial
+                para la industria
               </h2>
 
               <p className="text-gray-600 leading-relaxed mb-10 text-lg">
-                Nuestras guardas están diseñadas para proteger operadores,
-                maquinaria y procesos industriales bajo estándares de seguridad.
+                Diseñamos soluciones enfocadas en protección operativa,
+                reducción de riesgos e integración industrial.
               </p>
 
               <div className="grid grid-cols-2 gap-5 mb-10">
 
-                {[
-                  "Cumplimiento normativo",
+              
+              
+          {[
                   "Protección perimetral",
+                  "Acceso controlado",
                   "Reducción de riesgos",
-                  "Integración industrial",
+                  "Integración modular",
                 ].map((item, index) => (
 
                   <div
@@ -279,14 +280,12 @@ export default function GuardasPage() {
               className="relative"
             >
 
-              {/* ETIQUETAS */}
+
               <div className="absolute top-6 left-6 border border-white/20 bg-black/30 backdrop-blur-xl rounded-xl px-4 py-2 text-white text-sm z-10">
                 Safety Panel
               </div>
 
-              <div className="absolute bottom-6 right-6 border border-white/20 bg-black/30 backdrop-blur-xl rounded-xl px-4 py-2 text-white text-sm z-10">
-                Controlled Access
-              </div>
+
 
               <img
                 src="/guardas_detalle.jpg"
@@ -300,41 +299,7 @@ export default function GuardasPage() {
         </section>
 
 
-        {/* ================= CTA ================= */}
-        <section className="px-6 md:px-20 pb-32">
 
-          <div className="max-w-5xl mx-auto bg-white/70 backdrop-blur-xl border border-black/5 rounded-[40px] p-12 md:p-20 text-center shadow-2xl">
-
-            <p className="uppercase tracking-[0.35em] text-sm text-gray-500 mb-6">
-              Sistemas personalizados
-            </p>
-
-            <h2 className="text-4xl md:text-6xl font-light leading-tight mb-8">
-              ¿Necesitas proteger
-              <br />
-              un proceso industrial?
-            </h2>
-
-            <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed mb-10 text-lg">
-              Diseñamos soluciones adaptadas a maquinaria,
-              automatización y líneas de producción industriales.
-            </p>
-
-            <button
-              onClick={() =>
-                window.open(
-                  "https://wa.me/5215562045546?text=Hola,%20quiero%20cotizar%20guardas%20industriales",
-                  "_blank"
-                )
-              }
-              className="px-8 py-4 bg-black text-white rounded-2xl hover:bg-gray-800 transition"
-            >
-              Solicitar cotización
-            </button>
-
-          </div>
-
-        </section>
 
       </main>
     </>
@@ -379,19 +344,21 @@ function CarruselGuardas() {
   };
 
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-4xl mx-auto px-4">
 
-      <div className="bg-white/70 backdrop-blur-xl border border-black/5 rounded-[36px] p-6 md:p-10 shadow-2xl">
+      <div className="bg-white/70 backdrop-blur-xl border border-black/5 rounded-[36px] p-5 md:p-8 shadow-2xl">
 
+        {/* IMAGEN */}
         <motion.img
           key={guardas[index].img}
           initial={{ opacity: 0.4 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4 }}
           src={guardas[index].img}
-          className="w-full h-[240px] md:h-[520px] object-cover rounded-[28px] shadow-xl mb-8"
+          className="w-full h-[220px] md:h-[380px] object-contain rounded-[28px] shadow-xl mb-8"
         />
 
+        {/* INFO */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
 
           <div className="text-left">
@@ -400,24 +367,25 @@ function CarruselGuardas() {
               {guardas[index].nombre}
             </h3>
 
-            <p className="text-gray-600 text-base md:text-lg">
+            <p className="text-gray-600 text-base md:text-lg leading-relaxed">
               {guardas[index].desc}
             </p>
 
           </div>
 
+          {/* BOTONES */}
           <div className="flex gap-4">
 
             <button
               onClick={prev}
-              className="w-12 h-12 rounded-full border border-black/10 hover:bg-black hover:text-white transition"
+              className="w-12 h-12 rounded-full border border-black/10 hover:bg-black hover:text-white transition flex items-center justify-center"
             >
               ←
             </button>
 
             <button
               onClick={next}
-              className="w-12 h-12 rounded-full border border-black/10 hover:bg-black hover:text-white transition"
+              className="w-12 h-12 rounded-full border border-black/10 hover:bg-black hover:text-white transition flex items-center justify-center"
             >
               →
             </button>
