@@ -1,13 +1,13 @@
 "use client";
+
 import { motion } from "framer-motion";
 import MobileMenu from "@/components/layout/MobileMenu";
 import { useState } from "react";
+
 import {
   CircleDashed,
   Sparkles,
-  Cog,
-  ChevronLeft,
-  ChevronRight,
+   Cog,
   ArrowUpRight,
 } from "lucide-react";
 
@@ -21,13 +21,13 @@ export default function TuboPage() {
         <img
           src="/fondo_blanco.jpg"
           className="w-full h-full object-cover"
-      />
-    </div>
+        />
+      </div>
 
       <main className="relative z-10 text-black overflow-hidden">
 
         {/* ================= HERO ================= */}
-        <section className="relative h-screen overflow-hidden">
+        <section className="relative min-h-screen overflow-hidden">
 
           {/* FONDO */}
           <img
@@ -39,35 +39,64 @@ export default function TuboPage() {
           <div className="absolute inset-0 bg-black/60" />
 
           {/* GLOW AZUL SUTIL */}
-          <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full" />
+          <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 blur-[150px] rounded-full" />
 
           {/* CONTENIDO */}
-          <div className="relative z-10 h-full flex items-center px-6 md:px-14">
+          <div className="relative z-10 h-full px-6 md:px-14 py-32 flex items-center">
 
-            <motion.div
-              initial={{ opacity: 0, y: 35 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="max-w-[560px]"
-            >
+            <div className="grid md:grid-cols-2 gap-20 items-center w-full">
 
-              <p className="uppercase tracking-[0.45em] text-xs text-white/60 mb-8">
-                Tecnología de precisión
-              </p>
+              {/* TEXTO */}
+              <motion.div
+                initial={{ opacity: 0, y: 35 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="max-w-[560px]"
+              >
 
-              <h1 className="text-[58px] md:text-[100px] leading-[0.9] font-light text-white mb-8">
-                Corte láser
-                <br />
-                de tubo
-              </h1>
+                <p className="uppercase tracking-[0.45em] text-xs text-white/60 mb-8">
+                  Tecnología de precisión
+                </p>
 
-              <p className="text-white/75 text-lg md:text-xl leading-relaxed max-w-[480px]">
-                Tecnología especializada para cortes
-                precisos en tubos y perfiles industriales
-                con máxima eficiencia y repetibilidad.
-              </p>
+                <h1 className="text-[58px] md:text-[100px] leading-[0.9] font-light text-white mb-8">
+                  Corte láser
+                  <br />
+                  de tubo
+                </h1>
 
-            </motion.div>
+                <p className="text-white/75 text-lg md:text-xl leading-relaxed max-w-[480px]">
+                  Tecnología especializada para cortes
+                  precisos en tubos y perfiles industriales
+                  con máxima eficiencia y repetibilidad.
+                </p>
+
+              </motion.div>
+
+
+              {/* VIDEO */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.96 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+                className="relative"
+              >
+
+                {/* GLOW SUTIL */}
+                <div className="absolute inset-0 bg-blue-500/10 blur-3xl rounded-[30px] scale-110" />
+
+                <video
+                  className="relative w-full rounded-[28px] object-cover border border-white/10 shadow-2xl"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                >
+                  <source src="/videos/video_corte_tubo.mp4" />
+                </video>
+
+              </motion.div>
+
+            </div>
 
           </div>
 
@@ -178,6 +207,42 @@ export default function TuboPage() {
         </section>
 
 
+        {/* ================= TIPOS DE PERFIL ================= */}
+        <section className="px-6 md:px-14 py-20">
+
+          <div className="max-w-[1500px] mx-auto border-t border-black/10 pt-20">
+
+            {/* HEADER */}
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-16">
+
+              <div>
+
+                <p className="uppercase tracking-[0.45em] text-xs text-gray-400 mb-8">
+                  Tipos de perfil
+                </p>
+
+                <h2 className="text-[42px] md:text-[72px] font-light leading-[0.95]">
+                  Perfiles
+                  industriales
+                </h2>
+
+              </div>
+
+              <p className="text-gray-600 max-w-[420px] leading-relaxed">
+                Trabajamos diferentes perfiles y geometrías
+                para fabricación industrial y estructuras
+                metálicas de alta precisión.
+              </p>
+
+            </div>
+
+            <SliderTubos />
+
+          </div>
+
+        </section>
+
+
         {/* ================= INFO ================= */}
         <section className="px-6 md:px-14 py-20">
 
@@ -185,26 +250,21 @@ export default function TuboPage() {
 
             <div className="grid md:grid-cols-2 gap-20 items-center">
 
-              {/* VIDEO */}
+              {/* IMAGEN */}
               <motion.div
                 whileHover={{ scale: 1.01 }}
                 transition={{ duration: 0.4 }}
                 className="relative overflow-hidden rounded-[10px]"
               >
 
-                {/* GLOW AZUL MUY SUTIL */}
+                {/* GLOW */}
                 <div className="absolute inset-0 bg-blue-500/10 blur-3xl scale-110" />
 
                 {/* SOLO AQUÍ B/N → COLOR */}
-                <video
+                <img
+                  src="/tubo_detalle.jpg"
                   className="relative w-full h-[340px] md:h-[520px] object-cover grayscale hover:grayscale-0 transition duration-700"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                >
-                  <source src="/videos/video_corte_tubo.mp4" />
-                </video>
+                />
 
               </motion.div>
 
@@ -259,21 +319,8 @@ export default function TuboPage() {
 
           </div>
 
-        </section>
-
-
-        {/* ================= CARRUSEL ================= */}
-        <section className="px-6 md:px-14 py-20">
-
-          <div className="max-w-[1500px] mx-auto border-t border-black/10 pt-16">
-
-            <CarruselTubo />
-
-          </div>
-
-        </section>
-
-
+       </section>
+       
         {/* ================= CTA FINAL ================= */}
         <section className="px-6 md:px-14 py-24">
 
@@ -323,7 +370,7 @@ export default function TuboPage() {
 
               </div>
 
-         </div>
+            </div>
 
           </div>
 
@@ -336,112 +383,81 @@ export default function TuboPage() {
 
 
 
-/* ================= CARRUSEL ================= */
+/* ================= SLIDER TÉCNICO ================= */
 
-function CarruselTubo() {
-  const [index, setIndex] = useState(0);
+function SliderTubos() {
+  const [active, setActive] = useState(0);
 
-  const slides = [
-    "/tipo_de_tubo1.jpg",
-    "/tipo_de_tubo2.jpg",
-    "/tipo_de_tubo3.jpg",
-    "/tipo_de_tubo4.jpg",
+  const tubos = [
+    {
+      img: "/tipo_de_tubo1.jpg",
+      nombre: "Perfil cuadrado",
+      desc: "Alta resistencia estructural.",
+    },
+    {
+      img: "/tipo_de_tubo2.jpg",
+      nombre: "Tubo redondo",
+      desc: "Versátil y funcional.",
+    },
+    {
+      img: "/tipo_de_tubo3.jpg",
+      nombre: "Ángulo",
+      desc: "Refuerzo estructural.",
+    },
+    {
+      img: "/tipo_de_tubo4.jpg",
+      nombre: "Canal C",
+      desc: "Soporte para bastidores.",
+    },
   ];
 
-  const prev = () => {
-    setIndex((prev) =>
-      prev === 0 ? slides.length - 1 : prev - 1
-    );
-  };
-
-  const next = () => {
-    setIndex((prev) =>
-      prev === slides.length - 1 ? 0 : prev + 1
-    );
-  };
-
   return (
-    <div>
+    <div className="grid md:grid-cols-4 gap-4">
 
-      {/* HEADER */}
-      <div className="flex justify-between items-center mb-10">
+      {tubos.map((tubo, index) => (
 
-        <p className="uppercase tracking-[0.4em] text-xs text-gray-400">
-          Tipos de perfil
-        </p>
+        <motion.div
+          key={index}
+          onMouseEnter={() => setActive(index)}
+          whileHover={{ y: -6 }}
+          transition={{ duration: 0.3 }}
+          className={`group cursor-pointer border rounded-[18px] overflow-hidden transition-all duration-500 ${
+            active === index
+              ? "border-blue-500/40 shadow-[0_0_40px_rgba(59,130,246,0.12)]"
+              : "border-black/10"
+          }`}
+        >
 
-        <div className="flex items-center gap-8">
+          {/* IMAGEN */}
+          <div className="relative overflow-hidden">
 
-          <span className="text-sm text-gray-500">
-            0{index + 1} / 0{slides.length}
-          </span>
-
-          <div className="flex gap-4">
-
-            <button onClick={prev}>
-              <ChevronLeft size={22} strokeWidth={1.5} />
-            </button>
-
-            <button onClick={next}>
-              <ChevronRight size={22} strokeWidth={1.5} />
-            </button>
+            <img
+              src={tubo.img}
+              className={`w-full h-[260px] object-cover transition duration-700 ${
+                active === index
+                  ? "grayscale-0"
+                  : "grayscale"
+              }`}
+            />
 
           </div>
 
-        </div>
+          {/* INFO */}
+          <div className="p-6">
 
-      </div>
+            <h3 className="text-xl font-light mb-3">
+              {tubo.nombre}
+            </h3>
 
+            <p className="text-gray-600 text-sm leading-relaxed">
+              {tubo.desc}
+            </p>
 
-      {/* SLIDES */}
-      <div className="grid md:grid-cols-3 gap-2 overflow-hidden rounded-[12px]">
+          </div>
 
-        {[0, 1, 2].map((offset) => {
-          const slideIndex = (index + offset) % slides.length;
+        </motion.div>
 
-          return (
-
-            <motion.div
-              key={slideIndex}
-              initial={{ opacity: 0.7 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.4 }}
-              className="relative overflow-hidden group"
-            >
-
-              <img
-                src={slides[slideIndex]}
-                className="w-full h-[260px] md:h-[500px] object-cover"
-              />
-
-              {/* DETALLE AZUL SUTIL */}
-              <div className="absolute inset-0 border border-blue-500/0 group-hover:border-blue-500/30 transition duration-500" />
-
-            </motion.div>
-
-          );
-        })}
-
-      </div>
-
-
-      {/* INDICADORES */}
-      <div className="flex justify-center gap-3 mt-10">
-
-        {slides.map((_, i) => (
-
-          <div
-            key={i}
-            className={`h-[2px] transition-all duration-300 ${
-              i === index
-                ? "w-10 bg-blue-500"
-                : "w-6 bg-black/20"
-            }`}
-          />
-
-        ))}
-
-      </div>
+      ))}
 
     </div>
   );
