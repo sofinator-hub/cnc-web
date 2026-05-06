@@ -9,7 +9,7 @@ import {
   Cog,
   ChevronLeft,
   ChevronRight,
-  ArrowUpRight,
+ ArrowUpRight,
 } from "lucide-react";
 
 export default function GuardasPage() {
@@ -22,7 +22,7 @@ export default function GuardasPage() {
         <img
           src="/fondo_blanco.jpg"
           className="w-full h-full object-cover"
-       />
+        />
       </div>
 
       <main className="relative z-10 text-black overflow-hidden">
@@ -39,7 +39,8 @@ export default function GuardasPage() {
           {/* OVERLAY */}
           <div className="absolute inset-0 bg-black/55" />
 
-
+          {/* GLOW AZUL */}
+          <div className="absolute top-1/2 right-[-10%] -translate-y-1/2 w-[850px] h-[280px] bg-blue-500/10 blur-[140px] rounded-full" />
 
           {/* CONTENIDO */}
           <div className="relative z-10 h-full flex items-center px-6 md:px-14">
@@ -70,7 +71,7 @@ export default function GuardasPage() {
 
           </div>
 
-       </section>
+        </section>
 
 
         {/* ================= SISTEMAS ================= */}
@@ -116,7 +117,7 @@ export default function GuardasPage() {
                 <Shield
                   size={34}
                   strokeWidth={1.3}
-                  className="mb-8"
+                  className="mb-8 text-blue-500"
                 />
 
                 <h3 className="uppercase tracking-[0.3em] text-xs mb-6">
@@ -136,7 +137,7 @@ export default function GuardasPage() {
                 <Grid2X2
                   size={34}
                   strokeWidth={1.3}
-                  className="mb-8"
+                  className="mb-8 text-blue-500"
                 />
 
                 <h3 className="uppercase tracking-[0.3em] text-xs mb-6">
@@ -156,7 +157,7 @@ export default function GuardasPage() {
                 <Cog
                   size={34}
                   strokeWidth={1.3}
-                  className="mb-8"
+                  className="mb-8 text-blue-500"
                 />
 
                 <h3 className="uppercase tracking-[0.3em] text-xs mb-6">
@@ -188,13 +189,16 @@ export default function GuardasPage() {
               <motion.div
                 whileHover={{ scale: 1.01 }}
                 transition={{ duration: 0.4 }}
-                className="overflow-hidden rounded-[10px]"
+                className="relative overflow-hidden rounded-[10px]"
               >
+
+                {/* GLOW */}
+                <div className="absolute inset-0 bg-blue-500/10 blur-3xl scale-110" />
 
                 {/* SOLO AQUÍ B/N → COLOR */}
                 <img
                   src="/guardas_detalle.jpg"
-                  className="w-full h-[340px] md:h-[520px] object-cover grayscale hover:grayscale-0 transition duration-700"
+                  className="relative w-full h-[340px] md:h-[520px] object-cover grayscale hover:grayscale-0 transition duration-700"
                 />
 
               </motion.div>
@@ -233,7 +237,7 @@ export default function GuardasPage() {
                       className="flex items-center gap-4 text-gray-700"
                     >
 
-                      <div className="w-1.5 h-1.5 rounded-full bg-black" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
 
                       {item}
 
@@ -302,7 +306,7 @@ export default function GuardasPage() {
                       "_blank"
                     )
                   }
-                  className="bg-black text-white px-8 py-4 rounded-md flex items-center gap-4 hover:opacity-90 transition"
+                  className="bg-black text-white px-8 py-4 rounded-md flex items-center gap-4 hover:bg-blue-500 transition"
                 >
 
                   CONTACTAR
@@ -385,7 +389,7 @@ function CarruselExacto() {
       </div>
 
 
-      {/* TODAS A COLOR */}
+      {/* SLIDES */}
       <div className="grid md:grid-cols-3 gap-2 overflow-hidden rounded-[12px]">
 
         {[0, 1, 2].map((offset) => {
@@ -398,13 +402,16 @@ function CarruselExacto() {
               initial={{ opacity: 0.7 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4 }}
-              className="relative overflow-hidden"
+              className="relative overflow-hidden group"
             >
 
               <img
                 src={slides[slideIndex]}
                 className="w-full h-[260px] md:h-[500px] object-cover"
               />
+
+              {/* BORDE AZUL */}
+              <div className="absolute inset-0 border border-blue-500/0 group-hover:border-blue-500/30 transition duration-500" />
 
             </motion.div>
 
@@ -423,7 +430,7 @@ function CarruselExacto() {
             key={i}
             className={`h-[2px] transition-all duration-300 ${
               i === index
-                ? "w-10 bg-black"
+                ? "w-10 bg-blue-500"
                 : "w-6 bg-black/20"
             }`}
           />
