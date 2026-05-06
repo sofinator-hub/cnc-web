@@ -51,7 +51,7 @@ export default function Sidebar() {
             Mobiliario Inoxidable
           </Link>
 
-          <Link href="/ingeniería" className="px-2 py-1 rounded-md hover:bg-gray-100 hover:text-black transition">
+          <Link href="/ingenieria" className="px-2 py-1 rounded-md hover:bg-gray-100 hover:text-black transition">
             Servicios de Ingeniería
           </Link>
 

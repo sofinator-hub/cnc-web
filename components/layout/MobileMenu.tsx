@@ -79,7 +79,7 @@ export default function MobileMenu() {
             Mobiliario Inoxidable
           </Link>
 
-          <Link href="/ingeniería" onClick={() => setOpen(false)} className="hover:text-black transition">
+          <Link href="/ingenieria" onClick={() => setOpen(false)} className="hover:text-black transition">
             Servicios de ingeniería
           </Link>
 
