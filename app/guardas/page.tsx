@@ -159,56 +159,7 @@ export default function GuardasPage() {
 
           </div>
 
-        </section>
-
-
-        {/* ================= GALERIA ================= */}
-        <section className="px-6 md:px-20 py-28">
-
-          <div className="max-w-7xl mx-auto">
-
-            {/* TITULO */}
-            <div className="mb-20 text-center">
-
-              <p className="uppercase tracking-[0.35em] text-sm text-gray-500 mb-6">
-                Galería
-              </p>
-
-              <h2 className="text-5xl font-light">
-                Proyectos y fabricación
-              </h2>
-
-            </div>
-
-            {/* GRID */}
-            <div className="grid md:grid-cols-2 gap-8">
-
-              {galeria.map((img, index) => (
-
-                <motion.div
-                  key={index}
-                  whileHover={{ scale: 1.01 }}
-                  transition={{ duration: 0.3 }}
-                  className="group relative overflow-hidden rounded-[36px]"
-                >
-
-                  {/* B/N */}
-                  <img
-                    src={img}
-                    className="w-full h-[300px] md:h-[420px] object-cover grayscale group-hover:grayscale-0 transition duration-700"
-                  />
-
-                </motion.div>
-
-              ))}
-
-            </div>
-
-          </div>
-
-        </section>
-
-
+         </section>
         {/* ================= INFO ================= */}
         <section className="px-6 md:px-20 py-28">
 
@@ -276,6 +227,51 @@ export default function GuardasPage() {
 
         </section>
 
+        {/* ================= GALERIA ================= */}
+        <section className="px-6 md:px-20 py-28">
+
+          <div className="max-w-7xl mx-auto">
+
+            {/* TITULO */}
+            <div className="mb-20 text-center">
+
+              <p className="uppercase tracking-[0.35em] text-sm text-gray-500 mb-6">
+                Galería
+              </p>
+
+              <h2 className="text-5xl font-light">
+                Proyectos y fabricación
+              </h2>
+
+            </div>
+
+            {/* GRID */}
+            <div className="grid md:grid-cols-2 gap-8">
+
+              {galeria.map((img, index) => (
+
+                <motion.div
+                  key={index}
+                  whileHover={{ scale: 1.01 }}
+                  transition={{ duration: 0.3 }}
+                  className="group relative overflow-hidden rounded-[36px]"
+                >
+
+                  {/* B/N */}
+                  <img
+                    src={img}
+                    className="w-full h-[300px] md:h-[420px] object-cover grayscale group-hover:grayscale-0 transition duration-700"
+                  />
+
+                </motion.div>
+
+              ))}
+
+            </div>
+
+          </div>
+
+        </section>
 
         {/* ================= CTA ================= */}
         <section className="px-6 md:px-20 pb-32">
