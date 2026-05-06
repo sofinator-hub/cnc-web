@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import MobileMenu from "@/components/layout/MobileMenu";
 import { useState } from "react";
+
 import {
   MoveHorizontal,
   Workflow,
@@ -22,7 +23,7 @@ export default function ConveyorsPage() {
         <img
           src="/fondo_blanco.jpg"
           className="w-full h-full object-cover"
-       />
+        />
       </div>
 
       <main className="relative z-10 text-black overflow-hidden">
@@ -32,13 +33,15 @@ export default function ConveyorsPage() {
 
           {/* FONDO */}
           <img
-           
-           src="/fondo_conveyor.jpg"
+            src="/fondo_conveyor.jpg"
             className="absolute inset-0 w-full h-full object-cover"
           />
 
           {/* OVERLAY */}
-          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0 bg-black/60" />
+
+          {/* GLOW AZUL SUTIL */}
+          <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 blur-[150px] rounded-full" />
 
           {/* CONTENIDO */}
           <div className="relative z-10 h-full flex items-center px-6 md:px-14">
@@ -47,20 +50,20 @@ export default function ConveyorsPage() {
               initial={{ opacity: 0, y: 35 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="max-w-[520px]"
+              className="max-w-[560px]"
             >
 
-              <p className="uppercase tracking-[0.45em] text-xs text-white/70 mb-8">
+              <p className="uppercase tracking-[0.45em] text-xs text-white/60 mb-8">
                 Automatización industrial
               </p>
 
-              <h1 className="text-[58px] md:text-[96px] leading-[0.9] font-light text-white mb-8">
+              <h1 className="text-[58px] md:text-[100px] leading-[0.9] font-light text-white mb-8">
                 Sistemas
                 <br />
                 conveyors
               </h1>
 
-              <p className="text-white/80 text-lg leading-relaxed">
+              <p className="text-white/75 text-lg md:text-xl leading-relaxed max-w-[480px]">
                 Soluciones automatizadas para el transporte
                 eficiente de materiales en procesos industriales.
               </p>
@@ -115,7 +118,7 @@ export default function ConveyorsPage() {
                 <MoveHorizontal
                   size={34}
                   strokeWidth={1.3}
-                  className="mb-8"
+                  className="mb-8 text-blue-500"
                 />
 
                 <h3 className="uppercase tracking-[0.3em] text-xs mb-6">
@@ -135,7 +138,7 @@ export default function ConveyorsPage() {
                 <Workflow
                   size={34}
                   strokeWidth={1.3}
-                  className="mb-8"
+                  className="mb-8 text-blue-500"
                 />
 
                 <h3 className="uppercase tracking-[0.3em] text-xs mb-6">
@@ -155,7 +158,7 @@ export default function ConveyorsPage() {
                 <Cog
                   size={34}
                   strokeWidth={1.3}
-                  className="mb-8"
+                  className="mb-8 text-blue-500"
                 />
 
                 <h3 className="uppercase tracking-[0.3em] text-xs mb-6">
@@ -183,16 +186,19 @@ export default function ConveyorsPage() {
 
             <div className="grid md:grid-cols-2 gap-20 items-center">
 
-              {/* IMAGEN */}
+              {/* VIDEO */}
               <motion.div
                 whileHover={{ scale: 1.01 }}
                 transition={{ duration: 0.4 }}
-                className="overflow-hidden rounded-[10px]"
+                className="relative overflow-hidden rounded-[10px]"
               >
+
+                {/* GLOW AZUL */}
+                <div className="absolute inset-0 bg-blue-500/10 blur-3xl scale-110" />
 
                 {/* SOLO AQUÍ B/N → COLOR */}
                 <video
-                  className="w-full h-[340px] md:h-[520px] object-cover grayscale hover:grayscale-0 transition duration-700"
+                  className="relative w-full h-[340px] md:h-[520px] object-cover grayscale hover:grayscale-0 transition duration-700"
                   autoPlay
                   muted
                   loop
@@ -237,7 +243,7 @@ export default function ConveyorsPage() {
                       className="flex items-center gap-4 text-gray-700"
                     >
 
-                      <div className="w-1.5 h-1.5 rounded-full bg-black" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
 
                       {item}
 
@@ -306,7 +312,7 @@ export default function ConveyorsPage() {
                       "_blank"
                     )
                   }
-                  className="bg-black text-white px-8 py-4 rounded-md flex items-center gap-4 hover:opacity-90 transition"
+                  className="bg-black text-white px-8 py-4 rounded-md flex items-center gap-4 hover:bg-blue-500 transition"
                 >
 
                   CONTACTAR
@@ -316,6 +322,7 @@ export default function ConveyorsPage() {
                 </button>
 
               </div>
+
             </div>
 
           </div>
@@ -326,6 +333,7 @@ export default function ConveyorsPage() {
     </>
   );
 }
+
 
 
 /* ================= CARRUSEL ================= */
@@ -398,13 +406,16 @@ function CarruselConveyors() {
               initial={{ opacity: 0.7 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4 }}
-              className="relative overflow-hidden"
+              className="relative overflow-hidden group"
             >
 
               <img
                 src={slides[slideIndex]}
                 className="w-full h-[260px] md:h-[500px] object-cover"
               />
+
+              {/* BORDE AZUL SUTIL */}
+              <div className="absolute inset-0 border border-blue-500/0 group-hover:border-blue-500/30 transition duration-500" />
 
             </motion.div>
 
@@ -423,7 +434,7 @@ function CarruselConveyors() {
             key={i}
             className={`h-[2px] transition-all duration-300 ${
               i === index
-                ? "w-10 bg-black"
+                ? "w-10 bg-blue-500"
                 : "w-6 bg-black/20"
             }`}
           />
@@ -435,4 +446,5 @@ function CarruselConveyors() {
     </div>
   );
 }
+
 
