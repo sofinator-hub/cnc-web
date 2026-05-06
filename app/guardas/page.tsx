@@ -1,11 +1,10 @@
- "use client";
+"use client";
 
- import { motion } from "framer-motion";
- import { useState } from "react";
- import MobileMenu from "@/components/layout/MobileMenu";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import MobileMenu from "@/components/layout/MobileMenu";
 
-
-export default function GuardasPage() {
+ export default function GuardasPage() {
   return (
     <>
       <MobileMenu />
@@ -16,15 +15,16 @@ export default function GuardasPage() {
           src="/fondo_blanco.jpg"
           className="w-full h-full object-cover"
         />
-      <div className="absolute inset-0 bg-white/75" />
+
+        <div className="absolute inset-0 bg-white/80" />
       </div>
 
-      <main className="relative z-10 text-gray-900 overflow-hidden">
+      <main className="relative z-10 text-black overflow-hidden">
 
         {/* ================= HERO ================= */}
-        <section className="relative min-h-screen flex items-center overflow-hidden">
+        <section className="relative min-h-screen flex items-end overflow-hidden">
 
-          {/* FONDO */}
+          {/* IMAGEN */}
           <img
             src="/hero_guardas_clean.jpg"
             className="absolute inset-0 w-full h-full object-cover"
@@ -34,28 +34,29 @@ export default function GuardasPage() {
           <div className="absolute inset-0 bg-black/55" />
 
           {/* CONTENIDO */}
-          <div className="relative z-10 w-full px-6 md:px-20 pt-32">
+          <div className="relative z-10 w-full px-6 md:px-20 pb-20 md:pb-28">
 
             <motion.div
-              initial={{ opacity: 0, y: 35 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="max-w-2xl"
+              className="max-w-[700px]"
             >
 
-              <p className="uppercase tracking-[0.45em] text-sm text-gray-300 mb-8">
+              <p className="uppercase tracking-[0.45em] text-xs md:text-sm text-gray-300 mb-8">
                 Seguridad Industrial
               </p>
 
-              <h1 className="text-6xl md:text-[110px] font-light text-white leading-[0.95] mb-10">
+              <h1 className="text-[52px] md:text-[120px] font-light leading-[0.9] text-white mb-10">
                 Guardas
                 <br />
                 industriales
               </h1>
 
-              <p className="text-lg md:text-2xl text-gray-200 leading-relaxed max-w-xl">
-                Sistemas de protección para maquinaria,
-                automatización y procesos industriales.
+              <p className="text-lg md:text-2xl text-gray-200 leading-relaxed max-w-[520px]">
+                Sistemas modulares de protección
+                diseñados para automatización,
+                maquinaria y procesos industriales.
               </p>
 
             </motion.div>
@@ -65,43 +66,43 @@ export default function GuardasPage() {
         </section>
 
 
-        {/* ================= INTRO ================= */}
-        <section className="px-6 md:px-20 py-32">
+        {/* ================= BLOQUE EDITORIAL ================= */}
+        <section className="px-6 md:px-20 py-32 md:py-44">
 
-          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+          <div className="max-w-[1600px] mx-auto grid md:grid-cols-[0.9fr_1.1fr] gap-14 md:gap-24 items-center">
 
             {/* TEXTO */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 35 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
 
-              <p className="uppercase tracking-[0.35em] text-sm text-gray-500 mb-8">
+              <p className="uppercase tracking-[0.45em] text-xs text-gray-500 mb-10">
                 Integración industrial
               </p>
 
-              <h2 className="text-5xl md:text-7xl font-light leading-[1.05] mb-10">
-                Seguridad,
-                precisión
-                y diseño
+              <h2 className="text-[46px] md:text-[88px] font-light leading-[0.95] mb-12">
+                Diseño
+                modular
+                y preciso
               </h2>
 
-              <p className="text-gray-600 text-xl leading-relaxed max-w-xl mb-14">
-                Diseñamos soluciones modulares enfocadas
-                en protección operativa, integración industrial
-                y funcionalidad estructural.
+              <p className="text-gray-600 text-lg md:text-2xl leading-relaxed max-w-[500px] mb-16">
+                Soluciones desarrolladas para proteger
+                operadores, maquinaria y procesos
+                industriales sin comprometer funcionalidad.
               </p>
 
               {/* LISTA */}
               <div className="space-y-6">
 
                 {[
-                  "Protección perimetral",
-                  "Diseños modulares",
-                  "Integración personalizada",
-                  "Fabricación CNC",
+                 "Protección perimetral",
+                 "Fabricación CNC",
+                 "Diseños personalizados",
+                 "Integración industrial",
                 ].map((item, index) => (
 
                   <div
@@ -123,13 +124,17 @@ export default function GuardasPage() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="relative overflow-hidden rounded-[40px]"
+              className="relative"
             >
 
-              <img
-                src="/guardas_detalle.jpg"
-                className="w-full h-[420px] md:h-[720px] object-cover grayscale hover:grayscale-0 transition duration-700"
-              />
+              <div className="overflow-hidden rounded-[40px]">
+
+                <img
+                  src="/guardas_detalle.jpg"
+                  className="w-full h-[420px] md:h-[820px] object-cover grayscale hover:grayscale-0 transition duration-700"
+                />
+
+              </div>
 
             </motion.div>
 
@@ -139,21 +144,19 @@ export default function GuardasPage() {
 
 
         {/* ================= CARRUSEL EDITORIAL ================= */}
-        <section className="px-6 md:px-20 py-32">
+        <section className="px-6 md:px-20 py-20 md:py-32 overflow-hidden">
 
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-[1700px] mx-auto">
 
-            {/* HEADER */}
-            <div className="mb-20 md:mb-28">
+           <div className="mb-20 md:mb-28">
 
-              <p className="uppercase tracking-[0.4em] text-sm text-gray-500 mb-8">
+              <p className="uppercase tracking-[0.45em] text-xs text-gray-500 mb-8">
                 Sistemas
               </p>
 
-              <h2 className="text-5xl md:text-7xl font-light leading-[1.05]">
-                Protección
-                <br />
-                industrial
+              <h2 className="text-[46px] md:text-[100px] font-light leading-[0.92]">
+               Protección
+               industrial
               </h2>
 
             </div>
@@ -166,24 +169,25 @@ export default function GuardasPage() {
 
 
         {/* ================= CTA ================= */}
-        <section className="px-6 md:px-20 pb-32">
+        <section className="px-6 md:px-20 pt-12 pb-32 md:pb-40">
 
-          <div className="max-w-6xl mx-auto border border-black/10 rounded-[40px] bg-white/60 backdrop-blur-xl p-12 md:p-24">
+          <div className="max-w-[1600px] mx-auto border border-black/10 rounded-[42px] bg-white/60 backdrop-blur-xl p-10 md:p-24">
 
-            <div className="max-w-3xl">
+            <div className="max-w-[900px]">
 
-              <p className="uppercase tracking-[0.4em] text-sm text-gray-500 mb-8">
+              <p className="uppercase tracking-[0.45em] text-xs text-gray-500 mb-8">
                 Sistemas personalizados
               </p>
 
-              <h2 className="text-5xl md:text-7xl font-light leading-[1.05] mb-10">
-                Diseñadas para
-                procesos reales
+              <h2 className="text-[46px] md:text-[96px] font-light leading-[0.95] mb-12">
+                Diseñadas
+                para procesos
+                reales
               </h2>
 
-              <p className="text-xl text-gray-600 leading-relaxed mb-14 max-w-2xl">
-                Soluciones adaptadas a maquinaria,
-                automatización y entornos industriales
+              <p className="text-gray-600 text-lg md:text-2xl leading-relaxed max-w-[700px] mb-16">
+                Soluciones adaptadas a automatización,
+                maquinaria y entornos industriales
                 con enfoque en seguridad y funcionalidad.
               </p>
 
@@ -211,7 +215,7 @@ export default function GuardasPage() {
 }
 
 
-/* ================= CARRUSEL EDITORIAL ================= */
+/* ================= CARRUSEL ================= */
 
 function CarruselEditorial() {
   const [index, setIndex] = useState(0);
@@ -220,7 +224,7 @@ function CarruselEditorial() {
     {
       img: "/guarda1.jpg",
       title: "Protección perimetral",
-      desc: "Sistemas diseñados para delimitar y proteger áreas industriales.",
+      desc: "Diseñadas para delimitar y proteger áreas industriales.",
     },
     {
       img: "/guarda2.jpg",
@@ -230,12 +234,12 @@ function CarruselEditorial() {
     {
       img: "/guarda3.jpg",
       title: "Diseños personalizados",
-      desc: "Integración industrial enfocada en funcionalidad y precisión.",
+      desc: "Integración enfocada en funcionalidad y precisión.",
     },
     {
       img: "/guarda4.jpg",
       title: "Protección industrial",
-      desc: "Soluciones estructurales para automatización y maquinaria.",
+      desc: "Soluciones estructurales para automatización.",
     },
   ];
 
@@ -250,13 +254,12 @@ function CarruselEditorial() {
   return (
     <div className="relative">
 
-      {/* CARD */}
-      <motion.div
+     <motion.div
         key={slides[index].img}
         initial={{ opacity: 0.4 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="grid md:grid-cols-[1.3fr_0.7fr] gap-10 items-end"
+        className="grid md:grid-cols-[1.25fr_0.75fr] gap-10 md:gap-20 items-end"
       >
 
         {/* IMAGEN */}
@@ -264,27 +267,27 @@ function CarruselEditorial() {
 
           <img
             src={slides[index].img}
-            className="w-full h-[300px] md:h-[720px] object-cover grayscale hover:grayscale-0 transition duration-700"
+            className="w-full h-[320px] md:h-[820px] object-cover grayscale hover:grayscale-0 transition duration-700"
           />
 
         </div>
 
         {/* INFO */}
-        <div className="pb-4 md:pb-10">
+        <div className="pb-4 md:pb-12">
 
-          <div className="text-[90px] md:text-[160px] font-light text-black/5 leading-none mb-6">
+          <div className="text-[90px] md:text-[220px] font-light text-black/[0.04] leading-none mb-6">
             0{index + 1}
           </div>
 
-          <h3 className="text-4xl md:text-6xl font-light leading-tight mb-8">
+          <h3 className="text-[40px] md:text-[74px] font-light leading-[0.95] mb-8">
             {slides[index].title}
           </h3>
 
-          <p className="text-gray-600 text-lg md:text-xl leading-relaxed mb-12 max-w-md">
+          <p className="text-gray-600 text-lg md:text-2xl leading-relaxed max-w-[420px] mb-14">
             {slides[index].desc}
           </p>
 
-          {/* CONTROLES */}
+          {/* BOTONES */}
           <div className="flex gap-4">
 
             <button
@@ -299,8 +302,7 @@ function CarruselEditorial() {
               className="w-14 h-14 rounded-full border border-black/10 hover:bg-black hover:text-white transition flex items-center justify-center text-xl"
             >
               →
-
-            </button>
+          </button>
 
           </div>
 
