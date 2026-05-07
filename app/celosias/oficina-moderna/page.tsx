@@ -11,7 +11,7 @@ export default function OficinaModernaPage() {
     <>
       <MobileMenu />
 
-      {/* FONDO */}
+      {/* ================= FONDO ================= */}
       <div className="fixed inset-0 -z-10">
         <img
           src="/fondo_blanco.jpg"
@@ -35,7 +35,7 @@ export default function OficinaModernaPage() {
           />
 
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/45" />
 
           {/* Glow */}
           <div className="absolute top-10 left-5 w-40 h-40 md:w-80 md:h-80 bg-blue-600 rounded-full blur-3xl opacity-20" />
@@ -61,8 +61,7 @@ export default function OficinaModernaPage() {
 
               <p className="text-gray-200 text-sm md:text-lg leading-relaxed max-w-2xl">
                 Diseño contemporáneo fabricado en MDF de 9 mm,
-                ideal para dividir espacios interiores manteniendo
-                amplitud visual e iluminación natural.
+                ideal para espacios corporativos modernos.
               </p>
 
             </div>
@@ -70,12 +69,12 @@ export default function OficinaModernaPage() {
           </motion.div>
         </section>
 
-        {/* ================= INFORMACIÓN ================= */}
+        {/* ================= INFO GENERAL ================= */}
         <section className="px-6 md:px-20 py-20">
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
 
-            {/* DESCRIPCIÓN */}
+            {/* TEXTO */}
             <motion.div
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -91,94 +90,164 @@ export default function OficinaModernaPage() {
               <div className="space-y-6 text-gray-600 leading-relaxed">
 
                 <p>
-                  Esta celosía fue desarrollada para interiores corporativos
-                  modernos, buscando generar divisiones visuales elegantes sin
-                  sacrificar iluminación ni sensación de amplitud.
+                  Esta celosía fue diseñada para interiores corporativos
+                  modernos, permitiendo generar privacidad visual sin perder
+                  iluminación ni amplitud en el espacio.
                 </p>
 
                 <p>
-                  El patrón geométrico aporta una estética limpia y minimalista,
-                  integrándose de manera natural en espacios contemporáneos de oficina.
+                  El diseño geométrico aporta una estética minimalista
+                  y elegante que se integra naturalmente en oficinas
+                  contemporáneas y espacios arquitectónicos modernos.
                 </p>
 
                 <p>
-                  Gracias al corte CNC de alta precisión, el diseño mantiene
-                  acabados uniformes y detalles definidos en cada sección.
+                  Fabricada mediante corte CNC de alta precisión sobre
+                  MDF de 9 mm para garantizar acabados limpios y uniformes.
                 </p>
 
               </div>
 
             </motion.div>
 
-            {/* ESPECIFICACIONES */}
-            <motion.div
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="backdrop-blur-lg bg-white/70 border border-white/40 rounded-3xl p-8 shadow-lg"
-            >
+            {/* CARDS */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
-              <h2 className="text-3xl font-semibold mb-8 tracking-[0.08em]">
-                ESPECIFICACIONES
-              </h2>
+              {/* UBICACIÓN */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-white/70 backdrop-blur-lg border border-white/40 rounded-3xl p-6 shadow-lg hover:-translate-y-1 transition duration-300"
+              >
 
-              <div className="space-y-6">
-
-                <div className="flex justify-between border-b border-gray-300 pb-4">
-                  <span className="text-gray-500">Material</span>
-                  <span className="font-medium">MDF 9 mm</span>
+                <div className="text-4xl mb-4 animate-bounce">
+                  📍
                 </div>
 
-                <div className="flex justify-between border-b border-gray-300 pb-4">
-                  <span className="text-gray-500">Color</span>
-                  <span className="font-medium">Blanco</span>
+                <h3 className="text-xl font-semibold mb-2">
+                  Ubicación
+                </h3>
+
+                <p className="text-gray-600">
+                  Ciudad de México
+                </p>
+
+              </motion.div>
+
+              {/* DISEÑADOR */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="bg-white/70 backdrop-blur-lg border border-white/40 rounded-3xl p-6 shadow-lg hover:-translate-y-1 transition duration-300"
+              >
+
+                <div className="text-4xl mb-4">
+                  ✨
                 </div>
 
-                <div className="flex justify-between border-b border-gray-300 pb-4">
-                  <span className="text-gray-500">Aplicación</span>
-                  <span className="font-medium">Interior</span>
+                <h3 className="text-xl font-semibold mb-2">
+                  Diseño
+                </h3>
+
+                <p className="text-gray-600">
+                  Matei Studio
+                </p>
+
+              </motion.div>
+
+              {/* MATERIAL */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true }}
+                className="bg-white/70 backdrop-blur-lg border border-white/40 rounded-3xl p-6 shadow-lg col-span-1 sm:col-span-2"
+              >
+
+                <h3 className="text-xl font-semibold mb-6">
+                  Material
+                </h3>
+
+                <div className="flex flex-col md:flex-row items-center gap-6">
+
+                  {/* IMAGEN MATERIAL */}
+                  <div className="relative w-full md:w-52 h-40 rounded-2xl overflow-hidden">
+
+                    <Image
+                      src="/foto_mdf.jpg"
+                      alt="Material MDF"
+                      fill
+                      className="object-cover"
+                    />
+
+                  </div>
+
+                  {/* INFO */}
+                  <div>
+
+                    <div className="flex items-center gap-3 mb-4">
+
+                      <div className="w-5 h-5 rounded-full bg-gray-100 border border-gray-400" />
+
+                      <span className="font-medium text-lg">
+                        MDF 9 mm
+                      </span>
+
+                    </div>
+
+                    <p className="text-gray-600 leading-relaxed">
+                      Material ligero y resistente utilizado en aplicaciones
+                      interiores modernas gracias a su excelente acabado
+                      superficial y precisión en corte CNC.
+                    </p>
+
+                  </div>
+
                 </div>
 
-                <div className="flex justify-between border-b border-gray-300 pb-4">
-                  <span className="text-gray-500">Ubicación</span>
-                  <span className="font-medium">CDMX</span>
-                </div>
+              </motion.div>
 
-                <div className="flex justify-between border-b border-gray-300 pb-4">
-                  <span className="text-gray-500">Acabado</span>
-                  <span className="font-medium">Pintura blanca mate</span>
-                </div>
-
-                <div className="flex justify-between">
-                  <span className="text-gray-500">Proceso</span>
-                  <span className="font-medium">Corte CNC Láser</span>
-                </div>
-
-              </div>
-
-            </motion.div>
+            </div>
 
           </div>
 
         </section>
 
-        {/* ================= GALERÍA ================= */}
+        {/* ================= BRANDING ================= */}
         <section className="px-6 md:px-20 pb-20">
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.98 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative overflow-hidden rounded-3xl shadow-2xl"
+            className="bg-white/70 backdrop-blur-lg border border-white/40 rounded-3xl p-10 shadow-lg flex flex-col items-center justify-center text-center"
           >
 
-            <img
-              src="/celosia1.jpg"
-              alt="Detalle Celosía"
-              className="w-full h-[300px] md:h-[700px] object-cover hover:scale-105 transition duration-700"
-            />
+            {/* LOGO */}
+            <div className="relative w-40 h-40 mb-6">
+
+              <Image
+                src="/matei_logo.jpg"
+                alt="Matei Logo"
+                fill
+                className="object-contain"
+              />
+
+            </div>
+
+            <h3 className="text-2xl font-semibold mb-4">
+              Proyecto desarrollado por Matei Studio
+            </h3>
+
+            <p className="text-gray-600 max-w-2xl leading-relaxed">
+              Diseño y fabricación de soluciones arquitectónicas
+              mediante tecnología CNC de alta precisión.
+            </p>
 
           </motion.div>
 
