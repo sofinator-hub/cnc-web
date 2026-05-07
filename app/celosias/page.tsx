@@ -49,7 +49,7 @@ export default function CelosiasPage() {
       title: "Fachada",
       desc: "Diseño geométrico",
       category: "Fachadas",
-      slug: "fachada-geometrica"
+      slug: "fachada-premium"
     },
 
     {
