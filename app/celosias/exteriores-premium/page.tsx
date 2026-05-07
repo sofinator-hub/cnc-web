@@ -61,7 +61,7 @@ export default function ExterioresPremiumPage() {
               </p>
 
               <h1 className="text-4xl md:text-7xl font-semibold text-white mb-6">
-                Celosía Exterior Premium
+                Celosía Exterior
               </h1>
 
               <p className="text-gray-200 text-sm md:text-lg leading-relaxed max-w-2xl">
