@@ -1,7 +1,7 @@
-export default function Test() {
+export default function Page() {
   return (
     <div>
-      FUNCIONA
+      Página en construcción
     </div>
   );
 }
