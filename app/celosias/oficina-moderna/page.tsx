@@ -4,6 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import MobileMenu from "@/components/layout/MobileMenu";
+import {
+  MapPin,
+  PencilRuler,
+  Layers
+} from "lucide-react";
 
 
 export default function OficinaModernaPage() {
@@ -122,10 +127,13 @@ export default function OficinaModernaPage() {
                 className="bg-white/70 backdrop-blur-lg border border-white/40 rounded-3xl p-6 shadow-lg hover:-translate-y-1 transition duration-300"
               >
 
-                <div className="text-4xl mb-4 animate-bounce">
-                  📍
-                </div>
-
+                <div className="mb-4">
+                 <MapPin
+                  size={38}
+                  className="text-blue-600"
+                  strokeWidth={1.8}
+                   />
+             </div>
                 <h3 className="text-xl font-semibold mb-2">
                   Ubicación
                 </h3>
@@ -145,16 +153,19 @@ export default function OficinaModernaPage() {
                 className="bg-white/70 backdrop-blur-lg border border-white/40 rounded-3xl p-6 shadow-lg hover:-translate-y-1 transition duration-300"
               >
 
-                <div className="text-4xl mb-4">
-                  ✨
-                </div>
-
+                <div className="mb-4">
+                <PencilRuler
+                 size={38}
+                 className="text-blue-600"
+                 strokeWidth={1.8}
+                />
+               </div>
                 <h3 className="text-xl font-semibold mb-2">
                   Diseño
                 </h3>
 
                 <p className="text-gray-600">
-                  Matei Studio
+                  MATEI
                 </p>
 
               </motion.div>
@@ -232,7 +243,7 @@ export default function OficinaModernaPage() {
             <div className="relative w-40 h-40 mb-6">
 
               <Image
-                src="/matei_logo.jpg"
+                src="/logo_matei.jpg"
                 alt="Matei Logo"
                 fill
                 className="object-contain"
@@ -241,7 +252,7 @@ export default function OficinaModernaPage() {
             </div>
 
             <h3 className="text-2xl font-semibold mb-4">
-              Proyecto desarrollado por Matei Studio
+              Proyecto desarrollado por MATEI
             </h3>
 
             <p className="text-gray-600 max-w-2xl leading-relaxed">
