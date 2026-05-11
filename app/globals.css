@@ -3,13 +3,29 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* BRAND COLORS */
+  --primary: #742069;
+  --primary-dark: #542b7c;
+
+  /* OPTIONAL SURFACES */
+  --surface: #111111;
+  --surface-light: #1a1a1a;
+
+  /* TYPOGRAPHY */
+  --font-main: var(--font-geist-sans);
+  --font-mono-custom: var(--font-geist-mono);
 }
 
 theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+
+  --font-sans: var(--font-main);
+  --font-mono: var(--font-mono-custom);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,19 +35,83 @@ theme inline {
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+
+  /* GLOBAL FONT */
+  font-family: var(--font-main), Arial, Helvetica, sans-serif;
+
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* GLOBAL HEADINGS */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-main), Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* GLOBAL PARAGRAPHS */
+
+p,
+span,
+li,
+a,
+button,
+input,
+textarea {
+  font-family: var(--font-main), Arial, Helvetica, sans-serif;
+}
+
+/* TEXT SELECTION */
+
 ::selection {
-  background: #3b82f6;
+  background: var(--primary);
   color: white;
 }
-body {
-  letter-spacing: 0.02em;
+
+/* OPTIONAL GLOBAL UTILITIES */
+
+.purple-gradient {
+  background: linear-gradient(
+    to right,
+    var(--primary),
+    var(--primary-dark)
+  );
+}
+
+.purple-glow {
+  box-shadow: 0 0 30px rgba(116, 32, 105, 0.35);
+}
+
+.purple-border {
+  border-color: var(--primary);
+}
+
+.purple-text {
+  color: var(--primary);
+}
+
+.purple-bg {
+  background: var(--primary);
 }
