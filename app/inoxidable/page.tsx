@@ -80,83 +80,53 @@ export default function MobiliarioPage() {
 
       <main className="relative z-10 text-gray-900 overflow-hidden">
 
-        {/* ================= HERO ================= */}
-        <section className="min-h-[92vh] flex items-center justify-center relative overflow-hidden px-4">
+{/* ================= HERO ================= */}
+<section className="min-h-[88vh] flex items-center relative overflow-hidden px-6 md:px-20">
 
-          {/* Fondo */}
-          <div className="absolute inset-0">
-            <img
-              src="/fondo_acero1.jpg"
-              alt="Fondo acero"
-              className="w-full h-full object-cover"
-            />
+  {/* Fondo */}
+  <div className="absolute inset-0">
 
-            <div className="absolute inset-0 bg-black/30" />
-          </div>
+    <img
+      src="/fondo_acero1.jpg"
+      alt="Fondo acero"
+      className="w-full h-full object-cover"
+    />
 
+    {/* Overlay */}
+    <div className="absolute inset-0 bg-white/45" />
 
+  </div>
 
-          {/* Glow */}
-          <div className="absolute top-10 left-5 w-72 h-72 bg-cyan-400 rounded-full blur-3xl opacity-20" />
-          <div className="absolute bottom-10 right-5 w-72 h-72 bg-blue-700 rounded-full blur-3xl opacity-20" />
+  {/* Glow */}
+  <div className="absolute top-10 left-10 w-72 h-72 bg-cyan-300 rounded-full blur-3xl opacity-20" />
+  <div className="absolute bottom-10 right-10 w-72 h-72 bg-blue-400 rounded-full blur-3xl opacity-20" />
 
-          {/* Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="relative z-10 backdrop-blur-xl bg-white/15 border border-white/20 rounded-3xl p-8 md:p-16 max-w-5xl w-full shadow-2xl"
-          >
-            <div className="grid md:grid-cols-2 gap-10 items-center">
+  {/* Contenido */}
+  <motion.div
+    initial={{ opacity: 0, y: 25 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.7 }}
+    className="relative z-10 max-w-4xl"
+  >
 
-              <div>
-                <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold leading-[0.95] tracking-[0.12em] text-white">
-                  MOBILIARIO
-                  <br />
-                  INOXIDABLE
-                  <br />
-                  INDUSTRIAL
-                </h1>
+    <span className="uppercase tracking-[0.35em] text-sm text-blue-700">
+      Fabricación especializada
+    </span>
 
-                <p className="text-white/80 mt-8 text-sm md:text-lg leading-relaxed max-w-xl">
-                  Fabricación de mobiliario en acero inoxidable para
-                  entornos industriales, alimenticios y profesionales
-                  donde la higiene, resistencia y precisión son esenciales.
-                </p>
+    <h1 className="text-5xl sm:text-6xl md:text-8xl font-semibold leading-[0.95] tracking-[0.08em] text-gray-900 mt-6">
+      MOBILIARIO
+      <br />
+      INOXIDABLE
+    </h1>
 
-                <div className="flex flex-wrap gap-4 mt-8">
+    <p className="text-gray-700 text-base md:text-xl leading-relaxed mt-8 max-w-2xl">
+      Soluciones en acero inoxidable diseñadas para máxima
+      durabilidad, higiene y rendimiento en entornos
+      industriales y profesionales.
+    </p>
 
-                  <div className="bg-white/10 border border-white/20 px-4 py-2 rounded-full text-white text-sm">
-                    Acero 304 y 316
-                  </div>
-
-                  <div className="bg-white/10 border border-white/20 px-4 py-2 rounded-full text-white text-sm">
-                    Fabricación personalizada
-                  </div>
-
-                  <div className="bg-white/10 border border-white/20 px-4 py-2 rounded-full text-white text-sm">
-                    Acabados sanitarios
-                  </div>
-
-                </div>
-              </div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.2 }}
-                className="hidden md:block"
-              >
-                <img
-                  src="/mesa.jpg"
-                  alt="Mobiliario inoxidable"
-                  className="rounded-3xl shadow-2xl h-[500px] w-full object-cover"
-                />
-              </motion.div>
-
-            </div>
-          </motion.div>
-        </section>
+  </motion.div>
+</section>
 
         {/* ================= PRODUCTOS ================= */}
         <section className="px-6 md:px-20 py-28">
