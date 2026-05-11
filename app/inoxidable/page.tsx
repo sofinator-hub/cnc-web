@@ -93,7 +93,7 @@ export default function MobiliarioPage() {
     />
 
     {/* Overlay */}
-    <div className="absolute inset-0 bg-white/45" />
+    <div className="absolute inset-0 bg-white/30" />
 
   </div>
 
@@ -109,21 +109,25 @@ export default function MobiliarioPage() {
     className="relative z-10 max-w-4xl"
   >
 
-    <span className="uppercase tracking-[0.35em] text-sm text-blue-700">
-      Fabricación especializada
-    </span>
+    <div className="backdrop-blur-xl bg-white/45 border border-white/40 rounded-3xl p-8 md:p-14 shadow-2xl">
 
-    <h1 className="text-5xl sm:text-6xl md:text-8xl font-semibold leading-[0.95] tracking-[0.08em] text-gray-900 mt-6">
-      MOBILIARIO
-      <br />
-      INOXIDABLE
-    </h1>
+      <span className="uppercase tracking-[0.35em] text-sm text-blue-700">
+        Fabricación especializada
+      </span>
 
-    <p className="text-gray-700 text-base md:text-xl leading-relaxed mt-8 max-w-2xl">
-      Soluciones en acero inoxidable diseñadas para máxima
-      durabilidad, higiene y rendimiento en entornos
-      industriales y profesionales.
-    </p>
+      <h1 className="text-5xl sm:text-6xl md:text-8xl font-semibold leading-[0.95] tracking-[0.08em] text-gray-900 mt-6">
+        MOBILIARIO
+        <br />
+        INOXIDABLE
+      </h1>
+
+      <p className="text-gray-700 text-base md:text-xl leading-relaxed mt-8 max-w-2xl">
+        Soluciones en acero inoxidable diseñadas para máxima
+        durabilidad, higiene y rendimiento en entornos
+        industriales y profesionales.
+      </p>
+
+    </div>
 
   </motion.div>
 </section>
