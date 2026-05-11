@@ -80,94 +80,21 @@ export default function MobiliarioPage() {
 
       <main className="relative z-10 text-gray-900 overflow-hidden">
 
-{/* ================= HERO ================= */}
-<section className="min-h-[90vh] flex items-center justify-center relative overflow-hidden px-4">
+        {/* ================= HERO ================= */}
+        <section className="min-h-[92vh] flex items-center justify-center relative overflow-hidden px-4">
 
-  {/* Fondo */}
-  <div className="absolute inset-0">
+          {/* Fondo */}
+          <div className="absolute inset-0">
+            <img
+              src="/fondo_acero1.jpg"
+              alt="Fondo acero"
+              className="w-full h-full object-cover"
+            />
 
-    <img
-      src="/fondo_acero1.jpg"
-      alt="Fondo acero"
-      className="w-full h-full object-cover"
-    />
-
-    <div className="absolute inset-0 bg-white/35" />
-
-  </div>
-
-  {/* Glow */}
-  <div className="absolute top-10 left-5 w-72 h-72 bg-cyan-300 rounded-full blur-3xl opacity-20" />
-  <div className="absolute bottom-10 right-5 w-72 h-72 bg-blue-500 rounded-full blur-3xl opacity-20" />
-
-  {/* Contenido */}
-  <motion.div
-    initial={{ opacity: 0, y: 25 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.7 }}
-    className="relative z-10 max-w-6xl w-full"
-  >
-
-    <div className="grid md:grid-cols-2 gap-10 items-center">
-
-      {/* Texto */}
-      <div className="backdrop-blur-xl bg-white/55 border border-white/40 rounded-3xl p-8 md:p-14 shadow-2xl">
-
-        <span className="uppercase tracking-[0.3em] text-sm text-blue-700">
-          Fabricación especializada
-        </span>
-
-        <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold mt-5 leading-[0.95] tracking-[0.08em] text-gray-900">
-          MOBILIARIO
-          <br />
-          INOXIDABLE
-        </h1>
-
-        <p className="text-gray-700 mt-8 text-base md:text-lg leading-relaxed max-w-xl">
-          Soluciones en acero inoxidable diseñadas para
-          máxima durabilidad, higiene y rendimiento
-          en entornos industriales y profesionales.
-        </p>
-
-        {/* Barra técnica */}
-        <div className="flex flex-wrap gap-3 mt-8">
-
-          <div className="px-4 py-2 rounded-full bg-white/70 border border-gray-200 text-sm">
-            Acero 304 / 316
+            <div className="absolute inset-0 bg-black/30" />
           </div>
 
-          <div className="px-4 py-2 rounded-full bg-white/70 border border-gray-200 text-sm">
-            Fabricación personalizada
-          </div>
 
-          <div className="px-4 py-2 rounded-full bg-white/70 border border-gray-200 text-sm">
-            Acabados sanitarios
-          </div>
-
-        </div>
-
-      </div>
-
-      {/* Imagen */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.96 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.2 }}
-        className="hidden md:block"
-      >
-
-        <img
-          src="/mesa.jpg"
-          alt="Mobiliario inoxidable"
-          className="w-full h-[600px] object-cover rounded-3xl shadow-2xl"
-        />
-
-      </motion.div>
-
-    </div>
-
-  </motion.div>
-</section>
 
           {/* Glow */}
           <div className="absolute top-10 left-5 w-72 h-72 bg-cyan-400 rounded-full blur-3xl opacity-20" />
@@ -229,7 +156,7 @@ export default function MobiliarioPage() {
 
             </div>
           </motion.div>
-          
+        </section>
 
         {/* ================= PRODUCTOS ================= */}
         <section className="px-6 md:px-20 py-28">
@@ -300,7 +227,7 @@ export default function MobiliarioPage() {
             ))}
 
           </div>
-       </section>
+        </section>
 
         {/* ================= EXPLICACIÓN ================= */}
         <section className="bg-gradient-to-b from-gray-100 to-white py-28">
