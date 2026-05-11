@@ -20,15 +20,14 @@
   --background: #0a0a0a;
   --foreground: #f5f5f5;
 
-  /* BRAND COLORS */
+
   --primary: #742069;
   --primary-dark: #542b7c;
 
-  /* SURFACES */
-  --surface: #111111;
-  --surface-light: #1a1a1a;
 
-  /* TYPOGRAPHY */
+  --surface: #111111;
+
+  
   --font-main: Inter, Arial, Helvetica, sans-serif;
 }
 
@@ -40,7 +39,7 @@ theme inline {
   --color-primary-dark: var(--primary-dark);
 
   --font-sans: var(--font-main);
-}
+ }
 
 
 html {
@@ -53,10 +52,7 @@ body {
 
   font-family: var(--font-main);
 
-  font-size: 17px;
-  line-height: 1.7;
-  letter-spacing: 0.01em;
-
+  
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 
@@ -64,56 +60,28 @@ body {
   padding: 0;
 }
 
-/* GLOBAL HEADINGS */
+/* CLEANER GLOBAL TYPOGRAPHY */
 
-h1 {
-  font-size: clamp(3rem, 6vw, 6rem);
-  line-height: 0.95;
-  letter-spacing: -0.06em;
-  font-weight: 700;
-}
-
-h2 {
-  font-size: clamp(2.2rem, 4vw, 4rem);
-  line-height: 1;
-  letter-spacing: -0.05em;
-  font-weight: 600;
-}
-
-h3 {
-  font-size: clamp(1.6rem, 3vw, 2.5rem);
-  line-height: 1.1;
-  letter-spacing: -0.04em;
-  font-weight: 600;
-}
-
+h1,
+h2,
+h3,
 h4,
 h5,
-h6 
-{
+h6 {
+  font-family: var(--font-main);
   font-weight: 600;
   letter-spacing: -0.03em;
 }
 
-/* GLOBAL TEXT */
-
-p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: #d1d1d1;
+p,
+span,
+a,
+button,
+li {
+  font-family: var(--font-main);
 }
 
-a {
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-button {
-  transition: all 0.3s ease;
-  font-weight: 500;
-}
-
-/* TEXT SELECTION */
+/* SELECTION */
 
 ::selection {
   background: var(--primary);
