@@ -81,7 +81,7 @@ export default function MobiliarioPage() {
       <main className="relative z-10 text-gray-900 overflow-hidden">
 
 {/* ================= HERO ================= */}
-<section className="min-h-[88vh] flex items-center relative overflow-hidden px-6 md:px-20">
+<section className="min-h-[80vh] flex items-center relative overflow-hidden px-6 md:px-20">
 
   {/* Fondo */}
   <div className="absolute inset-0">
@@ -92,36 +92,35 @@ export default function MobiliarioPage() {
       className="w-full h-full object-cover"
     />
 
-    {/* Overlay */}
-    <div className="absolute inset-0 bg-white/30" />
+    <div className="absolute inset-0 bg-white/25" />
 
   </div>
 
   {/* Glow */}
-  <div className="absolute top-10 left-10 w-72 h-72 bg-cyan-300 rounded-full blur-3xl opacity-20" />
-  <div className="absolute bottom-10 right-10 w-72 h-72 bg-blue-400 rounded-full blur-3xl opacity-20" />
+  <div className="absolute top-10 left-10 w-56 h-56 bg-cyan-300 rounded-full blur-3xl opacity-20" />
+  <div className="absolute bottom-10 right-10 w-56 h-56 bg-blue-400 rounded-full blur-3xl opacity-20" />
 
   {/* Contenido */}
   <motion.div
-    initial={{ opacity: 0, y: 25 }}
+    initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.7 }}
-    className="relative z-10 max-w-4xl"
+    transition={{ duration: 0.6 }}
+    className="relative z-10"
   >
 
-    <div className="backdrop-blur-xl bg-white/45 border border-white/40 rounded-3xl p-8 md:p-14 shadow-2xl">
+    <div className="backdrop-blur-lg bg-white/35 border border-white/30 rounded-2xl px-7 py-8 md:px-10 md:py-10 shadow-xl max-w-2xl">
 
-      <span className="uppercase tracking-[0.35em] text-sm text-blue-700">
+      <span className="uppercase tracking-[0.25em] text-xs text-blue-700">
         Fabricación especializada
       </span>
 
-      <h1 className="text-5xl sm:text-6xl md:text-8xl font-semibold leading-[0.95] tracking-[0.08em] text-gray-900 mt-6">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-[0.95] tracking-[0.05em] text-gray-900 mt-4">
         MOBILIARIO
         <br />
         INOXIDABLE
       </h1>
 
-      <p className="text-gray-700 text-base md:text-xl leading-relaxed mt-8 max-w-2xl">
+      <p className="text-gray-700 text-sm md:text-base leading-relaxed mt-6 max-w-xl">
         Soluciones en acero inoxidable diseñadas para máxima
         durabilidad, higiene y rendimiento en entornos
         industriales y profesionales.
