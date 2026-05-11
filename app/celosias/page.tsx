@@ -112,7 +112,7 @@ export default function CelosiasPage() {
           </div>
 
           {/* GLOW */}
-          <div className="absolute top-10 left-5 w-40 h-40 md:w-80 md:h-80 bg-blue-600 rounded-full blur-3xl opacity-20" />
+          <div className="absolute top-10 left-5 w-40 h-40 md:w-80 md:h-80 bg-[var(--primary)] rounded-full blur-3xl opacity-20" />
           <div className="absolute bottom-10 right-5 w-40 h-40 md:w-80 md:h-80 bg-cyan-400 rounded-full blur-3xl opacity-20" />
 
           {/* CONTENIDO */}

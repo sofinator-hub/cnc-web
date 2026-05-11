@@ -1,20 +1,35 @@
 @import "tailwindcss";
 
+/* GLOBAL TAILWIND COLOR OVERRIDES */
+/* Every blue tone becomes MATEI purple */
+
+@theme {
+  --color-blue-50: #f6e9f4;
+  --color-blue-100: #ebd3e8;
+  --color-blue-200: #d8a8d1;
+  --color-blue-300: #c57dba;
+  --color-blue-400: #a94c9d;
+  --color-blue-500: #742069;
+  --color-blue-600: #542b7c;
+  --color-blue-700: #452261;
+  --color-blue-800: #331a49;
+  --color-blue-900: #221131;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #f5f5f5;
 
   /* BRAND COLORS */
   --primary: #742069;
   --primary-dark: #542b7c;
 
-  /* OPTIONAL SURFACES */
+  /* SURFACES */
   --surface: #111111;
   --surface-light: #1a1a1a;
 
   /* TYPOGRAPHY */
-  --font-main: var(--font-geist-sans);
-  --font-mono-custom: var(--font-geist-mono);
+  --font-main: Inter, Arial, Helvetica, sans-serif;
 }
 
 theme inline {
@@ -25,15 +40,8 @@ theme inline {
   --color-primary-dark: var(--primary-dark);
 
   --font-sans: var(--font-main);
-  --font-mono: var(--font-mono-custom);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 html {
   scroll-behavior: smooth;
@@ -43,11 +51,11 @@ body {
   background: var(--background);
   color: var(--foreground);
 
-  /* GLOBAL FONT */
-  font-family: var(--font-main), Arial, Helvetica, sans-serif;
+  font-family: var(--font-main);
 
-  letter-spacing: 0.02em;
-  line-height: 1.6;
+  font-size: 17px;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -58,29 +66,51 @@ body {
 
 /* GLOBAL HEADINGS */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-main), Arial, Helvetica, sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-  margin: 0;
+h1 {
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  font-weight: 700;
 }
 
-/* GLOBAL PARAGRAPHS */
+h2 {
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  font-weight: 600;
+}
 
-p,
-span,
-li,
-a,
-button,
-input,
-textarea {
-  font-family: var(--font-main), Arial, Helvetica, sans-serif;
+h3 {
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  font-weight: 600;
+}
+
+h4,
+h5,
+h6 
+{
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+/* GLOBAL TEXT */
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #d1d1d1;
+}
+
+a {
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+button {
+  transition: all 0.3s ease;
+  font-weight: 500;
 }
 
 /* TEXT SELECTION */
@@ -90,28 +120,28 @@ textarea {
   color: white;
 }
 
-/* OPTIONAL GLOBAL UTILITIES */
+/* GLOBAL UTILITIES */
 
-.purple-gradient {
-  background: linear-gradient(
-    to right,
-    var(--primary),
-    var(--primary-dark)
-  );
-}
-
-.purple-glow {
-  box-shadow: 0 0 30px rgba(116, 32, 105, 0.35);
-}
-
-.purple-border {
-  border-color: var(--primary);
+.purple-bg {
+  background-color: var(--primary);
 }
 
 .purple-text {
   color: var(--primary);
 }
 
-.purple-bg {
-  background: var(--primary);
+.purple-border {
+  border-color: var(--primary);
+}
+
+.purple-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--primary-dark)
+  );
+}
+
+.purple-glow {
+  box-shadow: 0 0 40px rgba(116, 32, 105, 0.35);
 }
