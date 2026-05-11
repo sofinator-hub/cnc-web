@@ -48,8 +48,8 @@ export default function MobiliarioPage() {
 
   const sectors = [
     {
-      title: "Restaurantes",
-      img: "/restaurant.jpg"
+      title: "plantas industriales",
+      img: "/planta.jpg"
     },
     {
       title: "Industria alimenticia",
@@ -299,8 +299,8 @@ export default function MobiliarioPage() {
                 text: "Ideal para entornos que requieren limpieza y sanitización constante."
               },
               {
-                title: "Diseño funcional",
-                text: "Optimiza espacios y mejora la eficiencia operativa."
+                title: "Acabado sanitario",
+                text: "superficies limpias y pulidas facilitando la limpieza."
               }
             ].map((item, i) => (
 
