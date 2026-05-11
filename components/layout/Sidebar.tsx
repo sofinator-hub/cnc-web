@@ -35,6 +35,14 @@ export default function Sidebar() {
             Soldadura con Ultrasonido
           </Link>
 
+          <Link href="/ingenieria" className="px-2 py-1 rounded-md hover:bg-gray-100 hover:text-black transition">
+            Servicios de Ingeniería
+          </Link>
+
+          <Link href="/inoxidable" className="px-2 py-1 rounded-md hover:bg-gray-100 hover:text-black transition">
+            Mobiliario Inoxidable
+          </Link>
+
           <Link href="/conveyors" className="px-2 py-1 rounded-md hover:bg-gray-100 hover:text-black transition">
             Conveyors
           </Link>
@@ -46,15 +54,7 @@ export default function Sidebar() {
           <Link href="/celosias" className="px-2 py-1 rounded-md hover:bg-gray-100 hover:text-black transition">
             Celosías
           </Link>
-
-          <Link href="/inoxidable" className="px-2 py-1 rounded-md hover:bg-gray-100 hover:text-black transition">
-            Mobiliario Inoxidable
-          </Link>
-
-          <Link href="/ingenieria" className="px-2 py-1 rounded-md hover:bg-gray-100 hover:text-black transition">
-            Servicios de Ingeniería
-          </Link>
-
+          
         </div>
 
         {/* DIVISOR */}

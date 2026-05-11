@@ -63,6 +63,14 @@ export default function MobileMenu() {
             Soldadura con Ultrasonido
           </Link>
 
+          <Link href="/ingenieria" onClick={() => setOpen(false)} className="hover:text-black transition">
+            Servicios de ingeniería
+          </Link>
+
+          <Link href="/inoxidable" onClick={() => setOpen(false)} className="hover:text-black transition">
+            Mobiliario Inoxidable
+          </Link>
+
           <Link href="/conveyors" onClick={() => setOpen(false)} className="hover:text-black transition">
             Conveyors
           </Link>
@@ -74,15 +82,7 @@ export default function MobileMenu() {
           <Link href="/celosias" onClick={() => setOpen(false)} className="hover:text-black transition">
             Celosías
           </Link>
-
-          <Link href="/inoxidable" onClick={() => setOpen(false)} className="hover:text-black transition">
-            Mobiliario Inoxidable
-          </Link>
-
-          <Link href="/ingenieria" onClick={() => setOpen(false)} className="hover:text-black transition">
-            Servicios de ingeniería
-          </Link>
-
+          
         </div>
 
         {/* FOOTER */}

@@ -100,7 +100,7 @@ export default function GuardasPage() {
 
                 <p className="text-gray-600 text-lg leading-relaxed max-w-[460px]">
                   Diseñamos y fabricamos guardas industriales
-                  que se integran a tus equipos y procesos,
+                  que se integran a tus equipos,
                   cumpliendo con altos estándares de seguridad y calidad.
                 </p>
 
@@ -166,7 +166,7 @@ export default function GuardasPage() {
 
                 <p className="text-gray-600 leading-relaxed">
                   Integración precisa con maquinaria
-                  y líneas automatizadas.
+                  y líneas de producción.
                 </p>
 
               </div>
@@ -227,7 +227,7 @@ export default function GuardasPage() {
 
                   {[
                     "Análisis y diseño",
-                    "Fabricación CNC",
+                    "cumplimiento con normativas nacionales e internacionales",
                     "Acabados de alta calidad",
                     "Instalación y soporte técnico",
                   ].map((item, index) => (

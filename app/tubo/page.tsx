@@ -222,7 +222,7 @@ export default function TuboPage() {
                 </p>
 
                 <h2 className="text-[42px] md:text-[72px] font-light leading-[0.95]">
-                  Perfiles
+                  Cortes de perfiles
                   industriales
                 </h2>
 

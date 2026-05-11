@@ -58,7 +58,7 @@ export default function ConveyorsPage() {
               </p>
 
               <h1 className="text-[58px] md:text-[100px] leading-[0.9] font-light text-white mb-8">
-                Sistemas
+
                 <br />
                 conveyors
               </h1>
@@ -100,7 +100,7 @@ export default function ConveyorsPage() {
               <div className="flex items-center">
 
                 <p className="text-gray-600 text-lg leading-relaxed max-w-[460px]">
-                  Diseñamos sistemas conveyors adaptados
+                  Diseñamos sistemas de conveyors adaptados
                   a líneas de producción y automatización,
                   optimizando flujo, movimiento y eficiencia operativa.
                 </p>
@@ -223,7 +223,7 @@ export default function ConveyorsPage() {
                 </h2>
 
                 <p className="text-gray-600 text-lg leading-relaxed mb-12 max-w-[520px]">
-                  Sistemas conveyors desarrollados
+                  Sistemas de conveyors desarrollados
                   para optimizar producción, automatización
                   y manejo eficiente de materiales.
                 </p>
@@ -290,7 +290,7 @@ export default function ConveyorsPage() {
 
                 <h2 className="text-[52px] md:text-[82px] font-light leading-[0.95] text-black">
                   Hablemos de tu
-                  siguiente sistema
+                  siguiente proyecto
                 </h2>
 
               </div>
@@ -301,8 +301,7 @@ export default function ConveyorsPage() {
 
                 <p className="text-gray-600 text-lg leading-relaxed max-w-[420px] mb-12">
                   Diseñamos conveyors industriales
-                  adaptados a automatización y líneas
-                  modernas de producción.
+                  adaptados a las necesidades de tu línea de producción.
                 </p>
 
                 <button

@@ -105,7 +105,7 @@ export default function Navbar() {
 
           <li>
             <Link href="/ai" className="bg-black text-white px-4 py-1 rounded-md">
-              IA
+              generador
             </Link>
           </li>
 
