@@ -234,206 +234,218 @@ export default function UltrasonidoPage() {
         </section>
 
 
-        {/* ================= TIRONI SECTION ================= */}
-        <section className="px-6 md:px-20 py-32 relative overflow-hidden">
+{/* ================= TIRONI SECTION ================= */}
+<section className="px-6 md:px-20 py-32 relative overflow-hidden">
 
-          {/* Glow */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/10 blur-[180px] rounded-full pointer-events-none" />
+  {/* Glow */}
+  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/10 blur-[180px] rounded-full pointer-events-none" />
 
-          <div className="relative z-10">
+  <div className="relative z-10">
 
-            {/* Heading */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
-              className="text-center max-w-5xl mx-auto mb-24"
-            >
+    {/* Heading */}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+      viewport={{ once: true }}
+      className="text-center max-w-5xl mx-auto mb-24"
+    >
 
-              <div className="text-cyan-300 uppercase tracking-[0.25em] text-sm mb-5">
-                Tecnología Europea
+      <div className="text-blue-300 uppercase tracking-[0.25em] text-sm mb-5">
+        Tecnología Europea
+      </div>
+
+      <h2 className="text-4xl md:text-6xl font-semibold leading-tight mb-8">
+        Precisión que une.
+        <span className="block text-blue-300">
+          Tecnología que trasciende.
+        </span>
+      </h2>
+
+      <p className="text-white/70 text-lg md:text-xl leading-relaxed">
+        Elevamos tus estándares de producción con sistemas de soldadura por ultrasonido
+        de <span className="text-white font-medium">Tironi Ultrasonic</span>.
+        La ingeniería Europea líder, ahora a tu alcance a través de Matei.
+      </p>
+
+    </motion.div>
+
+
+    {/* Logos */}
+    <div className="grid md:grid-cols-3 gap-8 items-center mb-24">
+
+      {[
+        {
+          src: "/logos/logo_tironi.svg",
+          alt: "Tironi"
+        },
+        {
+          src: "/logos/logo_matei.svg",
+          alt: "Matei"
+        },
+        {
+          src: "/logos/logo_clei.svg",
+          alt: "Clei"
+        }
+      ].map((logo, i) => (
+
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: i * 0.15 }}
+          viewport={{ once: true }}
+          whileHover={{
+            y: -8,
+            scale: 1.02
+          }}
+          className="group bg-white/10 border border-white/10 rounded-[32px] p-10 min-h-[220px] flex items-center justify-center backdrop-blur-xl relative overflow-hidden"
+        >
+
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-300/0 group-hover:from-blue-500/10 group-hover:to-blue-300/10 transition duration-500" />
+
+          <img
+            src={logo.src}
+            alt={logo.alt}
+            className="relative z-10 max-h-[100px] w-full object-contain opacity-90 group-hover:opacity-100 transition duration-500"
+          />
+
+        </motion.div>
+
+      ))}
+
+    </div>
+
+
+    {/* Content */}
+    <div className="grid md:grid-cols-2 gap-16 items-start">
+
+      {/* Texto */}
+      <motion.div
+        initial={{ opacity: 0, x: -40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+      >
+
+        <div className="text-blue-300 uppercase tracking-[0.2em] text-sm mb-5">
+          La evolución de la unión plástica
+        </div>
+
+        <h3 className="text-3xl md:text-5xl font-semibold mb-8 leading-tight">
+          Ingeniería diseñada para producción industrial moderna
+        </h3>
+
+        <p className="text-white/70 leading-relaxed text-lg mb-6">
+          En Matei entendemos que la eficiencia no es negociable.
+          Como distribuidores exclusivos de Tironi Ultrasonic,
+          traemos a México soluciones de soldadura que eliminan
+          la necesidad de adhesivos, tornillos o solventes.
+        </p>
+
+        <p className="text-white/70 leading-relaxed text-lg">
+          Garantizando ciclos de producción más rápidos y acabados
+          estéticamente impecables.
+        </p>
+
+      </motion.div>
+
+
+      {/* Right Cards */}
+      <motion.div
+        initial={{ opacity: 0, x: 40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="space-y-6"
+      >
+
+        {[
+          {
+            title: "Velocidad",
+            desc: "Soldaduras en fracciones de segundo."
+          },
+          {
+            title: "Sostenibilidad",
+            desc: "Proceso limpio, sin consumibles químicos."
+          },
+          {
+            title: "Repetibilidad",
+            desc: "Resultados constantes con control digital avanzado."
+          },
+          {
+            title: "Integridad",
+            desc: "Uniones de alta resistencia mecánica sin dañar las piezas."
+          }
+        ].map((item, i) => (
+
+          <motion.div
+            key={i}
+            whileHover={{ x: 8 }}
+            className="bg-white/10 border border-white/10 rounded-3xl p-6 backdrop-blur-xl"
+          >
+
+            <div className="flex items-start gap-5">
+
+              <div className="min-w-[50px] h-[50px] rounded-2xl bg-blue-500/20 flex items-center justify-center">
+                <div className="w-3 h-3 rounded-full bg-blue-300" />
               </div>
 
-              <h2 className="text-4xl md:text-6xl font-semibold leading-tight mb-8">
-                Precisión que une.
-                <span className="block text-cyan-300">
-                  Tecnología que trasciende.
-                </span>
-              </h2>
+              <div>
+                <h4 className="text-xl font-semibold mb-2">
+                  {item.title}
+                </h4>
 
-              <p className="text-white/70 text-lg md:text-xl leading-relaxed">
-                Elevamos tus estándares de producción con sistemas de soldadura por ultrasonido
-                de <span className="text-white font-medium">Tironi Ultrasonic</span>.
-                La ingeniería Europea líder, ahora a tu alcance a través de Matei.
-              </p>
-
-            </motion.div>
-
-
-            {/* Logos */}
-            <div className="grid md:grid-cols-3 gap-8 items-center mb-24">
-
-              {[
-                {
-                  src: "/logo_tironi.svg",
-                  alt: "Tironi"
-                },
-                {
-                  src: "/logo_matei.svg",
-                  alt: "Matei"
-                },
-                {
-                  src: "/logo_clei.svg",
-                  alt: "Clei"
-                }
-              ].map((logo, i) => (
-
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: i * 0.15 }}
-                  viewport={{ once: true }}
-                  whileHover={{
-                    y: -8,
-                    scale: 1.02
-                  }}
-                  className="group bg-white/10 border border-white/10 rounded-[32px] p-10 min-h-[220px] flex items-center justify-center backdrop-blur-xl relative overflow-hidden"
-                >
-
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-cyan-300/0 group-hover:from-blue-500/10 group-hover:to-cyan-300/10 transition duration-500" />
-
-                  <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="relative z-10 max-h-[100px] w-full object-contain opacity-90 group-hover:opacity-100 transition duration-500"
-                  />
-
-                </motion.div>
-
-              ))}
+                <p className="text-white/65 leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
 
             </div>
 
+          </motion.div>
 
-            {/* Content */}
-            <div className="grid md:grid-cols-2 gap-16 items-start">
+        ))}
 
-              {/* Texto */}
-              <motion.div
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7 }}
-                viewport={{ once: true }}
-              >
+      </motion.div>
 
-                <div className="text-cyan-300 uppercase tracking-[0.2em] text-sm mb-5">
-                  La evolución de la unión plástica
-                </div>
-
-                <h3 className="text-3xl md:text-5xl font-semibold mb-8 leading-tight">
-                  Ingeniería diseñada para producción industrial moderna
-                </h3>
-
-                <p className="text-white/70 leading-relaxed text-lg mb-6">
-                  En Matei entendemos que la eficiencia no es negociable.
-                  Como distribuidores exclusivos de Tironi Ultrasonic,
-                  traemos a México soluciones de soldadura que eliminan
-                  la necesidad de adhesivos, tornillos o solventes.
-                </p>
-
-                <p className="text-white/70 leading-relaxed text-lg">
-                  Garantizando ciclos de producción más rápidos y acabados
-                  estéticamente impecables.
-                </p>
-
-              </motion.div>
+    </div>
 
 
-              {/* Right Cards */}
-              <motion.div
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7 }}
-                viewport={{ once: true }}
-                className="space-y-6"
-              >
+    {/* Final CTA */}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+      viewport={{ once: true }}
+      className="mt-28 text-center"
+    >
 
-                {[
-                  {
-                    title: "Velocidad",
-                    desc: "Soldaduras en fracciones de segundo."
-                  },
-                  {
-                    title: "Sostenibilidad",
-                    desc: "Proceso limpio, sin consumibles químicos."
-                  },
-                  {
-                    title: "Repetibilidad",
-                    desc: "Resultados constantes con control digital avanzado."
-                  },
-                  {
-                    title: "Integridad",
-                    desc: "Uniones de alta resistencia mecánica sin dañar las piezas."
-                  }
-                ].map((item, i) => (
+      <h3 className="text-3xl md:text-5xl font-semibold mb-6">
+        ¿Tienes un desafío de ensamble?
+      </h3>
 
-                  <motion.div
-                    key={i}
-                    whileHover={{ x: 8 }}
-                    className="bg-white/10 border border-white/10 rounded-3xl p-6 backdrop-blur-xl"
-                  >
+      <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed mb-10">
+        Transformemos tu línea de producción con la precisión de Tironi.
+      </p>
 
-                    <div className="flex items-start gap-5">
+      {/* BOTÓN */}
+      <button
+        onClick={() =>
+          window.open(
+            "https://wa.me/5215562045546?text=Hola,%20quiero%20información%20sobre%20soldadura%20ultrasónica",
+            "_blank"
+          )
+        }
+        className="bg-blue-600 px-8 py-4 rounded-xl hover:bg-blue-700 transition shadow-lg shadow-blue-500/20"
+      >
+        Solicitar información
+      </button>
 
-                      <div className="min-w-[50px] h-[50px] rounded-2xl bg-blue-500/20 flex items-center justify-center">
-                        <div className="w-3 h-3 rounded-full bg-cyan-300" />
-                      </div>
+    </motion.div>
 
-                      <div>
-                        <h4 className="text-xl font-semibold mb-2">
-                          {item.title}
-                        </h4>
-
-                        <p className="text-white/65 leading-relaxed">
-                          {item.desc}
-                        </p>
-                      </div>
-
-                    </div>
-
-                  </motion.div>
-
-                ))}
-
-              </motion.div>
-
-            </div>
-
-
-            {/* Final Message */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
-              className="mt-28 text-center"
-            >
-
-              <h3 className="text-3xl md:text-5xl font-semibold mb-6">
-                ¿Tienes un desafío de ensamble?
-              </h3>
-
-              <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
-                Transformemos tu línea de producción con la precisión de Tironi.
-              </p>
-
-            </motion.div>
-
-          </div>
-
-        </section>
+  </div>
+</section>
 
       </main>
     </>
