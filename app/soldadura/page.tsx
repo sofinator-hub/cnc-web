@@ -124,7 +124,7 @@ export default function UltrasonidoPage() {
                   playsInline
                   className="w-full h-[180px] md:h-[190px] object-cover"
                 >
-                  <source src="public/video_ultrasonido1.mp4" />
+                  <source src="videos/video_soldadura1.mp4" />
                  </video>
               </motion.div>
 
@@ -144,7 +144,7 @@ export default function UltrasonidoPage() {
                   playsInline
                   className="w-full h-[180px] md:h-[190px] object-cover"
                 >
-                  <source src="public/video_ultrasonido2.mp4" />
+                  <source src="videos/video_soldadura2.mp4" />
                 
               </video>
              </motion.div>
@@ -215,7 +215,7 @@ export default function UltrasonidoPage() {
                     playsInline
                     className="w-full h-[220px] md:h-[280px] object-cover"
                   >
-                    <source src="public/video_ultrasonido3.mp4" />
+                    <source src="videos/video_soldadura3.mp4" />
                   </video>
 
                 </motion.div>
