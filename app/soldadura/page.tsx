@@ -276,15 +276,15 @@ export default function UltrasonidoPage() {
 
       {[
         {
-          src: "/logos/logo_tironi.svg",
+          src: "/logo_tironi.svg",
           alt: "Tironi"
         },
         {
-          src: "/logos/logo_matei.svg",
+          src: "/logo_matei.svg",
           alt: "Matei"
         },
         {
-          src: "/logos/logo_clei.svg",
+          src: "/logo_clei.svg",
           alt: "Clei"
         }
       ].map((logo, i) => (
