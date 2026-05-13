@@ -2,32 +2,48 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 export default function MobileMenu() {
+
   const [open, setOpen] = useState(false);
 
   return (
     <>
       {/* BOTÓN MENU */}
 
-      <button
-        onClick={() => setOpen(!open)}
-        className="
-          fixed top-4 right-4 z-[999]
-          md:hidden
-          bg-white/80
-          backdrop-blur-xl
-          p-3
-          rounded-xl
-          shadow-lg
-          border
-          border-purple-100
-        "
-      >
-        <div className="w-6 h-[2px] bg-[var(--primary)] mb-1.5 rounded-full"></div>
-        <div className="w-6 h-[2px] bg-[var(--primary)] mb-1.5 rounded-full"></div>
-        <div className="w-6 h-[2px] bg-[var(--primary)] rounded-full"></div>
-      </button>
+      {!open && (
+        <button
+          onClick={() => setOpen(true)}
+          className="
+            fixed top-4 right-4 z-[999]
+            lg:hidden
+
+            w-10 h-10
+
+            bg-white/15
+            backdrop-blur-md
+
+            rounded-xl
+
+            border border-white/10
+
+            flex items-center justify-center
+
+            text-white/80
+
+            transition-all duration-300
+
+            hover:bg-white/20
+            hover:text-white
+          "
+        >
+
+          <Menu size={18} />
+
+        </button>
+      )}
+
 
       {/* BACKDROP */}
 
@@ -35,9 +51,12 @@ export default function MobileMenu() {
         onClick={() => setOpen(false)}
         className={`
           fixed inset-0 z-[998]
-          bg-white/75
-          backdrop-blur-2xl
+
+          bg-black/40
+          backdrop-blur-sm
+
           transition duration-500
+
           ${
             open
               ? "opacity-100"
@@ -46,14 +65,22 @@ export default function MobileMenu() {
         `}
       />
 
+
       {/* MENU */}
 
       <div
         className={`
           fixed inset-0 z-[999]
+
           flex flex-col justify-between
+
           p-8
+
+          bg-white/75
+          backdrop-blur-2xl
+
           transition-all duration-500
+
           ${
             open
               ? "translate-y-0 opacity-100"
@@ -66,137 +93,139 @@ export default function MobileMenu() {
 
         <div className="flex justify-between items-center">
 
-          <span className="
-            text-xs
-            tracking-[0.25em]
-            text-gray-400
-          ">
-            MENU
-          </span>
+          <div>
+
+            <span className="
+              text-[10px]
+              tracking-[0.25em]
+              text-gray-400
+            ">
+              SYSTEM ONLINE
+            </span>
+
+            <h2 className="
+              text-xl
+              font-semibold
+              text-gray-800
+              mt-1
+            ">
+              Navegación
+            </h2>
+
+          </div>
 
           <button
             onClick={() => setOpen(false)}
             className="
-              text-2xl
+              w-10 h-10
+
+              rounded-xl
+
+              bg-white/60
+
+              flex items-center justify-center
+
               text-[var(--primary)]
-              transition-all
-              duration-300
+
+              transition-all duration-300
             "
           >
-            ✕
+
+            <X size={20} />
+
           </button>
 
         </div>
 
+
         {/* NAVEGACIÓN */}
 
         <div className="
-          flex flex-col gap-5
-          text-2xl
+          flex flex-col gap-3
+
+          text-lg
           font-medium
           text-gray-800
         ">
 
-          <Link
-            href="/"
-            onClick={() => setOpen(false)}
-            className="
-              hover:text-[var(--primary)]
-              transition-all duration-300
-            "
-          >
-            Inicio
-          </Link>
+          {[
+            {
+              href: "/",
+              label: "Inicio"
+            },
+            {
+              href: "/cnc",
+              label: "Corte Láser"
+            },
+            {
+              href: "/tubo",
+              label: "Corte Láser de Tubo"
+            },
+            {
+              href: "/soldadura",
+              label: "Soldadura Ultrasonido"
+            },
+            {
+              href: "/ingenieria",
+              label: "Ingeniería"
+            },
+            {
+              href: "/inoxidable",
+              label: "Mobiliario Inoxidable"
+            },
+            {
+              href: "/conveyors",
+              label: "Conveyors"
+            },
+            {
+              href: "/guardas",
+              label: "Guardas"
+            },
+            {
+              href: "/celosias",
+              label: "Celosías"
+            }
+          ].map((item, i) => (
 
-          <Link
-            href="/cnc"
-            onClick={() => setOpen(false)}
-            className="
-              hover:text-[var(--primary)]
-              transition-all duration-300
-            "
-          >
-            Corte láser
-          </Link>
+            <Link
+              key={i}
+              href={item.href}
+              onClick={() => setOpen(false)}
+              className="
+                group
 
-          <Link
-            href="/tubo"
-            onClick={() => setOpen(false)}
-            className="
-              hover:text-[var(--primary)]
-              transition-all duration-300
-            "
-          >
-            Corte láser de tubo
-          </Link>
+                flex items-center gap-3
 
-          <Link
-            href="/soldadura"
-            onClick={() => setOpen(false)}
-            className="
-              hover:text-[var(--primary)]
-              transition-all duration-300
-            "
-          >
-            Soldadura con Ultrasonido
-          </Link>
+                px-4 py-3
 
-          <Link
-            href="/ingenieria"
-            onClick={() => setOpen(false)}
-            className="
-              hover:text-[var(--primary)]
-              transition-all duration-300
-            "
-          >
-            Servicios de ingeniería
-          </Link>
+                rounded-2xl
 
-          <Link
-            href="/inoxidable"
-            onClick={() => setOpen(false)}
-            className="
-              hover:text-[var(--primary)]
-              transition-all duration-300
-            "
-          >
-            Mobiliario Inoxidable
-          </Link>
+                hover:bg-purple-50/80
+                hover:text-[var(--primary)]
 
-          <Link
-            href="/conveyors"
-            onClick={() => setOpen(false)}
-            className="
-              hover:text-[var(--primary)]
-              transition-all duration-300
-            "
-          >
-            Conveyors
-          </Link>
+                transition-all duration-300
+              "
+            >
 
-          <Link
-            href="/guardas"
-            onClick={() => setOpen(false)}
-            className="
-              hover:text-[var(--primary)]
-              transition-all duration-300
-            "
-          >
-            Guardas
-          </Link>
+              <div className="
+                w-2 h-2 rounded-full
 
-          <Link
-            href="/celosias"
-            onClick={() => setOpen(false)}
-            className="
-              hover:text-[var(--primary)]
-              transition-all duration-300
-            "
-          >
-            Celosías
-          </Link>
+                bg-purple-300
+
+                opacity-0
+                group-hover:opacity-100
+
+                transition-all duration-300
+              " />
+
+              {item.label}
+
+            </Link>
+
+          ))}
 
         </div>
+
 
         {/* FOOTER */}
 
@@ -233,6 +262,7 @@ export default function MobileMenu() {
 
           </div>
 
+
           {/* CTA */}
 
           <a
@@ -241,13 +271,18 @@ export default function MobileMenu() {
             className="
               purple-gradient
               text-white
+
               text-center
+
               py-3
-              rounded-xl
+
+              rounded-2xl
+
               font-medium
+
               purple-glow
-              transition-all
-              duration-300
+
+              transition-all duration-300
             "
           >
             Cotizar
