@@ -101,8 +101,8 @@ export default function CelosiasPage() {
     },
 
         {
-      img: "/celosia11.jpg",
-      title: "Pérbola",
+      img: "/celosia11.png",
+      title: "Perbola",
       desc: "Exterior moderno",
       category: "Perbolas",
       slug: "techos-modernos"
