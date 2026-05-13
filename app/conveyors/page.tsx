@@ -8,7 +8,7 @@ import {
   MoveHorizontal,
   Workflow,
   Cog,
- 
+
   ArrowUpRight,
 } from "lucide-react";
 
@@ -57,8 +57,7 @@ export default function ConveyorsPage() {
                 Automatización industrial
               </p>
 
-             
-             <h1 className="text-[58px] md:text-[100px] leading-[0.9] font-light text-white mb-8">
+              <h1 className="text-[58px] md:text-[100px] leading-[0.9] font-light text-white mb-8">
                 conveyors
               </h1>
 
@@ -201,11 +200,9 @@ export default function ConveyorsPage() {
                 whileHover={{ scale: 1.01 }}
                 transition={{ duration: 0.4 }}
                 className="relative overflow-hidden rounded-[10px]"
-              >
+            >
 
-
-                <div className="absolute inset-0 bg-blue-500/10 blur-3xl scale-110" />
-
+               <div className="absolute inset-0 bg-blue-500/10 blur-3xl scale-110" />
 
                 <video
                   className="relative w-full h-[340px] md:h-[520px] object-cover grayscale hover:grayscale-0 transition duration-700"
@@ -302,123 +299,67 @@ export default function ConveyorsPage() {
             </div>
 
 
-{/* GRID */}
-<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* GRID */}
+            <div className="grid grid-cols-2 gap-4">
 
-  {[
-    "/conveyor1.jpg",
-    "/conveyor2.jpg",
-    "/conveyor3.jpg",
-    "/conveyor4.png",
-  ].map((image, i) => (
-
-    <motion.div
-      key={i}
-      whileHover={{ y: -4 }}
-      transition={{ duration: 0.35 }}
-      className="
-        relative
-        overflow-hidden
-        rounded-[18px]
-        group
-      "
-    >
-
-      <img
-        src={image}
-        className="
-          w-full
-          h-[420px]
-          object-cover
-
-          transition duration-700
-          group-hover:scale-[1.03]
-        "
-      />
-
-      {/* OVERLAY */}
-      <div className="
-        absolute inset-0
-
-        bg-black/10
-        group-hover:bg-black/0
-
-        transition duration-500
-      " />
-
-      {/* BORDE */}
-      <div className="
-        absolute inset-0
-
-        border border-blue-500/0
-        group-hover:border-blue-500/20
-
-        transition duration-500
-      " />
-
-    </motion.div>
-
-  ))}
-
-</div>
-
-</div>
-
-              {/* DERECHA */}
-              <div className="md:col-span-5 grid gap-4">
+              {[
+                "/conveyor1.jpg",
+                "/conveyor2.jpg",
+                "/conveyor3.jpg",
+                "/conveyor4.png",
+              ].map((image, i) => (
 
                 <motion.div
-                  whileHover={{ scale: 1.01 }}
-                  transition={{ duration: 0.4 }}
-                  className="relative overflow-hidden rounded-[18px] group"
+                  key={i}
+                  whileHover={{ y: -4 }}
+                  transition={{ duration: 0.35 }}
+                  className="
+                    relative
+                    overflow-hidden
+                    rounded-[18px]
+                    group
+                  "
                 >
 
                   <img
-                    src="/conveyor2.jpg"
-                    className="w-full h-[350px] object-cover transition duration-700 group-hover:scale-[1.03]"
+                    src={image}
+                    className="
+                      w-full
+                      aspect-square
+                      object-cover
+
+                      transition duration-700
+                      group-hover:scale-[1.03]
+                    "
                   />
 
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition duration-500" />
+                  {/* OVERLAY */}
+                  <div className="
+                    absolute inset-0
+
+                    bg-black/10
+                    group-hover:bg-black/0
+
+                    transition duration-500
+                  " />
+
+                  {/* BORDE */}
+                  <div className="
+                    absolute inset-0
+
+                    border border-blue-500/0
+                    group-hover:border-blue-500/20
+
+                    transition duration-500
+                  " />
 
                 </motion.div>
 
+              ))}
 
-                <div className="grid grid-cols-2 gap-4">
+            </div>
 
-                  <motion.div
-                    whileHover={{ scale: 1.01 }}
-                    transition={{ duration: 0.4 }}
-                    className="relative overflow-hidden rounded-[18px] group"
-                  >
-
-                    <img
-                      src="/conveyor3.jpg"
-                      className="w-full h-[350px] object-cover transition duration-700 group-hover:scale-[1.03]"
-                    />
-
-                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition duration-500" />
-
-                  </motion.div>
-
-
-                  <motion.div
-                    whileHover={{ scale: 1.01 }}
-                    transition={{ duration: 0.4 }}
-                    className="relative overflow-hidden rounded-[18px] group"
-                  >
-
-                    <img
-                      src="/conveyor4.png"
-                      className="w-full h-[350px] object-cover transition duration-700 group-hover:scale-[1.03]"
-                    />
-
-                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition duration-500" />
-
-                  </motion.div>
-
-                </div>
-
-              </div>
+          </div>
 
         </section>
 
@@ -480,4 +421,4 @@ export default function ConveyorsPage() {
       </main>
     </>
   );
-} 
+}
