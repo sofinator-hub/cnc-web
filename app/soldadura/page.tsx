@@ -42,7 +42,7 @@ export default function UltrasonidoPage() {
         <div className="absolute inset-0 bg-black/60" />
       </div>
 
-      <main className="relative z-10 text-white">
+      <main className="relative z-10 text-white overflow-hidden">
 
         {/* ================= HERO ================= */}
         <section className="min-h-[85vh] flex items-center justify-center relative px-4">
@@ -118,17 +118,20 @@ export default function UltrasonidoPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="
-                rounded-3xl
+                relative
+                rounded-[32px]
                 overflow-hidden
-
-                bg-black/30
+                
                 border border-white/10
 
-                flex items-center justify-center
+                h-[260px] md:h-[420px]
 
-                h-[300px] md:h-[420px]
+                bg-black
               "
             >
+
+              {/* Glow */}
+              <div className="absolute inset-0 bg-[#911C82]/10 blur-3xl scale-110" />
 
               <video
                 autoPlay
@@ -136,10 +139,12 @@ export default function UltrasonidoPage() {
                 loop
                 playsInline
                 className="
+                  relative
+
                   w-full
                   h-full
 
-                  object-contain
+                  object-cover
                 "
               >
                 <source src="/videos/video_soldadura1.mp4" />
@@ -199,83 +204,46 @@ export default function UltrasonidoPage() {
               </div>
 
 
-              {/* VIDEOS SOLO EN APLICACIONES */}
+              {/* VIDEO SOLO EN APLICACIONES */}
               {active === "aplicaciones" && (
 
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className="grid grid-cols-2 gap-4"
+                  className="
+                    relative
+                    rounded-[28px]
+                    overflow-hidden
+
+                    border border-white/10
+
+                    h-[220px] md:h-[320px]
+
+                    bg-black
+                  "
                 >
 
-                  {/* VIDEO 2 */}
-                  <div
+                  {/* Glow */}
+                  <div className="absolute inset-0 bg-[#911C82]/10 blur-3xl scale-110" />
+
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
                     className="
-                      rounded-2xl
-                      overflow-hidden
+                      relative
 
-                      border border-white/10
+                      w-full
+                      h-full
 
-                      bg-black/30
-
-                      flex items-center justify-center
-
-                      h-[220px] md:h-[280px]
+                      object-cover
                     "
                   >
+                    <source src="/videos/video_soldadura2.mp4" />
+                  </video>
 
-                    <video
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      className="
-                        w-full
-                        h-full
-
-                        object-contain
-                      "
-                    >
-                      <source src="/videos/video_soldadura2.mp4" />
-                    </video>
-
-                  </div>
-
-
-                  {/* VIDEO 3 */}
-                  <div
-                    className="
-                      rounded-2xl
-                      overflow-hidden
-
-                      border border-white/10
-
-                      bg-black/30
-
-                      flex items-center justify-center
-
-                      h-[220px] md:h-[280px]
-                    "
-                  >
-
-                    <video
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      className="
-                        w-full
-                        h-full
-
-                        object-contain
-                      "
-                    >
-                      <source src="/videos/video_soldadura3.mp4" />
-                    </video>
-
-                  </div>
-
-                </motion.div>
+                 </motion.div>
 
               )}
 
@@ -423,14 +391,14 @@ export default function UltrasonidoPage() {
                   }}
                   className="
                     group
-                   bg-white/10
-                   border border-white/10
-                   rounded-[32px]
-                   p-10
-                   min-h-[220px]
-                  flex items-center justify-center
-                  backdrop-blur-xl
-                  relative overflow-hidden
+                    bg-white/10
+                    border border-white/10
+                    rounded-[32px]
+                    p-10
+                    min-h-[220px]
+                    flex items-center justify-center
+                    backdrop-blur-xl
+                    relative overflow-hidden
                   "
                 >
 
@@ -448,7 +416,7 @@ export default function UltrasonidoPage() {
 
             </div>
 
-           </div>
+          </div>
 
         </section>
 
