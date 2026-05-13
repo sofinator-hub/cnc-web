@@ -44,7 +44,7 @@ export default function UltrasonidoPage() {
 
       <main className="relative z-10 text-white">
 
-        {/* ================= HERO ORIGINAL ================= */}
+        {/* ================= HERO ================= */}
         <section className="min-h-[85vh] flex items-center justify-center relative px-4">
 
           {/* Glow */}
@@ -111,83 +111,41 @@ export default function UltrasonidoPage() {
             </motion.div>
 
 
-            {/* VIDEOS */}
-            <div className="grid grid-cols-2 gap-4">
+            {/* VIDEO */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="
+                rounded-3xl
+                overflow-hidden
 
-              {/* VIDEO 1 */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                bg-black/30
+                border border-white/10
+
+                flex items-center justify-center
+
+                h-[300px] md:h-[420px]
+              "
+            >
+
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
                 className="
-                  rounded-2xl
-                  overflow-hidden
+                  w-full
+                  h-full
 
-                  bg-black/30
-                  border border-white/10
-
-                  flex items-center justify-center
-
-                  h-[260px] md:h-[340px]
+                  object-contain
                 "
               >
+                <source src="/videos/video_soldadura1.mp4" />
+              </video>
 
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="
-                    w-full
-                    h-full
-
-                    object-contain
-                  "
-                >
-                  <source src="/videos/video_soldadura1.mp4" />
-                </video>
-
-              </motion.div>
-
-
-              {/* VIDEO 2 */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7 }}
-                viewport={{ once: true }}
-                className="
-                  rounded-2xl
-                  overflow-hidden
-
-                  bg-black/30
-                  border border-white/10
-
-                  flex items-center justify-center
-
-                  h-[260px] md:h-[340px]
-                "
-              >
-
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="
-                    w-full
-                    h-full
-
-                    object-contain
-                  "
-                >
-                  <source src="/videos/video_soldadura2.mp4" />
-                </video>
-
-              </motion.div>
-
-            </div>
+            </motion.div>
 
           </div>
 
@@ -241,40 +199,81 @@ export default function UltrasonidoPage() {
               </div>
 
 
-              {/* VIDEO SOLO EN APLICACIONES */}
+              {/* VIDEOS SOLO EN APLICACIONES */}
               {active === "aplicaciones" && (
 
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className="
-                    rounded-2xl
-                    overflow-hidden
-
-                    border border-white/10
-
-                    bg-black/30
-
-                    flex items-center justify-center
-
-                    h-[240px] md:h-[320px]
-                  "
+                  className="grid grid-cols-2 gap-4"
                 >
 
-                  <video
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
+                  {/* VIDEO 2 */}
+                  <div
                     className="
-                      w-full
-                      h-full
+                      rounded-2xl
+                      overflow-hidden
 
-                      object-contain
+                      border border-white/10
+
+                      bg-black/30
+
+                      flex items-center justify-center
+
+                      h-[220px] md:h-[280px]
                     "
                   >
-                    <source src="/videos/video_soldadura3.mp4" />
-                  </video>
+
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="
+                        w-full
+                        h-full
+
+                        object-contain
+                      "
+                    >
+                      <source src="/videos/video_soldadura2.mp4" />
+                    </video>
+
+                  </div>
+
+
+                  {/* VIDEO 3 */}
+                  <div
+                    className="
+                      rounded-2xl
+                      overflow-hidden
+
+                      border border-white/10
+
+                      bg-black/30
+
+                      flex items-center justify-center
+
+                      h-[220px] md:h-[280px]
+                    "
+                  >
+
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="
+                        w-full
+                        h-full
+
+                        object-contain
+                      "
+                    >
+                      <source src="/videos/video_soldadura3.mp4" />
+                    </video>
+
+                  </div>
 
                 </motion.div>
 
@@ -424,19 +423,14 @@ export default function UltrasonidoPage() {
                   }}
                   className="
                     group
-
-                    bg-white/10
-                    border border-white/10
-
-                    rounded-[32px]
-
-                    p-10
-                    min-h-[220px]
-
-                    flex items-center justify-center
-
-                    backdrop-blur-xl
-                    relative overflow-hidden
+                   bg-white/10
+                   border border-white/10
+                   rounded-[32px]
+                   p-10
+                   min-h-[220px]
+                  flex items-center justify-center
+                  backdrop-blur-xl
+                  relative overflow-hidden
                   "
                 >
 
@@ -454,148 +448,7 @@ export default function UltrasonidoPage() {
 
             </div>
 
-
-            {/* Content */}
-            <div className="grid md:grid-cols-2 gap-16 items-start">
-
-              {/* Texto */}
-              <motion.div
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7 }}
-                viewport={{ once: true }}
-              >
-
-                <div className="text-[#d86acc] uppercase tracking-[0.2em] text-sm mb-5">
-                  La evolución de la unión plástica
-                </div>
-
-                <h3 className="text-3xl md:text-5xl font-semibold mb-8 leading-tight">
-                  Ingeniería diseñada para producción industrial moderna
-                </h3>
-
-                <p className="text-white/70 leading-relaxed text-lg mb-6">
-                  En Matei entendemos que la eficiencia no es negociable.
-                  Como distribuidores exclusivos de Tironi Ultrasonic,
-                  traemos a México soluciones de soldadura que eliminan
-                  la necesidad de adhesivos, tornillos o solventes.
-                </p>
-
-                <p className="text-white/70 leading-relaxed text-lg">
-                  Garantizando ciclos de producción más rápidos y acabados
-                  estéticamente impecables.
-                </p>
-
-              </motion.div>
-
-
-              {/* Right Cards */}
-              <motion.div
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7 }}
-                viewport={{ once: true }}
-                className="space-y-6"
-              >
-
-                {[
-                  {
-                    title: "Velocidad",
-                    desc: "Soldaduras en fracciones de segundo."
-                  },
-                  {
-                    title: "Sostenibilidad",
-                    desc: "Proceso limpio, sin consumibles químicos."
-                  },
-                  {
-                    title: "Repetibilidad",
-                    desc: "Resultados constantes con control digital avanzado."
-                  },
-                  {
-                    title: "Integridad",
-                    desc: "Uniones de alta resistencia mecánica sin dañar las piezas."
-                  }
-                ].map((item, i) => (
-
-                  <motion.div
-                    key={i}
-                    whileHover={{ x: 8 }}
-                    className="bg-white/10 border border-white/10 rounded-3xl p-6 backdrop-blur-xl"
-                  >
-
-                    <div className="flex items-start gap-5">
-
-                      <div className="min-w-[50px] h-[50px] rounded-2xl bg-[#911C82]/20 flex items-center justify-center">
-                        <div className="w-3 h-3 rounded-full bg-[#d86acc]" />
-                      </div>
-
-                      <div>
-
-                        <h4 className="text-xl font-semibold mb-2">
-                          {item.title}
-                        </h4>
-
-                        <p className="text-white/65 leading-relaxed">
-                          {item.desc}
-                        </p>
-
-                      </div>
-
-                    </div>
-
-                  </motion.div>
-
-                ))}
-
-              </motion.div>
-
-            </div>
-
-
-            {/* Final CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
-              className="mt-28 text-center"
-            >
-
-              <h3 className="text-3xl md:text-5xl font-semibold mb-6">
-                ¿Tienes un desafío de ensamble?
-              </h3>
-
-              <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed mb-10">
-                Transformemos tu línea de producción con la precisión de Tironi.
-              </p>
-
-              <button
-                onClick={() =>
-                  window.open(
-                    "https://wa.me/5215562045546?text=Hola,%20quiero%20información%20sobre%20soldadura%20ultrasónica",
-                    "_blank"
-                  )
-                }
-                className="
-                  bg-[#911C82]
-
-                  px-8 py-4
-
-                  rounded-xl
-
-                  hover:bg-[#7d176f]
-
-                  transition
-
-                  shadow-lg shadow-[#911C82]/20
-                "
-              >
-                Solicitar información
-              </button>
-
-            </motion.div>
-
-          </div>
+           </div>
 
         </section>
 
