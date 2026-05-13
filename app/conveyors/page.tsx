@@ -2,18 +2,18 @@
 
 import { motion } from "framer-motion";
 import MobileMenu from "@/components/layout/MobileMenu";
-import { useState } from "react";
+
 
 import {
   MoveHorizontal,
   Workflow,
   Cog,
-  ChevronLeft,
-  ChevronRight,
+ 
   ArrowUpRight,
 } from "lucide-react";
 
 export default function ConveyorsPage() {
+
   return (
     <>
       <MobileMenu />
@@ -40,7 +40,7 @@ export default function ConveyorsPage() {
           {/* OVERLAY */}
           <div className="absolute inset-0 bg-black/55" />
 
-          {/* GLOW AZUL HORIZONTAL */}
+          {/* GLOW */}
           <div className="absolute top-1/2 right-[-10%] -translate-y-1/2 w-[900px] h-[300px] bg-blue-500/10 blur-[140px] rounded-full" />
 
           {/* CONTENIDO */}
@@ -57,9 +57,8 @@ export default function ConveyorsPage() {
                 Automatización industrial
               </p>
 
-              <h1 className="text-[58px] md:text-[100px] leading-[0.9] font-light text-white mb-8">
-
-                <br />
+             
+             <h1 className="text-[58px] md:text-[100px] leading-[0.9] font-light text-white mb-8">
                 conveyors
               </h1>
 
@@ -70,7 +69,7 @@ export default function ConveyorsPage() {
 
             </motion.div>
 
-        </div>
+          </div>
 
         </section>
 
@@ -113,7 +112,11 @@ export default function ConveyorsPage() {
             {/* FEATURES */}
             <div className="grid md:grid-cols-3 gap-10 border-t border-black/10 pt-16">
 
-              <div className="pr-6 md:border-r border-black/10">
+              {/* ITEM */}
+              <motion.div
+                whileHover={{ y: -6 }}
+                className="pr-6 md:border-r border-black/10"
+              >
 
                 <MoveHorizontal
                   size={34}
@@ -130,10 +133,14 @@ export default function ConveyorsPage() {
                   y transporte eficiente de materiales.
                 </p>
 
-              </div>
+              </motion.div>
 
 
-              <div className="pr-6 md:border-r border-black/10">
+              {/* ITEM */}
+              <motion.div
+                whileHover={{ y: -6 }}
+                className="pr-6 md:border-r border-black/10"
+              >
 
                 <Workflow
                   size={34}
@@ -150,10 +157,13 @@ export default function ConveyorsPage() {
                   automatizadas y procesos industriales.
                 </p>
 
-              </div>
+              </motion.div>
 
 
-              <div>
+              {/* ITEM */}
+              <motion.div
+                whileHover={{ y: -6 }}
+              >
 
                 <Cog
                   size={34}
@@ -170,7 +180,7 @@ export default function ConveyorsPage() {
                   necesidades específicas de producción.
                 </p>
 
-              </div>
+              </motion.div>
 
             </div>
 
@@ -193,10 +203,10 @@ export default function ConveyorsPage() {
                 className="relative overflow-hidden rounded-[10px]"
               >
 
-                {/* GLOW AZUL */}
+
                 <div className="absolute inset-0 bg-blue-500/10 blur-3xl scale-110" />
 
-                {/* SOLO AQUÍ B/N → COLOR */}
+
                 <video
                   className="relative w-full h-[340px] md:h-[520px] object-cover grayscale hover:grayscale-0 transition duration-700"
                   autoPlay
@@ -227,6 +237,7 @@ export default function ConveyorsPage() {
                   para optimizar producción, automatización
                   y manejo eficiente de materiales.
                 </p>
+
 
                 {/* LISTA */}
                 <div className="space-y-5">
@@ -262,12 +273,112 @@ export default function ConveyorsPage() {
         </section>
 
 
-        {/* ================= CARRUSEL ================= */}
-        <section className="px-6 md:px-14 py-20">
+        {/* ================= GALERÍA ================= */}
+        <section className="px-6 md:px-14 py-24">
 
-          <div className="max-w-[1500px] mx-auto border-t border-black/10 pt-16">
+          <div className="max-w-[1500px] mx-auto border-t border-black/10 pt-20">
 
-            <CarruselConveyors />
+            {/* HEADER */}
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10 mb-16">
+
+              <div>
+
+                <p className="uppercase tracking-[0.4em] text-xs text-gray-400 mb-6">
+                  Proyectos
+                </p>
+
+                <h2 className="text-[42px] md:text-[72px] leading-[0.95] font-light">
+                  Galería de
+                  conveyors
+                </h2>
+
+              </div>
+
+              <p className="text-gray-600 text-lg leading-relaxed max-w-[420px]">
+                Sistemas desarrollados para automatización,
+                transporte industrial y optimización de procesos.
+              </p>
+
+            </div>
+
+
+            {/* GRID */}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+
+              {/* GRANDE */}
+              <motion.div
+                whileHover={{ scale: 1.01 }}
+                transition={{ duration: 0.4 }}
+                className="md:col-span-7 relative overflow-hidden rounded-[18px] group"
+              >
+
+                <img
+                  src="/conveyor1.jpg"
+                  className="w-full h-[500px] md:h-[720px] object-cover transition duration-700 group-hover:scale-[1.03]"
+                />
+
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition duration-500" />
+
+              </motion.div>
+
+
+              {/* DERECHA */}
+              <div className="md:col-span-5 grid gap-4">
+
+                <motion.div
+                  whileHover={{ scale: 1.01 }}
+                  transition={{ duration: 0.4 }}
+                  className="relative overflow-hidden rounded-[18px] group"
+                >
+
+                  <img
+                    src="/conveyor2.jpg"
+                    className="w-full h-[350px] object-cover transition duration-700 group-hover:scale-[1.03]"
+                  />
+
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition duration-500" />
+
+                </motion.div>
+
+
+                <div className="grid grid-cols-2 gap-4">
+
+                  <motion.div
+                    whileHover={{ scale: 1.01 }}
+                    transition={{ duration: 0.4 }}
+                    className="relative overflow-hidden rounded-[18px] group"
+                  >
+
+                    <img
+                      src="/conveyor3.jpg"
+                      className="w-full h-[350px] object-cover transition duration-700 group-hover:scale-[1.03]"
+                    />
+
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition duration-500" />
+
+                  </motion.div>
+
+
+                  <motion.div
+                    whileHover={{ scale: 1.01 }}
+                    transition={{ duration: 0.4 }}
+                    className="relative overflow-hidden rounded-[18px] group"
+                  >
+
+                    <img
+                      src="/conveyor4.png"
+                      className="w-full h-[350px] object-cover transition duration-700 group-hover:scale-[1.03]"
+                    />
+
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition duration-500" />
+
+                  </motion.div>
+
+                </div>
+
+              </div>
+
+            </div>
 
           </div>
 
@@ -331,119 +442,4 @@ export default function ConveyorsPage() {
       </main>
     </>
   );
-}
-
-
-
-/* ================= CARRUSEL ================= */
-
-function CarruselConveyors() {
-  const [index, setIndex] = useState(0);
-
-  const slides = [
-    "/conveyor1.jpg",
-    "/conveyor2.jpg",
-    "/conveyor3.jpg",
-    "/conveyor4.png",
-  ];
-
-  const prev = () => {
-    setIndex((prev) =>
-      prev === 0 ? slides.length - 1 : prev - 1
-    );
-  };
-
-  const next = () => {
-    setIndex((prev) =>
-      prev === slides.length - 1 ? 0 : prev + 1
-    );
-  };
-
-  return (
-    <div>
-
-      {/* HEADER */}
-      <div className="flex justify-between items-center mb-10">
-
-        <p className="uppercase tracking-[0.4em] text-xs text-gray-400">
-          Proyectos
-        </p>
-
-        <div className="flex items-center gap-8">
-
-          <span className="text-sm text-gray-500">
-            0{index + 1} / 0{slides.length}
-          </span>
-
-          <div className="flex gap-4">
-
-            <button onClick={prev}>
-              <ChevronLeft size={22} strokeWidth={1.5} />
-            </button>
-
-            <button onClick={next}>
-              <ChevronRight size={22} strokeWidth={1.5} />
-            </button>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      {/* SLIDES */}
-      <div className="grid md:grid-cols-3 gap-2 overflow-hidden rounded-[12px]">
-
-        {[0, 1, 2].map((offset) => {
-          const slideIndex = (index + offset) % slides.length;
-
-          return (
-
-            <motion.div
-              key={slideIndex}
-              initial={{ opacity: 0.7 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.4 }}
-              className="relative overflow-hidden group"
-            >
-
-              <img
-                src={slides[slideIndex]}
-                className="w-full h-[260px] md:h-[500px] object-cover"
-              />
-
-              <div className="absolute inset-0 border border-blue-500/0 group-hover:border-blue-500/30 transition duration-500" />
-
-            </motion.div>
-
-          );
-        })}
-
-      </div>
-
-
-      {/* INDICADORES */}
-      <div className="flex justify-center gap-3 mt-10">
-
-        {slides.map((_, i) => (
-
-          <div
-            key={i}
-            className={`h-[2px] transition-all duration-300 ${
-              i === index
-                ? "w-10 bg-blue-500"
-                : "w-6 bg-black/20"
-            }`}
-          />
-
-        ))}
-
-      </div>
-
-    </div>
-  );
-}
-
-
-
+} 

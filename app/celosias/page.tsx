@@ -149,9 +149,7 @@ export default function CelosiasPage() {
   ];
 
   const categories = [
-    "Todos",
-    "Oficinas",
-    "Exteriores",
+   "Todos",
     "Residencial",
     "Interiores",
     "Perbolas",
