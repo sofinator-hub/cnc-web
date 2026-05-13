@@ -159,7 +159,7 @@ export default function IngenieriaPage() {
 
           <div className="absolute inset-0">
             <img
-              src="/fondo_ingenieria2.jpg"
+              src="/hero_ingenieria.jpg"
               className="w-full h-full object-cover"
             />
           </div>
