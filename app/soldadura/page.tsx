@@ -51,22 +51,44 @@ export default function UltrasonidoPage() {
           <div className="absolute top-10 left-5 w-48 h-48 bg-[#911C82] blur-3xl opacity-20" />
           <div className="absolute bottom-10 right-5 w-48 h-48 bg-[#d86acc] blur-3xl opacity-20" />
 
-          {/* Ondas */}
+          {/* Ondas ultrasónicas */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="relative w-[250px] h-[250px]">
 
-              <span className="absolute inset-0 rounded-full border border-[#911C82] opacity-40 animate-ping"></span>
-              <span className="absolute inset-0 rounded-full border border-[#d86acc] opacity-30 animate-ping [animation-delay:0.6s]"></span>
-              <span className="absolute inset-0 rounded-full border border-[#911C82] opacity-20 animate-ping [animation-delay:1.2s]"></span>
+            <div className="relative w-[420px] h-[420px]">
+
+              <span className="absolute inset-0 rounded-full border-2 border-[#911C82] opacity-60 animate-ping"></span>
+
+              <span className="absolute inset-0 scale-[1.25] rounded-full border border-[#d86acc] opacity-50 animate-ping [animation-delay:0.8s]"></span>
+
+              <span className="absolute inset-0 scale-[1.5] rounded-full border border-[#911C82] opacity-40 animate-ping [animation-delay:1.6s]"></span>
+
+              <span className="absolute inset-0 scale-[1.75] rounded-full border border-[#d86acc] opacity-30 animate-ping [animation-delay:2.4s]"></span>
 
             </div>
+
           </div>
 
           {/* Card */}
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
-            className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl md:rounded-3xl p-6 md:p-14 max-w-3xl w-full shadow-xl text-center"
+            className="
+              relative z-10
+
+              backdrop-blur-xl
+              bg-white/10
+              border border-white/20
+
+              rounded-2xl md:rounded-3xl
+
+              p-6 md:p-14
+
+              max-w-3xl
+              w-full
+
+              shadow-xl
+              text-center
+            "
           >
 
             <h1 className="text-2xl md:text-5xl font-semibold mb-6 tracking-[0.2em]">
@@ -74,7 +96,8 @@ export default function UltrasonidoPage() {
             </h1>
 
             <p className="text-white/80">
-              Tecnología avanzada que permite uniones limpias, rápidas y de alta precisión.
+              Tecnología avanzada que permite uniones limpias,
+              rápidas y de alta precisión.
             </p>
 
           </motion.div>
@@ -100,12 +123,14 @@ export default function UltrasonidoPage() {
               </h2>
 
               <p className="text-white/70 mb-4 leading-relaxed">
-                Es un proceso que utiliza vibraciones de alta frecuencia para unir materiales,
-                generando calor por fricción sin necesidad de fuentes térmicas externas.
+                Es un proceso que utiliza vibraciones de alta frecuencia
+                para unir materiales, generando calor por fricción
+                sin necesidad de fuentes térmicas externas.
               </p>
 
               <p className="text-white/70 leading-relaxed">
-                Ideal para aplicaciones donde la precisión, limpieza y velocidad son fundamentales.
+                Ideal para aplicaciones donde la precisión,
+                limpieza y velocidad son fundamentales.
               </p>
 
             </motion.div>
@@ -118,13 +143,15 @@ export default function UltrasonidoPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="
+                group
                 relative
+
                 rounded-[32px]
                 overflow-hidden
-                
+
                 border border-white/10
 
-                h-[260px] md:h-[420px]
+                h-[220px] md:h-[300px]
 
                 bg-black
               "
@@ -145,6 +172,9 @@ export default function UltrasonidoPage() {
                   h-full
 
                   object-cover
+
+                  transition duration-700
+                  group-hover:scale-105
                 "
               >
                 <source src="/videos/video_soldadura1.mp4" />
@@ -211,13 +241,15 @@ export default function UltrasonidoPage() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   className="
+                    group
                     relative
+
                     rounded-[28px]
                     overflow-hidden
 
                     border border-white/10
 
-                    h-[220px] md:h-[320px]
+                    h-[180px] md:h-[240px]
 
                     bg-black
                   "
@@ -238,12 +270,15 @@ export default function UltrasonidoPage() {
                       h-full
 
                       object-cover
+
+                      transition duration-700
+                      group-hover:scale-105
                     "
                   >
                     <source src="/videos/video_soldadura2.mp4" />
                   </video>
 
-                 </motion.div>
+                </motion.div>
 
               )}
 
@@ -300,7 +335,15 @@ export default function UltrasonidoPage() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -8 }}
-                className="p-8 rounded-3xl bg-white/10 backdrop-blur-xl border border-white/10"
+                className="
+                  p-8
+                  rounded-3xl
+
+                  bg-white/10
+                  backdrop-blur-xl
+
+                  border border-white/10
+                "
               >
 
                 <div className="w-14 h-14 mx-auto rounded-2xl bg-[#911C82]/15 border border-[#911C82]/20 flex items-center justify-center mb-5">
@@ -323,104 +366,7 @@ export default function UltrasonidoPage() {
 
         </section>
 
-
-        {/* ================= TIRONI SECTION ================= */}
-        <section className="px-6 md:px-20 py-32 relative overflow-hidden">
-
-          {/* Glow */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#911C82]/10 blur-[180px] rounded-full pointer-events-none" />
-
-          <div className="relative z-10">
-
-            {/* Heading */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
-              className="text-center max-w-5xl mx-auto mb-24"
-            >
-
-              <div className="text-[#d86acc] uppercase tracking-[0.25em] text-sm mb-5">
-                Tecnología Europea
-              </div>
-
-              <h2 className="text-4xl md:text-6xl font-semibold leading-tight mb-8">
-                Precisión que une.
-                <span className="block text-[#d86acc]">
-                  Tecnología que trasciende.
-                </span>
-              </h2>
-
-              <p className="text-white/70 text-lg md:text-xl leading-relaxed">
-                Elevamos tus estándares de producción con sistemas de soldadura por ultrasonido
-                de <span className="text-white font-medium">Tironi Ultrasonic</span>.
-                La ingeniería Europea líder, ahora a tu alcance a través de Matei.
-              </p>
-
-            </motion.div>
-
-
-            {/* Logos */}
-            <div className="grid md:grid-cols-3 gap-8 items-center mb-24">
-
-              {[
-                {
-                  src: "/logo_tironi.svg",
-                  alt: "Tironi"
-                },
-                {
-                  src: "/logo_matei.svg",
-                  alt: "Matei"
-                },
-                {
-                  src: "/logo_clei.svg",
-                  alt: "Clei"
-                }
-              ].map((logo, i) => (
-
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: i * 0.15 }}
-                  viewport={{ once: true }}
-                  whileHover={{
-                    y: -8,
-                    scale: 1.02
-                  }}
-                  className="
-                    group
-                    bg-white/10
-                    border border-white/10
-                    rounded-[32px]
-                    p-10
-                    min-h-[220px]
-                    flex items-center justify-center
-                    backdrop-blur-xl
-                    relative overflow-hidden
-                  "
-                >
-
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#911C82]/0 to-[#d86acc]/0 group-hover:from-[#911C82]/10 group-hover:to-[#d86acc]/10 transition duration-500" />
-
-                  <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="relative z-10 max-h-[100px] w-full object-contain opacity-90 group-hover:opacity-100 transition duration-500"
-                  />
-
-                </motion.div>
-
-              ))}
-
-            </div>
-
-          </div>
-
-        </section>
-
-      </main>
+       </main>
     </>
   );
 }
