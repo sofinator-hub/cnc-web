@@ -325,7 +325,7 @@ export default function ConveyorsPage() {
                     src={image}
                     className="
                       w-full
-                      aspect-square
+                      h-[180px] md:h-[260px]
                       object-cover
 
                       transition duration-700
