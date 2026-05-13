@@ -213,10 +213,9 @@ export default function UltrasonidoPage() {
                 className="p-8 rounded-3xl bg-white/10 backdrop-blur-xl border border-white/10"
               >
 
-                <div className="w-14 h-14 mx-auto rounded-2xl bg-blue-500/20 flex items-center justify-center mb-5">
-                  <div className="w-4 h-4 rounded-full bg-cyan-300" />
-                </div>
-
+<div className="w-14 h-14 mx-auto rounded-2xl bg-[#911C82]/15 border border-[#911C82]/20 flex items-center justify-center mb-5">
+  <div className="w-3 h-3 rounded-full bg-[#d86acc] shadow-[0_0_12px_rgba(216,106,204,0.8)]" />
+</div>
                 <h3 className="font-semibold mb-3 text-xl">
                   {item.title}
                 </h3>
