@@ -302,25 +302,65 @@ export default function ConveyorsPage() {
             </div>
 
 
-            {/* GRID */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+{/* GRID */}
+<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
 
-              {/* GRANDE */}
-              <motion.div
-                whileHover={{ scale: 1.01 }}
-                transition={{ duration: 0.4 }}
-                className="md:col-span-7 relative overflow-hidden rounded-[18px] group"
-              >
+  {[
+    "/conveyor1.jpg",
+    "/conveyor2.jpg",
+    "/conveyor3.jpg",
+    "/conveyor4.png",
+  ].map((image, i) => (
 
-                <img
-                  src="/conveyor1.jpg"
-                  className="w-full h-[500px] md:h-[720px] object-cover transition duration-700 group-hover:scale-[1.03]"
-                />
+    <motion.div
+      key={i}
+      whileHover={{ y: -4 }}
+      transition={{ duration: 0.35 }}
+      className="
+        relative
+        overflow-hidden
+        rounded-[18px]
+        group
+      "
+    >
 
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition duration-500" />
+      <img
+        src={image}
+        className="
+          w-full
+          h-[340px] md:h-[420px]
+          object-cover
 
-              </motion.div>
+          transition duration-700
+          group-hover:scale-[1.03]
+        "
+      />
 
+      {/* OVERLAY */}
+      <div className="
+        absolute inset-0
+
+        bg-black/10
+        group-hover:bg-black/0
+
+        transition duration-500
+      " />
+
+      {/* BORDE HOVER */}
+      <div className="
+        absolute inset-0
+
+        border border-blue-500/0
+        group-hover:border-blue-500/20
+
+        transition duration-500
+      " />
+
+    </motion.div>
+
+  ))}
+
+</div>
 
               {/* DERECHA */}
               <div className="md:col-span-5 grid gap-4">
@@ -379,8 +419,6 @@ export default function ConveyorsPage() {
               </div>
 
             </div>
-
-          </div>
 
         </section>
 
