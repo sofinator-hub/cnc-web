@@ -2,68 +2,63 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Menu } from "lucide-react";
 
 export default function Sidebar() {
   return (
-    <motion.div
-      initial={{ x: 120, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      transition={{ duration: 0.6 }}
+    <div
       className="
-        hidden lg:flex
-        fixed right-4 top-1/2 -translate-y-1/2
+        hidden lg:block
+        fixed right-6 top-1/2 -translate-y-1/2
         z-[999]
-        flex-col gap-4
-        opacity-70 hover:opacity-100
-        translate-x-[105px] hover:translate-x-0
-        transition-all duration-500
+        group
       "
     >
 
-      {/* TAB VISIBLE */}
+      {/* BOTÓN FLOTANTE */}
       <div
         className="
-          absolute
-          left-[-42px]
-          top-1/2
-          -translate-y-1/2
-          w-[42px]
-          h-[120px]
-          bg-white/65
+          absolute right-0 top-1/2 -translate-y-1/2
+          w-14 h-14
+          rounded-2xl
+          bg-white/70
           backdrop-blur-md
           border border-purple-100/70
-          border-r-0
-          rounded-l-2xl
+          shadow-xl
           flex items-center justify-center
-          shadow-lg
+          text-purple-500
+          transition-all duration-300
+          group-hover:opacity-0
+          group-hover:pointer-events-none
         "
       >
 
-        <div className="flex flex-col gap-2">
-
-          <div className="w-1.5 h-1.5 rounded-full bg-purple-400" />
-          <div className="w-1.5 h-1.5 rounded-full bg-purple-400" />
-          <div className="w-1.5 h-1.5 rounded-full bg-purple-400" />
-
-        </div>
+        <Menu size={24} />
 
       </div>
 
 
-      {/* CONTENEDOR */}
-      <div
+      {/* SIDEBAR */}
+      <motion.div
+        initial={{ opacity: 0, x: 40 }}
+        whileHover={{ opacity: 1, x: 0 }}
         className="
-          bg-white/65
-          backdrop-blur-md
-          border
-          border-purple-100/70
-          rounded-r-2xl rounded-l-none
-          shadow-xl
-          p-3
-          flex
-          flex-col
-          gap-3
-          w-[165px]
+          opacity-0
+          translate-x-10
+          group-hover:opacity-100
+          group-hover:translate-x-0
+          transition-all duration-300
+
+          bg-white/70
+          backdrop-blur-xl
+          border border-purple-100/70
+          rounded-3xl
+          shadow-2xl
+
+          p-4
+          w-[190px]
+
+          flex flex-col gap-4
         "
       >
 
@@ -80,7 +75,7 @@ export default function Sidebar() {
         </div>
 
 
-        {/* NAVEGACIÓN */}
+        {/* LINKS */}
         <div className="flex flex-col gap-1 text-[13px] text-gray-600">
 
           {[
@@ -127,12 +122,11 @@ export default function Sidebar() {
               <Link
                 href={item.href}
                 className="
-                  group
-                  flex items-center
-                  gap-2
-                  px-2 py-1.5
-                  rounded-lg
-                  hover:bg-purple-50/70
+                  group/link
+                  flex items-center gap-2
+                  px-3 py-2
+                  rounded-xl
+                  hover:bg-purple-50/80
                   hover:text-[var(--primary)]
                   transition-all duration-300
                 "
@@ -140,9 +134,9 @@ export default function Sidebar() {
 
                 <div className="
                   w-1.5 h-1.5 rounded-full
-                  bg-purple-300
+                  bg-purple-400
                   opacity-0
-                  group-hover:opacity-100
+                  group-hover/link:opacity-100
                   transition-all duration-300
                 " />
 
@@ -160,7 +154,7 @@ export default function Sidebar() {
 
 
         {/* DIVISOR */}
-        <div className="border-t border-purple-100/70 my-1" />
+        <div className="border-t border-purple-100/70" />
 
 
         {/* CONTACTO */}
@@ -203,30 +197,22 @@ export default function Sidebar() {
             purple-gradient
             text-white
             text-sm
-            px-4
-            py-2.5
+            px-4 py-2.5
             rounded-xl
             text-center
             font-medium
             purple-glow
-            transition-all duration-300
+            
           "
-          whileHover={{
-            scale: 1.04
-          }}
-          whileTap={{
-            scale: 0.97
-          }}
+
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.97 }}
         >
           Cotizar
         </motion.a>
 
-      </div>
+      </motion.div>
 
-
-      {/* LÍNEA DECORATIVA */}
-      <div className="h-10 border-r border-purple-200/40 opacity-40 mx-auto" />
-
-    </motion.div>
+    </div>
   );
 }
