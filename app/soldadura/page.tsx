@@ -366,7 +366,48 @@ export default function UltrasonidoPage() {
 
         </section>
 
-       </main>
+
+        {/* ================= TIRONI SECTION ================= */}
+        <section className="px-6 md:px-20 py-32 relative overflow-hidden">
+
+          {/* Glow */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#911C82]/10 blur-[180px] rounded-full pointer-events-none" />
+
+          <div className="relative z-10">
+
+            {/* Heading */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true }}
+              className="text-center max-w-5xl mx-auto mb-24"
+            >
+
+              <div className="text-[#d86acc] uppercase tracking-[0.25em] text-sm mb-5">
+                Tecnología Europea
+              </div>
+
+              <h2 className="text-4xl md:text-6xl font-semibold leading-tight mb-8">
+                Precisión que une.
+                <span className="block text-[#d86acc]">
+                  Tecnología que trasciende.
+                </span>
+              </h2>
+
+              <p className="text-white/70 text-lg md:text-xl leading-relaxed">
+                Elevamos tus estándares de producción con sistemas de soldadura por ultrasonido
+                de <span className="text-white font-medium">Tironi Ultrasonic</span>.
+                La ingeniería Europea líder, ahora a tu alcance a través de Matei.
+              </p>
+
+            </motion.div>
+
+          </div>
+
+        </section>
+
+      </main>
     </>
   );
 }
