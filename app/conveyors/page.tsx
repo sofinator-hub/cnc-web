@@ -321,17 +321,33 @@ export default function ConveyorsPage() {
                   "
                 >
 
-                  <img
-                    src={image}
-                    className="
-                      w-full
-                      h-[180px] md:h-[260px]
-                      object-cover
+<div
+  className="
+    w-full
+    h-[260px] md:h-[340px]
 
-                      transition duration-700
-                      group-hover:scale-[1.03]
-                    "
-                  />
+    bg-white
+
+    flex items-center justify-center
+
+    overflow-hidden
+  "
+>
+
+  <img
+    src={image}
+    className="
+      max-w-full
+      max-h-full
+
+      object-contain
+
+      transition duration-700
+      group-hover:scale-[1.03]
+    "
+  />
+
+</div>
 
                   {/* OVERLAY */}
                   <div className="
