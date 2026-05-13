@@ -151,7 +151,7 @@ export default function Navbar() {
 
         <ul
           className="
-            hidden md:flex
+            hidden lg:flex
 
             items-center
 
