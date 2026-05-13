@@ -303,7 +303,7 @@ export default function ConveyorsPage() {
 
 
 {/* GRID */}
-<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
   {[
     "/conveyor1.jpg",
@@ -328,7 +328,7 @@ export default function ConveyorsPage() {
         src={image}
         className="
           w-full
-          h-[340px] md:h-[420px]
+          h-[420px]
           object-cover
 
           transition duration-700
@@ -346,7 +346,7 @@ export default function ConveyorsPage() {
         transition duration-500
       " />
 
-      {/* BORDE HOVER */}
+      {/* BORDE */}
       <div className="
         absolute inset-0
 
@@ -359,6 +359,8 @@ export default function ConveyorsPage() {
     </motion.div>
 
   ))}
+
+</div>
 
 </div>
 
@@ -417,8 +419,6 @@ export default function ConveyorsPage() {
                 </div>
 
               </div>
-
-            </div>
 
         </section>
 
