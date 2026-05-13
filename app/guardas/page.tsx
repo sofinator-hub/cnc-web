@@ -2,17 +2,16 @@
 
 import { motion } from "framer-motion";
 import MobileMenu from "@/components/layout/MobileMenu";
-import { useState } from "react";
+
 import {
   Shield,
   Grid2X2,
   Cog,
-  ChevronLeft,
-  ChevronRight,
- ArrowUpRight,
+  ArrowUpRight,
 } from "lucide-react";
 
 export default function GuardasPage() {
+
   return (
     <>
       <MobileMenu />
@@ -112,7 +111,11 @@ export default function GuardasPage() {
             {/* FEATURES */}
             <div className="grid md:grid-cols-3 gap-10 border-t border-black/10 pt-16">
 
-              <div className="pr-6 md:border-r border-black/10">
+              {/* ITEM */}
+              <motion.div
+                whileHover={{ y: -6 }}
+                className="pr-6 md:border-r border-black/10"
+              >
 
                 <Shield
                   size={34}
@@ -129,10 +132,14 @@ export default function GuardasPage() {
                   operadores y maquinaria industrial.
                 </p>
 
-              </div>
+              </motion.div>
 
 
-              <div className="pr-6 md:border-r border-black/10">
+              {/* ITEM */}
+              <motion.div
+                whileHover={{ y: -6 }}
+                className="pr-6 md:border-r border-black/10"
+              >
 
                 <Grid2X2
                   size={34}
@@ -149,10 +156,13 @@ export default function GuardasPage() {
                   a diferentes procesos y espacios.
                 </p>
 
-              </div>
+              </motion.div>
 
 
-              <div>
+              {/* ITEM */}
+              <motion.div
+                whileHover={{ y: -6 }}
+              >
 
                 <Cog
                   size={34}
@@ -169,7 +179,7 @@ export default function GuardasPage() {
                   y líneas de producción.
                 </p>
 
-              </div>
+              </motion.div>
 
             </div>
 
@@ -195,7 +205,7 @@ export default function GuardasPage() {
                 {/* GLOW */}
                 <div className="absolute inset-0 bg-blue-500/10 blur-3xl scale-110" />
 
-                {/* SOLO AQUÍ B/N → COLOR */}
+
                 <img
                   src="/guardas_detalle.jpg"
                   className="relative w-full h-[340px] md:h-[520px] object-cover grayscale hover:grayscale-0 transition duration-700"
@@ -227,7 +237,7 @@ export default function GuardasPage() {
 
                   {[
                     "Análisis y diseño",
-                    "cumplimiento con normativas nacionales e internacionales",
+                    "Cumplimiento con normativas nacionales e internacionales",
                     "Acabados de alta calidad",
                     "Instalación y soporte técnico",
                   ].map((item, index) => (
@@ -256,12 +266,109 @@ export default function GuardasPage() {
         </section>
 
 
-        {/* ================= CARRUSEL ================= */}
-        <section className="px-6 md:px-14 py-20">
+        {/* ================= GALERÍA ================= */}
+        <section className="px-6 md:px-14 py-24">
 
-          <div className="max-w-[1500px] mx-auto border-t border-black/10 pt-16">
+          <div className="max-w-[1500px] mx-auto border-t border-black/10 pt-20">
 
-            <CarruselExacto />
+            {/* HEADER */}
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10 mb-16">
+
+              <div>
+
+                <p className="uppercase tracking-[0.4em] text-xs text-gray-400 mb-6">
+                  Proyectos
+                </p>
+
+                <h2 className="text-[42px] md:text-[72px] leading-[0.95] font-light">
+                  Galería de
+                  guardas
+                </h2>
+
+              </div>
+
+              <p className="text-gray-600 text-lg leading-relaxed max-w-[420px]">
+                Sistemas de protección industrial desarrollados
+                para seguridad, automatización y operación eficiente.
+              </p>
+
+            </div>
+
+
+            {/* GRID */}
+            <div className="grid grid-cols-2 gap-4">
+
+              {[
+                "/guarda1.jpg",
+                "/guarda2.jpg",
+                "/guarda3.jpg",
+                "/guarda4.jpg",
+              ].map((image, i) => (
+
+                <motion.div
+                  key={i}
+                  whileHover={{ y: -4 }}
+                  transition={{ duration: 0.35 }}
+                  className="
+                    relative
+                    overflow-hidden
+                    rounded-[18px]
+                    group
+                    bg-white
+                  "
+                >
+
+                  <div
+                    className="
+                      w-full
+                      h-[260px] md:h-[340px]
+
+                      flex items-center justify-center
+
+                      overflow-hidden
+                    "
+                  >
+
+                    <img
+                      src={image}
+                      className="
+                        max-w-full
+                        max-h-full
+
+                        object-contain
+
+                        transition duration-700
+                        group-hover:scale-[1.03]
+                      "
+                    />
+
+                  </div>
+
+                  {/* OVERLAY */}
+                  <div className="
+                    absolute inset-0
+
+                    bg-black/5
+                    group-hover:bg-black/0
+
+                    transition duration-500
+                  " />
+
+                  {/* BORDE */}
+                  <div className="
+                    absolute inset-0
+
+                    border border-blue-500/0
+                    group-hover:border-blue-500/20
+
+                    transition duration-500
+                  " />
+
+                </motion.div>
+
+              ))}
+
+            </div>
 
           </div>
 
@@ -310,7 +417,7 @@ export default function GuardasPage() {
                 >
 
                   CONTACTAR
-
+ 
                   <ArrowUpRight size={18} />
 
                 </button>
@@ -326,119 +433,4 @@ export default function GuardasPage() {
       </main>
     </>
   );
-}
-
-
-
-/* ================= CARRUSEL ================= */
-
-function CarruselExacto() {
-  const [index, setIndex] = useState(0);
-
-  const slides = [
-    "/guarda1.jpg",
-    "/guarda2.jpg",
-    "/guarda3.jpg",
-    "/guarda4.jpg",
-    "/guardas_main.jpg",
-    "/guardas_detalle.jpg",
-  ];
-
-  const prev = () => {
-    setIndex((prev) =>
-      prev === 0 ? slides.length - 1 : prev - 1
-    );
-  };
-
-  const next = () => {
-    setIndex((prev) =>
-      prev === slides.length - 1 ? 0 : prev + 1
-    );
-  };
-
-  return (
-    <div>
-
-      {/* HEADER */}
-      <div className="flex justify-between items-center mb-10">
-
-        <p className="uppercase tracking-[0.4em] text-xs text-gray-400">
-          Proyectos
-        </p>
-
-        <div className="flex items-center gap-8">
-
-          <span className="text-sm text-gray-500">
-            0{index + 1} / 0{slides.length}
-          </span>
-
-          <div className="flex gap-4">
-
-            <button onClick={prev}>
-              <ChevronLeft size={22} strokeWidth={1.5} />
-            </button>
-
-            <button onClick={next}>
-              <ChevronRight size={22} strokeWidth={1.5} />
-            </button>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      {/* SLIDES */}
-      <div className="grid md:grid-cols-3 gap-2 overflow-hidden rounded-[12px]">
-
-        {[0, 1, 2].map((offset) => {
-          const slideIndex = (index + offset) % slides.length;
-
-          return (
-
-            <motion.div
-              key={slideIndex}
-              initial={{ opacity: 0.7 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.4 }}
-              className="relative overflow-hidden group"
-            >
-
-              <img
-                src={slides[slideIndex]}
-                className="w-full h-[260px] md:h-[500px] object-cover"
-              />
-
-              {/* BORDE AZUL */}
-              <div className="absolute inset-0 border border-blue-500/0 group-hover:border-blue-500/30 transition duration-500" />
-
-            </motion.div>
-
-          );
-        })}
-
-      </div>
-
-
-      {/* INDICADORES */}
-      <div className="flex justify-center gap-3 mt-10">
-
-        {slides.map((_, i) => (
-
-          <div
-            key={i}
-            className={`h-[2px] transition-all duration-300 ${
-              i === index
-                ? "w-10 bg-blue-500"
-                : "w-6 bg-black/20"
-            }`}
-          />
-
-        ))}
-
-      </div>
-
-    </div>
-  );
-}
+} 
