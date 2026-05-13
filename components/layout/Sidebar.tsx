@@ -6,149 +6,141 @@ import Link from "next/link";
 export default function Sidebar() {
   return (
     <motion.div
-      initial={{ x: 100, opacity: 0 }}
+      initial={{ x: 120, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="hidden md:flex fixed right-6 top-[30%] z-[999] flex-col gap-4"
+      transition={{ duration: 0.6 }}
+      className="
+        hidden lg:flex
+        fixed right-4 top-1/2 -translate-y-1/2
+        z-[999]
+        flex-col gap-4
+        opacity-60 hover:opacity-100
+        translate-x-[120px] hover:translate-x-0
+        transition-all duration-500
+      "
     >
-      {/* CONTENEDOR */}
 
-      <div className="
-        bg-white/85
-        backdrop-blur-xl
-        border
-        border-purple-100
-        rounded-2xl
-        shadow-xl
-        p-4
-        flex
-        flex-col
-        gap-4
-        min-w-[190px]
-      ">
+      {/* CONTENEDOR */}
+      <div
+        className="
+          bg-white/65
+          backdrop-blur-md
+          border
+          border-purple-100/70
+          rounded-2xl
+          shadow-xl
+          p-3
+          flex
+          flex-col
+          gap-3
+          w-[165px]
+        "
+      >
 
         {/* STATUS */}
-
         <div className="flex items-center gap-2 text-[10px] text-gray-400 tracking-[0.15em]">
-          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+
+          <div className="relative flex items-center justify-center">
+            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+            <div className="absolute w-2 h-2 bg-green-400 rounded-full blur-sm opacity-60" />
+          </div>
+
           SYSTEM ONLINE
+
         </div>
+
 
         {/* NAVEGACIÓN */}
+        <div className="flex flex-col gap-1 text-[13px] text-gray-600">
 
-        <div className="flex flex-col gap-1 text-sm text-gray-600">
+          {[
+            {
+              href: "/cnc",
+              label: "Corte Láser"
+            },
+            {
+              href: "/tubo",
+              label: "Corte Láser Tubo"
+            },
+            {
+              href: "/soldadura",
+              label: "Soldadura"
+            },
+            {
+              href: "/ingenieria",
+              label: "Ingeniería"
+            },
+            {
+              href: "/inoxidable",
+              label: "Inoxidable"
+            },
+            {
+              href: "/conveyors",
+              label: "Conveyors"
+            },
+            {
+              href: "/guardas",
+              label: "Guardas"
+            },
+            {
+              href: "/celosias",
+              label: "Celosías"
+            }
+          ].map((item, i) => (
 
-          <Link
-            href="/cnc"
-            className="
-              px-3 py-2 rounded-md
-              hover:bg-purple-50
-              hover:text-[var(--primary)]
-              transition-all duration-300
-            "
-          >
-            Corte Láser
-          </Link>
+            <motion.div
+              key={i}
+              whileHover={{ x: 4 }}
+              transition={{ duration: 0.2 }}
+            >
 
-          <Link
-            href="/tubo"
-            className="
-              px-3 py-2 rounded-md
-              hover:bg-purple-50
-              hover:text-[var(--primary)]
-              transition-all duration-300
-            "
-          >
-            Corte Láser de Tubo
-          </Link>
+              <Link
+                href={item.href}
+                className="
+                  group
+                  flex items-center
+                  gap-2
+                  px-2 py-1.5
+                  rounded-lg
+                  hover:bg-purple-50/70
+                  hover:text-[var(--primary)]
+                  transition-all duration-300
+                "
+              >
 
-          <Link
-            href="/soldadura"
-            className="
-              px-3 py-2 rounded-md
-              hover:bg-purple-50
-              hover:text-[var(--primary)]
-              transition-all duration-300
-            "
-          >
-            Soldadura con Ultrasonido
-          </Link>
+                <div className="
+                  w-1.5 h-1.5 rounded-full
+                  bg-purple-300
+                  opacity-0
+                  group-hover:opacity-100
+                  transition-all duration-300
+                " />
 
-          <Link
-            href="/ingenieria"
-            className="
-              px-3 py-2 rounded-md
-              hover:bg-purple-50
-              hover:text-[var(--primary)]
-              transition-all duration-300
-            "
-          >
-            Servicios de Ingeniería
-          </Link>
+                <span>
+                  {item.label}
+                </span>
 
-          <Link
-            href="/inoxidable"
-            className="
-              px-3 py-2 rounded-md
-              hover:bg-purple-50
-              hover:text-[var(--primary)]
-              transition-all duration-300
-            "
-          >
-            Mobiliario Inoxidable
-          </Link>
+              </Link>
 
-          <Link
-            href="/conveyors"
-            className="
-              px-3 py-2 rounded-md
-              hover:bg-purple-50
-              hover:text-[var(--primary)]
-              transition-all duration-300
-            "
-          >
-            Conveyors
-          </Link>
+            </motion.div>
 
-          <Link
-            href="/guardas"
-            className="
-              px-3 py-2 rounded-md
-              hover:bg-purple-50
-              hover:text-[var(--primary)]
-              transition-all duration-300
-            "
-          >
-            Guardas
-          </Link>
-
-          <Link
-            href="/celosias"
-            className="
-              px-3 py-2 rounded-md
-              hover:bg-purple-50
-              hover:text-[var(--primary)]
-              transition-all duration-300
-            "
-          >
-            Celosías
-          </Link>
+          ))}
 
         </div>
 
-        {/* DIVISOR */}
 
-        <div className="border-t border-purple-100 my-2" />
+        {/* DIVISOR */}
+        <div className="border-t border-purple-100/70 my-1" />
 
         {/* CONTACTO */}
-
-        <div className="flex flex-col gap-1 text-xs text-gray-500">
+        <div className="flex flex-col gap-1 text-[11px] text-gray-500">
 
           <a
             href="https://wa.me/5215562045546"
             target="_blank"
             className="
-              px-2 py-1
+              px-2 py-1 rounded-md
+              hover:bg-purple-50/70
               hover:text-[var(--primary)]
               transition-all duration-300
             "
@@ -159,7 +151,8 @@ export default function Sidebar() {
           <a
             href="mailto:matei_company@hotmail.com"
             className="
-              px-2 py-1
+              px-2 py-1 rounded-md
+              hover:bg-purple-50/70
               hover:text-[var(--primary)]
               transition-all duration-300
             "
@@ -169,36 +162,38 @@ export default function Sidebar() {
 
         </div>
 
-        {/* BOTÓN COTIZAR */}
-
+        {/* BOTÓN */}
         <motion.a
           href="https://wa.me/5215562045546"
           target="_blank"
           className="
-            mt-2
+            mt-1
             purple-gradient
             text-white
             text-sm
             px-4
             py-2.5
-            rounded-lg
+            rounded-xl
             text-center
             font-medium
             purple-glow
-            transition-all
-            duration-300
+            transition-all duration-300
           "
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.96 }}
+          whileHover={{
+            scale: 1.04
+          }}
+          whileTap={{
+            scale: 0.97
+          }}
         >
           Cotizar
         </motion.a>
 
       </div>
 
-      {/* LÍNEA DECORATIVA */}
 
-      <div className="h-12 border-r border-purple-200 opacity-40 mx-auto" />
+      {/* LÍNEA DECORATIVA */}
+      <div className="h-10 border-r border-purple-200/40 opacity-40 mx-auto" />
 
     </motion.div>
   );
