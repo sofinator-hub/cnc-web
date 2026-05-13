@@ -22,9 +22,9 @@ export default function CelosiasPage() {
   const items: Item[] = [
     {
       img: "/celosia1.jpg",
-      title: "Oficina",
-      desc: "Interior moderno",
-      category: "Oficinas",
+      title: "Asador",
+      desc: "exterior moderno",
+      category: "Residencial",
       slug: "oficina-moderna"
     },
 
@@ -66,7 +66,86 @@ export default function CelosiasPage() {
       desc: "Exterior arquitectónico",
       category: "Exteriores",
       slug: "proteccion-exterior"
-    }
+    },
+
+        {
+      img: "/celosia7.jpg",
+      title: "Cafetería",
+      desc: "decoración de interior",
+      category: "Interiores",
+      slug: "cafetrías-modernas"
+    },
+
+        {
+      img: "/celosia8.jpg",
+      title: "jardín",
+      desc: "exterior moderno",
+      category: "Residencial",
+      slug: "jardines-modernos"
+    },
+
+        {
+      img: "/celosia9.jpg",
+      title: "Ventanas",
+      desc: "Protección moderna",
+      category: "Exteriores",
+      slug: "ventanas-modernas"
+    },
+
+        {
+      img: "/celosia10.jpg",
+      title: "Ventanal",
+      desc: "Protección moderna",
+      category: "Residencial",
+      slug: "ventanas-modernas"
+    },
+
+        {
+      img: "/celosia11.jpg",
+      title: "Pérbola",
+      desc: "Exterior moderno",
+      category: "Perbolas",
+      slug: "techos-modernos"
+    },
+
+        {
+      img: "/celosia12.jpg",
+      title: "Pérbola",
+      desc: "Exterior moderno",
+      category: "Perbolas",
+      slug: "techos-modernos"
+    },
+        {
+      img: "/celosia13.jpg",
+      title: "Pérbola",
+      desc: "Techo moderno",
+      category: "Perbolas",
+      slug: "perbolas-modernas"
+    },
+
+        {
+      img: "/celosia14.jpg",
+      title: "Muro divisorio",
+      desc: "Muro divisorio con celosia",
+      category: "Residencial",
+      slug: "muros-modernos"
+    },
+        {
+      img: "/celosia15.jpg",
+      title: "Muro divisorio",
+      desc: "Muro divisorio con celosia",
+      category: "Residencial",
+      slug: "muros-modernos"
+    },
+        {
+      img: "/celosia16.jpg",
+      title: "Protección",
+      desc: "Protección moderna",
+      category: "Residencial",
+      slug: "protecciones-modernas"
+    },
+    
+    
   ];
 
   const categories = [
