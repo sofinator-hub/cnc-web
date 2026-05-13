@@ -153,6 +153,8 @@ export default function CelosiasPage() {
     "Oficinas",
     "Exteriores",
     "Residencial",
+    "Interiores",
+    "Perbolas",
     "Fachadas"
   ];
 
