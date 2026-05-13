@@ -14,11 +14,41 @@ export default function Sidebar() {
         fixed right-4 top-1/2 -translate-y-1/2
         z-[999]
         flex-col gap-4
-        opacity-60 hover:opacity-100
-        translate-x-[120px] hover:translate-x-0
+        opacity-70 hover:opacity-100
+        translate-x-[105px] hover:translate-x-0
         transition-all duration-500
       "
     >
+
+      {/* TAB VISIBLE */}
+      <div
+        className="
+          absolute
+          left-[-42px]
+          top-1/2
+          -translate-y-1/2
+          w-[42px]
+          h-[120px]
+          bg-white/65
+          backdrop-blur-md
+          border border-purple-100/70
+          border-r-0
+          rounded-l-2xl
+          flex items-center justify-center
+          shadow-lg
+        "
+      >
+
+        <div className="flex flex-col gap-2">
+
+          <div className="w-1.5 h-1.5 rounded-full bg-purple-400" />
+          <div className="w-1.5 h-1.5 rounded-full bg-purple-400" />
+          <div className="w-1.5 h-1.5 rounded-full bg-purple-400" />
+
+        </div>
+
+      </div>
+
 
       {/* CONTENEDOR */}
       <div
@@ -27,7 +57,7 @@ export default function Sidebar() {
           backdrop-blur-md
           border
           border-purple-100/70
-          rounded-2xl
+          rounded-r-2xl rounded-l-none
           shadow-xl
           p-3
           flex
@@ -132,6 +162,7 @@ export default function Sidebar() {
         {/* DIVISOR */}
         <div className="border-t border-purple-100/70 my-1" />
 
+
         {/* CONTACTO */}
         <div className="flex flex-col gap-1 text-[11px] text-gray-500">
 
@@ -161,6 +192,7 @@ export default function Sidebar() {
           </a>
 
         </div>
+
 
         {/* BOTÓN */}
         <motion.a
