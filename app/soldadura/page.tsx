@@ -353,53 +353,50 @@ export default function UltrasonidoPage() {
               </p>
 
             </motion.div>
+{/* Logo Tironi */}
+<motion.div
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+  className="flex justify-center mb-24"
+>
 
+  <div
+    className="
+    group
+    bg-white/10
+    border border-white/10
+    rounded-[40px]
+    px-12
+    py-10
+    backdrop-blur-xl
+    relative
+    overflow-hidden
+    "
+  >
 
-            {/* Logos */}
-            <div className="grid md:grid-cols-3 gap-8 items-center mb-24">
+    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-300/0 group-hover:from-blue-500/10 group-hover:to-blue-300/10 transition duration-500" />
 
-              {[
-                {
-                  src: "/logo_tironi.svg",
-                  alt: "Tironi"
-                },
-                {
-                  src: "/logo_matei.svg",
-                  alt: "Matei"
-                },
-                {
-                  src: "/logo_clei.svg",
-                  alt: "Clei"
-                }
-              ].map((logo, i) => (
+    <img
+      src="/logo_tironi.svg"
+      alt="Tironi"
+      className="
+      relative
+      z-10
+      h-[90px]
+      md:h-[120px]
+      w-auto
+      object-contain
+      opacity-95
+      transition duration-500
+      group-hover:scale-105
+      "
+    />
 
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: i * 0.15 }}
-                  viewport={{ once: true }}
-                  whileHover={{
-                    y: -8,
-                    scale: 1.02
-                  }}
-                  className="group bg-white/10 border border-white/10 rounded-[32px] p-10 min-h-[220px] flex items-center justify-center backdrop-blur-xl relative overflow-hidden"
-                >
+  </div>
 
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-300/0 group-hover:from-blue-500/10 group-hover:to-blue-300/10 transition duration-500" />
-
-                  <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="relative z-10 max-h-[100px] w-full object-contain opacity-90 group-hover:opacity-100 transition duration-500"
-                  />
-
-                </motion.div>
-
-              ))}
-
-            </div>
-
+</motion.div>
 
             {/* Content */}
             <div className="grid md:grid-cols-2 gap-16 items-start">
