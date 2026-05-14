@@ -124,20 +124,24 @@ export default function Navbar() {
       animate={{ opacity: 1 }}
       className="flex items-center gap-3 cursor-pointer"
     >
- 
-      <img
-        src="/logo_matei.svg"
-        alt="Matei"
-        className="
-          h-10 lg:h-12
-          w-auto
-          object-contain
-          block
-          relative
-          -top-[4px]
-        "
-      />
- 
+
+      <div className="h-10 lg:h-12 flex items-center overflow-hidden">
+
+        <img
+          src="/logo_matei.svg"
+          alt="Matei"
+          className="
+            h-10 lg:h-12
+            w-auto
+            object-contain
+            block
+            relative
+            top-[4px]
+          "
+        />
+
+      </div>
+
       <h1
         className={`
           text-xl lg:text-2xl
@@ -160,7 +164,7 @@ export default function Navbar() {
 
   </Link>
 
-</div> 
+</div>
 
         {/* LINKS */}
 
