@@ -44,45 +44,287 @@ export default function UltrasonidoPage() {
 
       <main className="relative z-10 text-white">
 
-        {/* ================= HERO ORIGINAL ================= */}
-        <section className="min-h-[85vh] flex items-center justify-center relative px-4">
+{/* ================= HERO NUEVO ================= */}
+<section
+  className="
+  relative
+  min-h-screen
+  flex
+  items-center
+  overflow-hidden
+  "
+>
 
-          {/* Glow */}
-          <div className="absolute top-10 left-5 w-48 h-48 bg-blue-500 blur-3xl opacity-20" />
-          <div className="absolute bottom-10 right-5 w-48 h-48 bg-cyan-400 blur-3xl opacity-20" />
+  {/* Fondo */}
+  <div className="absolute inset-0">
 
-          {/* Ondas */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+    <img
+      src="/hero_soldadura.jpg"
+      className="
+      w-full
+      h-full
+      object-cover
+      object-center
+      "
+    />
 
-            <div className="relative w-[420px] h-[420px]">
+    {/* Overlay oscuro */}
+    <div className="absolute inset-0 bg-black/70" />
 
-              <span className="absolute inset-0 rounded-full border-2 border-[#911C82] opacity-60 animate-ping"></span>
+    {/* Glow morado */}
+    <div
+      className="
+      absolute
+      inset-0
+      bg-[radial-gradient(circle_at_top_left,rgba(145,28,130,0.22),transparent_35%)]
+      "
+    />
 
-              <span className="absolute inset-0 scale-[1.25] rounded-full border border-[#d86acc] opacity-50 animate-ping [animation-delay:0.8s]"></span>
+    {/* Fade inferior */}
+    <div
+      className="
+      absolute
+      bottom-0
+      left-0
+      w-full
+      h-40
+      bg-gradient-to-t
+      from-black
+      to-transparent
+      "
+    />
 
-              <span className="absolute inset-0 scale-[1.5] rounded-full border border-[#911C82] opacity-40 animate-ping [animation-delay:1.6s]"></span>
+  </div>
 
-              <span className="absolute inset-0 scale-[1.75] rounded-full border border-[#d86acc] opacity-30 animate-ping [animation-delay:2.4s]"></span>
 
-            </div>
+  {/* CONTENT */}
+  <div
+    className="
+    relative
+    z-10
 
-          </div>
+    max-w-7xl
+    mx-auto
 
-          {/* Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl md:rounded-3xl p-6 md:p-14 max-w-3xl w-full shadow-xl text-center"
-           >
-            <h1 className="text-2xl md:text-5xl font-semibold mb-6 tracking-[0.2em]">
-              SOLDADURA ULTRASÓNICA
-            </h1>
+    px-6
+    md:px-10
+    lg:px-14
 
-            <p className="text-white/80">
-              Tecnología avanzada que permite uniones limpias, rápidas y de alta precisión.
-             </p>
-           </motion.div>
-        </section>
+    pt-28
+    pb-20
+
+    grid
+    lg:grid-cols-2
+    gap-16
+
+    items-center
+    "
+  >
+
+    {/* LEFT */}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
+
+      {/* Badge */}
+      <div
+        className="
+        inline-flex
+        items-center
+
+        px-4
+        py-2
+
+        rounded-full
+
+        border
+        border-[#911C82]/40
+
+        bg-[#911C82]/10
+        backdrop-blur-md
+
+        text-[#d86acc]
+        text-xs
+        md:text-sm
+
+        tracking-[0.25em]
+        uppercase
+
+        mb-8
+        "
+      >
+        Tironi Ultrasonic
+      </div>
+
+
+      {/* Title */}
+      <h1
+        className="
+        text-5xl
+        md:text-7xl
+        xl:text-[7rem]
+
+        font-semibold
+
+        leading-[0.9]
+
+        mb-8
+        "
+      >
+        SOLDADURA
+
+        <span
+          className="
+          block
+
+          text-transparent
+          bg-clip-text
+
+          bg-gradient-to-r
+          from-[#d86acc]
+          to-[#911C82]
+          "
+        >
+          ULTRASÓNICA
+        </span>
+
+      </h1>
+
+
+      {/* Description */}
+      <p
+        className="
+        text-white/70
+
+        text-lg
+        md:text-xl
+
+        leading-relaxed
+
+        max-w-2xl
+
+        mb-10
+        "
+      >
+        Precisión industrial impulsada por vibración ultrasónica.
+        Uniones limpias, rápidas y diseñadas para líneas de producción modernas.
+      </p>
+
+
+      {/* CTA */}
+      <div className="flex flex-wrap gap-5">
+
+        <button
+          onClick={() =>
+            window.open(
+              "https://wa.me/5215562045546?text=Hola,%20quiero%20información%20sobre%20soldadura%20ultrasónica",
+              "_blank"
+            )
+          }
+          className="
+          px-8
+          py-4
+
+          rounded-2xl
+
+          bg-[#911C82]
+
+          hover:bg-[#a82f98]
+
+          transition-all
+          duration-300
+
+          shadow-[0_0_40px_rgba(145,28,130,0.35)]
+
+          hover:scale-[1.03]
+          "
+        >
+          Solicitar información
+        </button>
+
+
+        <a
+          href="#beneficios"
+          className="
+          px-8
+          py-4
+
+          rounded-2xl
+
+          border
+          border-white/15
+
+          bg-white/5
+          backdrop-blur-md
+
+          hover:bg-white/10
+
+          transition-all
+          duration-300
+          "
+        >
+          Explorar tecnología
+        </a>
+
+      </div>
+
+    </motion.div>
+
+
+    {/* RIGHT */}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.94 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1 }}
+      className="
+      relative
+
+      flex
+      justify-center
+      lg:justify-end
+      "
+    >
+
+      {/* Glow */}
+      <div
+        className="
+        absolute
+        inset-0
+
+        bg-[#911C82]/20
+        blur-[120px]
+
+        scale-90
+
+        pointer-events-none
+        "
+      />
+
+      {/* Imagen */}
+      <img
+        src="/hero_soldadura.jpg"
+        alt="Soldadura ultrasónica"
+
+        className="
+        relative
+        z-10
+
+        w-full
+        max-w-[720px]
+
+        object-contain
+
+        drop-shadow-[0_0_60px_rgba(145,28,130,0.18)]
+        "
+      />
+
+    </motion.div>
+
+  </div>
+
+</section>
 
 
         {/* ================= EXPLICACIÓN ================= */}

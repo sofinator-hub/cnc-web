@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const images = [
-  "/imagen1.jpeg",
-  "/imagen2.jpeg",
-  "/imagen3.jpeg",
-  "/imagen4.jpeg",
-  "/imagen5.jpeg",
+  "/galeria1.jpg",
+  "/galeria2.jpg",
+  "/galeria3.jpg",
+  "/galeria4.jpg",
+  "/galeria5.jpg",
 ];
 
 export default function Gallery() {
@@ -43,7 +43,7 @@ export default function Gallery() {
                 }}
               />
 
-              {/* 🔥 LÁSER REAL */}
+              {/*  LÁSER REAL */}
               {hovered === i && (
                 <motion.div
                   className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-blue-500 to-transparent"
