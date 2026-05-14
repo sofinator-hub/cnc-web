@@ -122,35 +122,32 @@ export default function Navbar() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="
-        flex items-center gap-3
-        cursor-pointer
-        relative top-[1px]
-      "
+      className="flex items-center gap-3 cursor-pointer"
     >
 
-      <img
-        src="/logo_matei.svg"
-        alt="Matei"
-        className="
-          h-9 lg:h-11
-          w-auto
-          object-contain
-          transition-all duration-300
-        "
-      />
+      <div className="relative -top-[2px]">
+
+        <img
+          src="/logo_matei.svg"
+          alt="Matei"
+          className="
+            h-9 lg:h-11
+            w-auto
+            object-contain
+            transition-all duration-300
+            block
+          "
+        />
+
+      </div>
 
       <h1
         className={`
-          flex items-center
-          leading-none
-
-          text-xl lg:text-2xl
-          font-semibold
-
-          tracking-[0.35em]
-
-          transition-all duration-300
+        text-xl lg:text-2xl
+        font-semibold
+        tracking-[0.35em]
+        leading-none
+         transition-all duration-300
 
           ${
             scrolled
