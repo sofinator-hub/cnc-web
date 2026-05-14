@@ -65,18 +65,19 @@ export default function UltrasonidoPage() {
       h-full
       object-cover
       object-center
+      brightness-110
       "
     />
 
     {/* Overlay oscuro */}
-    <div className="absolute inset-0 bg-black/70" />
+    <div className="absolute inset-0 bg-black/40" />
 
     {/* Glow morado */}
     <div
       className="
       absolute
       inset-0
-      bg-[radial-gradient(circle_at_top_left,rgba(145,28,130,0.22),transparent_35%)]
+      bg-[radial-gradient(circle_at_top_left,rgba(145,28,130,0.18),transparent_35%)]
       "
     />
 
@@ -168,7 +169,7 @@ export default function UltrasonidoPage() {
 
         font-semibold
 
-        leading-[0.9]
+        leading-tight
 
         mb-8
         "
@@ -196,7 +197,7 @@ export default function UltrasonidoPage() {
       {/* Description */}
       <p
         className="
-        text-white/70
+        text-white/75
 
         text-lg
         md:text-xl
@@ -242,8 +243,8 @@ export default function UltrasonidoPage() {
           "
         >
           Solicitar información
-        </button> 
- 
+        </button>
+        
       </div>
 
     </motion.div>
@@ -269,7 +270,7 @@ export default function UltrasonidoPage() {
         absolute
         inset-0
 
-        bg-[#911C82]/20
+        bg-[#911C82]/15
         blur-[120px]
 
         scale-90
@@ -277,7 +278,7 @@ export default function UltrasonidoPage() {
         pointer-events-none
         "
       />
- 
+
     </motion.div>
 
   </div>
