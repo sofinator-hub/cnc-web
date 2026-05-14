@@ -306,32 +306,30 @@ export default function GuardasPage() {
                 return (
 
                   <div
-                    key={i}
-                    className="
-                      relative
-                      overflow-hidden
-                      rounded-[18px]
-                      bg-[#f8f8f8]
-                      border border-black/5
-                    "
-                  >
+  key={i}
+  className="
+    relative
+    overflow-hidden
+    rounded-[18px]
+  "
+>
 
-                    <div
-                      className="
-                        w-full
-                        h-[420px] md:h-[520px]
-                        p-6
-                      "
-                    >
+  <div
+    className="
+      w-full
+      h-[420px] md:h-[520px]
+    "
+  >
 
-                      <img
-                        src={image}
-                        className="
-                          w-full
-                          h-full
-                          object-contain
-                        "
-                      />
+                     <img
+  src={image}
+  className="
+    w-full
+    h-full
+
+    object-contain
+  "
+/>
 
                     </div>
 
