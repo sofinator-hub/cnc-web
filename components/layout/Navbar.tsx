@@ -113,51 +113,60 @@ export default function Navbar() {
         "
       >
 
-        {/* LOGO */}
+{/* LOGO */}
 
-        <div className="flex-shrink-0 pr-12">
+<div className="flex-shrink-0 pr-12">
 
-          <Link href="/">
+  <Link href="/">
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="flex items-center gap-3 cursor-pointer"
-            >
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="
+        flex items-center gap-3
+        cursor-pointer
+        relative top-[1px]
+      "
+    >
 
-              <img
-                src="/logo_matei.svg"
-                alt="Matei"
-                className="
-                  h-10 lg:h-12
-                  w-auto
-                  object-contain
-                  transition-all duration-300
-                "
-              />
+      <img
+        src="/logo_matei.svg"
+        alt="Matei"
+        className="
+          h-9 lg:h-11
+          w-auto
+          object-contain
+          transition-all duration-300
+        "
+      />
 
-              <h1
-                className={`
-                  text-xl lg:text-2xl
-                  font-semibold
-                  tracking-[0.35em]
-                  transition-all duration-300
+      <h1
+        className={`
+          flex items-center
+          leading-none
 
-                  ${
-                    scrolled
-                      ? "text-[var(--primary)] drop-shadow-[0_0_10px_rgba(116,32,105,0.25)]"
-                      : "text-white"
-                  }
-                `}
-              >
-                MATEI
-              </h1>
+          text-xl lg:text-2xl
+          font-semibold
 
-            </motion.div>
+          tracking-[0.35em]
 
-          </Link>
+          transition-all duration-300
 
-        </div>
+          ${
+            scrolled
+              ? "text-[var(--primary)] drop-shadow-[0_0_10px_rgba(116,32,105,0.25)]"
+              : "text-white"
+          }
+        `}
+      >
+        MATEI
+      </h1>
+
+    </motion.div>
+
+  </Link>
+
+</div>
 
 
         {/* LINKS */}
