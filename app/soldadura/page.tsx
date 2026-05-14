@@ -242,32 +242,8 @@ export default function UltrasonidoPage() {
           "
         >
           Solicitar información
-        </button>
-
-
-        <a
-          href="#beneficios"
-          className="
-          px-8
-          py-4
-
-          rounded-2xl
-
-          border
-          border-white/15
-
-          bg-white/5
-          backdrop-blur-md
-
-          hover:bg-white/10
-
-          transition-all
-          duration-300
-          "
-        >
-          Explorar tecnología
-        </a>
-
+        </button> 
+ 
       </div>
 
     </motion.div>
@@ -301,25 +277,7 @@ export default function UltrasonidoPage() {
         pointer-events-none
         "
       />
-
-      {/* Imagen */}
-      <img
-        src="/hero_soldadura.jpg"
-        alt="Soldadura ultrasónica"
-
-        className="
-        relative
-        z-10
-
-        w-full
-        max-w-[720px]
-
-        object-contain
-
-        drop-shadow-[0_0_60px_rgba(145,28,130,0.18)]
-        "
-      />
-
+ 
     </motion.div>
 
   </div>
