@@ -124,30 +124,27 @@ export default function Navbar() {
       animate={{ opacity: 1 }}
       className="flex items-center gap-3 cursor-pointer"
     >
-
-      <div className="relative -top-[2px]">
-
-        <img
-          src="/logo_matei.svg"
-          alt="Matei"
-          className="
-            h-9 lg:h-11
-            w-auto
-            object-contain
-            transition-all duration-300
-            block
-          "
-        />
-
-      </div>
-
+ 
+      <img
+        src="/logo_matei.svg"
+        alt="Matei"
+        className="
+          h-10 lg:h-12
+          w-auto
+          object-contain
+          block
+          relative
+          -top-[4px]
+        "
+      />
+ 
       <h1
         className={`
-        text-xl lg:text-2xl
-        font-semibold
-        tracking-[0.35em]
-        leading-none
-         transition-all duration-300
+          text-xl lg:text-2xl
+          font-semibold
+          tracking-[0.35em]
+          leading-none
+          transition-all duration-300
 
           ${
             scrolled
@@ -163,8 +160,7 @@ export default function Navbar() {
 
   </Link>
 
-</div>
-
+</div> 
 
         {/* LINKS */}
 
