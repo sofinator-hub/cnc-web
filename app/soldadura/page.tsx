@@ -44,7 +44,7 @@ export default function UltrasonidoPage() {
 
       <main className="relative z-10 text-white">
 
-{/* ================= HERO NUEVO ================= */}
+{/* ================= HERO SOLDADURA ================= */}
 <section
   className="
   relative
@@ -60,16 +60,20 @@ export default function UltrasonidoPage() {
 
     <img
       src="/hero_soldadura.jpg"
+      alt="Hero Soldadura"
+
       className="
       w-full
       h-full
+
       object-cover
       object-center
+
       brightness-110
       "
     />
 
-    {/* Overlay oscuro */}
+    {/* Overlay */}
     <div className="absolute inset-0 bg-black/40" />
 
     {/* Glow morado */}
@@ -77,18 +81,21 @@ export default function UltrasonidoPage() {
       className="
       absolute
       inset-0
+
       bg-[radial-gradient(circle_at_top_left,rgba(145,28,130,0.18),transparent_35%)]
       "
     />
 
-    {/* Fade inferior */}
+    {/* Fade bottom */}
     <div
       className="
       absolute
       bottom-0
       left-0
+
       w-full
       h-40
+
       bg-gradient-to-t
       from-black
       to-transparent
@@ -98,7 +105,7 @@ export default function UltrasonidoPage() {
   </div>
 
 
-  {/* CONTENT */}
+  {/* CONTENIDO */}
   <div
     className="
     relative
@@ -111,18 +118,19 @@ export default function UltrasonidoPage() {
     md:px-10
     lg:px-14
 
-    pt-28
-    pb-20
+    pt-32
+    pb-24
 
     grid
     lg:grid-cols-2
+
     gap-16
 
     items-center
     "
   >
 
-    {/* LEFT */}
+    {/* IZQUIERDA */}
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
@@ -147,11 +155,12 @@ export default function UltrasonidoPage() {
         backdrop-blur-md
 
         text-[#d86acc]
+
         text-xs
         md:text-sm
 
-        tracking-[0.25em]
         uppercase
+        tracking-[0.25em]
 
         mb-8
         "
@@ -160,25 +169,28 @@ export default function UltrasonidoPage() {
       </div>
 
 
-      {/* Title */}
+      {/* TÍTULO */}
       <h1
         className="
         text-5xl
-        md:text-7xl
-        xl:text-[7rem]
+        md:text-6xl
+        xl:text-[6.5rem]
 
         font-semibold
 
-        leading-tight
+        leading-[1.05]
 
         mb-8
         "
       >
+
         SOLDADURA
 
         <span
           className="
           block
+
+          mt-2
 
           text-transparent
           bg-clip-text
@@ -194,7 +206,7 @@ export default function UltrasonidoPage() {
       </h1>
 
 
-      {/* Description */}
+      {/* TEXTO */}
       <p
         className="
         text-white/75
@@ -214,7 +226,7 @@ export default function UltrasonidoPage() {
       </p>
 
 
-      {/* CTA */}
+      {/* BOTONES */}
       <div className="flex flex-wrap gap-5">
 
         <button
@@ -243,14 +255,14 @@ export default function UltrasonidoPage() {
           "
         >
           Solicitar información
-        </button>
-        
+        </button> 
+
       </div>
 
     </motion.div>
 
 
-    {/* RIGHT */}
+    {/* DERECHA */}
     <motion.div
       initial={{ opacity: 0, scale: 0.94 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -271,6 +283,7 @@ export default function UltrasonidoPage() {
         inset-0
 
         bg-[#911C82]/15
+
         blur-[120px]
 
         scale-90
@@ -284,8 +297,7 @@ export default function UltrasonidoPage() {
   </div>
 
 </section>
-
-
+ 
         {/* ================= EXPLICACIÓN ================= */}
         <section className="px-6 md:px-20 py-24">
 
