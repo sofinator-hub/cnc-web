@@ -170,40 +170,41 @@ export default function UltrasonidoPage() {
 
 
       {/* TÍTULO */}
-      <h1
-        className="
-        text-5xl
-        md:text-6xl
-        xl:text-[6.5rem]
+<h1
+  className="
+  text-5xl
+  md:text-6xl
+  xl:text-[6.5rem]
 
-        font-semibold
+  font-semibold
 
-        leading-[1.05]
+  leading-[1.15]
 
-        mb-8
-        "
-      >
+  mb-8
+  "
+>
 
-        SOLDADURA
+  SOLDADURA
 
-        <span
-          className="
-          block
+  <span
+    className="
+    block
 
-          mt-2
+    mt-2
+    pb-4
 
-          text-transparent
-          bg-clip-text
+    text-transparent
+    bg-clip-text
 
-          bg-gradient-to-r
-          from-[#d86acc]
-          to-[#911C82]
-          "
-        >
-          ULTRASÓNICA
-        </span>
+    bg-gradient-to-r
+    from-[#d86acc]
+    to-[#911C82]
+    "
+  >
+    ULTRASÓNICA
+  </span>
 
-      </h1>
+</h1>
 
 
       {/* TEXTO */}
