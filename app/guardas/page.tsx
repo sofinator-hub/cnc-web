@@ -13,7 +13,7 @@ import {
   ScanSearch,
   Layers3,
 } from "lucide-react";
- 
+
 const benefits = [
   "Alta resistencia",
   "Durabilidad industrial",
@@ -52,10 +52,10 @@ export default function GuardasPage() {
     <>
       <MobileMenu />
 
-      {/* ================= FONDO ================= */}
+      {/* ================= FONDO GLOBAL ================= */}
       <div className="fixed inset-0 -z-10">
         <img
-          src="/fondo_guarda.jpg"
+          src="/fondo_blanco.jpg"
           className="w-full h-full object-cover"
         />
       </div>
@@ -72,24 +72,10 @@ export default function GuardasPage() {
           />
 
           {/* OVERLAY */}
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-black/55" />
 
           {/* GLOW */}
-          <div className="absolute top-1/2 right-[-10%] -translate-y-1/2 w-[900px] h-[350px] bg-[#8C1C7D]/20 blur-[160px] rounded-full" />
-
-          <div className="absolute bottom-[-20%] left-[10%] w-[500px] h-[200px] bg-[#542b7c]/20 blur-[120px] rounded-full" />
-
-          {/* GRID */}
-          <div className="absolute inset-0 opacity-[0.06]">
-            <div
-              className="w-full h-full"
-              style={{
-                backgroundImage:
-                  "linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px)",
-                backgroundSize: "80px 80px",
-              }}
-            />
-          </div>
+          <div className="absolute top-1/2 right-[-10%] -translate-y-1/2 w-[850px] h-[280px] bg-[#8C1C7D]/10 blur-[140px] rounded-full" />
 
           {/* CONTENIDO */}
           <div className="relative z-10 h-full flex items-center px-6 md:px-14">
@@ -97,24 +83,23 @@ export default function GuardasPage() {
             <motion.div
               initial={{ opacity: 0, y: 35 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9 }}
-              className="max-w-[620px]"
+              transition={{ duration: 0.8 }}
+              className="max-w-[520px]"
             >
 
               <p className="uppercase tracking-[0.45em] text-xs text-white/70 mb-8">
                 Seguridad industrial
               </p>
 
-              <h1 className="text-[58px] md:text-[108px] leading-[0.9] font-light text-white mb-8">
+              <h1 className="text-[58px] md:text-[96px] leading-[0.9] font-light text-white mb-8">
                 Guardas
                 <br />
                 industriales
               </h1>
 
-              <p className="text-white/80 text-lg md:text-xl leading-relaxed max-w-[520px]">
-                Sistemas de protección industrial diseñados
-                para maquinaria, automatización y entornos
-                de alta exigencia operativa.
+              <p className="text-white/80 text-lg leading-relaxed">
+                Sistemas de protección para maquinaria,
+                automatización y procesos industriales.
               </p>
 
             </motion.div>
@@ -150,8 +135,8 @@ export default function GuardasPage() {
 
                 <p className="text-gray-600 text-lg leading-relaxed max-w-[460px]">
                   Diseñamos y fabricamos guardas industriales
-                  integradas a procesos automatizados,
-                  robots y maquinaria especializada.
+                  que se integran a tus equipos,
+                  cumpliendo con altos estándares de seguridad y calidad.
                 </p>
 
               </div>
@@ -160,56 +145,77 @@ export default function GuardasPage() {
 
 
             {/* FEATURES */}
-            <div className="grid md:grid-cols-4 gap-10 border-t border-black/10 pt-16">
+            <div className="grid md:grid-cols-3 gap-10 border-t border-black/10 pt-16">
 
-              {[
-                {
-                  icon: Shield,
-                  title: "Protección",
-                  desc: "Seguridad para operadores y maquinaria industrial.",
-                },
-                {
-                  icon: Grid2X2,
-                  title: "Modularidad",
-                  desc: "Diseños adaptables a múltiples procesos industriales.",
-                },
-                {
-                  icon: Cog,
-                  title: "Integración",
-                  desc: "Compatibilidad con automatización y líneas productivas.",
-                },
-                {
-                  icon: Factory,
-                  title: "Fabricación",
-                  desc: "Materiales industriales de alta durabilidad.",
-                },
-              ].map((item, index) => (
+              {/* ITEM */}
+              <motion.div
+                whileHover={{ y: -6 }}
+                className="pr-6 md:border-r border-black/10"
+              >
 
-                <motion.div
-                  key={index}
-                  whileHover={{ y: -8 }}
-                  className="group relative overflow-hidden border border-black/5 rounded-[22px] p-8 bg-white/60 backdrop-blur-xl"
-                >
+                <Shield
+                  size={34}
+                  strokeWidth={1.3}
+                  className="mb-8 text-[#8C1C7D]"
+                />
 
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#8C1C7D]/0 to-[#8C1C7D]/5 opacity-0 group-hover:opacity-100 transition duration-500" />
+                <h3 className="uppercase tracking-[0.3em] text-xs mb-6">
+                  Protección
+                </h3>
 
-                  <item.icon
-                    size={34}
-                    strokeWidth={1.3}
-                    className="mb-8 text-[#8C1C7D] relative z-10"
-                  />
+                <p className="text-gray-600 leading-relaxed">
+                  Sistemas diseñados para proteger
+                  operadores y maquinaria industrial.
+                </p>
 
-                  <h3 className="uppercase tracking-[0.3em] text-xs mb-5 relative z-10">
-                    {item.title}
-                  </h3>
+              </motion.div>
 
-                  <p className="text-gray-600 leading-relaxed relative z-10">
-                    {item.desc}
-                  </p>
 
-                </motion.div>
+              {/* ITEM */}
+              <motion.div
+                whileHover={{ y: -6 }}
+                className="pr-6 md:border-r border-black/10"
+              >
 
-              ))}
+                <Grid2X2
+                  size={34}
+                  strokeWidth={1.3}
+                  className="mb-8 text-[#8C1C7D]"
+                />
+
+                <h3 className="uppercase tracking-[0.3em] text-xs mb-6">
+                  Modularidad
+                </h3>
+
+                <p className="text-gray-600 leading-relaxed">
+                  Diseños modulares adaptados
+                  a diferentes procesos y espacios.
+                </p>
+
+              </motion.div>
+
+
+              {/* ITEM */}
+              <motion.div
+                whileHover={{ y: -6 }}
+              >
+
+                <Cog
+                  size={34}
+                  strokeWidth={1.3}
+                  className="mb-8 text-[#8C1C7D]"
+                />
+
+                <h3 className="uppercase tracking-[0.3em] text-xs mb-6">
+                  Integración
+                </h3>
+
+                <p className="text-gray-600 leading-relaxed">
+                  Integración precisa con maquinaria
+                  y líneas de producción.
+                </p>
+
+              </motion.div>
 
             </div>
 
@@ -229,7 +235,7 @@ export default function GuardasPage() {
               <motion.div
                 whileHover={{ scale: 1.01 }}
                 transition={{ duration: 0.4 }}
-                className="relative overflow-hidden rounded-[18px]"
+                className="relative overflow-hidden rounded-[10px]"
               >
 
                 {/* GLOW */}
@@ -258,8 +264,7 @@ export default function GuardasPage() {
                 <p className="text-gray-600 text-lg leading-relaxed mb-12 max-w-[520px]">
                   Cada proyecto es desarrollado según
                   los requerimientos de tu operación,
-                  garantizando funcionalidad, integración
-                  y durabilidad industrial.
+                  garantizando funcionalidad y durabilidad.
                 </p>
 
                 {/* LISTA */}
@@ -267,8 +272,8 @@ export default function GuardasPage() {
 
                   {[
                     "Análisis y diseño",
-                    "Cumplimiento con normativas",
-                    "Acabados industriales",
+                    "Cumplimiento con normativas nacionales e internacionales",
+                    "Acabados de alta calidad",
                     "Instalación y soporte técnico",
                   ].map((item, index) => (
 
@@ -288,6 +293,115 @@ export default function GuardasPage() {
                 </div>
 
               </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        {/* ================= GALERÍA ================= */}
+        <section className="px-6 md:px-14 py-24">
+
+          <div className="max-w-[1500px] mx-auto border-t border-black/10 pt-20">
+
+            {/* HEADER */}
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10 mb-16">
+
+              <div>
+
+                <p className="uppercase tracking-[0.4em] text-xs text-gray-400 mb-6">
+                  Proyectos
+                </p>
+
+                <h2 className="text-[42px] md:text-[72px] leading-[0.95] font-light">
+                  Galería de
+                  guardas
+                </h2>
+
+              </div>
+
+              <p className="text-gray-600 text-lg leading-relaxed max-w-[420px]">
+                Sistemas de protección industrial desarrollados
+                para seguridad, automatización y operación eficiente.
+              </p>
+
+            </div>
+
+
+            {/* GRID */}
+            <div className="grid grid-cols-2 gap-4">
+
+              {[
+                "/guarda1.jpg",
+                "/guarda2.jpg",
+                "/guarda3.jpg",
+                "/guarda4.jpg",
+              ].map((image, i) => (
+
+                <motion.div
+                  key={i}
+                  whileHover={{ y: -4 }}
+                  transition={{ duration: 0.35 }}
+                  className="
+                    relative
+                    overflow-hidden
+                    rounded-[18px]
+                    group
+                    bg-white
+                  "
+                >
+
+                  <div
+                    className="
+                      w-full
+                      h-[260px] md:h-[340px]
+
+                      flex items-center justify-center
+
+                      overflow-hidden
+                    "
+                  >
+
+                    <img
+                      src={image}
+                      className="
+                        max-w-full
+                        max-h-full
+
+                        object-contain
+
+                        transition duration-700
+                        group-hover:scale-[1.03]
+                      "
+                    />
+
+                  </div>
+
+                  {/* OVERLAY */}
+                  <div className="
+                    absolute inset-0
+
+                    bg-black/5
+                    group-hover:bg-black/0
+
+                    transition duration-500
+                  " />
+
+                  {/* BORDE */}
+                  <div className="
+                    absolute inset-0
+
+                    border border-[#8C1C7D]/0
+                    group-hover:border-[#8C1C7D]/20
+
+                    transition duration-500
+                  " />
+
+                </motion.div>
+
+              ))}
 
             </div>
 
@@ -416,123 +530,10 @@ export default function GuardasPage() {
           </div>
 
         </section>
-
-
-        {/* ================= GALERÍA ================= */}
-        <section className="px-6 md:px-14 py-24">
-
-          <div className="max-w-[1500px] mx-auto border-t border-black/10 pt-20">
-
-            {/* HEADER */}
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10 mb-16">
-
-              <div>
-
-                <p className="uppercase tracking-[0.4em] text-xs text-gray-400 mb-6">
-                  Proyectos
-                </p>
-
-                <h2 className="text-[42px] md:text-[72px] leading-[0.95] font-light">
-                  Galería de
-                  guardas
-                </h2>
-
-              </div>
-
-              <p className="text-gray-600 text-lg leading-relaxed max-w-[420px]">
-                Sistemas de protección industrial desarrollados
-                para seguridad, automatización y operación eficiente.
-              </p>
-
-            </div>
-
-
-            {/* GRID ORIGINAL */}
-            <div className="grid grid-cols-2 gap-4">
-
-              {[
-                "/guarda1.jpg",
-                "/guarda2.jpg",
-                "/guarda3.jpg",
-                "/guarda4.jpg",
-                "/guarda5.jpg",
-                "/guarda6.jpg",
-                "/guarda7.jpg",
-                "/guarda8.jpg",
-              ].map((image, i) => (
-
-                <motion.div
-                  key={i}
-                  whileHover={{ y: -4 }}
-                  transition={{ duration: 0.35 }}
-                  className="
-                    relative
-                    overflow-hidden
-                    rounded-[18px]
-                    group
-                    bg-white
-                  "
-                >
-
-                  <div
-                    className="
-                      w-full
-                      h-[260px] md:h-[340px]
-
-                      flex items-center justify-center
-
-                      overflow-hidden
-                    "
-                  >
-
-                    <img
-                      src={image}
-                      className="
-                        max-w-full
-                        max-h-full
-
-                        object-contain
-
-                        transition duration-700
-                        group-hover:scale-[1.03]
-                      "
-                    />
-
-                  </div>
-
-                  {/* OVERLAY */}
-                  <div className="
-                    absolute inset-0
-
-                    bg-black/5
-                    group-hover:bg-black/0
-
-                    transition duration-500
-                  " />
-
-                  {/* BORDE */}
-                  <div className="
-                    absolute inset-0
-
-                    border border-[#8C1C7D]/0
-                    group-hover:border-[#8C1C7D]/20
-
-                    transition duration-500
-                  " />
-
-                </motion.div>
-
-              ))}
-
-            </div>
-
-          </div>
-
-        </section>
-
+ 
 
         {/* ================= STATS ================= */}
-        <section className="px-6 md:px-14 py-28">
+        <section className="px-6 md:px-14 pb-28">
 
           <div className="max-w-[1500px] mx-auto">
 
@@ -625,9 +626,9 @@ export default function GuardasPage() {
               <div>
 
                 <p className="text-gray-600 text-lg leading-relaxed max-w-[420px] mb-12">
-                  Desarrollamos sistemas industriales
-                  que impulsan seguridad, automatización
-                  y eficiencia operativa.
+                  Desarrollamos sistemas de guardas industriales
+                  que impulsan la seguridad y eficiencia
+                  de tu operación.
                 </p>
 
                 <button
