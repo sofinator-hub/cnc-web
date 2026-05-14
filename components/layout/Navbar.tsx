@@ -150,11 +150,11 @@ export default function Navbar() {
           leading-none
           transition-all duration-300
 
-          ${
-            scrolled
-              ? "text-[var(--primary)] drop-shadow-[0_0_10px_rgba(116,32,105,0.25)]"
-              : "text-white"
-          }
+${
+  scrolled
+    ? "text-[var(--primary)] drop-shadow-[0_0_10px_rgba(116,32,105,0.25)]"
+    : "text-gray-300"
+}
         `}
       >
         MATEI
