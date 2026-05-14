@@ -4,48 +4,12 @@ import { motion } from "framer-motion";
 import MobileMenu from "@/components/layout/MobileMenu";
 
 import {
-  Shield,
-  Grid2X2,
-  Cog,
-  ArrowUpRight,
-  Factory,
-  Wrench,
-  ScanSearch,
-  Layers3,
-} from "lucide-react";
+   Shield,
+   Grid2X2,
+   Cog,
+   ArrowUpRight,
 
-const benefits = [
-  "Alta resistencia",
-  "Durabilidad industrial",
-  "Adaptable a procesos",
-  "Fácil reubicación",
-  "Visibilidad operativa",
-  "Resistencia mecánica",
-];
-
-const process = [
-  {
-    title: "Análisis",
-    desc: "Evaluamos requerimientos técnicos y riesgos operativos.",
-  },
-  {
-    title: "Diseño",
-    desc: "Desarrollamos soluciones personalizadas y modulares.",
-  },
-  {
-    title: "Fabricación",
-    desc: "Producción con materiales industriales de alta calidad.",
-  },
-  {
-    title: "Instalación",
-    desc: "Montaje e integración en planta y líneas de producción.",
-  },
-  {
-    title: "Soporte",
-    desc: "Acompañamiento técnico y mantenimiento especializado.",
-  },
-];
-
+  } from "lucide-react";
 export default function GuardasPage() {
 
   return (
@@ -300,112 +264,89 @@ export default function GuardasPage() {
 
         </section>
 
-{/* GRID */}
-<div className="grid grid-cols-2 gap-4">
 
-  {[
-    "/guarda1.jpg",
-    "/guarda2.jpg",
-    "/guarda3.jpg",
-    "/guarda4.jpg",
-  ].map((image, i) => {
-    return (
+        {/* ================= GALERÍA ================= */}
+        <section className="px-6 md:px-14 py-24">
 
-      <motion.div
-        key={i}
-        whileHover={{ y: -4 }}
-        transition={{ duration: 0.35 }}
-        className="
-          relative
-          overflow-hidden
-          rounded-[18px]
-          group
-          bg-[#f7f7f7]
-        "
-      >
+          <div className="max-w-[1500px] mx-auto border-t border-black/10 pt-20">
 
-        <div
-          className="
-            relative
-            w-full
-            h-[260px] md:h-[340px]
-            overflow-hidden
-          "
-        >
+            {/* HEADER */}
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10 mb-16">
 
-          {/* IMAGEN COVER */}
-          <img
-            src={image}
-            className="
-              absolute inset-0
+              <div>
 
-              w-full
-              h-full
+                <p className="uppercase tracking-[0.4em] text-xs text-gray-400 mb-6">
+                  Proyectos
+                </p>
 
-              object-cover
+                <h2 className="text-[42px] md:text-[72px] leading-[0.95] font-light">
+                  Galería de
+                  guardas
+                </h2>
 
-              transition-all
-              duration-700
+              </div>
 
-              group-hover:opacity-0
-              group-hover:scale-[1.05]
-            "
-          />
+              <p className="text-gray-600 text-lg leading-relaxed max-w-[420px]">
+                Sistemas de protección industrial desarrollados
+                para seguridad, automatización y operación eficiente.
+              </p>
 
-          {/* IMAGEN COMPLETA */}
-          <img
-            src={image}
-            className="
-              absolute inset-0
+            </div>
 
-              w-full
-              h-full
 
-              object-contain
+            {/* GRID */}
+            <div className="grid grid-cols-2 gap-6">
 
-              opacity-0
-              scale-90
+              {[
+                "/guarda1.jpg",
+                "/guarda2.jpg",
+                "/guarda3.jpg",
+                "/guarda4.jpg",
+              ].map((image, i) => {
+                return (
 
-              transition-all
-              duration-700
+                  <div
+                    key={i}
+                    className="
+                      relative
+                      overflow-hidden
+                      rounded-[18px]
+                      bg-[#f8f8f8]
+                      border border-black/5
+                    "
+                  >
 
-              group-hover:opacity-100
-              group-hover:scale-100
-            "
-          />
+                    <div
+                      className="
+                        w-full
+                        h-[420px] md:h-[520px]
+                        p-6
+                      "
+                    >
 
-        </div>
+                      <img
+                        src={image}
+                        className="
+                          w-full
+                          h-full
+                          object-contain
+                        "
+                      />
 
-        {/* OVERLAY */}
-        <div
-          className="
-            absolute inset-0
+                    </div>
 
-            bg-black/5
-            group-hover:bg-black/0
+                  </div>
 
-            transition duration-500
-          "
-        />
+                );
+              })}
 
-        {/* BORDE */}
-        <div
-          className="
-            absolute inset-0
+            </div>
 
-            border border-[#8C1C7D]/0
-            group-hover:border-[#8C1C7D]/20
+          </div>
 
-            transition duration-500
-          "
-        />
+        </section>
 
-      </motion.div>
 
-    );
-  })}
-
-</div>
         {/* ================= CTA FINAL ================= */}
         <section className="px-6 md:px-14 py-24">
 
