@@ -300,112 +300,112 @@ export default function GuardasPage() {
 
         </section>
 
+{/* GRID */}
+<div className="grid grid-cols-2 gap-4">
 
-        {/* ================= GALERÍA ================= */}
-        <section className="px-6 md:px-14 py-24">
+  {[
+    "/guarda1.jpg",
+    "/guarda2.jpg",
+    "/guarda3.jpg",
+    "/guarda4.jpg",
+  ].map((image, i) => {
+    return (
 
-          <div className="max-w-[1500px] mx-auto border-t border-black/10 pt-20">
+      <motion.div
+        key={i}
+        whileHover={{ y: -4 }}
+        transition={{ duration: 0.35 }}
+        className="
+          relative
+          overflow-hidden
+          rounded-[18px]
+          group
+          bg-[#f7f7f7]
+        "
+      >
 
-            {/* HEADER */}
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10 mb-16">
+        <div
+          className="
+            relative
+            w-full
+            h-[260px] md:h-[340px]
+            overflow-hidden
+          "
+        >
 
-              <div>
+          {/* IMAGEN COVER */}
+          <img
+            src={image}
+            className="
+              absolute inset-0
 
-                <p className="uppercase tracking-[0.4em] text-xs text-gray-400 mb-6">
-                  Proyectos
-                </p>
+              w-full
+              h-full
 
-                <h2 className="text-[42px] md:text-[72px] leading-[0.95] font-light">
-                  Galería de
-                  guardas
-                </h2>
+              object-cover
 
-              </div>
+              transition-all
+              duration-700
 
-              <p className="text-gray-600 text-lg leading-relaxed max-w-[420px]">
-                Sistemas de protección industrial desarrollados
-                para seguridad, automatización y operación eficiente.
-              </p>
+              group-hover:opacity-0
+              group-hover:scale-[1.05]
+            "
+          />
 
-            </div>
+          {/* IMAGEN COMPLETA */}
+          <img
+            src={image}
+            className="
+              absolute inset-0
 
+              w-full
+              h-full
 
-            {/* GRID */}
-            <div className="grid grid-cols-2 gap-4">
+              object-contain
 
-              {[
-                "/guarda1.jpg",
-                "/guarda2.jpg",
-                "/guarda3.jpg",
-                "/guarda4.jpg",
-              ].map((image, i) => {
-                return (
+              opacity-0
+              scale-90
 
-                  <motion.div
-                    key={i}
-                    whileHover={{ y: -4 }}
-                    transition={{ duration: 0.35 }}
-                    className="
-                      relative
-                      overflow-hidden
-                      rounded-[18px]
-                      group
-                      bg-white
-                    "
-                  >
+              transition-all
+              duration-700
 
-                    <div
-                      className="
-                        w-full
-                        h-[260px] md:h-[340px]
-                        overflow-hidden
-                      "
-                    >
+              group-hover:opacity-100
+              group-hover:scale-100
+            "
+          />
 
-                      <img
-                        src={image}
-                        className="
-                          w-full
-                          h-full
-                          object-cover
-                          transition duration-700
-                          group-hover:scale-[1.05]
-                        "
-                      />
+        </div>
 
-                    </div>
+        {/* OVERLAY */}
+        <div
+          className="
+            absolute inset-0
 
-                    {/* OVERLAY */}
-                    <div
-                      className="
-                        absolute inset-0
-                        bg-black/5
-                        group-hover:bg-black/0
-                        transition duration-500
-                      "
-                    />
+            bg-black/5
+            group-hover:bg-black/0
 
-                    {/* BORDE */}
-                    <div
-                      className="
-                        absolute inset-0
-                        border border-[#8C1C7D]/0
-                        group-hover:border-[#8C1C7D]/20
-                        transition duration-500
-                      "
-                    />
+            transition duration-500
+          "
+        />
 
-                  </motion.div>
+        {/* BORDE */}
+        <div
+          className="
+            absolute inset-0
 
-                );
-              })}
+            border border-[#8C1C7D]/0
+            group-hover:border-[#8C1C7D]/20
 
-            </div>
+            transition duration-500
+          "
+        />
 
-          </div>
+      </motion.div>
 
-        </section>
- 
+    );
+  })}
+
+</div>
         {/* ================= CTA FINAL ================= */}
         <section className="px-6 md:px-14 py-24">
 
