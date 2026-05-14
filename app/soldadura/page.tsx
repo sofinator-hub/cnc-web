@@ -193,12 +193,7 @@ export default function UltrasonidoPage() {
     mt-2
     pb-4
 
-    text-transparent
-    bg-clip-text
-
-    bg-gradient-to-r
-    from-[#d86acc]
-    to-[#911C82]
+    text-[#d86acc]
     "
   >
     ULTRASÓNICA
