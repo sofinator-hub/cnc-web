@@ -82,7 +82,9 @@ export default function Navbar() {
     `relative transition-all duration-300 ${
       isActive(section)
         ? "text-[var(--primary)] font-semibold"
-        : "text-gray-500 hover:text-[var(--primary)]"
+        : scrolled
+        ? "text-gray-600 hover:text-[var(--primary)]"
+        : "text-white/80 hover:text-white"
     }`;
 
 
@@ -104,12 +106,10 @@ export default function Navbar() {
 
       <div
         className="
-          max-w-7xl mx-auto
-
-          px-6 lg:px-10
-          py-4
-
-          flex items-center justify-between
+        max-w-7xl mx-auto
+        px-6 lg:px-10
+        py-4
+        flex items-center justify-between
         "
       >
 
@@ -119,28 +119,41 @@ export default function Navbar() {
 
           <Link href="/">
 
-            <motion.h1
-              className={`
-                cursor-pointer
-
-                text-xl lg:text-2xl
-                font-semibold
-
-                tracking-[0.35em]
-
-                transition-all duration-300
-
-                ${
-                  scrolled
-                    ? "text-[var(--primary)] drop-shadow-[0_0_10px_rgba(116,32,105,0.25)]"
-                    : "text-white"
-                }
-              `}
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
+              className="flex items-center gap-3 cursor-pointer"
             >
-              MATEI
-            </motion.h1>
+
+              <img
+                src="/logo_matei.svg"
+                alt="Matei"
+                className="
+                  h-10 lg:h-12
+                  w-auto
+                  object-contain
+                  transition-all duration-300
+                "
+              />
+
+              <h1
+                className={`
+                  text-xl lg:text-2xl
+                  font-semibold
+                  tracking-[0.35em]
+                  transition-all duration-300
+
+                  ${
+                    scrolled
+                      ? "text-[var(--primary)] drop-shadow-[0_0_10px_rgba(116,32,105,0.25)]"
+                      : "text-white"
+                  }
+                `}
+              >
+                MATEI
+              </h1>
+
+            </motion.div>
 
           </Link>
 
@@ -151,13 +164,10 @@ export default function Navbar() {
 
         <ul
           className="
-            hidden lg:flex
-
-            items-center
-
-            gap-10 lg:gap-12
-
-            text-sm
+           hidden lg:flex
+          items-center
+          gap-10 lg:gap-12
+          text-sm
             whitespace-nowrap
           "
         >
@@ -187,7 +197,10 @@ export default function Navbar() {
 
             ) : (
 
-              <Link href="/#servicios">
+              <Link
+                href="/#servicios"
+                className={linkStyle("servicios")}
+              >
                 Servicios
               </Link>
 
@@ -209,7 +222,10 @@ export default function Navbar() {
 
             ) : (
 
-              <Link href="/#galeria">
+              <Link
+                href="/#galeria"
+                className={linkStyle("galeria")}
+              >
                 Galería
               </Link>
 
@@ -223,19 +239,13 @@ export default function Navbar() {
             <Link
               href="/ai"
               className="
-                purple-gradient
-
-                text-white
-
-                px-5 py-2
-
-                rounded-xl
-
-                purple-glow
-
-                hover:scale-105
-
-                transition-all duration-300
+                 purple-gradient
+                 text-white
+                 px-5 py-2
+                 rounded-xl
+                 purple-glow
+                 hover:scale-105
+                 transition-all duration-300
               "
             >
               Generador
