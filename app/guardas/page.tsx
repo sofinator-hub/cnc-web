@@ -13,30 +13,7 @@ import {
   ScanSearch,
   Layers3,
 } from "lucide-react";
-
-const categories = [
-  {
-    title: "Guardas perimetrales",
-    desc: "Sistemas modulares de protección para robots y maquinaria automatizada.",
-    image: "/guarda1.jpg",
-  },
-  {
-    title: "Cabinas 360°",
-    desc: "Cabinas cerradas para máxima seguridad y visibilidad operativa.",
-    image: "/guarda2.jpg",
-  },
-  {
-    title: "Acceso rotatorio",
-    desc: "Mecanismos industriales de acceso controlado y seguro.",
-    image: "/guarda3.jpg",
-  },
-  {
-    title: "Cabinas de acero",
-    desc: "Estructuras resistentes para procesos industriales exigentes.",
-    image: "/guarda4.jpg",
-  },
-];
-
+ 
 const benefits = [
   "Alta resistencia",
   "Durabilidad industrial",
@@ -69,7 +46,8 @@ const process = [
   },
 ];
 
- export default function GuardasPage() {
+export default function GuardasPage() {
+
   return (
     <>
       <MobileMenu />
@@ -77,7 +55,7 @@ const process = [
       {/* ================= FONDO ================= */}
       <div className="fixed inset-0 -z-10">
         <img
-          src="/fondo_blanco.jpg"
+          src="/fondo_guarda.jpg"
           className="w-full h-full object-cover"
         />
       </div>
@@ -87,17 +65,19 @@ const process = [
         {/* ================= HERO ================= */}
         <section className="relative h-screen overflow-hidden">
 
-           <img
+          {/* IMAGEN */}
+          <img
             src="/fondo_guardas.jpg"
             className="absolute inset-0 w-full h-full object-cover"
-           />
+          />
 
+          {/* OVERLAY */}
           <div className="absolute inset-0 bg-black/60" />
 
-          {/* GLOWS */}
-          <div className="absolute top-1/2 right-[-10%] -translate-y-1/2 w-[900px] h-[350px] bg-blue-500/20 blur-[160px] rounded-full" />
+          {/* GLOW */}
+          <div className="absolute top-1/2 right-[-10%] -translate-y-1/2 w-[900px] h-[350px] bg-[#8C1C7D]/20 blur-[160px] rounded-full" />
 
-          <div className="absolute bottom-[-20%] left-[10%] w-[500px] h-[200px] bg-cyan-400/10 blur-[120px] rounded-full" />
+          <div className="absolute bottom-[-20%] left-[10%] w-[500px] h-[200px] bg-[#542b7c]/20 blur-[120px] rounded-full" />
 
           {/* GRID */}
           <div className="absolute inset-0 opacity-[0.06]">
@@ -111,6 +91,7 @@ const process = [
             />
           </div>
 
+          {/* CONTENIDO */}
           <div className="relative z-10 h-full flex items-center px-6 md:px-14">
 
             <motion.div
@@ -148,7 +129,8 @@ const process = [
 
           <div className="max-w-[1500px] mx-auto">
 
-           <div className="grid md:grid-cols-2 gap-14 mb-24">
+            {/* TOP */}
+            <div className="grid md:grid-cols-2 gap-14 mb-24">
 
               <div>
 
@@ -202,18 +184,19 @@ const process = [
                   desc: "Materiales industriales de alta durabilidad.",
                 },
               ].map((item, index) => (
+
                 <motion.div
                   key={index}
                   whileHover={{ y: -8 }}
                   className="group relative overflow-hidden border border-black/5 rounded-[22px] p-8 bg-white/60 backdrop-blur-xl"
                 >
 
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-500/5 opacity-0 group-hover:opacity-100 transition duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#8C1C7D]/0 to-[#8C1C7D]/5 opacity-0 group-hover:opacity-100 transition duration-500" />
 
                   <item.icon
                     size={34}
                     strokeWidth={1.3}
-                    className="mb-8 text-blue-500 relative z-10"
+                    className="mb-8 text-[#8C1C7D] relative z-10"
                   />
 
                   <h3 className="uppercase tracking-[0.3em] text-xs mb-5 relative z-10">
@@ -225,6 +208,7 @@ const process = [
                   </p>
 
                 </motion.div>
+
               ))}
 
             </div>
@@ -234,74 +218,76 @@ const process = [
         </section>
 
 
-        {/* ================= TIPOS ================= */}
+        {/* ================= INFO ================= */}
         <section className="px-6 md:px-14 py-20">
 
           <div className="max-w-[1500px] mx-auto border-t border-black/10 pt-20">
 
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10 mb-16">
+            <div className="grid md:grid-cols-2 gap-20 items-center">
 
+              {/* IMAGEN */}
+              <motion.div
+                whileHover={{ scale: 1.01 }}
+                transition={{ duration: 0.4 }}
+                className="relative overflow-hidden rounded-[18px]"
+              >
+
+                {/* GLOW */}
+                <div className="absolute inset-0 bg-[#8C1C7D]/10 blur-3xl scale-110" />
+
+                <img
+                  src="/guardas_detalle.jpg"
+                  className="relative w-full h-[340px] md:h-[520px] object-cover grayscale hover:grayscale-0 transition duration-700"
+                />
+
+              </motion.div>
+
+
+              {/* TEXTO */}
               <div>
 
-                <p className="uppercase tracking-[0.4em] text-xs text-gray-400 mb-6">
-                  Catálogo
+                <p className="uppercase tracking-[0.4em] text-xs text-gray-400 mb-8">
+                  Diseño y fabricación
                 </p>
 
-                <h2 className="text-[44px] md:text-[76px] leading-[0.95] font-light">
-                  Tipos de
-                  guardas
+                <h2 className="text-[42px] md:text-[64px] leading-[1] font-light mb-8">
+                  Soluciones
+                  a la medida
                 </h2>
 
-              </div>
+                <p className="text-gray-600 text-lg leading-relaxed mb-12 max-w-[520px]">
+                  Cada proyecto es desarrollado según
+                  los requerimientos de tu operación,
+                  garantizando funcionalidad, integración
+                  y durabilidad industrial.
+                </p>
 
-              <p className="text-gray-600 text-lg leading-relaxed max-w-[420px]">
-                Soluciones industriales adaptadas
-                a distintos entornos y procesos productivos.
-              </p>
+                {/* LISTA */}
+                <div className="space-y-5">
 
-            </div>
+                  {[
+                    "Análisis y diseño",
+                    "Cumplimiento con normativas",
+                    "Acabados industriales",
+                    "Instalación y soporte técnico",
+                  ].map((item, index) => (
 
+                    <div
+                      key={index}
+                      className="flex items-center gap-4 text-gray-700"
+                    >
 
-            <div className="space-y-8">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#8C1C7D]" />
 
-              {categories.map((item, i) => (
-
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.7 }}
-                  whileHover={{ scale: 1.01 }}
-                  className="group relative overflow-hidden rounded-[28px]"
-                >
-
-                  <div className="absolute inset-0 bg-black/40 z-10" />
-
-                  <img
-                    src={item.image}
-                    className="w-full h-[340px] md:h-[500px] object-cover group-hover:scale-[1.04] transition duration-[1800ms]"
-                  />
-
-                  <div className="absolute inset-0 z-20 p-8 md:p-14 flex flex-col justify-end">
-
-                    <div className="max-w-[560px]">
-
-                      <h3 className="text-white text-[36px] md:text-[58px] font-light leading-none mb-6">
-                        {item.title}
-                      </h3>
-
-                      <p className="text-white/75 text-lg leading-relaxed">
-                        {item.desc}
-                      </p>
+                      {item}
 
                     </div>
 
-                  </div>
+                  ))}
 
-                </motion.div>
+                </div>
 
-              ))}
+              </div>
 
             </div>
 
@@ -313,11 +299,12 @@ const process = [
         {/* ================= BENEFICIOS ================= */}
         <section className="relative bg-black overflow-hidden py-28">
 
+          {/* GLOWS */}
           <div className="absolute inset-0">
 
-            <div className="absolute top-[20%] left-[10%] w-[500px] h-[300px] bg-blue-500/20 blur-[140px]" />
+            <div className="absolute top-[20%] left-[10%] w-[500px] h-[300px] bg-[#8C1C7D]/20 blur-[140px]" />
 
-            <div className="absolute bottom-[10%] right-[5%] w-[400px] h-[220px] bg-cyan-500/10 blur-[120px]" />
+            <div className="absolute bottom-[10%] right-[5%] w-[400px] h-[220px] bg-[#542b7c]/20 blur-[120px]" />
 
           </div>
 
@@ -408,7 +395,7 @@ const process = [
                   className="relative"
                 >
 
-                  <div className="text-blue-500/20 text-6xl font-light mb-8">
+                  <div className="text-[#8C1C7D]/20 text-6xl font-light mb-8">
                     0{i + 1}
                   </div>
 
@@ -432,11 +419,12 @@ const process = [
 
 
         {/* ================= GALERÍA ================= */}
-        <section className="px-6 md:px-14 py-10">
+        <section className="px-6 md:px-14 py-24">
 
           <div className="max-w-[1500px] mx-auto border-t border-black/10 pt-20">
 
-             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10 mb-16">
+            {/* HEADER */}
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10 mb-16">
 
               <div>
 
@@ -445,44 +433,92 @@ const process = [
                 </p>
 
                 <h2 className="text-[42px] md:text-[72px] leading-[0.95] font-light">
-                  Galería
-                  industrial
+                  Galería de
+                  guardas
                 </h2>
 
               </div>
 
               <p className="text-gray-600 text-lg leading-relaxed max-w-[420px]">
-                Fabricación e integración de sistemas
-                industriales de seguridad y automatización.
+                Sistemas de protección industrial desarrollados
+                para seguridad, automatización y operación eficiente.
               </p>
 
             </div>
 
 
-            {/* MASONRY */}
-            <div className="columns-1 md:columns-2 gap-5 space-y-5">
+            {/* GRID ORIGINAL */}
+            <div className="grid grid-cols-2 gap-4">
 
               {[
                 "/guarda1.jpg",
                 "/guarda2.jpg",
                 "/guarda3.jpg",
                 "/guarda4.jpg",
-                "/guarda_detalle.jpg",
-                "/fondo_guarda.jpg",
+                "/guarda5.jpg",
+                "/guarda6.jpg",
+                "/guarda7.jpg",
+                "/guarda8.jpg",
               ].map((image, i) => (
 
                 <motion.div
                   key={i}
                   whileHover={{ y: -4 }}
-                  className="relative overflow-hidden rounded-[24px] group break-inside-avoid"
+                  transition={{ duration: 0.35 }}
+                  className="
+                    relative
+                    overflow-hidden
+                    rounded-[18px]
+                    group
+                    bg-white
+                  "
                 >
 
-                  <img
-                    src={image}
-                    className="w-full object-cover group-hover:scale-[1.04] transition duration-[1800ms]"
-                  />
+                  <div
+                    className="
+                      w-full
+                      h-[260px] md:h-[340px]
 
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition duration-700" />
+                      flex items-center justify-center
+
+                      overflow-hidden
+                    "
+                  >
+
+                    <img
+                      src={image}
+                      className="
+                        max-w-full
+                        max-h-full
+
+                        object-contain
+
+                        transition duration-700
+                        group-hover:scale-[1.03]
+                      "
+                    />
+
+                  </div>
+
+                  {/* OVERLAY */}
+                  <div className="
+                    absolute inset-0
+
+                    bg-black/5
+                    group-hover:bg-black/0
+
+                    transition duration-500
+                  " />
+
+                  {/* BORDE */}
+                  <div className="
+                    absolute inset-0
+
+                    border border-[#8C1C7D]/0
+                    group-hover:border-[#8C1C7D]/20
+
+                    transition duration-500
+                  " />
 
                 </motion.div>
 
@@ -502,9 +538,10 @@ const process = [
 
             <div className="relative overflow-hidden rounded-[32px] bg-black px-10 py-20 md:px-20">
 
+              {/* GLOW */}
               <div className="absolute inset-0">
 
-                <div className="absolute top-[-10%] right-[10%] w-[500px] h-[280px] bg-blue-500/20 blur-[160px]" />
+                <div className="absolute top-[-10%] right-[10%] w-[500px] h-[280px] bg-[#8C1C7D]/20 blur-[160px]" />
 
               </div>
 
@@ -538,7 +575,7 @@ const process = [
                     <item.icon
                       size={34}
                       strokeWidth={1.3}
-                      className="text-blue-400 mb-8"
+                      className="text-[#8C1C7D] mb-8"
                     />
 
                     <div className="text-white text-5xl md:text-6xl font-light mb-5">
@@ -562,14 +599,15 @@ const process = [
         </section>
 
 
-        {/* ================= CTA ================= */}
+        {/* ================= CTA FINAL ================= */}
         <section className="px-6 md:px-14 py-24">
 
           <div className="max-w-[1500px] mx-auto border-t border-black/10 pt-20">
 
             <div className="grid md:grid-cols-2 gap-20 items-center">
 
-            <div>
+              {/* TEXTO */}
+              <div>
 
                 <p className="uppercase tracking-[0.45em] text-xs text-gray-400 mb-8">
                   ¿Tienes un proyecto?
@@ -583,7 +621,8 @@ const process = [
               </div>
 
 
-            <div>
+              {/* DERECHA */}
+              <div>
 
                 <p className="text-gray-600 text-lg leading-relaxed max-w-[420px] mb-12">
                   Desarrollamos sistemas industriales
@@ -598,7 +637,7 @@ const process = [
                       "_blank"
                     )
                   }
-                  className="bg-black text-white px-8 py-4 rounded-md flex items-center gap-4 hover:bg-blue-500 transition"
+                  className="bg-black text-white px-8 py-4 rounded-md flex items-center gap-4 hover:bg-[#8C1C7D] transition"
                 >
 
                   CONTACTAR
