@@ -306,8 +306,8 @@ export default function ConveyorsPage() {
 
               {[
                 "/conveyor1.jpg",
-                "/conveyor2.jpg",
-                "/conveyor3.jpg",
+                "/conveyor2.png",
+                "/conveyor3.png",
                 "/conveyor4.png",
               ].map((image, i) => (
 
