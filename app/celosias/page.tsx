@@ -183,7 +183,7 @@ export default function CelosiasPage() {
           {/* IMAGEN FONDO */}
           <div className="absolute inset-0">
             <img
-              src="/fondo_celosia2.jpg"
+              src="/fondo_celosia2.webp"
               alt="Fondo celosía"
               loading="lazy"
               className="w-full h-full object-cover md:opacity-90"
