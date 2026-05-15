@@ -22,7 +22,7 @@ export default function GuardasPage() {
       {/* ================= FONDO GLOBAL ================= */}
       <div className="fixed inset-0 -z-10">
         <img
-          src="/fondo_blanco.jpg"
+          src="/fondo_blanco.webp"
           alt="Fondo"
           className="w-full h-full object-cover"
         />
