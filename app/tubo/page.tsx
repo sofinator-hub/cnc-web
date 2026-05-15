@@ -31,7 +31,7 @@ export default function TuboPage() {
 
           {/* FONDO */}
           <img
-            src="/fondo_tubo.jpg"
+            src="/hero_tubo.webp"
             className="absolute inset-0 w-full h-full object-cover"
           />
 
