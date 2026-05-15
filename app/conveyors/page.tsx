@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import MobileMenu from "@/components/layout/MobileMenu";
- 
+
 import {
-   MoveHorizontal,
-   Workflow,
-   Cog,
-   ArrowUpRight,
+  MoveHorizontal,
+  Workflow,
+  Cog,
+  ArrowUpRight,
 } from "lucide-react";
 
 export default function ConveyorsPage() {
@@ -302,7 +302,7 @@ export default function ConveyorsPage() {
 
 
             {/* GRID */}
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 gap-4">
 
               {[
                 "/conveyor1.jpg",
@@ -311,36 +311,51 @@ export default function ConveyorsPage() {
                 "/conveyor4.png",
               ].map((image, i) => (
 
-                <div
+                <motion.div
                   key={i}
+                  whileHover={{ y: -4 }}
+                  transition={{ duration: 0.35 }}
                   className="
                     relative
                     overflow-hidden
-                    rounded-[22px]
+                    rounded-[18px]
+                    group
                     cursor-pointer
-                    border border-black/10
-                    bg-white
                   "
                   onClick={() => setSelected(image)}
                   onMouseEnter={() => setHovered(i)}
                   onMouseLeave={() => setHovered(null)}
                 >
 
-                  {/* IMAGEN */}
-                  <motion.img
-                    src={image}
+                  <div
                     className="
                       w-full
-                      h-[260px] md:h-[320px]
-                      object-cover
+                      h-[260px] md:h-[340px]
+
+                      bg-white
+
+                      flex items-center justify-center
+
+                      overflow-hidden
                     "
-                    animate={{
-                      scale: hovered === i ? 1.06 : 1,
-                    }}
-                    transition={{
-                      duration: 0.45,
-                    }}
-                  />
+                  >
+
+                    <motion.img
+                      src={image}
+                      className="
+                        max-w-full
+                        max-h-full
+                        object-contain
+                      "
+                      animate={{
+                        scale: hovered === i ? 1.05 : 1,
+                      }}
+                      transition={{
+                        duration: 0.5,
+                      }}
+                    />
+
+                  </div>
 
                   {/* LÁSER */}
                   {hovered === i && (
@@ -367,21 +382,35 @@ export default function ConveyorsPage() {
                   )}
 
                   {/* OVERLAY */}
-                  <div
-                    className={`
-                      absolute inset-0
-                      bg-black/20
-                      flex items-center justify-center
-                      transition duration-300
-                      ${hovered === i ? "opacity-100" : "opacity-0"}
-                    `}
-                  >
+                  <div className="
+                    absolute inset-0
+
+                    bg-black/10
+                    opacity-0
+                    group-hover:opacity-100
+
+                    flex items-center justify-center
+
+                    transition duration-500
+                  ">
+
                     <p className="text-white text-sm tracking-wide">
                       Ver proyecto
                     </p>
+
                   </div>
 
-                </div>
+                  {/* BORDE */}
+                  <div className="
+                    absolute inset-0
+
+                    border border-blue-500/0
+                    group-hover:border-blue-500/20
+
+                    transition duration-500
+                  " />
+
+                </motion.div>
 
               ))}
 
