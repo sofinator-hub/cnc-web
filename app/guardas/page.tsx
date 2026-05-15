@@ -292,55 +292,100 @@ export default function GuardasPage() {
               </p>
 
             </div>
+</div>
 
+{/* GRID */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-            {/* GRID */}
-            <div className="grid grid-cols-2 gap-6">
+  {[
+    "/guarda1.jpg",
+    "/guarda2.jpg",
+    "/guarda3.jpg",
+    "/guarda4.jpg",
+  ].map((image, i) => {
 
-              {[
-                "/guarda1.jpg",
-                "/guarda2.jpg",
-                "/guarda3.jpg",
-                "/guarda4.jpg",
-              ].map((image, i) => {
-                return (
+    return (
 
-                  <div
-  key={i}
-  className="
-    relative
-    overflow-hidden
-    rounded-[18px]
-  "
->
+      <motion.div
+        key={i}
+        whileHover={{ y: -4 }}
+        transition={{ duration: 0.35 }}
+        className="
+          relative
+          overflow-hidden
+          rounded-[18px]
+          group
+          cursor-pointer
+        "
+      >
 
-  <div
-    className="
-      w-full
-      h-[420px] md:h-[520px]
-    "
-  >
+        <div
+          className="
+            w-full
+            h-[240px]
+            md:h-[420px]
 
-                     <img
-  src={image}
-  className="
-    w-full
-    h-full
+            overflow-hidden
+          "
+        >
 
-    object-contain
-  "
-/>
+          <motion.img
+            src={image}
+            loading="lazy"
+            alt="Guarda industrial"
 
-                    </div>
+            className="
+              w-full
+              h-full
+              object-cover
+            "
 
-                  </div>
+            whileHover={{
+              scale: 1.05,
+            }}
 
-                );
-              })}
+            transition={{
+              duration: 0.5,
+            }}
+          />
 
-            </div>
+        </div>
 
-          </div>
+        {/* LÁSER */}
+        <motion.div
+          className="
+            absolute
+            top-0
+            left-[-100%]
+            w-full
+            h-[2px]
+            bg-gradient-to-r
+            from-transparent
+            via-[#8C1C7D]
+            to-transparent
+
+            opacity-0
+            group-hover:opacity-100
+          "
+
+          animate={{
+            left: ["-100%", "100%"],
+          }}
+
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+
+      </motion.div>
+
+    );
+
+  })}
+
+</div>
 
         </section>
 

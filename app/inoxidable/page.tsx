@@ -49,7 +49,7 @@ export default function MobiliarioPage() {
   const sectors = [
     {
       title: "plantas industriales",
-      img: "/planta.jpg"
+      img: "/plantag.jpg"
     },
     {
       title: "Industria alimenticia",
