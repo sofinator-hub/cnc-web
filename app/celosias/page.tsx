@@ -104,7 +104,7 @@ export default function CelosiasPage() {
       img: "/celosia11.png",
       title: "Perbola",
       desc: "Exterior moderno",
-      category: "Perbolas",
+      category: "Pergolas",
       slug: "techos-modernos"
     },
 
@@ -112,14 +112,14 @@ export default function CelosiasPage() {
       img: "/celosia12.jpg",
       title: "Pérbola",
       desc: "Exterior moderno",
-      category: "Perbolas",
+      category: "Pergolas",
       slug: "techos-modernos"
     },
         {
       img: "/celosia13.jpg",
       title: "Pérbola",
       desc: "Techo moderno",
-      category: "Perbolas",
+      category: "Pergolas",
       slug: "perbolas-modernas"
     },
 
@@ -152,7 +152,7 @@ export default function CelosiasPage() {
    "Todos",
     "Residencial",
     "Interiores",
-    "Perbolas",
+    "Pergolas",
     "Fachadas"
   ];
 
