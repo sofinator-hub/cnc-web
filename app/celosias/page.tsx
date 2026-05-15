@@ -336,9 +336,7 @@ export default function CelosiasPage() {
 
         </section>
 
-
-
-
+ 
       </main>
     </>
   );
