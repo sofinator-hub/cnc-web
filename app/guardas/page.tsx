@@ -1,16 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 import MobileMenu from "@/components/layout/MobileMenu";
 
 import {
-   Shield,
-   Grid2X2,
-   Cog,
-   ArrowUpRight,
+  Shield,
+  Grid2X2,
+  Cog,
+  ArrowUpRight,
+} from "lucide-react";
 
-  } from "lucide-react";
 export default function GuardasPage() {
+
+  const [selected, setSelected] = useState<string | null>(null);
 
   return (
     <>
@@ -20,6 +23,7 @@ export default function GuardasPage() {
       <div className="fixed inset-0 -z-10">
         <img
           src="/fondo_blanco.jpg"
+          alt="Fondo"
           className="w-full h-full object-cover"
         />
       </div>
@@ -32,6 +36,7 @@ export default function GuardasPage() {
           {/* IMAGEN */}
           <img
             src="/fondo_guardas.jpg"
+            alt="Guardas industriales"
             className="absolute inset-0 w-full h-full object-cover"
           />
 
@@ -207,6 +212,7 @@ export default function GuardasPage() {
 
                 <img
                   src="/guardita.jpg"
+                  alt="Sistema de guardas"
                   className="relative w-full h-[340px] md:h-[520px] object-cover grayscale hover:grayscale-0 transition duration-700"
                 />
 
@@ -292,102 +298,145 @@ export default function GuardasPage() {
               </p>
 
             </div>
-</div>
 
-{/* GRID */}
-<div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-  {[
-    "/guarda1.jpg",
-    "/guarda2.jpg",
-    "/guarda3.jpg",
-    "/guarda4.jpg",
-  ].map((image, i) => {
+            {/* GRID */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-    return (
+              {[
+                "/guarda1.jpg",
+                "/guarda2.jpg",
+                "/guarda3.jpg",
+                "/guarda4.jpg",
+              ].map((image, i) => {
 
-      <motion.div
-        key={i}
-        whileHover={{ y: -4 }}
-        transition={{ duration: 0.35 }}
-        className="
-          relative
-          overflow-hidden
-          rounded-[18px]
-          group
-          cursor-pointer
-        "
-      >
+                return (
 
-        <div
-          className="
-            w-full
-            h-[240px]
-            md:h-[420px]
+                  <motion.div
+                    key={i}
+                    whileHover={{ y: -4 }}
+                    transition={{ duration: 0.35 }}
+                    className="
+                      relative
+                      overflow-hidden
+                      rounded-[18px]
+                      group
+                      cursor-pointer
+                    "
+                    onClick={() => setSelected(image)}
+                  >
 
-            overflow-hidden
-          "
-        >
+                    <div
+                      className="
+                        w-full
+                        h-[240px]
+                        md:h-[420px]
 
-          <motion.img
-            src={image}
-            loading="lazy"
-            alt="Guarda industrial"
+                        overflow-hidden
+                      "
+                    >
 
-            className="
-              w-full
-              h-full
-              object-cover
-            "
+                      <motion.img
+                        src={image}
+                        loading="lazy"
+                        alt="Guarda industrial"
 
-            whileHover={{
-              scale: 1.05,
-            }}
+                        className="
+                          w-full
+                          h-full
+                          object-cover
+                        "
 
-            transition={{
-              duration: 0.5,
-            }}
-          />
+                        whileHover={{
+                          scale: 1.05,
+                        }}
 
-        </div>
+                        transition={{
+                          duration: 0.5,
+                        }}
+                      />
 
-        {/* LÁSER */}
-        <motion.div
-          className="
-            absolute
-            top-0
-            left-[-100%]
-            w-full
-            h-[2px]
-            bg-gradient-to-r
-            from-transparent
-            via-[#8C1C7D]
-            to-transparent
+                    </div>
 
-            opacity-0
-            group-hover:opacity-100
-          "
+                    {/* LÁSER */}
+                    <motion.div
+                      className="
+                        absolute
+                        top-0
+                        left-[-100%]
+                        w-full
+                        h-[2px]
+                        bg-gradient-to-r
+                        from-transparent
+                        via-[#8C1C7D]
+                        to-transparent
 
-          animate={{
-            left: ["-100%", "100%"],
-          }}
+                        opacity-0
+                        group-hover:opacity-100
+                      "
 
-          transition={{
-            duration: 1.5,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        />
+                      animate={{
+                        left: ["-100%", "100%"],
+                      }}
 
-      </motion.div>
+                      transition={{
+                        duration: 1.5,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
+                    />
 
-    );
+                  </motion.div>
 
-  })}
+                );
 
-</div>
+              })}
+
+            </div>
+
+          </div>
 
         </section>
+
+
+        {/* ================= MODAL ================= */}
+        {selected && (
+
+          <motion.div
+            className="
+              fixed inset-0
+              bg-black/80
+              backdrop-blur-sm
+              flex items-center justify-center
+              z-50
+              p-4
+            "
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            onClick={() => setSelected(null)}
+          >
+
+            <motion.img
+              src={selected}
+              alt="Vista ampliada"
+
+              className="
+                max-w-full
+                max-h-[85vh]
+                rounded-2xl
+              "
+
+              initial={{ scale: 0.85 }}
+              animate={{ scale: 1 }}
+
+              transition={{
+                duration: 0.3,
+              }}
+            />
+
+          </motion.div>
+
+        )}
 
 
         {/* ================= CTA FINAL ================= */}
