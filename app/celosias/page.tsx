@@ -21,7 +21,7 @@ export default function CelosiasPage() {
 
   const items: Item[] = [
     {
-      img: "/celosia1.jpg",
+      img: "/celosia1.webp",
       title: "Asador",
       desc: "exterior moderno",
       category: "Residencial",
@@ -29,7 +29,7 @@ export default function CelosiasPage() {
     },
 
     {
-      img: "/celosia2.jpg",
+      img: "/celosia2.webp",
       title: "Exteriores",
       desc: "Aplicación exterior",
       category: "Exteriores",
@@ -37,7 +37,7 @@ export default function CelosiasPage() {
     },
 
     {
-      img: "/celosia3.jpg",
+      img: "/celosia3.webp",
       title: "Terraza",
       desc: "Diseño personalizado",
       category: "Residencial",
@@ -45,7 +45,7 @@ export default function CelosiasPage() {
     },
 
     {
-      img: "/celosia4.jpg",
+      img: "/celosia4.webp",
       title: "Fachada",
       desc: "Diseño geométrico",
       category: "Fachadas",
@@ -53,7 +53,7 @@ export default function CelosiasPage() {
     },
 
     {
-      img: "/celosia5.jpg",
+      img: "/celosia5.webp",
       title: "Escaleras",
       desc: "Protección moderna",
       category: "Residencial",
@@ -61,7 +61,7 @@ export default function CelosiasPage() {
     },
 
     {
-      img: "/celosia6.jpg",
+      img: "/celosia6.webp",
       title: "Protección",
       desc: "Exterior arquitectónico",
       category: "Exteriores",
@@ -69,7 +69,7 @@ export default function CelosiasPage() {
     },
 
         {
-      img: "/celosia7.jpg",
+      img: "/celosia7.webp",
       title: "Cafetería",
       desc: "decoración de interior",
       category: "Interiores",
@@ -77,7 +77,7 @@ export default function CelosiasPage() {
     },
 
         {
-      img: "/celosia8.jpg",
+      img: "/celosia8.webp",
       title: "jardín",
       desc: "exterior moderno",
       category: "Residencial",
@@ -85,7 +85,7 @@ export default function CelosiasPage() {
     },
 
         {
-      img: "/celosia9.jpg",
+      img: "/celosia9.webp",
       title: "Ventanas",
       desc: "Protección moderna",
       category: "Exteriores",
@@ -93,7 +93,7 @@ export default function CelosiasPage() {
     },
 
         {
-      img: "/celosia10.jpg",
+      img: "/celosia10.webp",
       title: "Ventanal",
       desc: "Protección moderna",
       category: "Residencial",
@@ -101,7 +101,7 @@ export default function CelosiasPage() {
     },
 
         {
-      img: "/celosia11.png",
+      img: "/celosia11.webp",
       title: "Perbola",
       desc: "Exterior moderno",
       category: "Pergolas",
@@ -109,14 +109,14 @@ export default function CelosiasPage() {
     },
 
         {
-      img: "/celosia12.jpg",
+      img: "/celosia12.webp",
       title: "Pérbola",
       desc: "Exterior moderno",
       category: "Pergolas",
       slug: "techos-modernos"
     },
         {
-      img: "/celosia13.jpg",
+      img: "/celosia13.webp",
       title: "Pérbola",
       desc: "Techo moderno",
       category: "Pergolas",
@@ -124,21 +124,21 @@ export default function CelosiasPage() {
     },
 
         {
-      img: "/celosia14.jpg",
+      img: "/celosia14.webp",
       title: "Muro divisorio",
       desc: "Muro divisorio con celosia",
       category: "Residencial",
       slug: "muros-modernos"
     },
         {
-      img: "/celosia15.jpg",
+      img: "/celosia15.webp",
       title: "Muro divisorio",
       desc: "Muro divisorio con celosia",
       category: "Residencial",
       slug: "muros-modernos"
     },
         {
-      img: "/celosia16.jpg",
+      img: "/celosia16.webp",
       title: "Protección",
       desc: "Protección moderna",
       category: "Residencial",
@@ -168,7 +168,7 @@ export default function CelosiasPage() {
       {/* ================= FONDO ================= */}
       <div className="fixed inset-0 -z-10">
         <img
-          src="/fondo_blanco.jpg"
+          src="/fondo_blanco.webp"
           alt="Fondo"
           className="w-full h-full object-cover"
         />
