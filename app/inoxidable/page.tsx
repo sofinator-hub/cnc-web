@@ -15,32 +15,32 @@ export default function MobiliarioPage() {
 
   const products: Item[] = [
     {
-      img: "/mesa.jpg",
+      img: "/mesa.webp",
       title: "Mesas de trabajo",
       desc: "Fabricadas para soportar uso intensivo en entornos industriales y alimenticios."
     },
     {
-      img: "/tarja.jpg",
+      img: "/tarja.webp",
       title: "Tarjas industriales",
       desc: "Diseñadas para máxima higiene y resistencia a la corrosión."
     },
     {
-      img: "/estante.jpg",
+      img: "/estante.webp",
       title: "Estantería",
       desc: "Soluciones de almacenamiento resistentes y funcionales."
     },
     {
-      img: "/campana.jpg",
+      img: "/campana.webp",
       title: "Campanas",
       desc: "Acabados profesionales para sistemas de cocina industrial."
     },
     {
-      img: "/carro.jpg",
+      img: "/carro.webp",
       title: "Carros de servicio",
       desc: "Movilidad y resistencia para operaciones de alto rendimiento."
     },
     {
-      img: "/gabinete.jpg",
+      img: "/gabinete.webp",
       title: "Gabinetes",
       desc: "Diseño personalizado con acabados premium en acero inoxidable."
     }
@@ -49,19 +49,19 @@ export default function MobiliarioPage() {
   const sectors = [
     {
       title: "plantas industriales",
-      img: "/planta.jpg"
+      img: "/planta.webp"
     },
     {
       title: "Industria alimenticia",
-      img: "/food.jpg"
+      img: "/food.webp"
     },
     {
       title: "Laboratorios",
-      img: "/lab.jpg"
+      img: "/lab.webp"
     },
     {
       title: "Hospitales",
-      img: "/hospital.jpg"
+      img: "/hospital.webp"
     }
   ];
 
@@ -87,7 +87,7 @@ export default function MobiliarioPage() {
   <div className="absolute inset-0">
 
     <img
-      src="/fondo_acero1.jpg"
+      src="/fondo_acero1.webp"
       alt="Fondo acero"
       className="w-full h-full object-cover"
     />
