@@ -70,27 +70,25 @@ export default function CNCPage() {
               </p>
             </div>
 
-            {/* VIDEO */}
+
 {/* VIDEO */}
 <div className="flex justify-center md:justify-end">
 
-  <div className="w-[420px] overflow-hidden rounded-2xl shadow-2xl">
-    <video
-      className="w-full h-auto object-cover"
-      autoPlay
-      muted
-      loop
-      playsInline
-    >
-      <source
-        src="/videos/video_lasercito.mp4"
-        type="video/mp4"
-      />
-    </video>
+  <video
+    className="w-[250px] rounded-2xl shadow-xl"
+    autoPlay
+    muted
+    loop
+    playsInline
+  >
+    <source
+      src="/videos/video_lasercito.mp4"
+      type="video/mp4"
+    />
+  </video>
   </div>
 
-</div>
-</div>
+</div> 
 </section>
 
         {/* SECCIÓN 2 */}
