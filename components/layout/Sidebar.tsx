@@ -89,7 +89,7 @@ export default function Sidebar() {
             },
             {
               href: "/soldadura",
-              label: "Soldadura"
+              label: "Soldadura de ultrasonido"
             },
             {
               href: "/ingenieria",
