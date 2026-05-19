@@ -71,30 +71,27 @@ export default function CNCPage() {
             </div>
 
             {/* VIDEO */}
-            <div className="flex justify-center md:justify-end">
-              <video
-                className="
-                  w-[420px]
-                  md:w-[480px]
-                  rounded-2xl
-                  shadow-2xl
-                  object-cover
-                "
-                autoPlay
-                muted
-                loop
-                playsInline
-              >
-                <source
-                  src="/videos/video_lasercito.mp4"
-                  type="video/mp4"
-                />
-                Tu navegador no soporta video.
-              </video>
-            </div>
+{/* VIDEO */}
+<div className="flex justify-center md:justify-end">
 
-          </div>
-        </section>
+  <div className="w-[420px] overflow-hidden rounded-2xl shadow-2xl">
+    <video
+      className="w-full h-auto object-cover"
+      autoPlay
+      muted
+      loop
+      playsInline
+    >
+      <source
+        src="/videos/video_lasercito.mp4"
+        type="video/mp4"
+      />
+    </video>
+  </div>
+
+</div>
+</div>
+</section>
 
         {/* SECCIÓN 2 */}
         <section className="py-24 px-6 md:px-20">
