@@ -70,14 +70,18 @@ export default function CNCPage() {
   {/* Glow */}
   <div className="absolute inset-0 bg-gray-300 opacity-20 blur-3xl rounded-2xl scale-110 group-hover:opacity-30 transition duration-500" />
 
+<div className="relative group flex justify-center">
+
+  {/* Glow suave */}
+  <div className="absolute inset-0 bg-gray-300 opacity-10 blur-3xl rounded-2xl scale-105 group-hover:opacity-20 transition duration-500" />
+
   {/* Video */}
   <video
     className="
       relative
+      w-[700px]
       rounded-2xl
-      shadow-2xl
-      w-full
-      max-w-xl
+      shadow-xl
       object-cover
     "
     autoPlay
@@ -86,10 +90,11 @@ export default function CNCPage() {
     playsInline
   >
     <source src="/videos/video_lasercito.mp4" type="video/mp4" />
-    Tu navegador no soporta videos.
+    Tu navegador no soporta video.
   </video>
 
 </div>
+      </div>
 
           </div>
         </section>
