@@ -260,7 +260,7 @@ export default function MobiliarioPage() {
             >
 
               <img
-                src="/acero.jpg"
+                src="/acero.webp"
                 alt="Acero inoxidable"
                 className="w-full h-[520px] object-cover rounded-3xl shadow-2xl"
               />
