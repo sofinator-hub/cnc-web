@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import { useState } from "react";
 import MobileMenu from "@/components/layout/MobileMenu";
@@ -17,88 +18,82 @@ export default function CNCPage() {
     {
       nombre: "Acero inoxidable",
       medida: "3/16 (5mm)",
-      img: "/materiales/acero_inoxidable.jpg"
+      img: "/materiales/acero_inoxidable.jpg",
     },
     {
       nombre: "Acero al carbón",
       medida: "5/8 (16mm)",
-      img: "/materiales/acero_carbon.jpg"
+      img: "/materiales/acero_carbon.jpg",
     },
     {
       nombre: "Aluminio",
       medida: "3/16 (5mm)",
-      img: "/materiales/aluminio.jpg"
+      img: "/materiales/aluminio.jpg",
     },
     {
       nombre: "Latón y cobre",
       medida: "3 mm",
-      img: "/materiales/laton_cobre.jpg"
-    }
+      img: "/materiales/laton_cobre.jpg",
+    },
   ];
 
   return (
     <>
       <MobileMenu />
 
-      {/*  FONDO GLOBAL CLARO */}
+      {/* FONDO */}
       <div className="fixed inset-0 -z-10">
         <img
           src="/fondo_laser_claro.jpg"
           className="w-full h-full object-cover"
+          alt=""
         />
         <div className="absolute inset-0 bg-white/70" />
       </div>
 
       <main className="relative z-10 text-gray-900">
 
-        {/* SECCIÓN 1 */}
+        {/* HERO */}
         <section className="min-h-screen flex items-center px-6 md:px-20">
-          <div className="grid md:grid-cols-2 gap-10 items-center w-full">
+          <div className="grid md:grid-cols-2 gap-12 items-center w-full">
 
+            {/* TEXTO */}
             <div>
-              <h1 className="text-3xl md:text-4xl font-semibold mb-4">
+              <h1 className="text-3xl md:text-5xl font-semibold mb-6 leading-tight">
                 SERVICIO DE CORTE LÁSER Y FIBRA
               </h1>
 
-              <p className="text-gray-700 leading-relaxed">
-                Maquila de corte láser en acero inoxidable. Puedes hacer todo lo que sea posible con nuestro sistema de corte láser de fibra.
+              <p className="text-gray-700 leading-relaxed text-lg max-w-xl">
+                Maquila de corte láser en acero inoxidable.
+                Puedes hacer todo lo que sea posible con nuestro
+                sistema de corte láser de fibra.
               </p>
             </div>
 
-<div className="relative group flex justify-center py-10">
-  
-  {/* Glow */}
-  <div className="absolute inset-0 bg-gray-300 opacity-20 blur-3xl rounded-2xl scale-110 group-hover:opacity-30 transition duration-500" />
-
-<div className="relative group flex justify-center">
-
-  {/* Glow suave */}
-  <div className="absolute inset-0 bg-gray-300 opacity-10 blur-3xl rounded-2xl scale-105 group-hover:opacity-20 transition duration-500" />
-
-  {/* Video */}
-  <video
-    className="
-      relative
-      w-[700px]
-      rounded-2xl
-      shadow-xl
-      object-cover
-    "
-    autoPlay
-    muted
-    loop
-    playsInline
-  >
-    <source src="/videos/video_lasercito.mp4" type="video/mp4" />
-    Tu navegador no soporta video.
-  </video>
-
-</div>
-      </div>
+            {/* VIDEO */}
+            <div className="flex justify-center items-center">
+              <video
+                className="
+                  w-[520px]
+                  rounded-2xl
+                  shadow-xl
+                  object-cover
+                "
+                autoPlay
+                muted
+                loop
+                playsInline
+              >
+                <source
+                  src="/videos/video_lasercito.mp4"
+                  type="video/mp4"
+                />
+                Tu navegador no soporta video.
+              </video>
+            </div>
 
           </div>
-        </section>
-
+        </section> 
 
         {/* SECCIÓN 2 */}
         <section className="min-h-screen flex items-center px-6 md:px-20">
@@ -122,7 +117,7 @@ export default function CNCPage() {
                   width={600}
                   height={400}
                   alt=""
-                  className="object-cover w-full h-full group-hover:scale-105 transition"
+                  className="object-cover w-full h-full group-hover:scale-105 transition duration-500"
                 />
               </div>
 
@@ -132,15 +127,14 @@ export default function CNCPage() {
                   width={600}
                   height={400}
                   alt=""
-                  className="object-cover w-full h-full group-hover:scale-105 transition"
+                  className="object-cover w-full h-full group-hover:scale-105 transition duration-500"
                 />
               </div>
 
             </div>
 
           </div>
-        </section>
-
+        </section> 
 
         {/* TABLA */}
         <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
@@ -151,7 +145,9 @@ export default function CNCPage() {
 
           <div
             className="flex justify-center relative"
-            onMouseMove={(e) => setPos({ x: e.clientX, y: e.clientY })}
+            onMouseMove={(e) =>
+              setPos({ x: e.clientX, y: e.clientY })
+            }
           >
 
             <div className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl overflow-hidden shadow-md w-full max-w-2xl">
@@ -161,10 +157,25 @@ export default function CNCPage() {
                   key={i}
                   onMouseEnter={() => setHovered(item)}
                   onMouseLeave={() => setHovered(null)}
-                  className="flex justify-between px-6 py-4 border-b last:border-none hover:bg-white transition cursor-pointer"
+                  className="
+                    flex
+                    justify-between
+                    px-6
+                    py-4
+                    border-b
+                    last:border-none
+                    hover:bg-white
+                    transition
+                    cursor-pointer
+                  "
                 >
-                  <span className="font-medium">{item.nombre}</span>
-                  <span className="text-gray-500">{item.medida}</span>
+                  <span className="font-medium">
+                    {item.nombre}
+                  </span>
+
+                  <span className="text-gray-500">
+                    {item.medida}
+                  </span>
                 </div>
               ))}
 
@@ -175,7 +186,7 @@ export default function CNCPage() {
                 className="pointer-events-none fixed z-50"
                 style={{
                   top: pos.y + 15,
-                  left: pos.x + 15
+                  left: pos.x + 15,
                 }}
               >
                 <Image
@@ -183,24 +194,36 @@ export default function CNCPage() {
                   alt=""
                   width={160}
                   height={160}
-                  className="object-cover rounded-xl shadow-xl border"
+                  className="
+                    object-cover
+                    rounded-xl
+                    shadow-xl
+                    border
+                  "
                 />
               </div>
             )}
 
           </div>
-        </section>
-
+        </section> 
 
         {/* GRABADO */}
         <section className="min-h-screen flex items-center px-6 md:px-20">
 
           <div className="grid md:grid-cols-2 gap-10 items-center w-full">
 
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gray-300 opacity-20 blur-3xl rounded-2xl scale-110 group-hover:opacity-30 transition duration-500" />
-              <video className="relative rounded-2xl shadow-md w-full" autoPlay muted loop playsInline>
-                <source src="/videos/video_grabado_laser1.mp4" />
+            <div className="relative">
+              <video
+                className="rounded-2xl shadow-xl w-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+              >
+                <source
+                  src="/videos/video_grabado_laser1.mp4"
+                  type="video/mp4"
+                />
               </video>
             </div>
 
@@ -219,8 +242,8 @@ export default function CNCPage() {
             </div>
 
           </div>
-        </section>
 
+        </section> 
 
         {/* TUBO */}
         <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -232,12 +255,16 @@ export default function CNCPage() {
             loop
             playsInline
           >
-            <source src="/videos/video_tubo2.mp4" />
+            <source
+              src="/videos/video_tubo2.mp4"
+              type="video/mp4"
+            />
           </video>
 
           <div className="absolute inset-0 bg-white/60 backdrop-blur-sm" />
 
           <div className="relative z-10 text-center px-6 max-w-2xl">
+
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">
               CORTE LÁSER DE TUBO
             </h2>
@@ -252,6 +279,7 @@ export default function CNCPage() {
             >
               Ver más
             </a>
+
           </div>
 
         </section>
@@ -259,4 +287,4 @@ export default function CNCPage() {
       </main>
     </>
   );
-}
+} 
