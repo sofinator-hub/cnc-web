@@ -45,17 +45,17 @@ export default function CNCPage() {
       <div className="fixed inset-0 -z-10">
         <img
           src="/fondo_laser_claro.jpg"
-          className="w-full h-full object-cover"
           alt=""
-        />
+          className="w-full h-full object-cover"
+        /> 
         <div className="absolute inset-0 bg-white/70" />
       </div>
 
       <main className="relative z-10 text-gray-900">
 
         {/* HERO */}
-        <section className="min-h-screen flex items-center px-6 md:px-20">
-          <div className="grid md:grid-cols-2 gap-12 items-center w-full">
+        <section className="py-24 px-6 md:px-20">
+          <div className="grid md:grid-cols-2 gap-28 items-center w-full max-w-7xl mx-auto">
 
             {/* TEXTO */}
             <div>
@@ -71,12 +71,13 @@ export default function CNCPage() {
             </div>
 
             {/* VIDEO */}
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center md:justify-end">
               <video
                 className="
-                  w-[520px]
+                  w-[420px]
+                  md:w-[480px]
                   rounded-2xl
-                  shadow-xl
+                  shadow-2xl
                   object-cover
                 "
                 autoPlay
@@ -93,11 +94,11 @@ export default function CNCPage() {
             </div>
 
           </div>
-        </section> 
+        </section>
 
         {/* SECCIÓN 2 */}
-        <section className="min-h-screen flex items-center px-6 md:px-20">
-          <div className="w-full space-y-8">
+        <section className="py-24 px-6 md:px-20">
+          <div className="w-full max-w-7xl mx-auto space-y-10">
 
             <div>
               <h2 className="text-3xl font-semibold mb-4">
@@ -109,112 +110,149 @@ export default function CNCPage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-8">
 
-              <div className="overflow-hidden rounded-2xl group">
+              <div className="overflow-hidden rounded-2xl group shadow-xl">
                 <Image
                   src="/chispas_laser1.jpg"
                   width={600}
                   height={400}
                   alt=""
-                  className="object-cover w-full h-full group-hover:scale-105 transition duration-500"
+                  className="
+                    object-cover
+                    w-full
+                    h-full
+                    group-hover:scale-105
+                    transition
+                    duration-500
+                  "
                 />
               </div>
 
-              <div className="overflow-hidden rounded-2xl group">
+              <div className="overflow-hidden rounded-2xl group shadow-xl">
                 <Image
                   src="/foto_acero2.jpg"
                   width={600}
                   height={400}
                   alt=""
-                  className="object-cover w-full h-full group-hover:scale-105 transition duration-500"
-                />
-              </div>
-
-            </div>
-
-          </div>
-        </section> 
-
-        {/* TABLA */}
-        <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
-
-          <h2 className="text-3xl font-semibold mb-8">
-            MATERIALES Y ESPESORES
-          </h2>
-
-          <div
-            className="flex justify-center relative"
-            onMouseMove={(e) =>
-              setPos({ x: e.clientX, y: e.clientY })
-            }
-          >
-
-            <div className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl overflow-hidden shadow-md w-full max-w-2xl">
-
-              {materiales.map((item, i) => (
-                <div
-                  key={i}
-                  onMouseEnter={() => setHovered(item)}
-                  onMouseLeave={() => setHovered(null)}
-                  className="
-                    flex
-                    justify-between
-                    px-6
-                    py-4
-                    border-b
-                    last:border-none
-                    hover:bg-white
-                    transition
-                    cursor-pointer
-                  "
-                >
-                  <span className="font-medium">
-                    {item.nombre}
-                  </span>
-
-                  <span className="text-gray-500">
-                    {item.medida}
-                  </span>
-                </div>
-              ))}
-
-            </div>
-
-            {hovered && (
-              <div
-                className="pointer-events-none fixed z-50"
-                style={{
-                  top: pos.y + 15,
-                  left: pos.x + 15,
-                }}
-              >
-                <Image
-                  src={hovered.img}
-                  alt=""
-                  width={160}
-                  height={160}
                   className="
                     object-cover
-                    rounded-xl
-                    shadow-xl
-                    border
+                    w-full
+                    h-full
+                    group-hover:scale-105
+                    transition
+                    duration-500
                   "
                 />
               </div>
-            )}
+
+            </div>
 
           </div>
-        </section> 
+        </section>
+
+        {/* TABLA */}
+        <section className="py-32 px-6 relative overflow-hidden">
+
+          <div className="max-w-4xl mx-auto">
+
+            <h2 className="text-3xl font-semibold mb-10 text-center">
+              MATERIALES Y ESPESORES
+            </h2>
+
+            <div
+              className="flex justify-center relative"
+              onMouseMove={(e) =>
+                setPos({
+                  x: e.clientX,
+                  y: e.clientY,
+                })
+              }
+            >
+
+              <div
+                className="
+                  bg-white/80
+                  backdrop-blur-sm
+                  border
+                  border-gray-200
+                  rounded-2xl
+                  overflow-hidden
+                  shadow-xl
+                  w-full
+                "
+              >
+
+                {materiales.map((item, i) => (
+                  <div
+                    key={i}
+                    onMouseEnter={() => setHovered(item)}
+                    onMouseLeave={() => setHovered(null)}
+                    className="
+                      flex
+                      justify-between
+                      px-6
+                      py-5
+                      border-b
+                      last:border-none
+                      hover:bg-white
+                      transition
+                      cursor-pointer
+                    "
+                  >
+                    <span className="font-medium">
+                      {item.nombre}
+                    </span>
+
+                    <span className="text-gray-500">
+                      {item.medida}
+                    </span>
+                  </div>
+                ))}
+
+              </div>
+
+              {hovered && (
+                <div
+                  className="pointer-events-none fixed z-50"
+                  style={{
+                    top: pos.y + 15,
+                    left: pos.x + 15,
+                  }}
+                >
+                  <Image
+                    src={hovered.img}
+                    alt=""
+                    width={180}
+                    height={180}
+                    className="
+                      object-cover
+                      rounded-xl
+                      shadow-2xl
+                      border
+                    "
+                  />
+                </div>
+              )}
+
+            </div>
+
+          </div>
+        </section>
 
         {/* GRABADO */}
-        <section className="min-h-screen flex items-center px-6 md:px-20">
+        <section className="py-24 px-6 md:px-20">
 
-          <div className="grid md:grid-cols-2 gap-10 items-center w-full">
+          <div className="grid md:grid-cols-2 gap-20 items-center max-w-7xl mx-auto">
 
-            <div className="relative">
+            <div>
               <video
-                className="rounded-2xl shadow-xl w-full object-cover"
+                className="
+                  rounded-2xl
+                  shadow-2xl
+                  w-full
+                  object-cover
+                "
                 autoPlay
                 muted
                 loop
@@ -232,21 +270,31 @@ export default function CNCPage() {
                 GRABADO LÁSER
               </h2>
 
-              <p className="text-gray-700 mb-6">
+              <p className="text-gray-700 mb-6 leading-relaxed">
                 Personalización de alta precisión para piezas industriales.
               </p>
 
-              <button className="px-6 py-3 border border-black rounded-full hover:bg-black hover:text-white transition">
+              <button
+                className="
+                  px-6
+                  py-3
+                  border
+                  border-black
+                  rounded-full
+                  hover:bg-black
+                  hover:text-white
+                  transition
+                "
+              >
                 Solicitar cotización
               </button>
             </div>
 
           </div>
-
-        </section> 
+        </section>
 
         {/* TUBO */}
-        <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <section className="relative overflow-hidden py-40">
 
           <video
             className="absolute inset-0 w-full h-full object-cover"
@@ -263,19 +311,29 @@ export default function CNCPage() {
 
           <div className="absolute inset-0 bg-white/60 backdrop-blur-sm" />
 
-          <div className="relative z-10 text-center px-6 max-w-2xl">
+          <div className="relative z-10 text-center px-6 max-w-2xl mx-auto">
 
-            <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+            <h2 className="text-3xl md:text-5xl font-semibold mb-6">
               CORTE LÁSER DE TUBO
             </h2>
 
-            <p className="text-gray-700 mb-6">
+            <p className="text-gray-700 mb-8 text-lg">
               Corte de tubos y perfiles con alta precisión.
             </p>
 
             <a
               href="/tubo"
-              className="inline-block px-8 py-3 border border-black rounded-full hover:bg-black hover:text-white transition"
+              className="
+                inline-block
+                px-8
+                py-3
+                border
+                border-black
+                rounded-full
+                hover:bg-black
+                hover:text-white
+                transition
+              "
             >
               Ver más
             </a>
@@ -287,4 +345,4 @@ export default function CNCPage() {
       </main>
     </>
   );
-} 
+}
