@@ -65,12 +65,31 @@ export default function CNCPage() {
               </p>
             </div>
 
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gray-300 opacity-20 blur-3xl rounded-2xl scale-110 group-hover:opacity-30 transition duration-500" />
-              <video className="relative rounded-2xl shadow-md w-full" autoPlay muted loop playsInline>
-                <source src="/videos/video_lasercito.mp4" />
-              </video>
-            </div>
+<div className="relative group flex justify-center py-10">
+  
+  {/* Glow */}
+  <div className="absolute inset-0 bg-gray-300 opacity-20 blur-3xl rounded-2xl scale-110 group-hover:opacity-30 transition duration-500" />
+
+  {/* Video */}
+  <video
+    className="
+      relative
+      rounded-2xl
+      shadow-2xl
+      w-full
+      max-w-xl
+      object-cover
+    "
+    autoPlay
+    muted
+    loop
+    playsInline
+  >
+    <source src="/videos/video_lasercito.mp4" type="video/mp4" />
+    Tu navegador no soporta videos.
+  </video>
+
+</div>
 
           </div>
         </section>
