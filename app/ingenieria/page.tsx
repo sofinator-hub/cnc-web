@@ -28,8 +28,8 @@ const sections = {
       "Protecciones eléctricas",
 
     ],
-    img: "/electrico_color.jpg",
-    imgBN: "/electrico.jpg",
+    img: "/electrico_color.webp",
+    imgBN: "/electrico.webp",
   },
 
   automatizacion: {
@@ -54,8 +54,8 @@ const sections = {
       "Sensores industriales",
 
     ],
-    img: "/automatizacion_color.jpg",
-    imgBN: "/automatizacion.jpg",
+    img: "/automatizacion_color.webp",
+    imgBN: "/automatizacion.webp",
   },
 
   control: {
@@ -79,8 +79,8 @@ const sections = {
       
       "Control eléctrico",
     ],
-    img: "/control_color.jpg",
-    imgBN: "/control.jpg",
+    img: "/control_color.webp",
+    imgBN: "/control.webp",
   },
 
   generales: {
@@ -104,8 +104,8 @@ const sections = {
       "UPS",
       "Infraestructura eléctrica",
     ],
-    img: "/general_color.jpg",
-    imgBN: "/general.jpg",
+    img: "/general_color.webp",
+    imgBN: "/general.webp",
   },
 
   proyectos: {
@@ -129,8 +129,8 @@ const sections = {
       "Control de procesos",
 
     ],
-    img: "/proyectos_color.jpg",
-    imgBN: "/proyectos.jpg",
+    img: "/proyectos_color.webp",
+    imgBN: "/proyectos.webp",
   },
 };
 
