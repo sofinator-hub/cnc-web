@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useState } from "react"; 
 import { motion } from "framer-motion";
 import MobileMenu from "@/components/layout/MobileMenu";
 
@@ -10,150 +9,132 @@ type Item = {
   title: string;
   desc: string;
   category: string;
-  slug: string;
-};
+}; 
 
-export default function CelosiasPage() {
-  const [selected, setSelected] = useState<Item | null>(null);
-  const [active, setActive] = useState("Todos");
-
-  const router = useRouter();
+export default function CelosiasPage() { 
+  const [active, setActive] = useState("Todos"); 
 
   const items: Item[] = [
     {
       img: "/celosia1.webp",
       title: "Asador",
-      desc: "exterior moderno",
+      desc: "Exterior moderno",
       category: "Residencial",
-      slug: "oficina-moderna"
-    },
+    }, 
 
     {
       img: "/celosia2.webp",
       title: "Exteriores",
       desc: "Aplicación exterior",
       category: "Exteriores",
-      slug: "exteriores-premium"
-    },
+    }, 
 
     {
       img: "/celosia3.webp",
       title: "Terraza",
       desc: "Diseño personalizado",
       category: "Residencial",
-      slug: "terraza-premium"
-    },
+    }, 
 
     {
       img: "/celosia4.webp",
       title: "Fachada",
       desc: "Diseño geométrico",
       category: "Fachadas",
-      slug: "fachada-premium"
-    },
+    }, 
 
     {
       img: "/celosia5.webp",
       title: "Escaleras",
       desc: "Protección moderna",
       category: "Residencial",
-      slug: "escaleras-modernas"
-    },
+    }, 
 
     {
       img: "/celosia6.webp",
       title: "Protección",
       desc: "Exterior arquitectónico",
       category: "Exteriores",
-      slug: "proteccion-exterior"
-    },
+    }, 
 
-        {
+    {
       img: "/celosia7.webp",
       title: "Cafetería",
-      desc: "decoración de interior",
+      desc: "Decoración interior",
       category: "Interiores",
-      slug: "cafetrías-modernas"
-    },
+    }, 
 
-        {
+    {
       img: "/celosia8.webp",
-      title: "jardín",
-      desc: "exterior moderno",
+      title: "Jardín",
+      desc: "Exterior moderno",
       category: "Residencial",
-      slug: "jardines-modernos"
-    },
+    }, 
 
-        {
+    {
       img: "/celosia9.webp",
       title: "Ventanas",
       desc: "Protección moderna",
       category: "Exteriores",
-      slug: "ventanas-modernas"
-    },
+    }, 
 
-        {
+    {
       img: "/celosia10.webp",
       title: "Ventanal",
       desc: "Protección moderna",
       category: "Residencial",
-      slug: "ventanas-modernas"
-    },
+    }, 
 
-        {
+    {
       img: "/celosia11.webp",
-      title: "Perbola",
+      title: "Pérgola",
       desc: "Exterior moderno",
       category: "Pergolas",
-      slug: "techos-modernos"
-    },
+    }, 
 
-        {
+    {
       img: "/celosia12.webp",
-      title: "Pérbola",
+      title: "Pérgola",
       desc: "Exterior moderno",
       category: "Pergolas",
-      slug: "techos-modernos"
-    },
-        {
+    }, 
+
+    {
       img: "/celosia13.webp",
-      title: "Pérbola",
+      title: "Pérgola",
       desc: "Techo moderno",
       category: "Pergolas",
-      slug: "perbolas-modernas"
-    },
+    }, 
 
-        {
+    {
       img: "/celosia14.webp",
       title: "Muro divisorio",
-      desc: "Muro divisorio con celosia",
+      desc: "Muro divisorio con celosía",
       category: "Residencial",
-      slug: "muros-modernos"
-    },
-        {
+    }, 
+
+    {
       img: "/celosia15.webp",
       title: "Muro divisorio",
-      desc: "Muro divisorio con celosia",
+      desc: "Muro divisorio con celosía",
       category: "Residencial",
-      slug: "muros-modernos"
-    },
-        {
+    }, 
+
+    {
       img: "/celosia16.webp",
       title: "Protección",
       desc: "Protección moderna",
       category: "Residencial",
-      slug: "protecciones-modernas"
-    },
-    
-    
-  ];
+    }, 
+  ]; 
 
   const categories = [
-   "Todos",
+    "Todos",
     "Residencial",
     "Interiores",
     "Pergolas",
-    "Fachadas"
+    "Fachadas",
+    "Exteriores",
   ];
 
   const filteredItems =
@@ -248,8 +229,7 @@ export default function CelosiasPage() {
             {filteredItems.map((item, i) => (
               <div
                 key={i}
-                onClick={() => router.push(`/celosias/${item.slug}`)}
-                className="group cursor-pointer"
+                className="group"
               >
 
                 <div className="relative overflow-hidden rounded-2xl">
@@ -272,11 +252,7 @@ export default function CelosiasPage() {
                     <h3 className="text-lg font-semibold">
                       {item.title}
                     </h3>
-
-                    <span className="text-sm underline">
-                      Ver más →
-                    </span>
-
+ 
                   </div>
 
                 </div>
@@ -304,8 +280,7 @@ export default function CelosiasPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
                 viewport={{ once: true }}
-                onClick={() => router.push(`/celosias/${item.slug}`)}
-                className="cursor-pointer group relative rounded-2xl overflow-hidden bg-white border border-gray-200 hover:border-blue-500 transition duration-300 shadow-sm hover:shadow-lg"
+                className="group relative rounded-2xl overflow-hidden bg-white border border-gray-200 hover:border-blue-500 transition duration-300 shadow-sm hover:shadow-lg"
               >
 
                 <img
@@ -336,10 +311,8 @@ export default function CelosiasPage() {
 
         </section>
 
- 
       </main>
     </>
   );
-}
-
+} 
 
