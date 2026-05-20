@@ -305,12 +305,12 @@ export default function ConveyorsPage() {
             <div className="grid grid-cols-2 gap-4">
 
               {[
-                "/conveyor1.jpg",
-                "/conveyor2.png",
-                "/conveyor3.png",
-                "/conveyor4.png",
-                "/conveyor5.jpg",
-                "/conveyor6.jpg",
+                "/conveyor1.webp",
+                "/conveyor2.webp",
+                "/conveyor3.webp",
+                "/conveyor4.webp",
+                "/conveyor5.webp",
+                "/conveyor6.webp",
               ].map((image, i) => (
 
                 <motion.div
