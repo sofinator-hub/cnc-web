@@ -232,17 +232,33 @@ export default function IngenieriaPage() {
           <div className="max-w-7xl mx-auto grid md:grid-cols-[320px_1fr] gap-8 md:gap-12">
 
             {/* MENU */}
-            <div
-              className="
-                flex md:block
-                gap-3
-                overflow-x-auto
-                pb-4
-                md:space-y-4
-                snap-x
-                snap-mandatory
-              "
-            >
+            <div className="relative">
+
+  {/* FLECHA MOBILE */}
+  <div className="md:hidden absolute right-0 top-1/2 -translate-y-1/2 z-20 pointer-events-none">
+
+    <div className="bg-gradient-to-l from-white via-white/90 to-transparent pl-10 pr-2 py-4">
+
+      <div className="animate-pulse text-black/50 text-xl">
+        →
+      </div>
+
+    </div>
+
+  </div>
+
+  <div
+    className="
+      flex md:block
+      gap-3
+      overflow-x-auto
+      pb-4
+      md:space-y-4
+      snap-x
+      snap-mandatory
+      scrollbar-hide
+    "
+  ></div>
 
               {Object.keys(sections).map((key) => {
 
