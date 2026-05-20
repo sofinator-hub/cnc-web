@@ -309,8 +309,8 @@ export default function ConveyorsPage() {
                 "/conveyor2.png",
                 "/conveyor3.png",
                 "/conveyor4.png",
-                "/conveyor5.png",
-                "/conveyor6.png",
+                "/conveyor5.jpg",
+                "/conveyor6.jpg",
               ].map((image, i) => (
 
                 <motion.div
