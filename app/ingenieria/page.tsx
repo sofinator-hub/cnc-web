@@ -227,211 +227,214 @@ export default function IngenieriaPage() {
         </section> 
 
         {/* ================= SERVICIOS ================= */}
-        <section className="px-4 md:px-20 py-16 md:py-28">
+        
+<section className="px-4 md:px-20 py-16 md:py-28">
 
-          <div className="max-w-7xl mx-auto grid md:grid-cols-[320px_1fr] gap-8 md:gap-12">
+  <div className="max-w-7xl mx-auto grid md:grid-cols-[320px_1fr] gap-8 md:gap-12">
 
-            {/* MENU */}
-            <div className="relative">
+    {/* MENU */}
+    <div className="relative">
 
-  {/* FLECHA MOBILE */}
-  <div className="md:hidden absolute right-0 top-1/2 -translate-y-1/2 z-20 pointer-events-none">
+      {/* FLECHA MOBILE */}
+      <div className="md:hidden absolute right-0 top-1/2 -translate-y-1/2 z-20 pointer-events-none">
 
-    <div className="bg-gradient-to-l from-white via-white/90 to-transparent pl-10 pr-2 py-4">
+        <div className="bg-gradient-to-l from-white via-white/90 to-transparent pl-10 pr-2 py-4">
 
-      <div className="animate-pulse text-black/50 text-xl">
-        →
+          <div className="animate-pulse text-black/50 text-xl">
+            →
+          </div>
+
+        </div>
+
+      </div>
+
+      <div
+        className="
+          flex md:block
+          gap-3
+          overflow-x-auto
+          pb-4
+          md:space-y-4
+          snap-x
+          snap-mandatory
+          scrollbar-hide
+        "
+      >
+
+        {Object.keys(sections).map((key) => {
+
+          const item = sections[key as keyof typeof sections];
+
+          return (
+            <button
+              key={key}
+              onClick={() => setActive(key)}
+              className={`min-w-[220px] md:w-full text-left rounded-2xl md:rounded-3xl p-4 md:p-6 border transition-all duration-300 snap-start ${
+                active === key
+                  ? "bg-black text-white border-black"
+                  : "bg-white/70 border-black/5 hover:bg-white"
+              }`}
+            >
+
+              <div className="flex items-center justify-between mb-3 md:mb-4">
+
+                <span className="text-sm opacity-60">
+                  {item.number}
+                </span>
+
+                <div
+                  className={`w-3 h-3 rounded-full ${
+                    active === key
+                      ? "bg-white"
+                      : "bg-black/20"
+                  }`}
+                />
+
+              </div>
+
+              <h3 className="text-lg md:text-xl font-medium">
+                {item.title}
+              </h3>
+
+            </button>
+          );
+        })}
+
       </div>
 
     </div>
 
-  </div>
+    {/* PANEL */}
+    <motion.div
+      key={active}
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="bg-white/70 backdrop-blur-xl border border-black/5 rounded-[28px] md:rounded-[40px] overflow-hidden shadow-2xl"
+    >
 
-  <div
-    className="
-      flex md:block
-      gap-3
-      overflow-x-auto
-      pb-4
-      md:space-y-4
-      snap-x
-      snap-mandatory
-      scrollbar-hide
-    "
-  ></div>
+      {/* IMAGEN */}
+      <div className="relative h-[240px] md:h-[400px] overflow-hidden group">
 
-              {Object.keys(sections).map((key) => {
+        {/* MOBILE COLOR */}
+        <img
+          src={data.img}
+          className="absolute inset-0 w-full h-full object-cover md:hidden"
+        />
 
-                const item = sections[key as keyof typeof sections];
+        {/* DESKTOP BN */}
+        <img
+          src={data.imgBN}
+          className="hidden md:block absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:opacity-0 grayscale"
+        />
 
-                return (
-                  <button
-                    key={key}
-                    onClick={() => setActive(key)}
-                    className={`min-w-[220px] md:w-full text-left rounded-2xl md:rounded-3xl p-4 md:p-6 border transition-all duration-300 snap-start ${
-                      active === key
-                        ? "bg-black text-white border-black"
-                        : "bg-white/70 border-black/5 hover:bg-white"
-                    }`}
-                  >
+        {/* DESKTOP COLOR */}
+        <img
+          src={data.img}
+          className="hidden md:block absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition duration-700"
+        />
 
-                    <div className="flex items-center justify-between mb-3 md:mb-4">
+        {/* OVERLAY */}
+        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition duration-700" />
 
-                      <span className="text-sm opacity-60">
-                        {item.number}
-                      </span>
+        {/* TEXTO */}
+        <div className="absolute bottom-5 md:bottom-8 left-5 md:left-8 text-white">
 
-                      <div
-                        className={`w-3 h-3 rounded-full ${
-                          active === key
-                            ? "bg-white"
-                            : "bg-black/20"
-                        }`}
-                      />
+          <p className="text-xs md:text-sm tracking-[0.3em] uppercase opacity-70 mb-2 md:mb-3">
+            Servicio especializado
+          </p>
 
-                    </div>
+          <h2 className="text-2xl md:text-4xl font-light">
+            {data.title}
+          </h2>
 
-                    <h3 className="text-lg md:text-xl font-medium">
-                      {item.title}
-                    </h3>
+        </div>
 
-                  </button>
-                );
-              })}
+      </div>
+
+      {/* INFO */}
+      <div className="p-5 md:p-12">
+
+        <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-8 md:mb-12 max-w-3xl">
+          {data.desc}
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-6 md:gap-10">
+
+          {/* CAPACIDADES */}
+          <div>
+
+            <h3 className="uppercase tracking-[0.2em] text-xs md:text-sm text-gray-500 mb-4 md:mb-6">
+              Capacidades
+            </h3>
+
+            <div className="space-y-3 md:space-y-4">
+
+              {data.capabilities.map((item, i) => (
+                <div
+                  key={i}
+                  className="bg-black/[0.03] rounded-2xl p-3 md:p-4 text-sm md:text-base"
+                >
+                  {item}
+                </div>
+              ))}
 
             </div>
- 
-            {/* PANEL */}
-            <motion.div
-              key={active}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="bg-white/70 backdrop-blur-xl border border-black/5 rounded-[28px] md:rounded-[40px] overflow-hidden shadow-2xl"
-            >
-
-              {/* IMAGEN */}
-              <div className="relative h-[240px] md:h-[400px] overflow-hidden group">
-
-                {/* MOBILE COLOR */}
-                <img
-                  src={data.img}
-                  className="absolute inset-0 w-full h-full object-cover md:hidden"
-                />
-
-                {/* DESKTOP BN */}
-                <img
-                  src={data.imgBN}
-                  className="hidden md:block absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:opacity-0 grayscale"
-                />
-
-                {/* DESKTOP COLOR */}
-                <img
-                  src={data.img}
-                  className="hidden md:block absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition duration-700"
-                />
-
-                {/* OVERLAY */}
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition duration-700" />
-
-                {/* TEXTO */}
-                <div className="absolute bottom-5 md:bottom-8 left-5 md:left-8 text-white">
-
-                  <p className="text-xs md:text-sm tracking-[0.3em] uppercase opacity-70 mb-2 md:mb-3">
-                    Servicio especializado
-                  </p>
-
-                  <h2 className="text-2xl md:text-4xl font-light">
-                    {data.title}
-                  </h2>
-
-                </div>
-
-              </div>
-
-              {/* INFO */}
-              <div className="p-5 md:p-12">
-
-                <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-8 md:mb-12 max-w-3xl">
-                  {data.desc}
-                </p>
-
-                <div className="grid md:grid-cols-3 gap-6 md:gap-10">
-
-                  {/* CAPACIDADES */}
-                  <div>
-
-                    <h3 className="uppercase tracking-[0.2em] text-xs md:text-sm text-gray-500 mb-4 md:mb-6">
-                      Capacidades
-                    </h3>
-
-                    <div className="space-y-3 md:space-y-4">
-
-                      {data.capabilities.map((item, i) => (
-                        <div
-                          key={i}
-                          className="bg-black/[0.03] rounded-2xl p-3 md:p-4 text-sm md:text-base"
-                        >
-                          {item}
-                        </div>
-                      ))}
-
-                    </div>
-
-                  </div>
-
-                  {/* APLICACIONES */}
-                  <div>
-
-                    <h3 className="uppercase tracking-[0.2em] text-xs md:text-sm text-gray-500 mb-4 md:mb-6">
-                      Aplicaciones
-                    </h3>
-
-                    <div className="space-y-3 md:space-y-4">
-
-                      {data.applications.map((item, i) => (
-                        <div
-                          key={i}
-                          className="bg-black/[0.03] rounded-2xl p-3 md:p-4 text-sm md:text-base"
-                        >
-                          {item}
-                        </div>
-                      ))}
-
-                    </div>
-
-                  </div>
-
-                  {/* TECNOLOGIAS */}
-                  <div>
-
-                    <h3 className="uppercase tracking-[0.2em] text-xs md:text-sm text-gray-500 mb-4 md:mb-6">
-                      Tecnologías
-                    </h3>
-
-                    <div className="space-y-3 md:space-y-4">
-
-                      {data.tech.map((item, i) => (
-                        <div
-                          key={i}
-                          className="bg-black/[0.03] rounded-2xl p-3 md:p-4 text-sm md:text-base"
-                        >
-                          {item}
-                        </div>
-                      ))}
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </motion.div>
 
           </div>
 
-        </section>
+          {/* APLICACIONES */}
+          <div>
+
+            <h3 className="uppercase tracking-[0.2em] text-xs md:text-sm text-gray-500 mb-4 md:mb-6">
+              Aplicaciones
+            </h3>
+
+            <div className="space-y-3 md:space-y-4">
+
+              {data.applications.map((item, i) => (
+                <div
+                  key={i}
+                  className="bg-black/[0.03] rounded-2xl p-3 md:p-4 text-sm md:text-base"
+                >
+                  {item}
+                </div>
+              ))}
+
+            </div>
+
+          </div>
+
+          {/* TECNOLOGIAS */}
+          <div>
+
+            <h3 className="uppercase tracking-[0.2em] text-xs md:text-sm text-gray-500 mb-4 md:mb-6">
+              Tecnologías
+            </h3>
+
+            <div className="space-y-3 md:space-y-4">
+
+              {data.tech.map((item, i) => (
+                <div
+                  key={i}
+                  className="bg-black/[0.03] rounded-2xl p-3 md:p-4 text-sm md:text-base"
+                >
+                  {item}
+                </div>
+              ))}
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </motion.div>
+
+  </div>
+
+</section>
 
         {/* ================= TIMELINE ================= */}
         <section className="relative px-4 md:px-20 py-20 md:py-32 bg-black text-white overflow-hidden">
