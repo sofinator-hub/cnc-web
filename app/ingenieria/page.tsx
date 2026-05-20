@@ -292,32 +292,38 @@ export default function IngenieriaPage() {
               {/* IMAGEN */}
               <div className="relative h-[400px] overflow-hidden group">
 
-                <img
-                  src={data.imgBN}
-                  className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:opacity-0 grayscale"
-                />
 
-                <img
-                  src={data.img}
-                  className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition duration-700"
-                />
+  {/* MOBILE */}
+  <img
+    src={data.img}
+    className="absolute inset-0 w-full h-full object-cover md:hidden"
+  />
 
-                <div className="absolute inset-0 bg-black/20" />
+  {/* DESKTOP BN */}
+  <img
+    src={data.imgBN}
+    className="hidden md:block absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:opacity-0 grayscale"
+  />
 
-                <div className="absolute bottom-8 left-8 text-white">
+  {/* DESKTOP COLOR */}
+  <img
+    src={data.img}
+    className="hidden md:block absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition duration-700"
+  />
 
-                  <p className="text-sm tracking-[0.3em] uppercase opacity-70 mb-3">
-                    Servicio especializado
-                  </p>
+  <div className="absolute bottom-8 left-8 text-white drop-shadow-2xl">
 
-                  <h2 className="text-4xl font-light">
-                    {data.title}
-                  </h2>
+    <p className="text-sm tracking-[0.3em] uppercase opacity-70 mb-3">
+      Servicio especializado
+    </p>
 
-                </div>
+    <h2 className="text-4xl font-light">
+      {data.title}
+    </h2>
 
-              </div>
+  </div>
 
+</div>
               {/* INFO */}
               <div className="p-8 md:p-12">
 
