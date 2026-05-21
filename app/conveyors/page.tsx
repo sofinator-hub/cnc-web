@@ -310,7 +310,7 @@ export default function ConveyorsPage() {
                 "/conveyor3.webp",
                 "/conveyor4.webp",
                 "/conveyor5.webp",
-                "/conveyor6.webp",
+                "/conveyors6.webp",
               ].map((image, i) => (
 
                 <motion.div
