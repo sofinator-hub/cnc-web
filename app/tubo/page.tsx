@@ -19,7 +19,7 @@ export default function TuboPage() {
       {/* ================= FONDO GLOBAL ================= */}
       <div className="fixed inset-0 -z-10">
         <img
-          src="/fondo_blanco.jpg"
+          src="/fondo_page.webp"
           className="w-full h-full object-cover"
         />
       </div>
