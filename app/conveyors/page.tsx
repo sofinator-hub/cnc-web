@@ -23,7 +23,7 @@ export default function ConveyorsPage() {
       {/* ================= FONDO GLOBAL ================= */}
       <div className="fixed inset-0 -z-10">
         <img
-          src="/fondo_blanco.webp"
+          src="/fondo_page.webp"
           className="w-full h-full object-cover"
         />
       </div>

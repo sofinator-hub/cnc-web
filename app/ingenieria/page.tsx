@@ -146,7 +146,7 @@ export default function IngenieriaPage() {
       {/* FONDO */}
       <div className="fixed inset-0 -z-10">
         <img
-          src="/fondo_blanco.jpg"
+          src="/fondo_page.webp"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-white/75" />

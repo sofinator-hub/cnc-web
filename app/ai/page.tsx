@@ -10,7 +10,7 @@ export default function AIPage() {
 
       {/* FONDO */}
       <div className="fixed inset-0 -z-10">
-        <img src="/fondo_blanco.jpg" className="w-full h-full object-cover" />
+        <img src="/fondo_page.webp" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-white/80" />
       </div>
 
