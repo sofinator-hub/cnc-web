@@ -19,21 +19,30 @@ export default function Sidebar() {
       <div
         className="
           absolute right-0 top-1/2 -translate-y-1/2
-          w-14 h-14
-          rounded-2xl
-          bg-white/70
-          backdrop-blur-md
-          border border-purple-100/70
-          shadow-xl
+
+          w-16 h-16
+
+          rounded-3xl
+
+          bg-white/90
+          backdrop-blur-xl
+
+          border border-purple-200/80
+
+          shadow-[0_10px_35px_rgba(0,0,0,0.18)]
+
           flex items-center justify-center
-          text-purple-500
+
+          text-purple-600
+
           transition-all duration-300
+
           group-hover:opacity-0
           group-hover:pointer-events-none
         "
       >
 
-        <Menu size={24} />
+        <Menu size={30} strokeWidth={2.5} />
 
       </div>
 
