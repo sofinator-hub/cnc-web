@@ -42,6 +42,8 @@ export default function Navbar() {
 
     };
 
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
 
     return () =>
@@ -79,12 +81,12 @@ export default function Navbar() {
 
 
   const linkStyle = (section: string) =>
-    `relative transition-all duration-300 ${
+    `relative transition-all duration-300 text-shadow-sm ${
       isActive(section)
         ? "text-[var(--primary)] font-semibold"
         : scrolled
-        ? "text-gray-600 hover:text-[var(--primary)]"
-        : "text-white/80 hover:text-white"
+        ? "text-gray-700 hover:text-[var(--primary)]"
+        : "text-gray-800 hover:text-[var(--primary)] drop-shadow-[0_1px_4px_rgba(255,255,255,0.4)]"
     }`;
 
 
@@ -150,11 +152,11 @@ export default function Navbar() {
           leading-none
           transition-all duration-300
 
-${
-  scrolled
-    ? "text-[var(--primary)] drop-shadow-[0_0_10px_rgba(116,32,105,0.25)]"
-    : "text-gray-300"
-}
+          ${
+            scrolled
+              ? "text-[var(--primary)] drop-shadow-[0_0_10px_rgba(116,32,105,0.25)]"
+              : "text-gray-800 drop-shadow-[0_1px_4px_rgba(255,255,255,0.4)]"
+          }
         `}
       >
         MATEI
@@ -240,23 +242,8 @@ ${
           </li>
 
 
-          <li>
-
-            <Link
-              href="/ai"
-              className="
-                 purple-gradient
-                 text-white
-                 px-5 py-2
-                 rounded-xl
-                 purple-glow
-                 hover:scale-105
-                 transition-all duration-300
-              "
-            >
-              Generador
-            </Link>
-
+          <li> 
+            
           </li>
 
         </ul>
