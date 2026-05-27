@@ -81,12 +81,12 @@ export default function Navbar() {
 
 
   const linkStyle = (section: string) =>
-    `relative transition-all duration-300 text-shadow-sm ${
+    `relative transition-all duration-300 ${
       isActive(section)
         ? "text-[var(--primary)] font-semibold"
         : scrolled
         ? "text-gray-700 hover:text-[var(--primary)]"
-        : "text-gray-800 hover:text-[var(--primary)] drop-shadow-[0_1px_4px_rgba(255,255,255,0.4)]"
+        : "text-white hover:text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.65)]"
     }`;
 
 
@@ -115,67 +115,67 @@ export default function Navbar() {
         "
       >
 
-{/* LOGO */}
+        {/* LOGO */}
 
-<div className="flex-shrink-0 pr-12">
+        <div className="flex-shrink-0 pr-12">
 
-  <Link href="/">
+          <Link href="/">
 
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      className="flex items-center gap-3 cursor-pointer"
-    >
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="flex items-center gap-3 cursor-pointer"
+            >
 
-      <div className="h-10 lg:h-12 flex items-center overflow-hidden">
+              <div className="h-10 lg:h-12 flex items-center overflow-hidden">
 
-        <img
-          src="/logo_matei.svg"
-          alt="Matei"
-          className="
-            h-10 lg:h-12
-            w-auto
-            object-contain
-            block
-            relative
-            top-[4px]
-          "
-        />
+                <img
+                  src="/logo_matei.svg"
+                  alt="Matei"
+                  className="
+                    h-10 lg:h-12
+                    w-auto
+                    object-contain
+                    block
+                    relative
+                    top-[4px]
+                  "
+                />
 
-      </div>
+              </div>
 
-      <h1
-        className={`
-          text-xl lg:text-2xl
-          font-semibold
-          tracking-[0.35em]
-          leading-none
-          transition-all duration-300
+              <h1
+                className={`
+                  text-xl lg:text-2xl
+                  font-semibold
+                  tracking-[0.35em]
+                  leading-none
+                  transition-all duration-300
 
-          ${
-            scrolled
-              ? "text-[var(--primary)] drop-shadow-[0_0_10px_rgba(116,32,105,0.25)]"
-              : "text-gray-800 drop-shadow-[0_1px_4px_rgba(255,255,255,0.4)]"
-          }
-        `}
-      >
-        MATEI
-      </h1>
+                  ${
+                    scrolled
+                      ? "text-[var(--primary)] drop-shadow-[0_0_10px_rgba(116,32,105,0.25)]"
+                      : "text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.65)]"
+                  }
+                `}
+              >
+                MATEI
+              </h1>
 
-    </motion.div>
+            </motion.div>
 
-  </Link>
+          </Link>
 
-</div>
+        </div>
 
         {/* LINKS */}
 
         <ul
           className="
-           hidden lg:flex
-          items-center
-          gap-10 lg:gap-12
-          text-sm
+            hidden lg:flex
+            items-center
+            gap-10 lg:gap-12
+            text-sm
             whitespace-nowrap
           "
         >
@@ -239,11 +239,6 @@ export default function Navbar() {
 
             )}
 
-          </li>
-
-
-          <li> 
-            
           </li>
 
         </ul>
