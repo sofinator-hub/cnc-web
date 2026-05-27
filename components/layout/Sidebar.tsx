@@ -20,7 +20,7 @@ export default function Sidebar() {
         className="
           absolute right-0 top-1/2 -translate-y-1/2
 
-          w-16 h-16
+          w-16 h-26
 
           rounded-3xl
 
