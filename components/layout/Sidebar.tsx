@@ -9,7 +9,7 @@ export default function Sidebar() {
     <div
       className="
         hidden lg:block
-        fixed right-8 top-[55%] -translate-y-1/2
+        fixed right-6 top-1/2 -translate-y-1/2
         z-[999]
         group
       "
@@ -19,30 +19,21 @@ export default function Sidebar() {
       <div
         className="
           absolute right-0 top-1/2 -translate-y-1/2
-
-          w-16 h-16
-
-          rounded-3xl
-
-          bg-white/85
-          backdrop-blur-xl
-
-          border border-purple-200/70
-
-          shadow-[0_10px_40px_rgba(0,0,0,0.15)]
-
+          w-14 h-14
+          rounded-2xl
+          bg-white/70
+          backdrop-blur-md
+          border border-purple-100/70
+          shadow-xl
           flex items-center justify-center
-
-          text-purple-600
-
+          text-purple-500
           transition-all duration-300
-
           group-hover:opacity-0
           group-hover:pointer-events-none
         "
       >
 
-        <Menu size={28} />
+        <Menu size={24} />
 
       </div>
 
@@ -54,38 +45,29 @@ export default function Sidebar() {
         className="
           opacity-0
           translate-x-10
-
           group-hover:opacity-100
           group-hover:translate-x-0
-
           transition-all duration-300
 
-          bg-white/85
-          backdrop-blur-2xl
+          bg-white/70
+          backdrop-blur-xl
+          border border-purple-100/70
+          rounded-3xl
+          shadow-2xl
 
-          border border-purple-100/80
+          p-4
+          w-[190px]
 
-          rounded-[2rem]
-
-          shadow-[0_20px_60px_rgba(0,0,0,0.18)]
-
-          p-5
-
-          w-[240px]
-
-          flex flex-col gap-5
+          flex flex-col gap-4
         "
       >
 
         {/* STATUS */}
-        <div className="flex items-center gap-2 text-[11px] text-gray-500 tracking-[0.18em]">
+        <div className="flex items-center gap-2 text-[10px] text-gray-400 tracking-[0.15em]">
 
           <div className="relative flex items-center justify-center">
-
-            <div className="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse" />
-
-            <div className="absolute w-2.5 h-2.5 bg-green-400 rounded-full blur-sm opacity-60" />
-
+            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+            <div className="absolute w-2 h-2 bg-green-400 rounded-full blur-sm opacity-60" />
           </div>
 
           SYSTEM ONLINE
@@ -94,7 +76,7 @@ export default function Sidebar() {
 
 
         {/* LINKS */}
-        <div className="flex flex-col gap-2 text-[14px] text-gray-700">
+        <div className="flex flex-col gap-1 text-[13px] text-gray-600">
 
           {[
             {
@@ -133,7 +115,7 @@ export default function Sidebar() {
 
             <motion.div
               key={i}
-              whileHover={{ x: 6 }}
+              whileHover={{ x: 4 }}
               transition={{ duration: 0.2 }}
             >
 
@@ -141,35 +123,24 @@ export default function Sidebar() {
                 href={item.href}
                 className="
                   group/link
-
-                  flex items-center gap-3
-
-                  px-4 py-3
-
-                  rounded-2xl
-
-                  hover:bg-purple-50/90
+                  flex items-center gap-2
+                  px-3 py-2
+                  rounded-xl
+                  hover:bg-purple-50/80
                   hover:text-[var(--primary)]
-
                   transition-all duration-300
                 "
               >
 
-                <div
-                  className="
-                    w-2 h-2 rounded-full
+                <div className="
+                  w-1.5 h-1.5 rounded-full
+                  bg-purple-400
+                  opacity-0
+                  group-hover/link:opacity-100
+                  transition-all duration-300
+                " />
 
-                    bg-purple-400
-
-                    opacity-0
-
-                    group-hover/link:opacity-100
-
-                    transition-all duration-300
-                  "
-                />
-
-                <span className="font-medium">
+                <span>
                   {item.label}
                 </span>
 
@@ -183,23 +154,19 @@ export default function Sidebar() {
 
 
         {/* DIVISOR */}
-        <div className="border-t border-purple-100/80" />
+        <div className="border-t border-purple-100/70" />
 
 
         {/* CONTACTO */}
-        <div className="flex flex-col gap-2 text-[12px] text-gray-500">
+        <div className="flex flex-col gap-1 text-[11px] text-gray-500">
 
           <a
             href="https://wa.me/5215562045546"
             target="_blank"
             className="
-              px-3 py-2
-
-              rounded-xl
-
-              hover:bg-purple-50/80
+              px-2 py-1 rounded-md
+              hover:bg-purple-50/70
               hover:text-[var(--primary)]
-
               transition-all duration-300
             "
           >
@@ -209,13 +176,9 @@ export default function Sidebar() {
           <a
             href="mailto:matei_company@hotmail.com"
             className="
-              px-3 py-2
-
-              rounded-xl
-
-              hover:bg-purple-50/80
+              px-2 py-1 rounded-md
+              hover:bg-purple-50/70
               hover:text-[var(--primary)]
-
               transition-all duration-300
             "
           >
@@ -230,26 +193,19 @@ export default function Sidebar() {
           href="https://wa.me/5215562045546"
           target="_blank"
           className="
-            mt-2
-
+            mt-1
             purple-gradient
-
             text-white
-
             text-sm
-
-            px-4 py-3
-
-            rounded-2xl
-
+            px-4 py-2.5
+            rounded-xl
             text-center
-
-            font-semibold
-
-            purple-glow 
+            font-medium
+            purple-glow
+            
           "
 
-          whileHover={{ scale: 1.04 }}
+          whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
         >
           Cotizar
