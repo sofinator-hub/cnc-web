@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import Script from "next/script";
 
-// 👇 IMPORTA ESTO
+import "./globals.css";
+ 
 import Navbar from "../components/layout/Navbar";
 import Sidebar from "../components/layout/Sidebar";
 
@@ -33,11 +34,35 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
 
-        {/* 🔥 GLOBAL */}
+        {/* GOOGLE TAG */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-MEY3C7X0VE"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-tag-manager" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag(){
+              dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+
+            // GOOGLE ANALYTICS
+            gtag('config', 'G-MEY3C7X0VE');
+
+            // GOOGLE ADS
+            gtag('config', 'AW-924192746');
+          `}
+        </Script>
+
+        {/* GLOBAL */}
         <Navbar />
         <Sidebar />
 
-        {/* 🔥 CONTENIDO */}
+        {/* CONTENIDO */}
         {children}
 
       </body>
