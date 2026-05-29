@@ -158,7 +158,7 @@ export default function Hero() {
 
         {/* BOTÓN */}
         <motion.a
-          href="https://wa.me/5215562045546?text=Hola,%20quiero%20cotizar%20un%20proyecto"
+          href="https://wa.me/5215562045546?text=Hola,%20quiero%20cotizar%20un%20proyecto."
           target="_blank"
           className="inline-block bg-black text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold shadow-md"
           initial={{ opacity: 0, scale: 0.9 }}
